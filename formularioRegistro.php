@@ -24,7 +24,7 @@
 </script>
     <p>Estoy de acuerdo con <a href="terminos.php">Términos y Condiciones</a></p>
     <input class="" type="submit" value="Registrar"></input>
-    <p><a href="inicioSesion.php">Ya tengo Cuenta</a></p>
+    <p><a href="inicioSesion.php">Ya tengo Cuenta.</a></p>
   </section>
 </form>
 
