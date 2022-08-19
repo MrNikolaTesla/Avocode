@@ -12,12 +12,10 @@
   
 <form method="POST" action="recuperarPassword2.php"></form>
   <section class="form-register">
- <h4>Inicio de sesión</h4>
+ <h4>Recuperación de Contraseña</h4>
     <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-    <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
-    <p>Estoy de acuerdo con <a href="terminos.php">Términos y Condiciones</a></p>
-    <input class="buttons" type="submit" value="Iniciar">
-    <p><a href="formularioRegistro.php">Registrar cuenta</a></p>  
+    <input class="buttons" type="submit" value="Enviar correo de recuperación">
+    <p><a href="inicioSesion.php">Volver a inicio de sesion</a></p>  
     </section>
   </section>
 </body>
