@@ -17,8 +17,8 @@
                 <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre"></input>
                 <input class="controls" type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido"></input>
                 <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo"></input>
-                <input class="controls" type="password" name="passwordRegistro1" id="password" placeholder="Ingrese su Contraseña"></input>
-                <input class="controls" type="password" name="passwordRegistro2" id="password" placeholder="Ingrese su Contraseña"></input>
+                <input class="controls" type="password" name="password" id="passwordRegistro1" placeholder="Ingrese su Contraseña"></input>
+                <input class="controls" type="password" name="password" id="passwordRegistro2" placeholder="Ingrese su Contraseña"></input>
                 <p>Estoy de acuerdo con <a href="terminos.php">Términos y Condiciones</a></p>
                 <input class="buttons" type="submit" value="Registrar"></input>
                 <p><a href="inicioSesion.php">Ya tengo Cuenta</a></p>
