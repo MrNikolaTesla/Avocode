@@ -11,7 +11,7 @@
   <section class="form-register">
  <h4>Lo sentimos.</h4>
     <p>Alguno de los valores que ingresó estaban incompletos o eran incorrectos.</p><br><br>
-    <p><a href="inicioSesion.php">Volver</a></p>  
+    <p><a href="index.php">Volver</a></p>  
     </section>
   </section>
 </body>
