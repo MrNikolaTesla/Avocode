@@ -16,8 +16,8 @@
     <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo"></input>
     <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña"></input>
     <input class="buttons" type="submit" value="Iniciar sesión"></input>
-    <p><a href="recuperarPassword-1.php">Olvidé la contraseña</a></p>
-    <p><a href="formularioRegistro.php">Registrar cuenta</a></p>
+    <p><a href="recuperarPassword.php">Olvidé la contraseña</a></p>
+    <p><a href="Registro_Sesion.php">Registrar cuenta</a></p>
   </section>
   </form>
 </body>
