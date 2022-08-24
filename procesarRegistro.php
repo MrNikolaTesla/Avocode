@@ -15,7 +15,7 @@ include("conexionBD.php");
 $POSTnombre=$_POST['nombre'];
 $POSTapellido=$_POST['apellido'];
 $POSTcorreo=$_POST['correo'];
-$POSTpassword=$_POST['password'];
+$POSTpassword=$_POST['passwordRegistro1'];
 
 $query = "INSERT INTO datos(nombre, apellido, correo, password) VALUES (nombre, apellido, correo, password)";
 $result = mysqli_query($connection, $query);
