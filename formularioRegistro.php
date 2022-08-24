@@ -11,7 +11,6 @@
 
 <body>
     <?php include("conexionBD.php"); ?>
-
     <form method="POST" action="procesarRegistro.php">
         <section class="form-register">
             <h4>Formulario de Registro</h4>
