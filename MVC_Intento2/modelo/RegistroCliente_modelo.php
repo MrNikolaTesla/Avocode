@@ -9,7 +9,7 @@ class RegistroCliente_modelo{
     }
 
     public function set_cliente ($nombre, $apellido, $correo, $password) {
-    $sql = "INSERT INTO usuarios (nombre, apellido, correo, password) VALUES ('$nombre', '$apellido', '$correo', '$password')";
+    $sql = "INSERT INTO usuario (nombre, apellido, correo, password) VALUES ('$nombre', '$apellido', '$correo', '$password')";
     $query = mysqli_query($this->con, $sql);
     return $query;
     }
