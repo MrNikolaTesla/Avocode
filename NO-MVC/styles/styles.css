@@ -5,7 +5,7 @@
   }
   
   body {
-    background-image: url('fondo1.jpg');
+    background-image: url("/Avocode/NO-MVC/assets/imagenes/fondo1-reducido.jpg");
     background-repeat: no-repeat;
 
   }
@@ -84,6 +84,10 @@
     box-shadow: 7px 13px 37px #000;
     opacity: 0.85;
     font-size: 16px;
+
+  }
+  p {
+    text-align: justify;
 
   }
   
