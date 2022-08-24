@@ -1,17 +1,15 @@
 <?php
-require_once("modelo/RegistroCliente_modelo.php");
+require_once("modelo/InicioSesion_modelo.php");
 $registroCliente = new RegistroCliente_modelo();
-if(!empty($_POST["boton_registro"])){
-    if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"]) and !empty($_POST["passwordRegistro1"])) {
+if(!empty($_POST["boton_inicio"])){
+    if(!empty($_POST["correo"]) and !empty($_POST["password"])) {
         
         //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
-        $nombre = $_POST["nombre"];
-        $apellido = $_POST["apellido"];
         $correo = $_POST["correo"];
-        $contraseña = $_POST["passwordRegistro1"];
+        $contraseña = $_POST["password"];
 
-        $estado = $registroAlumno->set_alumno($nombre, $apellido, $correo, $contraseña);
+        $estado = $registroAlumno->verify_user($correo, $contraseña);
 
 if($estado==1) {
     echo '<div class="alert alert-success">Alumno dado de alta correctamente</div>';
