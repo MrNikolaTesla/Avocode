@@ -19,7 +19,7 @@
                 <input class="controls" type="password" name="passwordRegistro1" id="password" placeholder="Ingrese su Contraseña"></input>
                 <input class="controls" type="password" name="passwordRegistro2" id="password" placeholder="Ingrese su Contraseña"></input>
                 <p>Estoy de acuerdo con <a href="Terminos.php">Términos y Condiciones</a></p>
-                <input class="buttons" type="submit" value="Registrar"></input>
+                <input class="buttons" type="submit" name="boton_registro" value="Registrar"></input>
                 <p><a href="inicioSesion.php">Ya tengo Cuenta</a></p>
         </section>
     </form>
