@@ -29,5 +29,4 @@ if($correo!=null && $contraseña!=null){
     }else{
         header("Location: ../Inicio_Fallido.php");
     }
-</body>
-</html>
+?>
