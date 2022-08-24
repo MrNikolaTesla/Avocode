@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="iniciostyle.css">
 </head>
 <body>
-    <form method="POST" action="procesarSesion.php">
+    <form method="POST" action="modelo/Modelo_InicioSesion.php">
   <section class="form-register">
     <h4>Inicio de sesión</h4>
     <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo"></input>
