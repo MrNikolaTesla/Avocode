@@ -22,10 +22,11 @@ $result = mysqli_query($connection, $query);
 
 if($result){
 ?>
-    <section class="form-register">
+<div class="div-regular">
     <h4>Sesión iniciada</h4>
-    <p>Este es un mensaje de prueba, no guarda los datos en la BD</p>
-    </section>
+    <p>Esta es la página inicial</p>
+</div>
+
 <?php } ?>
 </form>
 </body>
