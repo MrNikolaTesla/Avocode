@@ -21,13 +21,13 @@ if($correo!=null && $contraseña!=null){
     $contraseña_captado = mysqli_query($connection, $query_contraseña);
     $habemus_contraseña = mysqli_num_rows($contraseña_captado);
     }else{
-        header("Location: inicioFallido.php");
+        header("Location: ../Inicio_Fallido.php");
     }
 
     if($habemus_correo && $habemus_contraseña){
-        header("Location: ../index.php");
+        header("Location: ../algo.php");
     }else{
-        header("Location: ../.php");
+        header("Location: ../Inicio_Fallido.php");
     }
 </body>
 </html>
