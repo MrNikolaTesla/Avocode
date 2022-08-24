@@ -12,7 +12,7 @@ if(!empty($_POST["boton_inicio"])){
         $estado = $inicio_sesion->verify_user($correo, $password);
 
 if($estado==1) {
-    echo '<div class="alert alert-success">Sesion Iniciada!</div>';
+    header("Location: ../vista/menu_principal.php");
 }else{
     echo '<div class="alert alert-danger">Oops!</div>';
 }
