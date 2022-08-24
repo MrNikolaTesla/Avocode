@@ -1,5 +1,5 @@
 <?php
-class RegistroCliente_modelo{
+class Inicio_usuario{
 
     private $con;
 

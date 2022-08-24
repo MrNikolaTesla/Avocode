@@ -1,6 +1,6 @@
 <?php
 require_once("modelo/InicioSesion_modelo.php");
-$registroCliente = new RegistroCliente_modelo();
+$inicio_sesion = new Inicio_usuario();
 if(!empty($_POST["boton_inicio"])){
     if(!empty($_POST["correo"]) and !empty($_POST["password"])) {
         
