@@ -1,5 +1,5 @@
 <?php
-require_once("modelo/InicioSesion_modelo.php");
+require_once("../modelo/InicioSesion.php");
 $inicio_sesion = new Inicio_usuario();
 if(!empty($_POST["boton_inicio"])){
     if(!empty($_POST["correo"]) and !empty($_POST["password"])) {
@@ -7,18 +7,18 @@ if(!empty($_POST["boton_inicio"])){
         //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
         $correo = $_POST["correo"];
-        $contraseña = $_POST["password"];
+        $password = $_POST["password"];
 
-        $estado = $registroAlumno->verify_user($correo, $contraseña);
+        $estado = $inicio_sesion->verify_user($correo, $password);
 
 if($estado==1) {
-    echo '<div class="alert alert-success">Alumno dado de alta correctamente</div>';
+    echo '<div class="alert alert-success">Sesion Iniciada!</div>';
 }else{
-    echo '<div class="alert alert-danger">Error al dar de alta alumno</div>';
+    echo '<div class="alert alert-danger">Oops!</div>';
 }
 
 } else {
-    echo '<div class="alert alert-danger">Alguno de los campos está vacio.</div>';
+    echo '<div class="alert alert-danger">Vacio.</div>';
 }
 }
 ?>
