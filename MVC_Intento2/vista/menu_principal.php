@@ -45,12 +45,12 @@ li a:hover:not(.active) {
 </head>
 <body>
 <ul>
-<li style="float:left"><a href="vista/FormularioInicioSesion.php">Opcion1Nav</a></li>
-<li style="float:left"><a href="vista/FormularioRegistroCliente.php">Opcion2Nav</a></li>
-<li style="float:left"><a href="vista/FormularioRegistroCliente.php">Opcion3Nav</a></li>
-<li style="float:left"><a href="vista/FormularioRegistroCliente.php">Opcion4Nav</a></li>
-<li style="float:left"><a href="vista/FormularioRegistroCliente.php">Opcion5Nav</a></li>
-<li style="float:left"><a href="vista/FormularioRegistroCliente.php">Opcion6Nav</a></li>
+<li style="float:left"><a href="">Opcion1Nav</a></li> <!--Aca iria "GestionDeArticulos.php", pero me gustaria hacer una verificacion de permisos antes"-->
+<li style="float:left"><a href="">Opcion2Nav</a></li>
+<li style="float:left"><a href="">Opcion3Nav</a></li>
+<li style="float:left"><a href="">Opcion4Nav</a></li>
+<li style="float:left"><a href="">Opcion5Nav</a></li>
+<li style="float:left"><a href="">Opcion6Nav</a></li>
 
 </ul>
 </body>
