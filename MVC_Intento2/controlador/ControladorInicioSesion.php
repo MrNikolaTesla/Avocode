@@ -11,8 +11,12 @@ if(!empty($_POST["boton_inicio"])){
 
         $estado = $inicio_sesion->verify_user($correo, $password);
 
-if($estado==1) {
-    header("Location: ../vista/menu_principal.php");
+if($estado=="cliente") {
+    header("Location: ../vista/menu_principal_cliente.php");
+}else if($estado=="empleado") {
+    header("Location: ../vista/menu_principal_empleado.php");
+}else if($estado=="administrador") {
+    header("Location: ../vista/menu_principal_administrador.php");
 }else{
     echo '<div class="alert alert-danger">Oops!</div>';
 }

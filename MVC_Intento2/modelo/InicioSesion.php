@@ -18,12 +18,14 @@ class Inicio_usuario{
             $id = $correo_concuerda['id'];
             $nombre = $correo_concuerda['nombre'];
             $apellidos = $correo_concuerda['apellido'];
+            $tipo = $correo_concuerda['tipo'];
         
         $query_contraseña = "SELECT * FROM usuario WHERE password = '$contraseña' AND id = '$id'";
         $contraseña_captado = mysqli_query($this->con, $query_contraseña);
         $contraseña_concuerda = mysqli_num_rows($contraseña_captado);
         if($contraseña_concuerda!=null){
-            return $contraseña_concuerda;
+            
+            return $tipo;
         }else{
 
         }
