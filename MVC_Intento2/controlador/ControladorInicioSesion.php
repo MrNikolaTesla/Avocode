@@ -14,7 +14,7 @@ if(!empty($_POST["boton_inicio"])){
 if($estado) {
 
 session_start(); 
-$_SESSION['tipo'] = "$estado"; // store session data
+$_SESSION['tipo'] = "$estado"; 
 
     header("Location: ../vista/menu_principal.php");
 }else {
