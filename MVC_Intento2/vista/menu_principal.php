@@ -45,13 +45,7 @@ li a:hover:not(.active) {
 </head>
 <body>
 <ul>
-<li style="float:left"><a href="GestionDeUsuarios.php">Gestor de Usuarios</a></li> <!--Aca iria "GestionDeArticulos.php", pero me gustaria hacer una verificacion de permisos antes"-->
-<li style="float:left"><a href="">Opcion2Nav</a></li>
-<li style="float:left"><a href="">Opcion3Nav</a></li>
-<li style="float:left"><a href="">Opcion4Nav</a></li>
-<li style="float:left"><a href="">Opcion5Nav</a></li>
-<li style="float:left"><a href="">Opcion6Nav</a></li>
-
+<?php require_once("../controlador/MenuPrincipal_VerificacionPermisos.php"); ?>
 </ul>
 </body>
 </html>
