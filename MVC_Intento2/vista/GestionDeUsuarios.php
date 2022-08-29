@@ -16,20 +16,36 @@
                   <h3 class="text-center">Registro de Usuarios</h3>
                   <!-- Aca iria para insertar un usuario nuevo :D | php require_once("../controlador/.php"); -->
                   <div class="mb-3">
-                    <label class="form-label">Nombre de la persona</label>
+                    <label class="form-label">Nombre/s</label>
                     <input type="text" class="form-control" name="nombre">
                    </div>
                    <div class="mb-3">
-                    <label class="form-label">Apellido de la persona</label>
+                    <label class="form-label">Apellido/s</label>
                     <input type="text" class="form-control" name="apellido">
                    </div>
                    <div class="mb-3">
-                    <label class="form-label">Edad de la persona</label>
-                    <input type="text" class="form-control" name="edad">
+                    <label class="form-label">Correo</label>
+                    <input type="email" class="form-control" name="edad">
                    </div>
                    <div class="mb-3">
-                    <label class="form-label">Nota de la persona</label>
+                    <label class="form-label">Contraseña</label>
                     <input type="text" class="form-control" name="nota">
+                   </div>
+                   <div class="mb-3">
+                    <label class="form-label">Direccion</label>
+                    <input type="text" class="form-control" name="nota">
+                   </div>
+                   <div class="mb-3">
+                    <label class="form-label">Telefono</label>
+                    <input type="number" class="form-control" name="nota">
+                   </div>
+                   <div class="mb-3">
+                    <label class="form-label">Tipo</label>
+                    <select id="cmbMake" name="Make" >
+                        <option value="cliente">Cliente</option>
+                        <option value="empleado">Empleado</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
                    </div>
                   <button type="submit" class="btn btn-primary" name="btnenviar" value="enviar">Enviar</button>
                 </form>
