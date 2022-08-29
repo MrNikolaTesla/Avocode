@@ -14,7 +14,7 @@
                 <!-- INICIO FORMULARIO ALTA -->
                 <form class="col-4" method="POST">
                   <h3 class="text-center">Registro de Usuarios</h3>
-                  <!-- Aca iria para insertar un usuario nuevo :D | php require_once("../controlador/.php"); -->
+                  <?php require_once("../controlador/ControladorRegistroUsuario.php"); ?>
                   <div class="mb-3">
                     <label class="form-label">Nombre/s</label>
                     <input type="text" class="form-control" name="nombre">
@@ -25,23 +25,23 @@
                    </div>
                    <div class="mb-3">
                     <label class="form-label">Correo</label>
-                    <input type="email" class="form-control" name="edad">
+                    <input type="email" class="form-control" name="correo">
                    </div>
                    <div class="mb-3">
                     <label class="form-label">Contraseña</label>
-                    <input type="text" class="form-control" name="nota">
+                    <input type="text" class="form-control" name="password">
                    </div>
                    <div class="mb-3">
                     <label class="form-label">Direccion</label>
-                    <input type="text" class="form-control" name="nota">
+                    <input type="text" class="form-control" name="direccion">
                    </div>
                    <div class="mb-3">
                     <label class="form-label">Telefono</label>
-                    <input type="number" class="form-control" name="nota">
+                    <input type="number" class="form-control" name="telefono">
                    </div>
                    <div class="mb-3">
                     <label class="form-label">Tipo</label>
-                    <select id="cmbMake" name="Make" >
+                    <select id="cmbMake" name="tipo" >
                         <option value="cliente">Cliente</option>
                         <option value="empleado">Empleado</option>
                         <option value="administrador">Administrador</option>
@@ -53,7 +53,7 @@
         
                 <div class="col-8 "> <!-- No se cual es esta class porque es del boostrap -->
                         <!-- INICIO TABLA LISTAR -->
-                        <?php require_once("controlador/Usuario_controlador.php"); ?>
+                        <?php require_once("../controlador/Usuario_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
                 </div>
         </div>
