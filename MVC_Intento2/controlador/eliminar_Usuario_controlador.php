@@ -15,6 +15,7 @@ if($estado==1) {
     $_SESSION['message'] = 'No se ha podido eliminar al usuario seleccionado.';
     header("Location: ../vista/GestionDeUsuarios.php");
 }
+
 }else{
     session_start(); 
     $_SESSION['message'] = 'No se hay un usuario seleccionado.';

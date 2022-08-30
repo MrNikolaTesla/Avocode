@@ -49,7 +49,7 @@
                    </div>
                   <button type="submit" class="btn btn-primary" name="boton_registro" value="enviar">Enviar</button>
                   <p>
-                  <div><a href="menu_principal.php">Volver</a></div><!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
+                  <button><a href="menu_principal.php">Volver</a></button><!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
                 </p>
                 </form>
                 <!-- FIN FORMULARIO ALTA -->
