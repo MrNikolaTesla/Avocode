@@ -18,7 +18,7 @@ if($estado==1) {
 
 }else{
     session_start(); 
-    $_SESSION['message'] = 'No se hay un usuario seleccionado.';
+    $_SESSION['message'] = 'El usuario seleccionado no existe.';
     header("Location: ../vista/GestionDeUsuarios.php");
 }
 ?>

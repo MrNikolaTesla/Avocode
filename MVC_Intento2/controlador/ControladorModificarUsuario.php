@@ -14,17 +14,17 @@ if(!empty($_POST["modificacion"])){
         $direccion = $_POST["direccion"];
         $telefono = $_POST["telefono"];
         $tipo = $_POST["tipo"];
-
         $estado = $actualizarUsuario->update_usuario($id, $nombre, $apellido, $correo, $password, $direccion, $telefono, $tipo);
 
 if($estado==1) {
-
-    echo '<div class="alert alert-success">Usuario modificado correctamente!</div>';
+    session_start(); 
+    $_SESSION['message'] = 'Usuario modificado correctamente';
+    header("Location: ../vista/GestionDeUsuarios.php");
 }else{
-    echo '<div class="alert alert-danger">El otro algo ha ocurrido.</div>';
+    session_start(); 
+    $_SESSION['message'] = 'Usuario no modificado, algo ha fallado.';
+    header("Location: ../vista/GestionDeUsuarios.php");
 }
 }
-}else{
-    echo '<div class="alert alert-danger">Algo ha ocurrido.</div>';
 }
 ?>

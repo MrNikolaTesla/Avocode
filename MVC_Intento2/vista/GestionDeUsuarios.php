@@ -13,7 +13,7 @@
                 <!-- INICIO FORMULARIO ALTA -->
                 <form class="col-4" method="POST">
                   <h3 class="text-center">Registro de Usuarios</h3>
-                  <?php require_once("mensaje_sesion.php"); ?>
+                  <?php require_once("mensaje_gestor_usuario.php"); ?>
                   <?php require_once("../controlador/ControladorRegistroUsuario.php"); ?>
                   <div class="mb-3">
                     <label class="form-label">Nombre/s</label>
@@ -49,9 +49,10 @@
                    </div>
                   <button type="submit" class="btn btn-primary" name="boton_registro" value="enviar">Enviar</button>
                   <p>
-                  <button><a href="menu_principal.php">Volver</a></button><!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
+                  <!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
                 </p>
                 </form>
+                <button><a href="menu_principal.php">Volver</a></button>
                 <!-- FIN FORMULARIO ALTA -->
         
                 <div class="col-8 "> <!-- No se cual es esta class porque es del boostrap -->

@@ -1,7 +1,7 @@
 <?php
 
 require_once("../modelo/Modificar_usuario_modelo.php");
-session_start(); 
+session_start();
 $_SESSION['mod_usuario'] = $id = $_GET['id'];
 
 $usuarios = new modificar_usuario();
