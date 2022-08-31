@@ -14,7 +14,7 @@ if($permiso == "cliente"){
     echo "<li style='float:left'><a href=''>4OpcionEmpleado</a></li>";
 }else{
     echo "<li style='float:left'><a href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li>";
-    echo "<li style='float:left'><a href=''>2OpcionAdministrador</a></li>";
+    echo "<li style='float:left'><a href='GestionDeProductos.php'>Gestor de Productos</a></li>";
     echo "<li style='float:left'><a href=''>3OpcionAdministrador</a></li>";
     echo "<li style='float:left'><a href=''>4OpcionAdministrador</a></li>";
 }
