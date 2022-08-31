@@ -9,16 +9,16 @@ require_once("../modelo/eliminar_Usuario_modelo.php");
 if($estado==1) {
     session_start(); 
     $_SESSION['message'] = 'Usuario eliminado correctamente';
-    header("Location: ../vista/GestionDeUsuarios.php");
+    header("Location: ../pagina/GestionDeUsuarios.php");
 }else{
     session_start(); 
     $_SESSION['message'] = 'No se ha podido eliminar al usuario seleccionado.';
-    header("Location: ../vista/GestionDeUsuarios.php");
+    header("Location: ../pagina/GestionDeUsuarios.php");
 }
 
 }else{
     session_start(); 
     $_SESSION['message'] = 'El usuario seleccionado no existe.';
-    header("Location: ../vista/GestionDeUsuarios.php");
+    header("Location: ../pagina/GestionDeUsuarios.php");
 }
 ?>

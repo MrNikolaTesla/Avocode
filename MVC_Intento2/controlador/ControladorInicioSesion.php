@@ -16,7 +16,7 @@ if($estado) {
 session_start(); 
 $_SESSION['tipo'] = "$estado"; 
 
-    header("Location: ../vista/menu_principal.php");
+    header("Location: ../pagina/menu_principal.php");
 }else {
     echo '<div class="alert alert-danger">Oops!</div>';
 }

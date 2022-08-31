@@ -32,15 +32,15 @@ if(!empty($_POST["modificacion"])){
 if($estado==1) {
     session_start(); 
     $_SESSION['message'] = 'Usuario modificado correctamente';
-    header("Location: ../vista/GestionDeUsuarios.php");
+    header("Location: ../pagina/GestionDeUsuarios.php");
 }else if($repetido!=null){
     session_start(); 
     $_SESSION['message'] = 'Correo ya en uso.';
-    header("Location: ../vista/GestionDeUsuarios.php");
+    header("Location: ../pagina/GestionDeUsuarios.php");
 }else{
     session_start(); 
     $_SESSION['message'] = 'Usuario no modificado, algo ha fallado.';
-    header("Location: ../vista/GestionDeUsuarios.php");
+    header("Location: ../pagina/GestionDeUsuarios.php");
 }
 }
 }

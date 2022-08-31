@@ -28,15 +28,15 @@ if(!empty($_POST["modificacion"])){
 if($estado==1) {
     session_start(); 
     $_SESSION['message'] = 'Producto modificado correctamente';
-    header("Location: ../vista/GestionDeProductos.php");
+    header("Location: ../pagina/GestionDeProductos.php");
 }else if($repetido!=null){
     session_start(); 
     $_SESSION['message'] = 'Producto equivalente ya encontrado en el sistema.';
-    header("Location: ../vista/GestionDeProductos.php");
+    header("Location: ../pagina/GestionDeProductos.php");
 }else{
     session_start(); 
     $_SESSION['message'] = 'Producto no modificado, algo ha fallado.';
-    header("Location: ../vista/GestionDeProductos.php");
+    header("Location: ../pagina/GestionDeProductos.php");
 }
 }
 }

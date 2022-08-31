@@ -45,8 +45,8 @@ li a:hover:not(.active) {
 </head>
 <body>
 <ul>
-<li style="float:left"><a href="vista/FormularioInicioSesion.php">Iniciar Sesion</a></li>
-<li style="float:left"><a href="vista/FormularioRegistroCliente.php">Registrarse</a></li>
+<li style="float:left"><a href="pagina/FormularioInicioSesion.php">Iniciar Sesion</a></li>
+<li style="float:left"><a href="pagina/FormularioRegistroCliente.php">Registrarse</a></li>
 </ul>
 </body>
 </html>
