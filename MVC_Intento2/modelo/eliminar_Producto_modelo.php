@@ -9,7 +9,7 @@ class Eliminar_producto{
     }
 
     public function eliminar_producto ($id) {
-    $sql = "DELETE FROM articulo WHERE id = $id";
+    $sql = "DELETE FROM articulo WHERE id_articulo = $id";
     $query = mysqli_query($this->con, $sql);
     return $query;
     }

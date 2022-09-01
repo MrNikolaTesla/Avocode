@@ -13,7 +13,7 @@ class modificar_producto{
 
     public function get_data(){
     $id = $_SESSION['mod_producto'];
-    $sql = "SELECT * FROM articulo WHERE id = $id";
+    $sql = "SELECT * FROM articulo WHERE id_articulo = $id";
     $query = mysqli_query($this->con,$sql);
     return $query;
     }

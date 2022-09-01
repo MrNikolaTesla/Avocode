@@ -9,7 +9,7 @@ class ActualizarUsuario_modelo{
     }
 
     public function update_usuario ($id, $nombre, $apellido, $correo, $password, $direccion, $telefono, $tipo) {
-    $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', password  = '$password', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id = $id";
+    $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', password  = '$password', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
     $query = mysqli_query($this->con,$sql);
     return $query;
     }

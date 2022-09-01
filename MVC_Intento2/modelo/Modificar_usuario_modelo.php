@@ -13,7 +13,7 @@ class modificar_usuario{
 
     public function get_data(){
     $id = $_SESSION['mod_usuario'];
-    $sql = "SELECT * FROM usuario WHERE id = $id";
+    $sql = "SELECT * FROM usuario WHERE id_usuario = $id";
     $query = mysqli_query($this->con,$sql);
     return $query;
     }

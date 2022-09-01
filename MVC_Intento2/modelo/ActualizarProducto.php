@@ -9,7 +9,7 @@ class ActualizarProducto_modelo{
     }
 
     public function update_producto ($id, $nombre, $precio, $tipo) {
-    $sql = "UPDATE articulo set nombre = '$nombre', precio = '$precio', tipo = '$tipo' WHERE id = $id";
+    $sql = "UPDATE articulo set nombre = '$nombre', precio = '$precio', tipo = '$tipo' WHERE id_articulo = $id";
     $query = mysqli_query($this->con,$sql);
     return $query;
     }

@@ -9,7 +9,7 @@ class Eliminar_usuario{
     }
 
     public function eliminar_usuario ($id) {
-    $sql = "DELETE FROM usuario WHERE id = $id";
+    $sql = "DELETE FROM usuario WHERE id_usuario = $id";
     $query = mysqli_query($this->con, $sql);
     return $query;
     }
