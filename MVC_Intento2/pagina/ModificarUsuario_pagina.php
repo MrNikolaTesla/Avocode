@@ -21,7 +21,7 @@
                 <?php require_once("../controlador/ControladorModificarUsuario.php"); ?>
                 <div class="mb-3">
                     <label class="form-label">Id</label>
-                    <input type="text" class="form-control" name="id" value="<?php echo $usuario['id']?>" readonly>
+                    <input type="text" class="form-control" name="id" value="<?php echo $usuario['id_usuario']?>" readonly>
                    </div>
                 <div class="mb-3">
                     <label class="form-label">Nombre/s</label>

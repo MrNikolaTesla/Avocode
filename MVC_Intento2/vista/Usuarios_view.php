@@ -36,7 +36,7 @@ foreach($matrizUsuario as $registro){
     <tbody>
 <?php foreach($matrizUsuario as $usuario): ?>
     <tr>
-        <th scope="row"><?php echo $usuario['id']?></th>
+        <th scope="row"><?php echo $usuario['id_usuario']?></th>
         <td><?php echo $usuario['nombre']?></td>
         <td><?php echo $usuario['apellido']?></td>
         <td><?php echo $usuario['tipo']?></td>
@@ -44,8 +44,8 @@ foreach($matrizUsuario as $registro){
         <td><?php echo $usuario['telefono']?></td>
         <td><?php echo $usuario['direccion']?></td>
         <td><?php echo $usuario['password']?></td>
-        <td><a href="../controlador/eliminar_Usuario_controlador.php?id=<?php echo $usuario['id']?>" class="btn btn-danger"> Eliminar</a></td>
-        <td><a href="ModificarUsuario_pagina.php?id=<?php echo $usuario['id']?>" class="btn btn-secondary">Modificar</a></td>
+        <td><a href="../controlador/eliminar_Usuario_controlador.php?id=<?php echo $usuario['id_usuario']?>" class="btn btn-danger"> Eliminar</a></td>
+        <td><a href="ModificarUsuario_pagina.php?id=<?php echo $usuario['id_usuario']?>" class="btn btn-secondary">Modificar</a></td>
 </tr>
 <?php endforeach; ?>
 </tbody>

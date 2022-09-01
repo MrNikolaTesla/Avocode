@@ -19,7 +19,7 @@
                 <?php require_once("../controlador/ControladorModificarProducto.php"); ?>
                 <div class="mb-3">
                     <label class="form-label">Id</label>
-                    <input type="text" class="form-control" name="id" value="<?php echo $producto['id']?>" readonly>
+                    <input type="text" class="form-control" name="id" value="<?php echo $producto['id_articulo']?>" readonly>
                    </div>
                 <div class="mb-3">
                     <label class="form-label">Nombre</label>

@@ -25,12 +25,12 @@
     <tbody>
 <?php foreach($matrizProductos as $producto): ?>
     <tr>
-        <th scope="row"><?php echo $producto['id']?></th>
+        <th scope="row"><?php echo $producto['id_articulo']?></th>
         <td><?php echo $producto['nombre']?></td>
         <td><?php echo $producto['precio']?></td>
         <td><?php echo $producto['tipo']?></td>
-        <td><a href="../controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id']?>" class="btn btn-danger"> Eliminar</a></td>
-        <td><a href="ModificarProducto_pagina.php?id=<?php echo $producto['id']?>" class="btn btn-secondary">Modificar</a></td>
+        <td><a href="../controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id_articulo']?>" class="btn btn-danger"> Eliminar</a></td>
+        <td><a href="ModificarProducto_pagina.php?id=<?php echo $producto['id_articulo']?>" class="btn btn-secondary">Modificar</a></td>
 </tr>
 <?php endforeach; ?>
 </tbody>
