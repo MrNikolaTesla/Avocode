@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <!-- CSS only -->
+        <link rel="stylesheet" href="../assets/styles2.css">
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
@@ -45,6 +47,20 @@
                     <label class="form-label">Telefono</label>
                     <input type="number" class="form-control" name="telefono" value="<?php echo $usuario['telefono']?>">
                    </div>
+
+
+                <div class="mb-3">
+                <label class="form-label">Tipo (Anteriormente: <?php echo $usuario['tipo']?>)</label>
+                <select name="format" id="format">
+                <option selected disabled>Elija un usuario</option>
+                <option value="cliente">Cliente</option>
+                <option value="empleado">Empleado</option>
+                <option value="administrador">Administrador</option>
+                </select>
+                </div>
+
+
+
                    <div class="mb-3">
                     <label class="form-label">Tipo (Anteriormente: <?php echo $usuario['tipo']?>)</label>
                     <select id="cmbMake" name="tipo">
