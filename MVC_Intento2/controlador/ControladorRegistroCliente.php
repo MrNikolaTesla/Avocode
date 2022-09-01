@@ -13,7 +13,7 @@ if(!empty($_POST["boton_registro"])){
         $correo = $_POST["correo"];
         $password = $_POST["passwordRegistro1"];
 
-        $repetido = $repe_registroCliente->get_correo($correo);
+        $repetido = $repe_registro->get_correo($correo);
 
         if($repetido!=null){
             $estado = 0;
