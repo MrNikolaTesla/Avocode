@@ -29,7 +29,7 @@ CREATE TABLE `orden` (
   `fecha` date NOT NULL COMMENT 'Fecha de la orden realizada',
   `observacion` varchar(90) NOT NULL COMMENT 'Comentarios para realizar el pedido',
   `hora` varchar(10) NOT NULL COMMENT 'Hora de la orden',
-  `articulos` varchar(100) NOT NULL COMMENT 'Articulos de la orden', --Tanto articulos como precio seran cambiados por una relacion con una posible
+  `articulos` varchar(100) NOT NULL COMMENT 'Articulos de la orden', --Tanto articulos como precio seran cambiados por una relacion segun sea posible
   --tabla a nombre de lineas, permitiendo evitar la redundancia de multiples productos dentro de una misma comanda
   `precio` int(10) NOT NULL COMMENT 'Precio de la orden'
 );
