@@ -10,8 +10,8 @@ CREATE TABLE `articulo` (
 
 CREATE TABLE `factura` (
   `id` int(10) PRIMARY KEY NOT NULL COMMENT 'ID de Factura',
-  `cliente` varchar(40) NOT NULL COMMENT 'Cliente al que le corresponde la factura',
-`empleado` varchar(40) NOT NULL COMMENT 'Empleado que atendió al cliente',
+  `cliente` int(10) NOT NULL COMMENT 'Cliente al que le corresponde la factura',
+`empleado` int(10) NOT NULL COMMENT 'Empleado que atendió al cliente',
   `fecha` date NOT NULL COMMENT 'Fecha de la factura',
   `hora` varchar(10) NOT NULL COMMENT 'Hora en la que se realizó la factura',
   `forma_pago` enum('Credito','Debito','Online','Casa_Credito') NOT NULL COMMENT 'Forma de pago utilizada para la factura',
@@ -47,9 +47,9 @@ CREATE TABLE `reserva` (
   `id` int(10) PRIMARY KEY NOT NULL COMMENT 'ID de Mesa',
   `mesa` int(10) NOT NULL COMMENT 'Numero de Mesa',
   `fecha` date NOT NULL COMMENT 'Fecha en la que se ocupo la Mesa',
-  `hora` int(10) NOT NULL COMMENT 'Hora en que se ocupo la Mesa',
-  `cliente` int(40) NOT NULL COMMENT 'Cliente que ocupo la Mesa',
-  `empleado` int(40) NOT NULL COMMENT 'Empleado que atendio la Mesa'
+  `hora` varchar(10) NOT NULL COMMENT 'Hora en que se ocupo la Mesa',
+  `cliente` int(10) NOT NULL COMMENT 'Cliente que ocupo la Mesa',
+  `empleado` int(10) NOT NULL COMMENT 'Empleado que atendio la Mesa'
 );
 
 --Muy probablemente tengamos que hacer una nueva entidad a nombre de empleados para las FK a futuro
