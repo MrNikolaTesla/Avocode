@@ -1,5 +1,6 @@
 ﻿--Tuvimos grandes cantidades de problemas con las FK, principalmente a la hora de agregarlas y exportarlas, por lo tanto, las mismas estan faltantes es este boceto de BD
---Cabe aclarar que si sabemos que atributos volver FK (Principalmente cliente y empleado), los hubieramos colocado pero tuvimos 4000 errores, no teniamos dia para preguntar e internet no logro proporcionarnos una respuesta
+--Cabe aclarar que si sabemos que atributos volver FK (Principalmente cliente y empleado), los hubieramos colocado pero tuvimos 4000 errores, no teniamos dia
+--para preguntar e internet no logro proporcionarnos una respuesta
 
 CREATE TABLE `articulo` (
   `id` int(10) PRIMARY KEY NOT NULL COMMENT 'ID del Producto',
@@ -21,7 +22,7 @@ CREATE TABLE `factura` (
 
 CREATE TABLE `mesa` (
   `id` int(10) PRIMARY KEY NOT NULL COMMENT 'ID de la Mesa',
-  `estado` enum('Libre','Ocupada','Reservada') NOT NULL COMMENT 'Estado de la Mesa'
+  `estado` enum('Libre','Ocupada','Reservada') NOT NULL DEFAULT 'Libre' COMMENT 'Estado de la Mesa'
 );
 
 CREATE TABLE `orden` (
@@ -29,7 +30,7 @@ CREATE TABLE `orden` (
   `fecha` date NOT NULL COMMENT 'Fecha de la orden realizada',
   `observacion` varchar(90) NOT NULL COMMENT 'Comentarios para realizar el pedido',
   `hora` varchar(10) NOT NULL COMMENT 'Hora de la orden',
-  `articulos` varchar(100) NOT NULL COMMENT 'Articulos de la orden', --Tanto articulos como precio seran cambiados por una relacion segun sea posible
+  `articulos` varchar(100) NOT NULL COMMENT 'Articulos de la orden', --Tanto articulos como precio seran cambiados por una relacion segun sea posible, POR AHORA NO SON FUNCIONALES
   --tabla a nombre de lineas, permitiendo evitar la redundancia de multiples productos dentro de una misma comanda
   `precio` int(10) NOT NULL COMMENT 'Precio de la orden'
 );
@@ -60,6 +61,7 @@ CREATE TABLE `usuario` (
   `correo` varchar(60) NOT NULL COMMENT 'Correo del Usuario',
   `password` varchar(20) NOT NULL COMMENT 'Clave del Usuario',
   `direccion` varchar(80) DEFAULT NULL COMMENT 'Direccion de envio del Usuario',
-  `telefono` int(13) DEFAULT NULL COMMENT 'Telefono de contacto del Usuario',--Por algun motivo si ponemos el 0 primero la BD lo elimina, he de suponer porque el valor realmente no cambia, eso habria que cambiarlo segun sepamos porque sucede.
+  `telefono` int(13) DEFAULT NULL COMMENT 'Telefono de contacto del Usuario',--Por algun motivo si ponemos el 0 primero la BD lo elimina, he de suponer porque el valor realmente
+  --no cambia, eso habria que cambiarlo segun sepamos porque sucede.
   `tipo` varchar(30) NOT NULL DEFAULT 'cliente' COMMENT 'Tipo de usuario, para las jerarquias'
 );
