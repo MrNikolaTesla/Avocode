@@ -60,6 +60,6 @@ CREATE TABLE `usuario` (
   `correo` varchar(60) NOT NULL COMMENT 'Correo del Usuario',
   `password` varchar(20) NOT NULL COMMENT 'Clave del Usuario',
   `direccion` varchar(80) DEFAULT NULL COMMENT 'Direccion de envio del Usuario',
-  `telefono` int(13) DEFAULT NULL COMMENT 'Telefono de contacto del Usuario',
+  `telefono` int(13) DEFAULT NULL COMMENT 'Telefono de contacto del Usuario',--Por algun motivo si ponemos el 0 primero la BD lo elimina, he de suponer porque el valor realmente no cambia, eso habria que cambiarlo segun sepamos porque sucede.
   `tipo` varchar(30) NOT NULL DEFAULT 'cliente' COMMENT 'Tipo de usuario, para las jerarquias'
 );
