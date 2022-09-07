@@ -8,7 +8,7 @@ class modificar_producto{
     {
         require_once("../modelo/conexion.php");
         $this->con=Conectar::conexion();
-        $this->usuario = array();
+        $this->producto = array();
     }
 
     public function get_data(){
