@@ -1,5 +1,6 @@
 <?php
-class usuarios_modelo{
+class usuarios_modelo
+{
 
     private $con;
     private $usuario;
@@ -7,23 +8,22 @@ class usuarios_modelo{
     public function __construct()
     {
         require_once("../modelo/conexion.php");
-        $this->con=Conectar::conexion();
+        $this->con = Conectar::conexion();
         $this->usuario = array();
     }
 
-    public function get_usuarios(){
+    public function get_usuarios()
+    {
 
         $sql = "SELECT * FROM usuario";
-        $query = mysqli_query($this->con,$sql);
+        $query = mysqli_query($this->con, $sql);
 
-        while($filas = mysqli_fetch_array($query)){
+        while ($filas = mysqli_fetch_array($query)) {
             $this->usuario[] = $filas;
         }
 
         return $this->usuario;
     }
-
-
 }
 
 ?>

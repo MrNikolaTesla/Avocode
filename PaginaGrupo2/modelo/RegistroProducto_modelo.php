@@ -15,4 +15,5 @@ class RegistroProducto_modelo{
     }
 
     }
+
 ?>

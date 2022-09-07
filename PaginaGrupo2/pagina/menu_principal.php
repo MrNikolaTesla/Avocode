@@ -13,10 +13,10 @@
 
 <body>
   <div class="menuNav">
-  	<ul>
-    <?php require_once("../controlador/MenuPrincipal_VerificacionPermisos.php"); ?>
+    <ul>
+      <?php require_once("../controlador/MenuPrincipal_VerificacionPermisos.php"); ?>
     </ul>
-</div>
+  </div>
 </body>
 
 </html>

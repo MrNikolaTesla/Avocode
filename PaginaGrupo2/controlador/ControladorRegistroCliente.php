@@ -35,4 +35,5 @@ if($estado==1) {
     echo '<div class="alert alert-danger">Alguno de los campos está vacio.</div>';
 }
 }
+
 ?>

@@ -25,4 +25,5 @@ $_SESSION['tipo'] = "$estado";
     echo '<div class="alert alert-danger">Vacio.</div>';
 }
 }
+
 ?>

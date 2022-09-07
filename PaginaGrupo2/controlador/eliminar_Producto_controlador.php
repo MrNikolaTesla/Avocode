@@ -21,4 +21,5 @@ if($estado==1) {
     $_SESSION['message'] = 'El producto seleccionado no existe.';
     header("Location: ../pagina/GestionDeProductos.php");
 }
+
 ?>
