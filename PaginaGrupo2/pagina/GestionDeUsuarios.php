@@ -13,11 +13,11 @@
 </head>
 
 <body>
-        <div class="container-fluid row">
+        <div class="container-fluid">
                 <!-- No se cual es esta class porque es del boostrap -->
                 <!-- INICIO FORMULARIO ALTA -->
                 <form class="col-4" method="POST">
-                        <h3 class="text-center">Registro de Usuarios</h3>
+                        <h3 class="text-center2">Registro de Usuarios</h3>
                         <?php require_once("../vista/mensaje_gestor_usuario.php"); ?>
                         <?php require_once("../controlador/ControladorRegistroUsuario.php"); ?>
                         <div class="mb-3">
@@ -57,7 +57,8 @@
                                 <!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
                         </p>
                 </form>
-                <button><a href="menu_principal.php">Volver</a></button>
+
+                <button class="button1"><a href="menu_principal.php">Volver</a></button>
                 <!-- FIN FORMULARIO ALTA -->
 
                 <div class="col-8 ">

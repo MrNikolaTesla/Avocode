@@ -14,18 +14,27 @@ nav {
 
 tr {
   color: white;
-
+  border-collapse: separate;
+  border-spacing: 10px 5px;
+  border: 10px;
+  width: 50%;
 }
 
 td {
 
   color: white;
-
+  border-collapse: separate;
+  border-spacing: 10px 5px;
+  border: 10px;
+  width: 50%;
 }
 
 th {
   color: white;
-
+  border-collapse: separate;
+  border-spacing: 10px 5px;
+  border: 10px;
+  width: 50%;
 }
 
 .col {
@@ -136,10 +145,39 @@ li a:hover:not(.active) {
   float: left;
 
   position: absolute;
-  
-  top: 50px;
-  
-  left: 45vw;
+
+  top: 5vw;
+
+  left: 35vw;
+
+  word-spacing: 10px;
+  line-height: 20px;
+  width: 50%;
+
+}
 
 
+.text-center2 {
+  text-align: center !important;
+
+}
+
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto
+}
+
+.button1 {
+  width: 10vw;
 }
