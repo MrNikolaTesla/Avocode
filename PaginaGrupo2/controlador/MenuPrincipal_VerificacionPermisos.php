@@ -3,25 +3,23 @@ session_start();
 $permiso = $_SESSION['tipo'];
 
 if ($permiso == "cliente") {
-    echo "<li><a class='boton' href=''>1OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>2OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>3OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>4OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
-} else if ($permiso == "empleado") {
-    echo "<li><a class='boton' href=''>1OpcionEmpleado</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>2OpcionEmpleado</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>3OpcionEmpleado</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>4OpcionEmpleado</a></li><hr size=5 noshade='noshade' color='#000'>";
-} else {
-    /* echo "<li style='float:left'><a href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li>";
-    echo "<li style='float:left'><a href='GestionDeProductos.php'>Gestor de Productos</a></li>";
-    echo "<li style='float:left'><a href=''>3OpcionAdministrador</a></li>";
-    echo "<li style='float:left'><a href=''>4OpcionAdministrador</a></li>"; */
+    echo "<li><a href='1OpcionCliente'><button class='button-40' role='button'>Gestor de Usuarios</a></button>";
+    echo "<li><a href='2OpcionCliente'><button class='button-40' role='button'>Gestor de Productos</a></button>";
+    echo "<li><a href='3OpcionCliente'><button class='button-40' role='button'>3Opcion Administrador</a></button>";
+    echo "<li><a href='4OpcionCliente'><button class='button-40' role='button'>4Opcion Administrador</a></button>";
 
-    echo "<li><a class='boton' href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href='GestionDeProductos.php'>Gestor de Productos</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>3OpcionAdministrador</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>4OpcionAdministrador</a></li><hr size=5 noshade='noshade' color='#000'>";
+} else if ($permiso == "empleado") {
+    echo "<li><a href='1OpcionEmpleado'><button class='button-40' role='button'>Gestor de Usuarios</a></button>";
+    echo "<li><a href='2OpcionEmpleado.php'><button class='button-40' role='button'>Gestor de Productos</a></button>";
+    echo "<li><a href='3OpcionEmpleado.php'><button class='button-40' role='button'>3Opcion Administrador</a></button>";
+    echo "<li><a href='4OpcionEmpleado.php'><button class='button-40' role='button'>4Opcion Administrador</a></button>";
+ 
+} else {
+
+    echo "<li><a href='GestionDeUsuarios.php'><button class='button-40' role='button'>Gestor de Usuarios</a></button>";
+    echo "<li><a href='GestionDeProductos.php'><button class='button-40' role='button'>Gestor de Productos</a></button>";
+    echo "<li><a href='3OpcionAdministrador.php'><button class='button-40' role='button'>3Opcion Administrador</a></button>";
+    echo "<li><a href='4OpcionAdministrador.php'><button class='button-40' role='button'>4Opcion Administrador</a></button>";
 }
 
 ?>
