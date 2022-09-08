@@ -24,14 +24,15 @@ hr{
 	margin-right: -13%;
 }
 .menuNav{
-	background-color: #A7A7A7;
+	background-color: rgba(87, 27, 27, 0.5);
+  background: radial-gradient( #c94a4a73 50%, #5a09097e 70%);
 	position: block;
 	padding-top: 0.01vh;
 	height: 100vh;
 	width: 20.4em;
 }
 .boton{
-	background-color: #8D8D8D;
+	background-color: #8f3a3a;
 	font-family: 'Poppins', sans-serif;
 	padding: 11px;
 	display: inline-block;
@@ -42,9 +43,10 @@ hr{
 	border-radius: 8px;
 }
 .boton:hover{
-	background-color: #626262;
-	color: white;
+	background-color: #792626;
+  color: #000000;
 }
 .boton:active{
-	background-color: #434343;
+	background-color: #691515;
+  color: white;
 }
