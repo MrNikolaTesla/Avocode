@@ -39,7 +39,7 @@
         <tbody>
             <?php foreach ($matrizUsuario as $usuario) : ?>
                 <tr>
-                    <th scope="row"><?php echo $usuario['id_usuario'] ?></th>
+                    <td scope="row"><?php echo $usuario['id_usuario'] ?></td>
                     <td><?php echo $usuario['nombre'] ?></td>
                     <td><?php echo $usuario['apellido'] ?></td>
                     <td><?php echo $usuario['tipo'] ?></td>

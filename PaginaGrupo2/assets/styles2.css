@@ -108,3 +108,7 @@ li a:hover:not(.active) {
   box-shadow: none;
   transform: translateY(0);
 }
+
+.blank{
+  color: white;
+}
