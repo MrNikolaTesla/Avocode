@@ -22,27 +22,27 @@
                         <?php require_once("../controlador/ControladorRegistroUsuario.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Nombre/s</label>
-                                <input type="text" class="form-control" name="nombre">
+                                <input type="text" class="tablas-input" name="nombre">
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Apellido/s</label>
-                                <input type="text" class="form-control" name="apellido">
+                                <input type="text" class="tablas-input" name="apellido">
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Correo</label>
-                                <input type="email" class="form-control" name="correo">
+                                <input type="email" class="tablas-input" name="correo">
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Contraseña</label>
-                                <input type="text" class="form-control" name="password">
+                                <input type="text" class="tablas-input" name="password">
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Direccion</label>
-                                <input type="text" class="form-control" name="direccion">
+                                <input type="text" class="tablas-input" name="direccion">
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Telefono</label>
-                                <input type="number" class="form-control" name="telefono">
+                                <input type="number" class="tablas-input" name="telefono">
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Tipo</label>
