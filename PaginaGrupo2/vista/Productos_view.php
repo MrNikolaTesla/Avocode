@@ -12,7 +12,7 @@
 <?php
 ?>
 <h3 class="text-center">Tabla de Productos</h3>
-<table class="table table-striped">
+<table class="table">
 <thead>
     <tr>
         <th scope="col">ID</th> 
