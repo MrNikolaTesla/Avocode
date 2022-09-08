@@ -21,7 +21,7 @@
     }
     ?>
     <h3 class="text-center">Tabla de usuarios</h3>
-    <table class="table small">
+    <table class="tablas-usuarios">
         <thead>
             <tr>
                 <th scope="col">ID</th>
