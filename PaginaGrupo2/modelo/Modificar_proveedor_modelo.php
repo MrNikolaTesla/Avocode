@@ -1,5 +1,5 @@
 <?php
-class modificar_usuario
+class modificar_proveedor
 {
 
     private $con;
@@ -14,8 +14,8 @@ class modificar_usuario
 
     public function get_data()
     {
-        $id = $_SESSION['mod_usuario'];
-        $sql = "SELECT * FROM usuario WHERE id_usuario = $id";
+        $id = $_SESSION['mod_proveedor'];
+        $sql = "SELECT * FROM proveedor WHERE id_proveedor = $id";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }
