@@ -2,7 +2,7 @@
 
 require_once("../modelo/Modificar_producto_modelo.php");
 session_start();
-$_SESSION['mod_producto'] = $id = $_GET['id_producto'];
+$_SESSION['mod_producto'] = $id = $_GET['id'];
 
 $productos = new modificar_producto();
 

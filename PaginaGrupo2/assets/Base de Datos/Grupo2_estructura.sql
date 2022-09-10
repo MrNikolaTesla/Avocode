@@ -1,9 +1,4 @@
-﻿/*Tuvimos grandes cantidades de problemas con las FK, principalmente a la hora de agregarlas y exportarlas, por lo tanto, las mismas estan faltantes es este boceto de BD
---Cabe aclarar que si sabemos que atributos volver FK (Principalmente cliente y empleado), los hubieramos colocado pero tuvimos 4000 errores, no teniamos dia
---para preguntar e internet no logro proporcionarnos una respuesta*/
-
-
-CREATE TABLE `articulo` (
+﻿CREATE TABLE `articulo` (
   `id_articulo` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID del Producto',
   `nombre` varchar(30) NOT NULL COMMENT 'Nombre del Producto',
   `precio` int(20) NOT NULL COMMENT 'Precio del Producto',

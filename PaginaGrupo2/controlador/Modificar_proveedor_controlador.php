@@ -2,7 +2,7 @@
 
 require_once("../modelo/Modificar_proveedor_modelo.php");
 session_start();
-$_SESSION['mod_proveedor'] = $id = $_GET['id_proveedor'];
+$_SESSION['mod_proveedor'] = $id = $_GET['id'];
 
 $proveedor = new modificar_proveedor();
 
