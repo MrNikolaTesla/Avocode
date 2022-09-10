@@ -17,7 +17,7 @@ if(!empty($_POST["modificacion"])){
         $telefono = $_POST["telefono"];
         $tipo = $_POST["tipo"];
 
-        $repetido = $repe_registro->get_correo($correo);
+        $repetido = $repe_registro->get_usuario($nombre, $apellido, $correo, $password, $direccion, $telefono);
 
         if($repetido!=null){
             $estado = 0;
