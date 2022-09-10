@@ -1,5 +1,5 @@
 <?php
-class Eliminar_usuario{
+class Eliminar_proveedor{
 
     private $con;
 
@@ -8,8 +8,8 @@ class Eliminar_usuario{
     $this->con=conectar::conexion();
     }
 
-    public function eliminar_usuario ($id) {
-    $sql = "DELETE FROM usuario WHERE id_usuario = $id";
+    public function eliminar_proveedor ($id) {
+    $sql = "DELETE FROM proveedor WHERE id_proveedor = $id";
     $query = mysqli_query($this->con, $sql);
     return $query;
     }

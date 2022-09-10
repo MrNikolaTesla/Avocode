@@ -33,6 +33,7 @@ if($permiso == "cliente"){
     }
     echo "<li><a class='boton' href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#000'>";
     echo "<li><a class='boton' href='GestionDeProductos.php'>Gestor de Productos</a></li><hr size=5 noshade='noshade' color='#000'>";
+    echo "<li><a class='boton' href='GestionDeProveedores.php'>Gestor de Proveedores</a></li><hr size=5 noshade='noshade' color='#000'>";
     echo "<li><a class='boton' href=''>3OpcionAdministrador</a></li><hr size=5 noshade='noshade' color='#000'>";
     echo "<li><a class='boton' href=''>4OpcionAdministrador</a></li><hr size=5 noshade='noshade' color='#000'>";
     echo "<li><a class='boton' href='../controlador/Logout.php'>Logout</a></li><hr size=5 noshade='noshade' color='#000'>";

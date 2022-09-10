@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
 
-    <title>Modificar Usuario</title>
+    <title>Modificar Proovedor</title>
 
 </head>
 
 <body>
 
-    <?php foreach ($usuario_modificar as $usuario) :
+    <?php foreach ($proveedor_modificar as $proveedor) :
 
     endforeach; ?>
 

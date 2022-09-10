@@ -1,5 +1,5 @@
 <?php
-class usuarios_modelo
+class modificar_proveedor
 {
 
     private $con;
@@ -12,17 +12,12 @@ class usuarios_modelo
         $this->usuario = array();
     }
 
-    public function get_usuarios()
+    public function get_data()
     {
-
-        $sql = "SELECT * FROM usuario";
+        $id = $_SESSION['mod_proveedor'];
+        $sql = "SELECT * FROM proveedor WHERE id_proveedor = $id";
         $query = mysqli_query($this->con, $sql);
-
-        while ($filas = mysqli_fetch_array($query)) {
-            $this->usuario[] = $filas;
-        }
-
-        return $this->usuario;
+        return $query;
     }
 }
 

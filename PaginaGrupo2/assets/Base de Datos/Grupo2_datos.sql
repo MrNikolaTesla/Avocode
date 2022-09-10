@@ -29,10 +29,10 @@ INSERT INTO orden (id_orden, fecha, observacion, hora, articulos, precio)
 VALUES ('2','2022-09-09', 'Panes clasicos', '21:00', '3', '300');
 
 INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
-VALUES ('1','Joshua Uchiha', 'Bread Industries', 'Panes Simples', '98453122');
+VALUES ('1','Joshua Uchiha', 'Bread Industries', 'Panes Simples', '098453122');
 
 INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
-VALUES ('2','Edo Brando', 'Green Stairs', 'Lechuga', '93742849');
+VALUES ('2','Edo Brando', 'Green Stairs', 'Lechuga', '093742849');
 
 INSERT INTO reserva (id_reserva, mesa, fecha, hora, cliente, empleado)
 VALUES ('1', '1', '2022-09-07', '19:00', '3', '2');
