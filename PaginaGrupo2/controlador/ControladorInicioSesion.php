@@ -14,15 +14,22 @@ if(!empty($_POST["boton_inicio"])){
 if($estado) {
 
 session_start(); 
-$_SESSION['tipo'] = "$estado"; 
-
+$_SESSION['tipo'] = $estado['tipo']; 
+$_SESSION['nombre'] = $estado['nombre']; 
+$_SESSION['apellido'] = $estado['apellido']; 
+$_SESSION['correo'] = $estado['correo']; 
+$_SESSION['password'] = $estado['password']; 
+$_SESSION['direccion'] = $estado['direccion']; 
+$_SESSION['telefono'] = $estado['telefono']; 
+$_SESSION['nuevo_ingreso'] = "true";
+ 
     header("Location: ../pagina/menu_principal.php");
 }else {
-    echo '<div class="alert alert-danger">Oops!</div>';
+    echo '<div class="alert alert-danger">Contraseña o correo incorrecto.</div>';
 }
 
 } else {
-    echo '<div class="alert alert-danger">Vacio.</div>';
+    echo '<div class="alert alert-danger">Vacio.</div>'; 
 }
 }
 

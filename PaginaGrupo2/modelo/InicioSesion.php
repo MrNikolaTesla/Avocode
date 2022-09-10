@@ -23,12 +23,12 @@ class Inicio_usuario
             $apellidos = $correo_concuerda['apellido'];
             $tipo = $correo_concuerda['tipo'];
 
-            $query_contraseña = "SELECT * FROM usuario WHERE password = '$contraseña' AND id_usuario = '$id'";
-            $contraseña_captado = mysqli_query($this->con, $query_contraseña);
+            $query = "SELECT * FROM usuario WHERE password = '$contraseña' AND id_usuario = '$id'";
+            $contraseña_captado = mysqli_query($this->con, $query);
             $contraseña_concuerda = mysqli_num_rows($contraseña_captado);
             if ($contraseña_concuerda != null) {
-
-                return $tipo;
+                $resultado = mysqli_fetch_array($contraseña_captado);
+                return $resultado;
             } else {
             }
         }
