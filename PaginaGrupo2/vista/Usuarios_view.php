@@ -35,10 +35,10 @@
                         <th>Tipo de Usuario</th>
                         <th>Correo</th>
                         <th>Telefono</th>
-                        <th >Direccion</th>
-                        <th>Contraseña</th>
-                        <th>Eliminar</th>
-                        <th>Modificar</th>
+                        <th>Direccion</th>
+                        <th colspan="2">Contraseña</th>
+                        <th colspan="2">Eliminar</th>
+                        <th colspan="2">Modificar</th>
                     <tr>
                 </thead>
     </div>
@@ -47,16 +47,16 @@
 
         <?php foreach ($matrizUsuario as $usuario) : ?>
             <tr>
-                <td ><?php echo $usuario['id_usuario'] ?></td>
-                <td ><?php echo $usuario['nombre'] ?></td>
-                <td ><?php echo $usuario['apellido'] ?></td>
-                <td ><?php echo $usuario['tipo'] ?></td>
-                <td ><?php echo $usuario['correo'] ?></td>
-                <td ><?php echo $usuario['telefono'] ?></td>
-                <td ><?php echo $usuario['direccion'] ?></td>
-                <td ><?php echo $usuario['password'] ?></td>
-                <td ><a href="../controlador/eliminar_Usuario_controlador.php?id=<?php echo $usuario['id_usuario'] ?>" class="btn btn-danger"> Eliminar</a></td>
-                <td ><a href="ModificarUsuario_pagina.php?id=<?php echo $usuario['id_usuario'] ?>" class="btn btn-secondary">Modificar</a></td>
+                <td><?php echo $usuario['id_usuario'] ?></td>
+                <td><?php echo $usuario['nombre'] ?></td>
+                <td><?php echo $usuario['apellido'] ?></td>
+                <td><?php echo $usuario['tipo'] ?></td>
+                <td><?php echo $usuario['correo'] ?></td>
+                <td><?php echo $usuario['telefono'] ?></td>
+                <td colspan="2"><?php echo $usuario['direccion'] ?></td>
+                <td colspan="2"><?php echo $usuario['password'] ?></td>
+                <td colspan="2"><a href="../controlador/eliminar_Usuario_controlador.php?id=<?php echo $usuario['id_usuario'] ?>" class="btn btn-danger"> Eliminar</a></td>
+                <td colspan="2"><a href="ModificarUsuario_pagina.php?id=<?php echo $usuario['id_usuario'] ?>" class="btn btn-secondary">Modificar</a></td>
             </tr>
         <?php endforeach; ?>
     </tbody>
