@@ -5,7 +5,7 @@ $nombre = $_SESSION['nombre'];
 
 if($permiso == "cliente"){
     if($_SESSION['nuevo_ingreso'] == "true"){
-        echo "Bienvenido ".$nombre. "!";
+        echo "<p class='saludo'>¡Bienvenido ".$nombre. "!</p><hr size=5 noshade='noshade' color='#000'>";
         $_SESSION['nuevo_ingreso'] = "false";
         }
     echo "<li><a class='boton' href=''>1OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
@@ -16,7 +16,7 @@ if($permiso == "cliente"){
 
  }else if ($permiso == "empleado"){
     if($_SESSION['nuevo_ingreso'] == "true"){
-        echo "Bienvenido ".$nombre. "!";
+        echo "<p class='saludo'>¡Bienvenido ".$nombre. "!</p><hr size=5 noshade='noshade' color='#000'>";
         $_SESSION['nuevo_ingreso'] = "false";
         }
     echo "<li><a class='boton' href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#000'>";
@@ -31,7 +31,7 @@ if($permiso == "cliente"){
     echo "<li style='float:left'><a href=''>3OpcionAdministrador</a></li>";
     echo "<li style='float:left'><a href=''>4OpcionAdministrador</a></li>"; */
     if($_SESSION['nuevo_ingreso'] == "true"){
-    echo "Bienvenido ".$nombre. "!";
+    echo "<p class='saludo'>¡Bienvenido ".$nombre. "!</p><hr size=5 noshade='noshade' color='#000'>";
     $_SESSION['nuevo_ingreso'] = "false";
     }
     echo "<li><a class='boton' href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#000'>";
