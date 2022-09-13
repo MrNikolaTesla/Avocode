@@ -34,15 +34,19 @@
                         <input type="text" class="form-control" name="empresa" value="<?php echo $proveedor['empresa'] ?>">
                 </div>
                 <div class="mb-3">
-                        <label class="form-label">productos</label>
+                        <label class="form-label">Productos</label>
                         <input type="text" class="form-control" name="productos" value="<?php echo $proveedor['productos'] ?>">
+                </div>
+                <div class="mb-3">
+                        <label class="form-label">Telefono</label>
+                        <input type="text" class="form-control" name="telefono" value="<?php echo $proveedor['telefono'] ?>">
                 </div>
                 <button type="submit" class="btn btn-primary" name="modificacion" value="enviar">Modificar!</button>
                 <p>
                         <!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
                 </p>
         </form>
-        <button><a href="GestionDeProveedor.php">Volver</a></button>
+        <button><a href="GestionDeProveedores.php">Volver</a></button>
 
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

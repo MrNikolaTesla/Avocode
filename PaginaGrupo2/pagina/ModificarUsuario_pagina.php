@@ -53,19 +53,8 @@
 
                 <div class="mb-3">
                         <label class="form-label">Tipo (Anteriormente: <?php echo $usuario['tipo'] ?>)</label>
-                        <select name="format" id="format">
-                                <option selected disabled>Elija un usuario</option>
-                                <option value="cliente">Cliente</option>
-                                <option value="empleado">Empleado</option>
-                                <option value="administrador">Administrador</option>
-                        </select>
-                </div>
-
-
-
-                <div class="mb-3">
-                        <label class="form-label">Tipo (Anteriormente: <?php echo $usuario['tipo'] ?>)</label>
-                        <select id="cmbMake" name="tipo">
+                        <select name="tipo" id="format">
+                                <option value="NoSelecciono" selected disabled hidden>Elija un usuario</option>
                                 <option value="cliente">Cliente</option>
                                 <option value="empleado">Empleado</option>
                                 <option value="administrador">Administrador</option>

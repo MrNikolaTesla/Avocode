@@ -1,13 +1,25 @@
 <?php
+require_once("../modelo/eliminar_Proveedor_modelo.php");
+    $eliminarProveedor = new Eliminar_proveedor();
+    if(isset($_GET['id'])){
 
-require_once("../modelo/Modificar_proveedor_modelo.php");
-session_start();
-$_SESSION['mod_proveedor'] = $id = $_GET['id_proveedor'];
+        $id = $_GET['id'];
+        $estado = $eliminarProveedor->eliminar_proveedor($id);
 
-$proveedores = new modificar_proveedor();
+if($estado==1) {
+    session_start(); 
+    $_SESSION['message'] = 'Proveedor eliminado correctamente';
+    header("Location: ../pagina/GestionDeProveedores.php");
+}else{
+    session_start(); 
+    $_SESSION['message'] = 'No se ha podido eliminar el proveedor seleccionado.';
+    header("Location: ../pagina/GestionDeProveedores.php");
+}
 
-$proveedor_modificar = $proveedores->get_data();
-
-require_once("../vista/Modificar_proveedor_view.php");
+}else{
+    session_start(); 
+    $_SESSION['message'] = 'El proveedor seleccionado no existe.';
+    header("Location: ../pagina/GestionDeProveedores.php");
+}
 
 ?>

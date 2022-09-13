@@ -8,13 +8,13 @@ if(!empty($_POST["modificacion"])){
         
         //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
-        $id = $_POST["id_proveedor"];
+        $id = $_POST["id"];
         $nombre_apellido = $_POST["nombre_apellido"];
         $empresa = $_POST["empresa"];
         $productos = $_POST["productos"];
         $telefono = $_POST["telefono"];
 
-        $repetido = $repe_proveedor->get_proveedor($nombre_apellido, $empresa, $telefono);
+        $repetido = $repe_proveedor->get_proveedor($nombre_apellido, $empresa, $productos, $telefono);
 
         if($repetido!=null){
             $estado = 0;
@@ -39,7 +39,9 @@ if($estado==1) {
     $_SESSION['message'] = 'Proveedor no modificado, algo ha fallado.';
     header("Location: ../pagina/GestionDeProveedores.php");
 }
+echo "Mori 1";
 }
+echo "Mori 2";
 }
 
 ?>

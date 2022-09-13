@@ -4,7 +4,7 @@
     $actualizarUsuario = new ActualizarUsuario_modelo();
     $repe_registro = new Repe_Registro_modelo();
 if(!empty($_POST["modificacion"])){
-    if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"]) and !empty($_POST["password"]) and !($_POST["tipo"] == "null")) {
+    if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"]) and !empty($_POST["password"]) and isset($_POST["tipo"])) {
         
         //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
@@ -43,6 +43,7 @@ if($estado==1) {
     header("Location: ../pagina/GestionDeUsuarios.php");
 }
 }
+echo '<div class="alert alert-warning">No se ha elegido un tipo de usuario.</div>';
 }
 
 ?>
