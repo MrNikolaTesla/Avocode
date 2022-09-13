@@ -3,13 +3,13 @@ class proveedores_modelo
 {
 
     private $con;
-    private $usuario;
+    private $proveedor;
 
     public function __construct()
     {
         require_once("../modelo/conexion.php");
         $this->con = Conectar::conexion();
-        $this->usuario = array();
+        $this->proveedor = array();
     }
 
     public function get_proveedores()
