@@ -14,6 +14,7 @@ if(!empty($_POST["boton_inicio"])){
 if($estado) {
 
 session_start(); 
+$_SESSION['id'] = $estado['id_usuario']; 
 $_SESSION['tipo'] = $estado['tipo']; 
 $_SESSION['nombre'] = $estado['nombre']; 
 $_SESSION['apellido'] = $estado['apellido']; 

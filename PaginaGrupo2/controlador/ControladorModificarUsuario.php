@@ -17,7 +17,7 @@ if(!empty($_POST["modificacion"])){
         $telefono = $_POST["telefono"];
         $tipo = $_POST["tipo"];
 
-        $repetido = $repe_registro->get_usuario($nombre, $apellido, $correo, $password, $direccion, $telefono);
+        $repetido = $repe_registro->get_usuario($id, $nombre, $apellido, $correo, $password, $direccion, $telefono);
 
         if($repetido!=null){
             $estado = 0;
@@ -39,11 +39,11 @@ if($estado==1) {
     header("Location: ../pagina/GestionDeUsuarios.php");
 }else{
     session_start(); 
-    $_SESSION['message'] = 'Usuario no modificado, algo ha fallado.';
+    $_SESSION['message'] = 'No cuentas con los permisos para modificar este usuario.';
     header("Location: ../pagina/GestionDeUsuarios.php");
 }
 }
-echo '<div class="alert alert-warning">No se ha elegido un tipo de usuario.</div>';
+echo '<div class="alert alert-danger">No se ha elegido un tipo de usuario.</div>';
 }
 
 ?>
