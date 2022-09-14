@@ -38,7 +38,7 @@
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Direccion</label>
-                                <input type="text" class="tablas-input" name="direccion">
+                                <input maxlength="80" type="text" class="tablas-input" name="direccion"> <!-- EL MÁXIMO DE DIRECCIÓN (maxlength) ES 80 CARACTERES, EL MISMO QUE LA BASE DE DATOS-->
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Telefono</label>
