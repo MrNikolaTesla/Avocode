@@ -19,11 +19,23 @@ td, #customers th {
   padding: 8px;
   color: white;
   max-width: 15vw;
-
+  height: 50px;
+  width: fit-content;
 }
 
-tr:nth-child(even) {
+ /* float: left;
+
+  position: absolute;
+
+  top: 5vw;
+
+  left: 30vw;*/
+
+
+
+/* tr:nth-child(even) {
   color: white;
+  
 }
 
 tr:hover {
@@ -33,7 +45,8 @@ tr:hover {
 
 th {
   color: white;
-}
+  
+} */
 
 .col {
   color: white;

@@ -37,11 +37,11 @@
             </tr>
         </thead>
 
-        </div>
-        </form>
 
-        <h3 class="text-center">Modificacion de Usuarios</h3>
+
         <tbody>
+        <h3 class="text-center">Modificacion de Usuarios</h3>
+
             <?php foreach ($matrizUsuario as $usuario) : ?>
                 <tr>
                     <td><?php echo $usuario['id_usuario'] ?></td>
