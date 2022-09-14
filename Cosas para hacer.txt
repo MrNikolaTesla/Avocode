@@ -1,0 +1,5 @@
+-Hacer llover CSS
+-No mostrar contraseñas
+-CRUD de Productos V2
+-Lado del Cliente
+-Modificacion de Cuenta / Eliminacion
