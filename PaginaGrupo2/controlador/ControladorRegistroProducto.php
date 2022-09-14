@@ -23,11 +23,20 @@ if (!empty($_POST["boton_añadir"])) {
         }
 
         if ($estado == 1) {
-            echo '<div class="alert alert-success">Producto agregado correctamente!</div>';
+            echo '<div class="alert alert-sucess alert-dismissible fade show" role="alert">
+            Producto agregado correctamente!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>';
         } else if ($repetido != null) {
-            echo '<div class="alert alert-danger">El producto ya ha sido agregado al sistema previamente.</div>';
+            echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+            El producto ya ha sido agregado al sistema previamente.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>';
         } else {
-            echo '<div class="alert alert-danger">Alguno de los campos está vacio.</div>';
+            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+            Alguno de los campos está vacio.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>';
         }
     }
 }
