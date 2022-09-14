@@ -10,11 +10,11 @@ if($estado== 1) {
     session_start(); 
     $_SESSION['message'] = 'Usuario eliminado correctamente';
     header("Location: ../pagina/GestionDeUsuarios.php");
-}else if($estado == 3){
+}else if($estado == 2){
     session_start(); 
     $_SESSION['message'] = 'No puedes eliminarte a ti mismo!';
     header("Location: ../pagina/GestionDeUsuarios.php");
-}else if(!$estado){
+}else if($estado==0){
     session_start(); 
     $_SESSION['message'] = 'No tienes los permisos para realizar esta accion.';
     header("Location: ../pagina/GestionDeUsuarios.php");

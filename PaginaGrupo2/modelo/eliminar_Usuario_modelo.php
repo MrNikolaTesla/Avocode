@@ -15,20 +15,22 @@ class Eliminar_usuario{
     $verificacion = "SELECT * FROM usuario WHERE id_usuario = '$id'";
     $query_veri = mysqli_query($this->con, $verificacion);
     $tipo = mysqli_fetch_array($query_veri);
-    if($tipo['tipo'] != "administrador" && $permiso == "empleado"){
-        if($id_personal != $id){
-        $sql = "DELETE FROM usuario WHERE id_usuario = $id";
-        $query = mysqli_query($this->con, $sql);
-        return $query;
-    }else{
-        $estado=3;
+
+    if($id_personal == $id){
+        $estado=2;
         return $estado;
-    }
+
+        }else if($tipo['tipo'] == "administrador" || $tipo['tipo'] == "empleado" && $permiso == "empleado"){
+        $estado=0;
+        return $estado;
+        
     }else{
-        return;
+        $sql = "DELETE FROM usuario WHERE id_usuario = $id";
+            $query = mysqli_query($this->con, $sql);
+            $estado=1;
+            return $estado;
     }
     }
 
     }
-
 ?>

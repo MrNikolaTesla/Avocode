@@ -18,28 +18,31 @@ if(!empty($_POST["modificacion"])){
         $tipo = $_POST["tipo"];
 
         $repetido = $repe_registro->get_usuario($id, $nombre, $apellido, $correo, $password, $direccion, $telefono);
-
-        if($repetido!=null){
-            $estado = 0;
-    }
     
-    if ($repetido==null){
+    if ($repetido==2){
         $estado = $actualizarUsuario->update_usuario($id, $nombre, $apellido, $correo, $password, $direccion, $telefono, $tipo);
     }
-
         
 
 if($estado==1) {
     session_start(); 
     $_SESSION['message'] = 'Usuario modificado correctamente';
     header("Location: ../pagina/GestionDeUsuarios.php");
-}else if($repetido!=null){
+}else if($repetido==1){
     session_start(); 
     $_SESSION['message'] = 'Correo ya en uso.';
     header("Location: ../pagina/GestionDeUsuarios.php");
-}else{
+}else if($estado==0){
     session_start(); 
     $_SESSION['message'] = 'No cuentas con los permisos para modificar este usuario.';
+    header("Location: ../pagina/GestionDeUsuarios.php");
+}else if($estado==2){
+    session_start(); 
+    $_SESSION['message'] = 'No es posible cambiar tu tipo de usuario a una posicion superior.';
+    header("Location: ../pagina/GestionDeUsuarios.php");
+}else if($estado==3){
+    session_start(); 
+    $_SESSION['message'] = 'No es posible cambiar el tipo de usuario a una posicion superior.';
     header("Location: ../pagina/GestionDeUsuarios.php");
 }
 }

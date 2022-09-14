@@ -26,11 +26,15 @@ class Repe_Registro_modelo
         $verificacion = "SELECT * FROM usuario WHERE id_usuario = '$id'";
         $query_veri = mysqli_query($this->con, $verificacion);
         $veri = mysqli_fetch_array($query_veri);
-        if($veri['id_usuario'] == $id){
-        return $result;
-    }else if($veri['correo'] == $correo){
-            $result = 1;
-            return $result;
+        if($veri['id_usuario'] == $id && $correo == $veri['correo']){
+            $repetido = 2;
+        return $repetido;
+    }else if ($veri['id_usuario'] != $id && $correo == $veri['correo']){
+        $repetido = 1;
+        return $repetido;
+    }else{
+        $repetido = 2;
+        return $repetido;
     }
     }
 }
