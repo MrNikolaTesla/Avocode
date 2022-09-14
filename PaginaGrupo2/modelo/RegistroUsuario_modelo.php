@@ -12,9 +12,16 @@ class RegistroUsuario_modelo
 
     public function set_cliente($nombre, $apellido, $correo, $password, $direccion, $telefono, $tipo)
     {
+        $permiso = $_SESSION['tipo'];
+        if($tipo == "administrador" || $tipo == "empleado" && $permiso == "empleado"){
+        $estado=2;
+        return $estado;
+        }else{
         $sql = "INSERT INTO usuario (nombre, apellido, correo, password, direccion, telefono, tipo) VALUES ('$nombre', '$apellido', '$correo', '$password', '$direccion', '$telefono', '$tipo')";
         $query = mysqli_query($this->con, $sql);
-        return $query;
+        $estado=1;
+        return $estado;
+        }
     }
 }
 

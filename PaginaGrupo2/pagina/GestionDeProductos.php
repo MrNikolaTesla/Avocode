@@ -16,7 +16,7 @@
                 <!-- INICIO FORMULARIO ALTA -->
                 <form class="col-4" method="POST">
                         <h3 class="text-center">Agregar Producto</h3>
-                        <?php require_once("../vista/mensaje_gestor_producto.php"); ?>
+                        <?php require_once("../vista/mensaje_gestor.php"); ?>
                         <?php require_once("../controlador/ControladorRegistroProducto.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Nombre</label>

@@ -18,7 +18,7 @@
                 <!-- INICIO FORMULARIO ALTA -->
                 <form class="col-4" method="POST">
                         <h3 class="text-center2">Registro de Proveedores</h3>
-                        <?php require_once("../vista/mensaje_gestor_proveedor.php"); ?>
+                        <?php require_once("../vista/mensaje_gestor.php"); ?>
                         <?php require_once("../controlador/ControladorRegistroProveedor.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Nombre/s y Apellido/s</label>

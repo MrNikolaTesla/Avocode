@@ -17,22 +17,32 @@ if(!empty($_POST["boton_registro"])){
         $tipo = $_POST["tipo"];
 
         $repetido = $repe_registro->get_correo($correo);
-
-        if($repetido!=null){
-            $estado = 0;
-    }
     
     if ($repetido==null){
         $estado = $registroUsuario->set_cliente($nombre, $apellido, $correo, $password, $direccion, $telefono, $tipo);
     }
 
 if($estado==1) {
-    echo '<div class="alert alert-success">Usuario '.$tipo.' registrado correctamente!</div>';
+    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+    Usuario '.$tipo.' registrado correctamente!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>';
 }else if($repetido!=null){
-    echo '<div class="alert alert-danger">El correo ya esta en uso.</div>';
-}else{
-    echo '<div class="alert alert-danger">Alguno de los campos está vacio.</div>';
+    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    El correo ya esta en uso.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>';
+}else if($estado==2) {
+    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    No tienes los permisos para realizar esta accion.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>';
 }
+}else{
+    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Alguno de los campos está vacio.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>';
 }
 }
 
