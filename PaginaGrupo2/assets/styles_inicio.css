@@ -21,10 +21,12 @@
       background-position: center;
 
     }
-
+    body::-webkit-scrollbar{
+      width: 0;
+    }
     @media screen and (min-width: 1200px) {
       #header {
-        position: absolute;
+        position: static;
         top: 0;
         left: 0;
         width: 100%;
@@ -32,14 +34,19 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        z-index: 100;
       }
 
+      #header img{
+        margin-top: -22px;
+        margin-bottom: 100px;
+        margin-left: -95px;
+      }
 
       #header ul {
-        display: flex;
+        display: inline-flex;
         justify-content: center;
         align-items: center;
+        margin-top: -95px;
       }
 
       #header ul li {
@@ -63,10 +70,10 @@
       section {
         position: relative;
         width: 100%;
-        height: 100vh;
+        height: 45.1vh;
         display: flex;
         justify-content: center;
-        align-items: center;
+        margin-top: 170px;
       }
 
       section::before {
@@ -78,16 +85,6 @@
         z-index: 10;
       }
 
-      section img {
-        position: absolute;
-        top: 0px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        pointer-events: none;
-      }
-
       section #text {
         position: absolute;
         color: white;
@@ -96,12 +93,7 @@
         line-height: 10px;
         font-family: 'Rancho', cursive;
         transform: translatey(-50%);
-      }
-
-      section #text span {
-        font-size: 10px;
-        letter-spacing: 2px;
-        font-weight: 400;
+        cursor: default;
       }
 
       #btn {
@@ -115,6 +107,7 @@
         letter-spacing: 2px;
         border-radius: 40px;
         transform: translatey(100px);
+        height: 47px;
       }
 
       .sec {
@@ -135,7 +128,6 @@
       }
 
       footer {
-        position: relative;
         padding: 0px 100px;
         background: var(--primary);
       }
@@ -191,6 +183,7 @@
       #header ul {
         justify-content: center;
         text-align: right;
+        margin-right: -45px;
       }
 
       #header ul li {
@@ -227,6 +220,7 @@
         text-align: center;
         font-family: 'Rancho';
         display: inline-block;
+        cursor: default;
       }
 
       #btn {
@@ -240,6 +234,7 @@
         border-radius: 40px;
         display: inline-block;
         height: 47px;
+        margin-bottom: 10vh;
       }
 
       .sec {
@@ -260,7 +255,6 @@
       }
 
       footer {
-        position: relative;
         padding: 0px 100px;
         background: var(--primary);
       }

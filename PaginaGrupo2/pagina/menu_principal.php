@@ -1,17 +1,43 @@
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="../assets/style_menu_principal.css">
-  <title>Menu Principal</title>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Principal</title>
+    <link rel="stylesheet" type="text/css" href="../assets/style_menu_principal_admin.css">
+    <link rel="stylesheet" type="text/css" href="../assets/style_menu_principal_empleado.css">
+    <link rel="stylesheet" type="text/css" href="../assets/style_menu_principal_cliente.css">
 </head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-<body>
-<div class="menuNav">
-  	<ul>
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.body-admin{
+	background-image: url("../assets/fondoinicio.png");
+	background-size: cover;
+	background-position: center;
+  }
+ul{
+	list-style: none;
+	margin-top: 1.6vh;
+	width: 292px;
+}
+li{
+	padding: 10px;
+  margin-left: 25px;
+	text-align: center;
+}
+hr{
+	margin-left: -13%;
+	margin-right: -13%;
+}
+</style>
+
+<body class="body-admin body-empleado body-cliente">
     <?php require_once("../controlador/MenuPrincipal_VerificacionPermisos.php"); ?>
-    </ul>
-</div>
 </body>
 
 </html>
