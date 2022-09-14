@@ -12,35 +12,27 @@ nav {
   background-color: #333;
 }
 
-tr {
+
+td, #customers th {
+  border: 1px solid rgb(9, 99, 151);
+  text-align: left;
+  padding: 8px;
   color: white;
-  border-collapse: separate;
-  border-spacing: 10px 5px;
-  border: 10px;
-  width: 50%;
-  padding: 0 5px;
+  max-width: 15vw;
 
 }
 
-td {
-
+tr:nth-child(even) {
   color: white;
-  border-collapse: separate;
-  border-spacing: 10px 5px;
-  border: 10px;
-  width: 50%;
-  padding: 0 5px;
+}
+
+tr:hover {
+  color: white;
 
 }
 
 th {
   color: white;
-  border-collapse: separate;
-  border-spacing: 10px 5px;
-  border: 10px;
-  width: 50%;
-  padding: 0 5px;
-
 }
 
 .col {
@@ -162,14 +154,13 @@ li a:hover:not(.active) {
 
 }
 
-
 .text-center2 {
   text-align: center;
-  position:flex;
+  position: flex;
 
 }
 
-.container-fluid,
+/* .container-fluid,
 .container-lg,
 .container-md,
 .container-sm,
@@ -183,7 +174,7 @@ li a:hover:not(.active) {
   padding-left: calc(var(--bs-gutter-x) * .5);
   margin-right: auto;
   margin-left: auto
-}
+} */
 
 .button1 {
   width: 10vw;
