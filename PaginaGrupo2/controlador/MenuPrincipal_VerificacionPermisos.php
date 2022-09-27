@@ -5,56 +5,43 @@
 session_start(); 
 $permiso = $_SESSION['tipo'];
 $nombre = $_SESSION['nombre'];
+$apellido = $_SESSION['apellido'];
 
 if($permiso == "cliente"){
+    ?><div class="menu-nav-cliente"><ul><?php
     if($_SESSION['nuevo_ingreso'] == "true"){
-        ?><div><?php
         echo "<p class='saludo-cliente'>¡Bienvenido ".$nombre. "!</p><hr size=5 noshade='noshade' color='#000'>";
-        ?></div><?php
         $_SESSION['nuevo_ingreso'] = "false";
-        }else{
-            ?><div><?php
-            echo "<li><p class='saludo-cliente'>" . $nombre . "</p></li><hr size=5 noshade='noshade' color='#743535'>";
-            ?></div><?php
-        }
-    echo "<li><a class='boton' href=''>1OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>2OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>3OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>4OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href='../controlador/Logout.php'>Logout</a></li><hr size=5 noshade='noshade' color='#000'>";
-
+    }else{
+        echo "<li><p class='saludo-cliente'>" . $nombre . "</p></li><hr size=5 noshade='noshade' color='#000'>";
+    }
+    echo "<li><a class='btn-cliente' href=''>1OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
+    echo "<li><a class='btn-cliente' href=''>2OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
+    echo "<li><a class='btn-cliente' href=''>3OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
+    echo "<li><a class='btn-cliente' href=''>4OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
+    echo "<li><a class='btn-cliente' href='../controlador/Logout.php'>Logout</a></li><hr size=5 noshade='noshade' color='#000'>";
+    ?></ul></div><?php
  }else if ($permiso == "empleado"){
+    ?><div class="menu-nav-empleado"><ul><?php
     if($_SESSION['nuevo_ingreso'] == "true"){
-        ?><div><?php
         echo "<p class='saludo-empleado'>¡Bienvenido " . $nombre . "!</p><hr size=5 noshade='noshade' color='#000'>";
-        ?></div><?php
         $_SESSION['nuevo_ingreso'] = "false";
-        }else{
-            ?><div><?php
-            echo "<li><p class='saludo-empleado'>" . $nombre . "</p></li><hr size=5 noshade='noshade' color='#743535'>";
-            ?></div><?php
-        }
-    echo "<li><a class='boton' href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>2OpcionEmpleado</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>3OpcionEmpleado</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href=''>4OpcionEmpleado</a></li><hr size=5 noshade='noshade' color='#000'>";
-    echo "<li><a class='boton' href='../controlador/Logout.php'>Logout</a></li><hr size=5 noshade='noshade' color='#000'>";
-
+    }else{
+        echo "<li><p class='saludo-empleado'>" . $nombre . "</p></li><hr size=5 noshade='noshade' color='#000'>";
+    }
+    echo "<li><a class='btn-empleado' href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#000'>";
+    echo "<li><a class='btn-empleado' href=''>2OpcionEmpleado</a></li><hr size=5 noshade='noshade' color='#000'>";
+    echo "<li><a class='btn-empleado' href=''>3OpcionEmpleado</a></li><hr size=5 noshade='noshade' color='#000'>";
+    echo "<li><a class='btn-empleado' href=''>4OpcionEmpleado</a></li><hr size=5 noshade='noshade' color='#000'>";
+    echo "<li><a class='btn-empleado' href='../controlador/Logout.php'>Logout</a></li><hr size=5 noshade='noshade' color='#000'>";
+    ?></ul></div><?php
 }else{
-    /* echo "<li style='float:left'><a href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li>";
-    echo "<li style='float:left'><a href='GestionDeProductos.php'>Gestor de Productos</a></li>";
-    echo "<li style='float:left'><a href=''>3OpcionAdministrador</a></li>";
-    echo "<li style='float:left'><a href=''>4OpcionAdministrador</a></li>"; */
     ?><div class="menu-nav-admin"><ul><?php
     if($_SESSION['nuevo_ingreso'] == "true"){
-        ?><div><?php
         echo "<li><p class='saludo-admin'>¡Bienvenido " . $nombre . "!</p></li><hr size=5 noshade='noshade' color='#743535'>";
-        ?></div><?php
-    $_SESSION['nuevo_ingreso'] = "false";
+        $_SESSION['nuevo_ingreso'] = "false";
     }else{
-        ?><div class="div-saludo"><?php
-        echo "<li><p class='saludo-admin'>" . $nombre . "</p></li><hr size=5 noshade='noshade' color='#743535'>";
-        ?></div><?php
+        echo "<li><p class='saludo-admin'>" . $nombre . " " . $apellido . "</p></li><hr size=5 noshade='noshade' color='#743535'>";
     }
     echo "<li><a class='btn-admin' href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#743535'>";
     echo "<li><a class='btn-admin' href='GestionDeProductos.php'>Gestor de Productos</a></li><hr size=5 noshade='noshade' color='#743535'>";
