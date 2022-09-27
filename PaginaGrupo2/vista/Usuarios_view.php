@@ -31,7 +31,6 @@
                 <th>Correo</th>
                 <th>Teléfono</th>
                 <th>Dirección</th>
-                <th>Contraseña</th>
                 <th>Eliminar</th>
                 <th>Modificar</th>
             </tr>
@@ -51,7 +50,6 @@
                     <td><?php echo $usuario['correo'] ?></td>
                     <td><?php echo $usuario['telefono'] ?></td>
                     <td><?php echo $usuario['direccion'] ?></td>
-                    <td><?php echo $usuario['password'] ?></td>
                     <td><a href="../controlador/eliminar_Usuario_controlador.php?id=<?php echo $usuario['id_usuario'] ?>" class="btn btn-danger"> Eliminar</a></td>
                     <td><a href="ModificarUsuario_pagina.php?id=<?php echo $usuario['id_usuario'] ?>" class="btn btn-secondary">Modificar</a></td>
                 </tr>

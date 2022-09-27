@@ -38,10 +38,6 @@
                         <input type="email" class="form-control" name="correo" value="<?php echo $usuario['correo'] ?>">
                 </div>
                 <div class="mb-3">
-                        <label class="form-label">Contraseña</label>
-                        <input type="text" class="form-control" name="password" value="<?php echo $usuario['password'] ?>">
-                </div>
-                <div class="mb-3">
                         <label class="form-label">Direccion</label>
                         <input type="text" class="form-control" name="direccion" value="<?php echo $usuario['direccion'] ?>">
                 </div>

@@ -8,7 +8,7 @@ class ActualizarUsuario_modelo{
     $this->con=conectar::conexion();
     }
 
-    public function update_usuario ($id, $nombre, $apellido, $correo, $password, $direccion, $telefono, $tipo) {
+    public function update_usuario ($id, $nombre, $apellido, $correo, $direccion, $telefono, $tipo) {
     $permiso = $_SESSION['tipo'];
     $id_personal = $_SESSION['id'];
     $verificacion = "SELECT * FROM usuario WHERE id_usuario = '$id'";
@@ -19,18 +19,18 @@ class ActualizarUsuario_modelo{
         return $estado;
         }else if($tipo_veri['tipo'] == "empleado" && $permiso == "empleado" && $tipo=="administrador"){
             $tipo = "empleado";
-    $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', password  = '$password', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
+    $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
     $query = mysqli_query($this->con,$sql);
     $estado=2;
     return $estado;
 }else if($tipo_veri['tipo'] == "cliente" && $permiso == "empleado" && $tipo=="administrador"){
     $tipo = "cliente";
-    $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', password  = '$password', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
+    $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
     $query = mysqli_query($this->con,$sql);
     $estado=3;
     return $estado;
     }else{
-        $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', password  = '$password', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
+        $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
         $query = mysqli_query($this->con,$sql);
         $estado=1;
         return $estado;
