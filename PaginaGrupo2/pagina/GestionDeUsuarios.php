@@ -13,7 +13,7 @@
 </head>
 
 <body>
-        <div class="container-fluid">
+        <div class="container-fluid cont-pers">
                 <!-- No se cual es esta class porque es del boostrap -->
                 <!-- INICIO FORMULARIO ALTA -->
                 <form class="col-4" method="POST">
@@ -22,27 +22,27 @@
                         <?php require_once("../controlador/ControladorRegistroUsuario.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Nombre/s</label>
-                                <input type="text" class="tablas-input" name="nombre">
+                                <p><input type="text" class="tablas-input" name="nombre"></p>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Apellido/s</label>
-                                <input type="text" class="tablas-input" name="apellido">
+                                <p><input type="text" class="tablas-input" name="apellido"></p>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Correo</label>
-                                <input type="email" class="tablas-input" name="correo">
+                                <p><input type="email" class="tablas-input" name="correo"></p>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Contraseña</label>
-                                <input type="text" class="tablas-input" name="password">
+                                <p><input type="text" class="tablas-input" name="password"></p>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Direccion</label>
-                                <input maxlength="80" type="text" class="tablas-input" name="direccion"> <!-- EL MÁXIMO DE DIRECCIÓN (maxlength) ES 80 CARACTERES, EL MISMO QUE LA BASE DE DATOS-->
+                                <p><input maxlength="80" type="text" class="tablas-input" name="direccion"></p> <!-- EL MÁXIMO DE DIRECCIÓN (maxlength) ES 80 CARACTERES, EL MISMO QUE LA BASE DE DATOS-->
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Telefono</label>
-                                <input type="number" class="tablas-input" name="telefono">
+                                <p><input type="number" class="tablas-input" name="telefono"></p>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Tipo</label>
@@ -53,12 +53,8 @@
                                 </select>
                         </div>
                         <button type="submit" class="btn btn-primary" name="boton_registro" value="enviar">Enviar</button>
-                        <p>
-                                <!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
-                        </p>
                 </form>
 
-                <button class="button1"><a href="menu_principal.php">Volver</a></button>
                 <!-- FIN FORMULARIO ALTA -->
 
                 <div class="col-8 ">
@@ -66,6 +62,9 @@
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("../controlador/Usuario_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
+                        <!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
+                        <a class="button1" href="menu_principal.php">Volver</a>
+
                 </div>
         </div>
         <!-- JavaScript Bundle with Popper -->

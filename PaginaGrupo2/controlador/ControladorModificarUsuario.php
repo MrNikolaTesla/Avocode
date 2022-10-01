@@ -4,7 +4,7 @@
     $actualizarUsuario = new ActualizarUsuario_modelo();
     $repe_registro = new Repe_Registro_modelo();
 if(!empty($_POST["modificacion"])){
-    if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"]) and !empty($_POST["password"]) and isset($_POST["tipo"])) {
+    if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"]) and isset($_POST["tipo"])) {
         
         //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
@@ -12,15 +12,14 @@ if(!empty($_POST["modificacion"])){
         $nombre = $_POST["nombre"];
         $apellido = $_POST["apellido"];
         $correo = $_POST["correo"];
-        $password = $_POST["password"];
         $direccion = $_POST["direccion"];
         $telefono = $_POST["telefono"];
         $tipo = $_POST["tipo"];
 
-        $repetido = $repe_registro->get_usuario($id, $nombre, $apellido, $correo, $password, $direccion, $telefono);
+        $repetido = $repe_registro->get_usuario($id, $nombre, $apellido, $correo, $direccion, $telefono);
     
     if ($repetido==2){
-        $estado = $actualizarUsuario->update_usuario($id, $nombre, $apellido, $correo, $password, $direccion, $telefono, $tipo);
+        $estado = $actualizarUsuario->update_usuario($id, $nombre, $apellido, $correo, $direccion, $telefono, $tipo);
     }
         
 

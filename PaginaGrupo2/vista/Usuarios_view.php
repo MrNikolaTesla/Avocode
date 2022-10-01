@@ -20,7 +20,6 @@
     ?>
     <!-- No se cual es esta class porque es del boostrap -->
     <!-- INICIO FORMULARIO ALTA -->
-
     <table id="customers">
         <thead>
             <tr>
@@ -39,7 +38,7 @@
 
 
         <tbody>
-        <h3 class="text-center">Modificacion de Usuarios</h3>
+        <h3 class="text-center">Listado de Usuarios</h3>
 
             <?php foreach ($matrizUsuario as $usuario) : ?>
                 <tr>
@@ -56,7 +55,6 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-
 </body>
 
 </html>

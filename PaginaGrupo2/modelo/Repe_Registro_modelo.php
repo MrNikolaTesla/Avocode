@@ -18,9 +18,9 @@ class Repe_Registro_modelo
         return $result;
     }
 
-    public function get_usuario($id, $nombre, $apellido, $correo, $password, $direccion, $telefono)
+    public function get_usuario($id, $nombre, $apellido, $correo, $direccion, $telefono)
     {
-        $sql = "SELECT * FROM usuario WHERE nombre LIKE '%$nombre%' and apellido LIKE '%$apellido%' and correo = '$correo' and password = '$password' and direccion = '$direccion' and telefono = 'telefono'";
+        $sql = "SELECT * FROM usuario WHERE nombre LIKE '%$nombre%' and apellido LIKE '%$apellido%' and correo = '$correo' and direccion = '$direccion' and telefono = 'telefono'";
         $query = mysqli_query($this->con, $sql);
         $result = mysqli_fetch_array($query);
         $verificacion = "SELECT * FROM usuario WHERE id_usuario = '$id'";

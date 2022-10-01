@@ -1,8 +1,12 @@
 body {
   background-image: url('fondo1.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
+  
 }
-
+.cont-pers{
+  display: flex;
+}
 nav {
   list-style-type: none;
   font-family: sans-serif;
@@ -51,6 +55,12 @@ th {
 .col {
   color: white;
 
+}
+.col-4{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h3 {
@@ -189,6 +199,12 @@ li a:hover:not(.active) {
   margin-left: auto
 } */
 
+#customers{
+  margin: 0 0 25px 0;
+}
 .button1 {
-  width: 10vw;
+  background-color: white;
+  padding: 10px 30px 10px 30px;
+  margin: 0 0 0 20px;
+  text-decoration: none;
 }
