@@ -1,6 +1,5 @@
 -Hacer llover CSS (Lautaro y Facundo en ustedes confio)
--Mesas
+-No mostrar contraseñas en Usuarios + cambiar todo lo que las actualiza y demas
 -CRUD de Productos V2 (Con cosa para ingresar imagenes y guardarlas en un sitio en assets)
 -Lado del Cliente (Principalmente menu y demas
 -Modificacion de Cuenta / Eliminacion 
--Terminar de armar los procesos de modelo unificados en un solo archivo

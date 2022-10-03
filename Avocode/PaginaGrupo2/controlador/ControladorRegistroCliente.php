@@ -1,8 +1,6 @@
 <?php
-require_once("../modelo/RegistroCliente_modelo.php");
-require_once("../modelo/Repe_Registro_modelo.php");
-$registroCliente = new RegistroCliente_modelo();
-$repe_registro = new Repe_Registro_modelo();
+require_once("../modelo/Usuario.php");
+$usuario = new Usuario();
 if(!empty($_POST["boton_registro"])){
     if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"]) and !empty($_POST["passwordRegistro1"])) {
         
@@ -13,14 +11,14 @@ if(!empty($_POST["boton_registro"])){
         $correo = $_POST["correo"];
         $password = $_POST["passwordRegistro1"];
 
-        $repetido = $repe_registro->get_correo($correo);
+        $repetido = $usuario->get_correo($correo);
 
         if($repetido!=null){
             $estado = 0;
     }
     
     if ($repetido==null){
-        $estado = $registroCliente->set_cliente($nombre, $apellido, $correo, $password);
+        $estado = $usuario->set_cliente($nombre, $apellido, $correo, $password);
     }
 
 if($estado==1) {

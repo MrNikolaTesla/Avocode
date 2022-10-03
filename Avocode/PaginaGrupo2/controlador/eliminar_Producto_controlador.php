@@ -1,10 +1,10 @@
 <?php
-require_once("../modelo/eliminar_Producto_modelo.php");
-    $eliminarProducto = new Eliminar_producto();
+require_once("../modelo/Producto.php");
+    $producto = new Producto();
     if(isset($_GET['id'])){
 
         $id = $_GET['id'];
-        $estado = $eliminarProducto->eliminar_producto($id);
+        $estado = $producto->eliminar_producto($id);
 
 if($estado==1) {
     session_start(); 

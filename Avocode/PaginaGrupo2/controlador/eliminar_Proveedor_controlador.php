@@ -1,10 +1,10 @@
 <?php
-require_once("../modelo/eliminar_Proveedor_modelo.php");
-    $eliminarProveedor = new Eliminar_proveedor();
+require_once("../modelo/Proveedor.php");
+    $proveedor = new Proveedor();
     if(isset($_GET['id'])){
 
         $id = $_GET['id'];
-        $estado = $eliminarProveedor->eliminar_proveedor($id);
+        $estado = $proveedor->eliminar_proveedor($id);
 
 if($estado==1) {
     session_start(); 

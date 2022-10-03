@@ -1,8 +1,6 @@
 <?php
-    require_once("../modelo/RegistroUsuario_modelo.php");
-    require_once("../modelo/Repe_Registro_modelo.php");
-    $registroUsuario = new RegistroUsuario_modelo();
-    $repe_registro = new Repe_Registro_modelo();
+    require_once("../modelo/Usuario.php");
+    $usuario = new Usuario();
 if(!empty($_POST["boton_registro"])){
     if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"]) and !empty($_POST["password"]) and !($_POST["tipo"] == "null")) {
         
@@ -16,10 +14,10 @@ if(!empty($_POST["boton_registro"])){
         $telefono = $_POST["telefono"];
         $tipo = $_POST["tipo"];
 
-        $repetido = $repe_registro->get_correo($correo);
+        $repetido = $usuario->get_correo($correo);
     
     if ($repetido==null){
-        $estado = $registroUsuario->set_cliente($nombre, $apellido, $correo, $password, $direccion, $telefono, $tipo);
+        $estado = $usuario->set_usuario($nombre, $apellido, $correo, $password, $direccion, $telefono, $tipo);
     }
 
 if($estado==1) {

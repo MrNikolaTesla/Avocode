@@ -1,10 +1,10 @@
 <?php
-require_once("../modelo/eliminar_Usuario_modelo.php");
-    $eliminarUsuario = new Eliminar_usuario();
+require_once("../modelo/Usuario.php");
+    $usuario = new Usuario();
     if(isset($_GET['id'])){
 
         $id = $_GET['id'];
-        $estado = $eliminarUsuario->eliminar_usuario($id);
+        $estado = $usuario->eliminar_usuario($id);
 
 if($estado== 1) {
     session_start(); 

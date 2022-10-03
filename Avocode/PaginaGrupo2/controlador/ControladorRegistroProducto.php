@@ -1,8 +1,6 @@
 <?php
-require_once("../modelo/RegistroProducto_modelo.php");
-require_once("../modelo/Repe_Producto_modelo.php");
-$registroProducto = new RegistroProducto_modelo();
-$repe_producto = new Repe_Producto_modelo();
+require_once("../modelo/Producto.php");
+$producto = new Producto();
 if (!empty($_POST["boton_añadir"])) {
     if (!empty($_POST["nombre"]) and !empty($_POST["precio"]) and !($_POST["tipo"] == "null")) {
 
@@ -12,14 +10,14 @@ if (!empty($_POST["boton_añadir"])) {
         $precio = $_POST["precio"];
         $tipo = $_POST["tipo"];
 
-        $repetido = $repe_producto->get_producto($nombre, $precio, $tipo);
+        $repetido = $producto->get_producto($nombre, $precio, $tipo);
 
         if ($repetido != null) {
             $estado = 0;
         }
 
         if ($repetido == null) {
-            $estado = $registroProducto->set_producto($nombre, $precio, $tipo);
+            $estado = $producto->set_producto($nombre, $precio, $tipo);
         }
 
         if ($estado == 1) {
