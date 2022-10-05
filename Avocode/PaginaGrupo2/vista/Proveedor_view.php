@@ -13,19 +13,6 @@
 </head>
 
 <body>
-    <?php
-
-    foreach ($matrizProveedor as $registro) {
-
-        //echo $registro['matricula'] . " - " . $registro['nombre']. " <br> " ;
-    }
-    ?>
-    <div class="container-fluid">
-        <!-- No se cual es esta class porque es del boostrap -->
-        <!-- INICIO FORMULARIO ALTA -->
-        <form class="col-4" method="POST">
-
-            <h3 class="text-center2">Tabla de Proveedores</h3>
             <table class="tablas-usuarios">
                 <thead>
                     <tr>
@@ -39,9 +26,8 @@
                     <tr>
                 </thead>
     </div>
-    </form>
     <tbody>
-
+    <h3 class="text-center">Tabla de Proveedores</h3>
         <?php foreach ($matrizProveedor as $proveedor) : ?>
             <tr>
                 <td><?php echo $proveedor['id_proveedor'] ?></td>

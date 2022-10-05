@@ -13,13 +13,6 @@
 </head>
 
 <body>
-    <?php
-    foreach ($matrizUsuario as $registro) {
-        //echo $registro['matricula'] . " - " . $registro['nombre']. " <br> " ;
-    }
-    ?>
-    <!-- No se cual es esta class porque es del boostrap -->
-    <!-- INICIO FORMULARIO ALTA -->
     <table id="customers">
         <thead>
             <tr>
