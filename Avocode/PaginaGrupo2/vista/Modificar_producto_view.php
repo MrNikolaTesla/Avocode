@@ -1,4 +1,4 @@
-<?php foreach ($producto_modificar as $producto) : ?>
+<?php foreach ($usuario_modificar as $usuario) : ?>
 <form class="col-4" method="POST">
                 <h3 class="text-center">Modificacion de Productos</h3>
                 <?php require_once("../controlador/ControladorModificarProducto.php"); ?>

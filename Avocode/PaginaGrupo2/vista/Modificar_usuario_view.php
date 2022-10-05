@@ -1,4 +1,4 @@
-<?php foreach ($usuario_modificar as $usuario) { ?>
+<?php foreach ($usuario_modificar as $usuario) : ?>
 <form class="col-4" method="POST">
                 <h3 class="text-center">Modificacion de Usuarios</h3>
                 <?php require_once("../controlador/ControladorModificarUsuario.php"); ?>
@@ -42,4 +42,4 @@
                         <!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
                 </p>
 </form>
-<?php } ?>
+<?php endforeach; ?>
