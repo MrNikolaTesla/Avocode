@@ -37,10 +37,10 @@ class Producto{
         return $query;
     }
 
-    public function get_data(){
-        $id = $_SESSION['mod_producto'];
+    public function get_data($id){
         $sql = "SELECT * FROM articulo WHERE id_articulo = $id";
         $query = mysqli_query($this->con,$sql);
+        echo "Coso";
         return $query;
     }
 

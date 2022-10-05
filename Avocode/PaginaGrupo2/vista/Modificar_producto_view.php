@@ -1,4 +1,4 @@
-<?php foreach ($producto_modificar as $producto) { ?>
+<?php foreach ($producto_modificar as $producto) : ?>
 <form class="col-4" method="POST">
                 <h3 class="text-center">Modificacion de Productos</h3>
                 <?php require_once("../controlador/ControladorModificarProducto.php"); ?>
@@ -26,4 +26,4 @@
                         <!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
                 </p>
 </form>
-<?php } ?>
+<?php endforeach; ?>
