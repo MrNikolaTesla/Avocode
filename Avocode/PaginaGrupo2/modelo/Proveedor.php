@@ -46,6 +46,13 @@ class Proveedor
         return $query;
     }
 
+    public function buscar_proveedores ($producto)
+    {
+        $sql = "SELECT * FROM proveedor WHERE productos LIKE '%$producto%'";
+        $query = mysqli_query($this->con, $sql);
+        return $query;
+    }
+
     public function eliminar_proveedor ($id) {
         $sql = "DELETE FROM proveedor WHERE id_proveedor = $id";
         $query = mysqli_query($this->con, $sql);

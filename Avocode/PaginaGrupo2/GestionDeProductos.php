@@ -41,6 +41,10 @@
         <button><a href="menu_principal.php">Volver</a></button>
         <!-- FIN FORMULARIO ALTA -->
 
+        <div>
+                <?php require_once("vista/buscar_producto_view.php"); ?>
+        </div>
+                
         <div class="col-8 ">
                 <!-- No se cual es esta class porque es del boostrap -->
                 <!-- INICIO TABLA LISTAR -->

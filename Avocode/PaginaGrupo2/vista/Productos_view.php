@@ -24,7 +24,7 @@
     <tr>
 </thead>
     <tbody>
-<?php foreach($producto_modificar as $producto): ?>
+<?php foreach($matrizProducto as $producto): ?>
     <tr>
         <th scope="row"><?php echo $producto['id_articulo']?></th>
         <td><?php echo $producto['nombre']?></td>

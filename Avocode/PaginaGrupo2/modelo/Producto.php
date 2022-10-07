@@ -44,6 +44,13 @@ class Producto{
         return $query;
     }
 
+    public function buscar_productos ($nombre)
+    {
+        $sql = "SELECT * FROM articulo WHERE nombre LIKE '%$nombre%'";
+        $query = mysqli_query($this->con, $sql);
+        return $query;
+    }
+
     public function eliminar_producto($id)
     {
         $sql = "DELETE FROM articulo WHERE id_articulo = $id";
