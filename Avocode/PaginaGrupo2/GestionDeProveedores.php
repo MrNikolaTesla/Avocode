@@ -8,7 +8,7 @@
         <title>Gestor de Proveedores</title>
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <link rel="stylesheet" href="../assets/styles2.css">
+        <link rel="stylesheet" href="assets/styles2.css">
 
 </head>
 
@@ -18,8 +18,8 @@
                 <!-- INICIO FORMULARIO ALTA -->
                 <form class="col-4" method="POST">
                         <h3 class="text-center2">Registro de Proveedores</h3>
-                        <?php require_once("../vista/mensaje_gestor.php"); ?>
-                        <?php require_once("../controlador/ControladorRegistroProveedor.php"); ?>
+                        <?php require_once("vista/mensaje_gestor.php"); ?>
+                        <?php require_once("controlador/ControladorRegistroProveedor.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Nombre/s y Apellido/s</label>
                                 <input type="text" class="tablas-input" name="nombre_apellido">
@@ -48,7 +48,7 @@
                 <div class="col-8 ">
                         <!-- No se cual es esta class porque es del boostrap -->
                         <!-- INICIO TABLA LISTAR -->
-                        <?php require_once("../controlador/Proveedor_controlador.php"); ?>
+                        <?php require_once("controlador/Proveedor_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
                 </div>
         </div>

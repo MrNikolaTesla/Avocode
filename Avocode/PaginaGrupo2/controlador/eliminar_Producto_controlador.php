@@ -9,17 +9,17 @@ require_once("../modelo/Producto.php");
 if($estado==1) {
     session_start(); 
     $_SESSION['message'] = 'Producto eliminado correctamente';
-    header("Location: ../pagina/GestionDeProductos.php");
+    header("Location: ../GestionDeProductos.php");
 }else{
     session_start(); 
     $_SESSION['message'] = 'No se ha podido eliminar el producto seleccionado.';
-    header("Location: ../pagina/GestionDeProductos.php");
+    header("Location: ../GestionDeProductos.php");
 }
 
 }else{
     session_start(); 
     $_SESSION['message'] = 'El producto seleccionado no existe.';
-    header("Location: ../pagina/GestionDeProductos.php");
+    header("Location: ../GestionDeProductos.php");
 }
 
 ?>

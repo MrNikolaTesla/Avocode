@@ -1,5 +1,5 @@
 <?php
-require_once("../modelo/Producto.php");
+require_once("modelo/Producto.php");
 $producto = new Producto();
 if (!empty($_POST["boton_añadir"])) {
     if (!empty($_POST["nombre"]) and !empty($_POST["precio"]) and !($_POST["tipo"] == "null")) {
@@ -21,7 +21,7 @@ if (!empty($_POST["boton_añadir"])) {
         }
 
         if ($estado == 1) {
-            echo '<div class="alert alert-sucess alert-dismissible fade show" role="alert">
+            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
             Producto agregado correctamente!
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>';

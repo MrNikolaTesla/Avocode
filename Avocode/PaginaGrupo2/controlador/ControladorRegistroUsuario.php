@@ -1,5 +1,5 @@
 <?php
-    require_once("../modelo/Usuario.php");
+    require_once("modelo/Usuario.php");
     $usuario = new Usuario();
 if(!empty($_POST["boton_registro"])){
     if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"]) and !empty($_POST["password"]) and !($_POST["tipo"] == "null")) {

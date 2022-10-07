@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css">
   <title>Formulario Registro</title>
 </head>
 
@@ -17,6 +17,7 @@
         Las Condiciones de servicio establecen la forma en que se puede utilizar tu producto, servicio o contenido de forma legalmente vinculante.</div>
     </section>
   </form>
+  <a class="button1" href="FormularioRegistroCliente.php">Volver</a>
 </body>
 
 </html>

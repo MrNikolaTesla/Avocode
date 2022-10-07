@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=devide-width, initial-scale=1.0">
-<link rel="stylesheet" href="../assets/styles2.css">
+<link rel="stylesheet" href="assets/styles2.css">
 
 </head>
 <body>
@@ -30,7 +30,7 @@
         <td><?php echo $producto['nombre']?></td>
         <td><?php echo $producto['precio']?></td>
         <td><?php echo $producto['tipo']?></td>
-        <td><a href="../controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id_articulo']?>" class="btn btn-danger"> Eliminar</a></td>
+        <td><a href="controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id_articulo']?>" class="btn btn-danger"> Eliminar</a></td>
         <td><a href="ModificarProducto_pagina.php?id=<?php echo $producto['id_articulo']?>" class="btn btn-secondary">Modificar</a></td>
 </tr>
 <?php endforeach; ?>

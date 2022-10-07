@@ -1,5 +1,5 @@
 <?php
-require_once("../modelo/InicioSesion.php");
+require_once("modelo/InicioSesion.php");
 $inicio_sesion = new Inicio_usuario();
 if(!empty($_POST["boton_inicio"])){
     if(!empty($_POST["correo"]) and !empty($_POST["password"])) {
@@ -24,7 +24,7 @@ $_SESSION['direccion'] = $estado['direccion'];
 $_SESSION['telefono'] = $estado['telefono']; 
 $_SESSION['nuevo_ingreso'] = "true";
  
-    header("Location: ../pagina/menu_principal.php");
+    header("Location: menu_principal.php");
 }else {
     echo '<div class="alert alert-danger">Contraseña o correo incorrecto.</div>';
 }

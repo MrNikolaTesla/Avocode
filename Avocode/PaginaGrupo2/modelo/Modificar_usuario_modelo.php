@@ -7,7 +7,7 @@ class modificar_usuario
 
     public function __construct()
     {
-        require_once("../modelo/conexion.php");
+        require_once("conexion.php");
         $this->con = Conectar::conexion();
         $this->usuario = array();
     }

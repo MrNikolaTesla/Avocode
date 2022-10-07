@@ -1,6 +1,6 @@
 <?php
-    require_once("../modelo/ActualizarUsuario.php");
-    require_once("../modelo/Repe_Registro_modelo.php");
+    require_once("modelo/ActualizarUsuario.php");
+    require_once("modelo/Repe_Registro_modelo.php");
     $actualizarUsuario = new ActualizarUsuario_modelo();
     $repe_registro = new Repe_Registro_modelo();
 if(!empty($_POST["modificacion"])){
@@ -26,23 +26,23 @@ if(!empty($_POST["modificacion"])){
 if($estado==1) {
     session_start(); 
     $_SESSION['message'] = 'Usuario modificado correctamente';
-    header("Location: ../pagina/GestionDeUsuarios.php");
+    header("Location: GestionDeUsuarios.php");
 }else if($repetido==1){
     session_start(); 
     $_SESSION['message'] = 'Correo ya en uso.';
-    header("Location: ../pagina/GestionDeUsuarios.php");
+    header("Location: GestionDeUsuarios.php");
 }else if($estado==0){
     session_start(); 
     $_SESSION['message'] = 'No cuentas con los permisos para modificar este usuario.';
-    header("Location: ../pagina/GestionDeUsuarios.php");
+    header("Location: GestionDeUsuarios.php");
 }else if($estado==2){
     session_start(); 
     $_SESSION['message'] = 'No es posible cambiar tu tipo de usuario a una posicion superior.';
-    header("Location: ../pagina/GestionDeUsuarios.php");
+    header("Location: GestionDeUsuarios.php");
 }else if($estado==3){
     session_start(); 
     $_SESSION['message'] = 'No es posible cambiar el tipo de usuario a una posicion superior.';
-    header("Location: ../pagina/GestionDeUsuarios.php");
+    header("Location: GestionDeUsuarios.php");
 }
 }
 echo '<div class="alert alert-danger">No se ha elegido un tipo de usuario.</div>';

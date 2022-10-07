@@ -1,6 +1,6 @@
 <?php
-    require_once("../modelo/ActualizarProveedor.php");
-    require_once("../modelo/Repe_Proveedor_modelo.php");
+    require_once("modelo/ActualizarProveedor.php");
+    require_once("modelo/Repe_Proveedor_modelo.php");
     $actualizarProveedor = new ActualizarProveedor_modelo();
     $repe_proveedor = new Repe_Proveedor_modelo();
 if(!empty($_POST["modificacion"])){
@@ -29,15 +29,15 @@ if(!empty($_POST["modificacion"])){
 if($estado==1) {
     session_start(); 
     $_SESSION['message'] = 'Proveedor modificado correctamente';
-    header("Location: ../pagina/GestionDeProveedores.php");
+    header("Location: GestionDeProveedores.php");
 }else if($repetido!=null){
     session_start(); 
     $_SESSION['message'] = 'Producto equivalente ya encontrado en el sistema.';
-    header("Location: ../pagina/GestionDeProveedores.php");
+    header("Location: GestionDeProveedores.php");
 }else{
     session_start(); 
     $_SESSION['message'] = 'Proveedor no modificado, algo ha fallado.';
-    header("Location: ../pagina/GestionDeProveedores.php");
+    header("Location: GestionDeProveedores.php");
 }
 echo "Mori 1";
 }

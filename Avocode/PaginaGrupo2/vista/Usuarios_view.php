@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/styles2.css">
+    <link rel="stylesheet" href="assets/styles2.css">
 
     <title>Index no tan loco</title>
 
@@ -42,7 +42,7 @@
                     <td><?php echo $usuario['correo'] ?></td>
                     <td><?php echo $usuario['telefono'] ?></td>
                     <td><?php echo $usuario['direccion'] ?></td>
-                    <td><a href="../controlador/eliminar_Usuario_controlador.php?id=<?php echo $usuario['id_usuario'] ?>" class="btn btn-danger"> Eliminar</a></td>
+                    <td><a href="controlador/eliminar_Usuario_controlador.php?id=<?php echo $usuario['id_usuario'] ?>" class="btn btn-danger"> Eliminar</a></td>
                     <td><a href="ModificarUsuario_pagina.php?id=<?php echo $usuario['id_usuario'] ?>" class="btn btn-secondary">Modificar</a></td>
                 </tr>
             <?php endforeach; ?>

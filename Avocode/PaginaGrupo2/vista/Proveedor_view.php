@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/styles2.css">
+    <link rel="stylesheet" href="assets/styles2.css">
 
     <title>Index no tan loco</title>
 
@@ -35,7 +35,7 @@
                 <td><?php echo $proveedor['empresa'] ?></td>
                 <td><?php echo $proveedor['productos'] ?></td>
                 <td><?php echo $proveedor['telefono'] ?></td>
-                <td><a href="../controlador/eliminar_Proveedor_controlador.php?id=<?php echo $proveedor['id_proveedor'] ?>" class="btn btn-danger"> Eliminar</a></td>
+                <td><a href="controlador/eliminar_Proveedor_controlador.php?id=<?php echo $proveedor['id_proveedor'] ?>" class="btn btn-danger"> Eliminar</a></td>
                 <td><a href="ModificarProveedor_pagina.php?id=<?php echo $proveedor['id_proveedor'] ?>" class="btn btn-secondary">Modificar</a></td>
             </tr>
         <?php endforeach; ?>

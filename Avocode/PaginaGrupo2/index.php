@@ -18,8 +18,8 @@
       <li><a href="#">Edición Limitada</a></li>
       <li><a href="#">Sobre nosotros</a></li>
       <li><a href="#">Contacto</a></li>
-      <li><a href="pagina/FormularioInicioSesion.php">Iniciar Sesión</a></li>
-      <li><a href="pagina/FormularioRegistroCliente.php">Registrar</a></li>
+      <li><a href="FormularioInicioSesion.php">Iniciar Sesión</a></li>
+      <li><a href="FormularioRegistroCliente.php">Registrar</a></li>
     </ul>
   </header>
 

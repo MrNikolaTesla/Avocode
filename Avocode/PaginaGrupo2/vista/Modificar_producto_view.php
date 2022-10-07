@@ -1,7 +1,7 @@
-<?php foreach ($usuario_modificar as $usuario) : ?>
+<?php foreach ($producto_modificar as $producto) : ?>
 <form class="col-4" method="POST">
                 <h3 class="text-center">Modificacion de Productos</h3>
-                <?php require_once("../controlador/ControladorModificarProducto.php"); ?>
+                <?php require_once("controlador/ControladorModificarProducto.php"); ?>
                 <div class="mb-3">
                         <label class="form-label">Id</label>
                         <input type="text" class="form-control" name="id" value="<?php echo $producto['id_articulo'] ?>" readonly>

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Modificar Producto</title>
         <!-- CSS only -->
-        <link rel="stylesheet" href="../assets/styles2.css">
+        <link rel="stylesheet" href="assets/styles2.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
@@ -15,7 +15,7 @@
 
         <div class="container-fluid row">
                 <!-- No se cual es esta class porque es del boostrap -->
-                <?php require_once("../controlador/Modificar_producto_controlador.php"); ?>
+                <?php require_once("controlador/Modificar_producto_controlador.php"); ?>
         </div>
         <button><a href="GestionDeProductos.php">Volver</a></button>
 
