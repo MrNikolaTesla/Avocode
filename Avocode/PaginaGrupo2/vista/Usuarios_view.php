@@ -104,7 +104,6 @@
                             <td><?php echo $usuario['telefono'] ?></td>
                             <td><?php echo $usuario['direccion'] ?></td>
                             <td>
-                                <a href="#" class="view" title="Ver" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                                 <a href="ModificarUsuario_pagina.php?id=<?php echo $usuario['id_usuario'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                                 <a href="controlador/eliminar_Usuario_controlador.php?id=<?php echo $usuario['id_usuario'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
                             </td>
