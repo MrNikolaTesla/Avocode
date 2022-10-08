@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="assets/styles2.css">
         <title>Usuario</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <!-- Recursos Misceláneos (Bootstrap CSS, Tipografías, CSS variado) -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
@@ -23,7 +22,6 @@
 
 <body>
         <div class="container-fluid cont-pers">
-                <!-- No se cual es esta class porque es del boostrap -->
                 <!-- INICIO FORMULARIO ALTA -->
                 <form class="form-flex" method="POST">
                         <h3 class="text-center2">Ingreso de Productos</h3>
@@ -45,16 +43,15 @@
                                         <option value="acompanamiento">Acompañamiento</option>
                                 </select>
                         </div>
-                        <div><button type="submit" class="btn btn-primary" name="boton_añadir" value="enviar">Agregar</button>
-                        </div>
-        </div>
-        </form>
-        <div class="col-8 ">
-                <!-- No se cual es esta class porque es del boostrap -->
-                <!-- INICIO TABLA LISTAR -->
-                <?php require_once("controlador/Producto_controlador.php"); ?>
-                <!-- FIN TABLA LISTAR -->
-        </div>
+                        <button type="submit" class="btn btn-primary" name="boton_añadir" value="enviar">Agregar</button>
+                </form>
+                <!-- FIN FORMULARIO ALTA -->
+                <div class="col-8 ">
+                        <!-- No se cual es esta class porque es del boostrap -->
+                        <!-- INICIO TABLA LISTAR -->
+                        <?php require_once("controlador/Producto_controlador.php"); ?>
+                        <!-- FIN TABLA LISTAR -->
+                </div>
         </div>
 </body>
 <!-- JavaScript Bundle with Popper -->

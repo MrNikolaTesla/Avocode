@@ -13,10 +13,9 @@
 </head>
 
 <body>
-        <div class="container-fluid">
-                <!-- No se cual es esta class porque es del boostrap -->
+        <div class="container-fluid cont-pers">
                 <!-- INICIO FORMULARIO ALTA -->
-                <form class="col-4" method="POST">
+                <form class="form-flex" method="POST">
                         <h3 class="text-center2">Registro de Proveedores</h3>
                         <?php require_once("vista/mensaje_gestor.php"); ?>
                         <?php require_once("controlador/ControladorRegistroProveedor.php"); ?>
@@ -37,30 +36,17 @@
                                 <input type="text" class="tablas-input" name="telefono">
                         </div>
                         <button type="submit" class="btn btn-primary" name="boton_registro" value="enviar">Enviar</button>
-                        <p>
-                                <!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
-                        </p>
                 </form>
-
-                <button class="button1"><a href="menu_principal.php">Volver</a></button>
                 <!-- FIN FORMULARIO ALTA -->
-
-                <div>
-                <?php require_once("vista/buscar_proveedor_view.php"); ?>
-                </div>
-                
                 <div class="col-8 ">
                         <!-- No se cual es esta class porque es del boostrap -->
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("controlador/Proveedor_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
                 </div>
-
-                
         </div>
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
 </body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 </html>

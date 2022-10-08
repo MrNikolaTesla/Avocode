@@ -38,23 +38,30 @@
                 });
             });
         });
-        // Confirmación de eliminar usuario
-        /*       function asegurar() {
+        // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
+             /* function asegurar() {
                    rc = confirm("¿Seguro que desea Eliminar al usuario?");
                    return rc;
                } */
     </script>
+
+    <!-- JAVASCRIPT DE SWEETALERT SIN USO ACTUALMENTE -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 
 <body>
+
+    <!-- DIV'S CON CLASES DIFERENTES PARA EL RESPONSIVE, DISPOSICIÓN EN LA PÁGINA -->
     <div class="container">
         <div class="table-responsive">
             <div class="table-wrapper">
                 <div class="table-title">
                     <div class="row">
                         <div class="col-xs-4">
+    <!------------------------------------------------------------------------------->
+
+    <!-- DIV DE SELECCIÓN DE ENTRADAS-->
                             <div class="show-entries">
                                 <span>Mostrar</span>
                                 <select>
@@ -69,6 +76,9 @@
                         <div class="col-xs-4">
                             <h2 class="text-center">Listado de <b>Productos</b></h2>
                         </div>
+    <!------------------------------------------------------------------------------->
+
+    <!-- DIV DE BÚSQUEDA-->
                         <div class="col-xs-4">
                             <div class="search-box">
                                 <div class="input-group" type="text" name="proveedor">
@@ -79,18 +89,23 @@
                         </div>
                     </div>
                 </div>
+    <!------------------------------------------------------------------------------->
+
+    <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
                 <form method="POST">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>#ID</th>
                                 <th>Nombre<i class="fa fa-sort"></i></th>
-                                <th>Precio</th>
+                                <th>Precio<i class="fa fa-sort"></i></th>
                                 <th>Tipo de Producto</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
                 </form>
+
+                <!-- CUERPO DE TABLA -->               
                 <tbody>
                     <?php foreach ($matrizProducto as $producto) : ?>
                         <tr>
@@ -106,13 +121,12 @@
                     <?php endforeach; ?>
                 </tbody>
                 </table>
-                <div>
-                    <?php require_once("vista/buscar_proveedor_view.php"); ?>
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-primary"><a href="menu_principal.php" style="color:white;">Regresar al inicio</a></button>
-                </div>
+
+                <!-- Regreso al inicio -->
+                <div><button type="submit" class="btn btn-primary"><a href="menu_principal.php" style="color:white;">Regresar al inicio</a></button></div>
             </div>
+
+            <!-- INICIO Paginado -->
             <div class="clearfix">
                 <div class="hint-text">Mostrando <b>5</b> de <b>25</b> entradas</div>
                 <ul class="pagination">
@@ -125,6 +139,8 @@
                     <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
                 </ul>
             </div>
+            <!-- FIN Paginado -->
+
         </div>
     </div>
     </div>

@@ -37,23 +37,30 @@
                 });
             });
         });
-        // Confirmación de eliminar usuario
-        /*       function asegurar() {
+        // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
+            /* function asegurar() {
                    rc = confirm("¿Seguro que desea Eliminar al usuario?");
                    return rc;
                } */
     </script>
+
+    <!-- JAVASCRIPT DE SWEETALERT SIN USO ACTUALMENTE -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 
 <body>
+
+    <!-- DIV'S CON CLASES DIFERENTES PARA EL RESPONSIVE Y DISPOSICIÓN EN LA PÁGINA -->
     <div class="container">
         <div class="table-responsive">
             <div class="table-wrapper">
                 <div class="table-title">
                     <div class="row">
                         <div class="col-xs-4">
+    <!------------------------------------------------------------------------------->
+
+    <!-- DIV DE SELECCIÓN DE ENTRADAS-->
                             <div class="show-entries">
                                 <span>Mostrar</span>
                                 <select>
@@ -68,6 +75,9 @@
                         <div class="col-xs-4">
                             <h2 class="text-center">Listado de <b>Usuarios</b></h2>
                         </div>
+    <!------------------------------------------------------------------------------->
+
+    <!-- DIV DE BÚSQUEDA-->
                         <div class="col-xs-4">
                             <div class="search-box">
                                 <div class="input-group" type="text" name="proveedor">
@@ -78,6 +88,9 @@
                         </div>
                     </div>
                 </div>
+    <!------------------------------------------------------------------------------->
+
+    <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
                 <form method="POST">
                     <table class="table table-bordered">
                         <thead>
@@ -85,18 +98,20 @@
                                 <th>#ID</th>
                                 <th>Nombre<i class="fa fa-sort"></i></th>
                                 <th>Apellido</th>
-                                <th>Tipo de usuario</th>
-                                <th>Correo<i class="fa fa-sort"></i></th>
+                                <th>Tipo de usuario<i class="fa fa-sort"></i></th>
+                                <th>Correo</i></th>
                                 <th>Teléfono</th>
                                 <th>Dirección</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
                 </form>
+
+                <!-- CUERPO DE TABLA -->               
                 <tbody>
                     <?php foreach ($matrizUsuario as $usuario) : ?>
                         <tr>
-                            <td><?php echo $usuario['id_usuario'] ?></td>
+                            <th scope="row"><?php echo $usuario['id_usuario'] ?></th>
                             <td><?php echo $usuario['nombre'] ?></td>
                             <td><?php echo $usuario['apellido'] ?></td>
                             <td><?php echo $usuario['tipo'] ?></td>
@@ -111,13 +126,12 @@
                     <?php endforeach; ?>
                 </tbody>
                 </table>
-                <div>
-                    <?php require_once("vista/buscar_proveedor_view.php"); ?>
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-primary"><a href="menu_principal.php" style="color:white;">Regresar al inicio</a></button>
-                </div>
+
+                <!-- Regreso al inicio -->
+                <div><button type="submit" class="btn btn-primary"><a href="menu_principal.php" style="color:white;">Regresar al inicio</a></button></div>
             </div>
+
+            <!-- INICIO Paginado -->
             <div class="clearfix">
                 <div class="hint-text">Mostrando <b>5</b> de <b>25</b> entradas</div>
                 <ul class="pagination">
@@ -130,6 +144,8 @@
                     <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
                 </ul>
             </div>
+            <!-- FIN Paginado -->
+
         </div>
     </div>
     </div>
