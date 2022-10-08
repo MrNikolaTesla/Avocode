@@ -9,6 +9,17 @@
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/styles2.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <title>Usuario</title>
+        <!-- Recursos Misceláneos (Bootstrap CSS, Tipografías, CSS variado) -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- JQUERY-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- BOOTSTRAP JAVASCRIPT -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -16,7 +27,7 @@
         <div class="container-fluid cont-pers">
                 <!-- No se cual es esta class porque es del boostrap -->
                 <!-- INICIO FORMULARIO ALTA -->
-                <form class="col-4" method="POST">
+                <form class="form-flex" method="POST">
                         <h3 class="text-center2">Registro de Usuarios</h3>
                         <?php require_once("vista/mensaje_gestor.php"); ?>
                         <?php require_once("controlador/ControladorRegistroUsuario.php"); ?>
@@ -55,6 +66,7 @@
                         <button type="submit" class="btn btn-primary" name="boton_registro" value="enviar">Enviar</button>
                 </form>
 
+
                 <!-- FIN FORMULARIO ALTA -->
 
                 <div class="col-8 ">
@@ -62,14 +74,12 @@
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("controlador/Usuario_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
-                        <!-- Boton de volver, se pueden llevar la "a" y la "/a" para reposicionarlo -->
-                        <a class="button1" href="menu_principal.php">Volver</a>
 
                 </div>
         </div>
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
+        
 </body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 </html>
