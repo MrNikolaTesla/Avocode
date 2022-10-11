@@ -78,19 +78,10 @@
     <!------------------------------------------------------------------------------->
 
     <!-- DIV DE BÚSQUEDA-->
-                        <div class="col-xs-4">
-                            <div class="search-box">
-                                <div class="input-group" type="text" name="proveedor">
-                                    <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
-                                    <input type="text" class="form-control" placeholder="Buscar&hellip;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <?php require_once("vista/buscar_usuario_view.php"); ?>   
     <!------------------------------------------------------------------------------->
 
-    <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
+    <!-- COMIENZO DEL FORMULARIO DE USUARIOS -->
                 <form method="POST">
                     <table class="table table-bordered">
                         <thead>

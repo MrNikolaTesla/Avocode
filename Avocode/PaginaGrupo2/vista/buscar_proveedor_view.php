@@ -1,8 +1,15 @@
+<div class="col-xs-4">
 <form method="POST">
-        <section>
-            <?php require_once("controlador/Controlador_Buscar_Proveedor.php");?>
-            <input class="controls" type="text" name="proveedor" placeholder="Ingrese un producto a buscar"></input>
-            <input class="buttons" type="submit" name="busqueda" value="Buscar"></input>
-            <input class="buttons" type="submit" value="Reiniciar"></input>
-        </section>
-</form>
+                            <div class="search-box">
+                            <?php require_once("controlador/Controlador_Buscar_Proveedor.php");?>
+                                <div class="input-group" type="text" name="busqueda">
+                                    <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                                    <input type="text" name="proveedor" class="form-control" placeholder="Buscar&hellip;">
+                                    <input class="buttons" type="submit" name="busqueda" value="Buscar"></input>
+                                    <input class="buttons" type="submit" value="Reiniciar"></input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>

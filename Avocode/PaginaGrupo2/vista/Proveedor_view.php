@@ -72,21 +72,12 @@
                             </div>
                         </div>
                         <div class="col-xs-4">
-                            <h2 class="text-center">Listado de <b>Usuarios</b></h2>
+                            <h2 class="text-center">Listado de <b>Proveedores</b></h2>
                         </div>
     <!------------------------------------------------------------------------------->
 
     <!-- DIV DE BÚSQUEDA-->
-                        <div class="col-xs-4">
-                            <div class="search-box">
-                                <div class="input-group" type="text" name="proveedor">
-                                    <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
-                                    <input type="text" class="form-control" placeholder="Buscar&hellip;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <?php require_once("vista/buscar_proveedor_view.php"); ?>   
     <!------------------------------------------------------------------------------->
 
                 <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
@@ -96,11 +87,9 @@
                             <tr>
                                 <th>#ID</th>
                                 <th>Nombre<i class="fa fa-sort"></i></th>
-                                <th>Apellido</th>
-                                <th>Tipo de usuario</th>
-                                <th>Correo<i class="fa fa-sort"></i></th>
-                                <th>Teléfono</th>
-                                <th>Dirección</th>
+                                <th>Empresa</th>
+                                <th>Productos</th>
+                                <th>Telefono</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>

@@ -105,6 +105,13 @@ class Usuario
         }
     }
 
+    public function buscar_usuarios ($nombre)
+    {
+        $sql = "SELECT * FROM usuario WHERE nombre LIKE '%$nombre%'";
+        $query = mysqli_query($this->con, $sql);
+        return $query;
+    }
+
     public function update_usuario ($id, $nombre, $apellido, $correo, $direccion, $telefono, $tipo) {
         $permiso = $_SESSION['tipo'];
         $id_personal = $_SESSION['id'];
