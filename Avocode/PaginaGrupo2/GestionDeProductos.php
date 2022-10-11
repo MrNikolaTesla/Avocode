@@ -23,7 +23,7 @@
 <body>
         <div class="container-fluid cont-pers">
                 <!-- INICIO FORMULARIO ALTA -->
-                <form class="form-flex" method="POST">
+                <form class="form-flex" method="POST" enctype="multipart/form-data">
                         <h3 class="text-center2">Ingreso de Productos</h3>
                         <?php require_once("vista/mensaje_gestor.php"); ?>
                         <?php require_once("controlador/ControladorRegistroProducto.php"); ?>
@@ -42,6 +42,9 @@
                                         <option value="bebida">Bebida</option>
                                         <option value="acompanamiento">Acompañamiento</option>
                                 </select>
+                        </div>
+                        <div class="mb-3">
+                        <input type="file" name="imagen" />
                         </div>
                         <button type="submit" class="btn btn-primary" name="boton_añadir" value="enviar">Agregar</button>
                 </form>

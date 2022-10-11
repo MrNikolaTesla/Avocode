@@ -17,7 +17,30 @@ if (!empty($_POST["boton_añadir"])) {
         }
 
         if ($repetido == null) {
-            $estado = $producto->set_producto($nombre, $precio, $tipo);
+
+        // ALTA DE PRODUCTO //
+        $estado = $producto->set_producto($nombre, $precio, $tipo);
+        // FIN DE ALTA DE PRODUCTO //
+
+        // ------------------------------SUBIDA DE IMAGEN-------------------------------------- //
+
+        // MAYOR ID //
+        $mayor_id = $producto->mayor_id();
+        $bucle = true;
+        foreach($mayor_id as $canto){
+        if($bucle == true){
+        $id_foto = $canto;
+        $bucle = false;
+        }
+        }
+        // FIN DE MAYOR ID //
+
+        
+            $ruta_nuevo_destino = 'assets/Productos/';
+            if(move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta_nuevo_destino.'id'.$id_foto.'.png') ) {
+               echo 'Imagen guardada con éxito';
+            }
+        // FIN DE SUBIDA DE IMAGEN //
         }
 
         if ($estado == 1) {

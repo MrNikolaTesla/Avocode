@@ -7,6 +7,12 @@ require_once("../modelo/Producto.php");
         $estado = $producto->eliminar_producto($id);
 
 if($estado==1) {
+    
+    // ELIMINA LA IMAGEN CONECTADA AL PRODUCTO //
+    $nombre = "id".$id.".png";
+    unlink('../assets/Productos/'.$nombre);
+    // FINAL //
+
     session_start(); 
     $_SESSION['message'] = 'Producto eliminado correctamente';
     header("Location: ../GestionDeProductos.php");

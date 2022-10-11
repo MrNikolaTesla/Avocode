@@ -58,6 +58,14 @@ class Producto{
         return $query;
     }
 
+    public function mayor_id()
+    {
+        $sql = "SELECT max(id_articulo) as mayor from articulo";
+        $query = mysqli_query($this->con, $sql);
+        $result = mysqli_fetch_array($query);
+        return $result;
+    }
+
     public function update_producto($id, $nombre, $precio, $tipo)
     {
         $sql = "UPDATE articulo set nombre = '$nombre', precio = '$precio', tipo = '$tipo' WHERE id_articulo = $id";
