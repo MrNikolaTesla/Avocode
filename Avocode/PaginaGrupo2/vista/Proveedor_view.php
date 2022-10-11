@@ -113,7 +113,7 @@
                 </tbody>
                 </table>
                 <!-- Regreso al inicio -->
-                <div><button type="submit" class="btn btn-primary"><a href="menu_principal.php" style="color:white;">Regresar al inicio</a></button></div>
+                <div><button type="submit" class="button-2"><a href="menu_principal.php" style="color:white;">Regresar al inicio</a></button></div>
             </div>
 
             <!-- INICIO Paginado -->

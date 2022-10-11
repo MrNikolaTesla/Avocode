@@ -29,21 +29,21 @@
                         <?php require_once("controlador/ControladorRegistroProveedor.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Nombre/s y Apellido/s</label>
-                                <input type="text" class="tablas-input" name="nombre_apellido">
+                                <p><input type="text" class="tablas-input" name="nombre_apellido"></p>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Empresa</label>
-                                <input type="text" class="tablas-input" name="empresa">
+                                <p><input type="text" class="tablas-input" name="empresa"></p>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Productos</label>
-                                <input type="text" class="tablas-input" name="productos">
+                                <p><input type="text" class="tablas-input" name="productos"></p>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Telefono</label>
-                                <input type="text" class="tablas-input" name="telefono">
+                                <p><input type="text" class="tablas-input" name="telefono"></p>
                         </div>
-                        <button type="submit" class="btn btn-primary" name="boton_registro" value="enviar">Enviar</button>
+                        <button type="submit" class="button-2" name="boton_registro" value="enviar">Enviar</button>
                 </form>
                 <!-- FIN FORMULARIO ALTA -->
                 <div class="col-8 ">

@@ -20,12 +20,10 @@
                 </div>
             </div>
     </div>
-    <div><input class="button-3" type="submit" value="Reiniciar búsqueda"></input> </div>
-
+    <div><input class="button-1" type="submit" value="Reiniciar valores de búsqueda"></input></div>
     </div>
     </form>
     </div>
-
 </body>
 
 </html>

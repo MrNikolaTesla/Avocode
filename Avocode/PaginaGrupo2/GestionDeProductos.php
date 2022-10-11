@@ -46,7 +46,7 @@
                         <div class="mb-3">
                         <input type="file" name="imagen" />
                         </div>
-                        <button type="submit" class="btn btn-primary" name="boton_añadir" value="enviar">Agregar</button>
+                        <button type="submit" class="button-2" name="boton_añadir" value="enviar">Agregar</button>
                 </form>
                 <!-- FIN FORMULARIO ALTA -->
                 <div class="col-8 ">
