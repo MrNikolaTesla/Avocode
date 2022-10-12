@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="assets/styles2.css">
+
 <?php session_start();
 if (isset($_SESSION['message']) && $_SESSION['message'] != "no") { ?>
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
