@@ -39,7 +39,7 @@
         });
         // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
             function asegurar() {
-                   rc = confirm("¿Seguro que desea Eliminar al usuario?");
+                   rc = confirm("¿Seguro que desea Eliminar este proveedor?");
                    return rc;
                } 
     </script>

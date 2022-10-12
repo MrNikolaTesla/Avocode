@@ -33,7 +33,7 @@
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Precio</label>
-                                <p><input type="text" class="tablas-input" name="precio"></p>
+                                <p><input type="number" class="tablas-input" name="precio"></p>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Tipo</label>
@@ -44,7 +44,7 @@
                                 </select>
                         </div>
                         <div class="mb-3">
-                        <input type="file" name="imagen" />
+                        <input type="file" accept="image/*" name="imagen"/>
                         </div>
                         <button type="submit" class="button-2" name="boton_añadir" value="enviar">Agregar</button>
                 </form>

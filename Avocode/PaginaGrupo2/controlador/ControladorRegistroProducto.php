@@ -2,7 +2,7 @@
 require_once("modelo/Producto.php");
 $producto = new Producto();
 if (!empty($_POST["boton_añadir"])) {
-    if (!empty($_POST["nombre"]) and !empty($_POST["precio"]) and !($_POST["tipo"] == "null")) {
+    if (!empty($_POST["nombre"]) and !empty($_POST["precio"]) and !($_POST["tipo"] == "0")) {
 
         //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
@@ -24,12 +24,17 @@ if (!empty($_POST["boton_añadir"])) {
 
         // ------------------------------SUBIDA DE IMAGEN-------------------------------------- //
 
+        
+        }
+
+        if ($estado == 1) {
+
         // MAYOR ID //
         $mayor_id = $producto->mayor_id();
         $bucle = true;
-        foreach($mayor_id as $canto){
+        foreach($mayor_id as $id_prod){
         if($bucle == true){
-        $id_foto = $canto;
+        $id_foto = $id_prod;
         $bucle = false;
         }
         }
@@ -41,9 +46,7 @@ if (!empty($_POST["boton_añadir"])) {
                echo 'Imagen guardada con éxito';
             }
         // FIN DE SUBIDA DE IMAGEN //
-        }
 
-        if ($estado == 1) {
             echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
             Producto agregado correctamente!
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -53,12 +56,12 @@ if (!empty($_POST["boton_añadir"])) {
             El producto ya ha sido agregado al sistema previamente.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>';
-        } else {
-            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-            Alguno de los campos está vacio.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>';
         }
+    }else{
+        echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+        Alguno de los campos está vacio.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>';
     }
 }
 

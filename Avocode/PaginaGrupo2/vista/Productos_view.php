@@ -40,7 +40,7 @@
         });
         // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
               function asegurar() {
-                   rc = confirm("¿Seguro que desea Eliminar al usuario?");
+                   rc = confirm("¿Seguro que desea Eliminar este producto?");
                    return rc;
                } 
     </script>
@@ -83,24 +83,26 @@
     <!------------------------------------------------------------------------------->
 
     <!-- COMIENZO DEL FORMULARIO DE PRODUCTOS -->
-                <form method="POST">
+    <form method="POST">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>#ID</th>
+                                <th>Imagen</th>
                                 <th>Nombre<i class="fa fa-sort"></i></th>
                                 <th>Precio<i class="fa fa-sort"></i></th>
                                 <th>Tipo de Producto</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
-                </form>
-
+    </form>
                 <!-- CUERPO DE TABLA -->               
                 <tbody>
-                    <?php foreach ($matrizProducto as $producto) : ?>
+                    <?php foreach ($matrizProducto as $producto) : ?>  
                         <tr>
                             <th scope="row"><?php echo $producto['id_articulo'] ?></th>
+                            <?php $dir_imagen = "assets/Productos/id".$producto['id_articulo'].".png"; ?>
+                            <th><img src="<?php echo $dir_imagen; ?>" alt="Imagen" width="60" height="50"></th>
                             <td><?php echo $producto['nombre'] ?></td>
                             <td><?php echo $producto['precio'] ?></td>
                             <td><?php echo $producto['tipo'] ?></td>
@@ -115,7 +117,6 @@
 
                 <!-- Regreso al inicio -->
                 <div><button type="submit" class="button-2"><a href="menu_principal.php" style="color:white;">Regresar al inicio</a></button></div>
-            </div>
 
             <!-- INICIO Paginado -->
             <div class="clearfix">
