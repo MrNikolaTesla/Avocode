@@ -39,10 +39,10 @@
             });
         });
         // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
-             /* function asegurar() {
+              function asegurar() {
                    rc = confirm("¿Seguro que desea Eliminar al usuario?");
                    return rc;
-               } */
+               } 
     </script>
 
     <!-- JAVASCRIPT DE SWEETALERT SIN USO ACTUALMENTE -->
