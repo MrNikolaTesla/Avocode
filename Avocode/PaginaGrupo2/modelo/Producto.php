@@ -13,7 +13,7 @@ class Producto{
 
     public function listar_productos(){
 
-        $sql = "SELECT * FROM articulo";
+        $sql = "SELECT * FROM articulo ORDER BY id_articulo";
         $query = mysqli_query($this->con,$sql);
 
         while($filas = mysqli_fetch_array($query)){

@@ -28,7 +28,7 @@ class Proveedor
     public function listar_proveedores()
     {
 
-        $sql = "SELECT * FROM proveedor";
+        $sql = "SELECT * FROM proveedor ORDER BY id_proveedor";
         $query = mysqli_query($this->con, $sql);
 
         while ($filas = mysqli_fetch_array($query)) {

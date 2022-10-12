@@ -15,7 +15,7 @@ class Usuario
     public function listar_usuarios()
     {
 
-        $sql = "SELECT * FROM usuario";
+        $sql = "SELECT * FROM usuario ORDER BY id_usuario";
         $query = mysqli_query($this->con, $sql);
 
         while ($filas = mysqli_fetch_array($query)) {
