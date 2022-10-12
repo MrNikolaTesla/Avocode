@@ -16,32 +16,40 @@ if(!empty($_POST["modificacion"])){
         $telefono = $_POST["telefono"];
         $tipo = $_POST["tipo"];
 
-        $repetido = $repe_registro->get_usuario($id, $nombre, $apellido, $correo, $direccion, $telefono);
+        $repetido_usuario = $repe_registro->get_usuario($id, $nombre, $apellido, $correo, $direccion, $telefono);
     
-    if ($repetido==2){
-        $estado = $actualizarUsuario->update_usuario($id, $nombre, $apellido, $correo, $direccion, $telefono, $tipo);
+    if ($repetido_usuario==2){
+        $repetido_corre = $repe_registro->get_correo($correo);
+        if($repetido_corre!=null){
+            $mod_correo = 0;
+        }else{
+            $mod_correo = 1;
+        }
+        if($mod_correo == 1){
+            $estado = $actualizarUsuario->update_usuario($id, $nombre, $apellido, $correo, $direccion, $telefono, $tipo);
+        }else{
+        $estado = 4;
+    }
     }
         
 
 if($estado==1) {
-    session_start(); 
     $_SESSION['message'] = 'Usuario modificado correctamente';
     header("Location: GestionDeUsuarios.php");
-}else if($repetido==1){
-    session_start(); 
-    $_SESSION['message'] = 'Correo ya en uso.';
+}else if($repetido_usuario==1){
+    $_SESSION['message'] = 'Usuario identico ya dentro del sistema.';
     header("Location: GestionDeUsuarios.php");
 }else if($estado==0){
-    session_start(); 
     $_SESSION['message'] = 'No cuentas con los permisos para modificar este usuario.';
     header("Location: GestionDeUsuarios.php");
 }else if($estado==2){
-    session_start(); 
     $_SESSION['message'] = 'No es posible cambiar tu tipo de usuario a una posicion superior.';
     header("Location: GestionDeUsuarios.php");
 }else if($estado==3){
-    session_start(); 
     $_SESSION['message'] = 'No es posible cambiar el tipo de usuario a una posicion superior.';
+    header("Location: GestionDeUsuarios.php");
+}else if($estado==4){
+    $_SESSION['message'] = 'Correo ya en uso.';
     header("Location: GestionDeUsuarios.php");
 }
 }

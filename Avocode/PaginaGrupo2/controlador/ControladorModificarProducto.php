@@ -30,9 +30,7 @@ if(!empty($_POST["modificacion"])){
             //if(move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta_nuevo_destino.'id'.$id.'.png') ) {
                //echo 'Imagen guardada con éxito';
         //}
-    }
-
-        
+    }     
 
 if($estado==1) {
     session_start(); 
