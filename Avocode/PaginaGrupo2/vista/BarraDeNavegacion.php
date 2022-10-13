@@ -64,7 +64,7 @@
                     echo "<li><p class='saludo-admin'>" . $nombre . " " . $apellido . "</p></li><hr size=5 noshade='noshade' color='#743535'>";
                 }
                 echo "<li><a class='btn-admin' href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#743535'>";
-                echo "<li><a class='btn-admin' href='GestionDeProductos.php'>Gestor de Productos</a></li><hr size=5 noshade='noshade' color='#743535'>";
+                echo "<li><a class='btn-admin' href='GestionDeProductos.php?update=<?php echo rand(0,2581023);'>Gestor de Productos</a></li><hr size=5 noshade='noshade' color='#743535'>";
                 echo "<li><a class='btn-admin' href='GestionDeProveedores.php'>Gestor de Proveedores</a></li><hr size=5 noshade='noshade' color='#743535'>";
                 echo "<li><a class='btn-admin' href=''>3OpcionAdministrador</a></li><hr size=5 noshade='noshade' color='#743535'>";
                 echo "<li><a class='btn-admin' href=''>4OpcionAdministrador</a></li><hr size=5 noshade='noshade' color='#743535'>";
