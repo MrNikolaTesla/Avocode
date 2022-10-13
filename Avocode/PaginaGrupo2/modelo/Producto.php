@@ -63,7 +63,16 @@ class Producto{
         $sql = "SELECT max(id_articulo) as mayor from articulo";
         $query = mysqli_query($this->con, $sql);
         $result = mysqli_fetch_array($query);
-        return $result;
+        $bucle = true;
+        //Filtra un solo resultado del array, porque por x motivo suelta dos veces el mismo numero.
+        foreach($result as $id_producto){
+        if($bucle == true){
+        $id = $id_producto;
+        $bucle = false;
+        }
+        }
+        //
+        return $id;
     }
 
     public function update_producto($id, $nombre, $precio, $tipo)
@@ -71,6 +80,18 @@ class Producto{
         $sql = "UPDATE articulo set nombre = '$nombre', precio = '$precio', tipo = '$tipo' WHERE id_articulo = $id";
         $query = mysqli_query($this->con, $sql);
         return $query;
+    }
+
+    public function agregar_imagen($id)
+    {
+            if(move_uploaded_file($_FILES['imagen']['tmp_name'], 'assets/Productos/id'.$id.'.png') ) {
+               echo 'Imagen guardada con éxito';
+            }
+    }
+
+    public function eliminar_imagen($id_foto)
+    {
+        unlink('../assets/Productos/'.$id_foto);
     }
 }
 

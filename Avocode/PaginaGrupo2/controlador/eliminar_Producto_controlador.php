@@ -9,8 +9,8 @@ require_once("../modelo/Producto.php");
 if($estado==1) {
     
     // ELIMINA LA IMAGEN CONECTADA AL PRODUCTO //
-    $nombre = "id".$id.".png";
-    unlink('../assets/Productos/'.$nombre);
+    $nombre_foto = "id".$id.".png";
+    $producto->eliminar_imagen($nombre_foto);
     // FINAL //
 
     session_start(); 

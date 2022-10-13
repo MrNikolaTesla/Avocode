@@ -23,7 +23,7 @@
 <body>
         <div class="container-fluid cont-pers">
                 <!-- INICIO FORMULARIO ALTA -->
-                <?php require_once("controlador/RegistroDeProductos.php"); ?>
+                <?php require_once("vista/RegistroDeProductos.php"); ?>
                 <!-- FIN FORMULARIO ALTA -->
                 <div class="col-8 ">
                         <!-- No se cual es esta class porque es del boostrap -->

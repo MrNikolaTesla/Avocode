@@ -30,21 +30,11 @@ if (!empty($_POST["boton_añadir"])) {
         if ($estado == 1) {
 
         // MAYOR ID //
-        $mayor_id = $producto->mayor_id();
-        $bucle = true;
-        foreach($mayor_id as $id_prod){
-        if($bucle == true){
-        $id_foto = $id_prod;
-        $bucle = false;
-        }
-        }
+        $id = $producto->mayor_id();
         // FIN DE MAYOR ID //
 
-        
-            $ruta_nuevo_destino = 'assets/Productos/';
-            if(move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta_nuevo_destino.'id'.$id_foto.'.png') ) {
-               echo 'Imagen guardada con éxito';
-            }
+        // SUBIDA DE IMAGEN //
+        $producto->agregar_imagen($id);
         // FIN DE SUBIDA DE IMAGEN //
 
             echo '<div class="alert alert-success alert-dismissible fade show" role="alert">

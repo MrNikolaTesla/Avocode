@@ -25,7 +25,7 @@
 
         <div class="container-fluid cont-pers">
                 <!-- INICIO FORMULARIO ALTA -->
-                <?php require_once("controlador/RegistroDeProveedores.php"); ?>
+                <?php require_once("vista/RegistroDeProveedores.php"); ?>
                 <!-- FIN FORMULARIO ALTA -->
                 <div class="col-8 ">
                         <!-- No se cual es esta class porque es del boostrap -->
