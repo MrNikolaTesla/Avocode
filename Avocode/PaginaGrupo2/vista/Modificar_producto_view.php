@@ -21,7 +21,7 @@
 <body>
         <?php foreach ($producto_modificar as $producto) : 
                 $dir_imagen = "assets/Productos/id".$producto['id_articulo'].".png"; ?>
-                <form class="col-4" method="POST">
+                <form class="col-4" method="POST" enctype="multipart/form-data">
                         <h3 class="text-center">Modificacion de Productos</h3>
                         <?php require_once("controlador/ControladorModificarProducto.php"); ?>
                         <div class="mb-3">
@@ -47,7 +47,7 @@
                                 <img src="<?php echo $dir_imagen; ?>"  alt="Imagen" width="100" height="100">
                                 <br>
                                 (En caso de querer modificar la imagen del producto, sube una imagen aqui: ↓)
-                                <input type="file" name="imagen" />
+                                <input type="file" accept="image/*" name="imagen" />
                         </div>
                         <button type="submit" class="button-2"><a href="GestionDeProductos.php" style="color:white;">Regresar al Listado</a></button>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>

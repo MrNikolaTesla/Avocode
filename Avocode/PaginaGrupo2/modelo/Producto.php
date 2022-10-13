@@ -90,7 +90,8 @@ class Producto{
 
     public function eliminar_imagen($id_foto)
     {
-        unlink('../assets/Productos/'.$id_foto);
+        echo "COso2";
+        unlink($id_foto);
     }
 }
 

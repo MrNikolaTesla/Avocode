@@ -22,37 +22,36 @@ if(!empty($_POST["modificacion"])){
     }     
 
 if($estado==1) {
-    //if($_POST['imagen']){
-        //$nombre_foto = "id".$id.".png";
-        //$producto_mod->eliminar_imagen($nombre_foto);
-        //$id_imagen = $producto_mod->mayor_id();
-        //$producto_mod->agregar_imagen($id_imagen);
+    if($_FILES['imagen'] != ""){
+        $direccion_foto = "assets/Productos/id".$id.".png";
+        $producto_mod->eliminar_imagen($direccion_foto);
+        $producto_mod->agregar_imagen($id);
         session_start();
-        $_SESSION['message'] = 'Producto e imagen modificado correctamente';
-        header("Location: GestionDeProductos.php");
-    //}else{
-       // session_start();
-        //$_SESSION['message'] = 'Producto modificado correctamente';
-   // header("Location: GestionDeProductos.php");
-    //}
+        $_SESSION['message'] = 'Producto e imagen modificada correctamente';
+        //El echo rand es para evitar que la imagen no cambie por el cache al ser modificada.
+        header("Location: GestionDeProductos.php?update=<?php echo rand(0,2581023);");
+    }else{
+    session_start();
+    $_SESSION['message'] = 'Producto modificado correctamente.';
+    header("Location: GestionDeProductos.php?update=<?php echo rand(0,2581023);");
+     }
 }else if($repetido!=null){
-    //if($_POST['imagen'] != null){
-        //$nombre_foto = "id".$id.".png";
-        //$producto_mod->eliminar_imagen($nombre_foto);
-        //$id_imagen = $producto_mod->mayor_id();
-        //$producto_mod->agregar_imagen($id_imagen);
+    if($_FILES['imagen'] != ""){
+        $direccion_foto = "assets/Productos/id".$id.".png";
+        $producto_mod->eliminar_imagen($direccion_foto);
+        $producto_mod->agregar_imagen($id);
         session_start();
-        $_SESSION['message'] = 'Producto e imagen modificado correctamente';
-        header("Location: GestionDeProductos.php");
-   // }else{
-      //  session_start();
-    //$_SESSION['message'] = 'Producto equivalente ya encontrado en el sistema.';
-   // header("Location: GestionDeProductos.php");
-   // }
+        $_SESSION['message'] = 'Imagen modificada correctamente';
+        header("Location: GestionDeProductos.php?update=<?php echo rand(0,2581023);");
+    }else{
+    session_start();
+    $_SESSION['message'] = 'Producto equivalente ya encontrado en el sistema.';
+    header("Location: GestionDeProductos.php?update=<?php echo rand(0,2581023);");
+     }
 }else{
     session_start(); 
     $_SESSION['message'] = 'Producto no modificado, algo ha fallado.';
-    header("Location: GestionDeProductos.php");
+    header("Location: GestionDeProductos.php?update=<?php echo rand(0,2581023);");
 }
 }
 }
