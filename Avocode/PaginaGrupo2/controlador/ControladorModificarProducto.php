@@ -22,24 +22,33 @@ if(!empty($_POST["modificacion"])){
     }     
 
 if($estado==1) {
-    //if($_FILES['imagen'] != null){
-       // $nombre_foto = "id".$id.".png";
-       // $producto_mod->eliminar_imagen($nombre_foto);
-       // $id_imagen = $producto_mod->mayor_id();
-       // $producto_mod->agregar_imagen($id_imagen);
-       /// $_SESSION['message'] = 'Producto e imagen modificado correctamente';
-        //header("Location: GestionDeProductos.php");
+    //if($_POST['imagen']){
+        //$nombre_foto = "id".$id.".png";
+        //$producto_mod->eliminar_imagen($nombre_foto);
+        //$id_imagen = $producto_mod->mayor_id();
+        //$producto_mod->agregar_imagen($id_imagen);
+        session_start();
+        $_SESSION['message'] = 'Producto e imagen modificado correctamente';
+        header("Location: GestionDeProductos.php");
     //}else{
-       // $_SESSION['message'] = 'Producto modificado correctamente';
-    //header("Location: GestionDeProductos.php");
+       // session_start();
+        //$_SESSION['message'] = 'Producto modificado correctamente';
+   // header("Location: GestionDeProductos.php");
     //}
-    session_start(); 
-    $_SESSION['message'] = 'Producto modificado correctamente';
-    header("Location: GestionDeProductos.php");
 }else if($repetido!=null){
-    session_start(); 
-    $_SESSION['message'] = 'Producto equivalente ya encontrado en el sistema.';
-    header("Location: GestionDeProductos.php");
+    //if($_POST['imagen'] != null){
+        //$nombre_foto = "id".$id.".png";
+        //$producto_mod->eliminar_imagen($nombre_foto);
+        //$id_imagen = $producto_mod->mayor_id();
+        //$producto_mod->agregar_imagen($id_imagen);
+        session_start();
+        $_SESSION['message'] = 'Producto e imagen modificado correctamente';
+        header("Location: GestionDeProductos.php");
+   // }else{
+      //  session_start();
+    //$_SESSION['message'] = 'Producto equivalente ya encontrado en el sistema.';
+   // header("Location: GestionDeProductos.php");
+   // }
 }else{
     session_start(); 
     $_SESSION['message'] = 'Producto no modificado, algo ha fallado.';
