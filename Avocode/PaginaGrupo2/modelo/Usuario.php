@@ -73,9 +73,8 @@ class Usuario
         return $query;
     }
 
-    public function get_data()
+    public function get_data($id)
     {
-        $id = $_SESSION['mod_usuario'];
         $sql = "SELECT * FROM usuario WHERE id_usuario = $id";
         $query = mysqli_query($this->con, $sql);
         return $query;

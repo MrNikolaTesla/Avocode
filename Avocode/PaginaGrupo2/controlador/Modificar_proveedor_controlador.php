@@ -1,13 +1,14 @@
 <?php
 
-require_once("modelo/Modificar_proveedor_modelo.php");
-session_start();
-$_SESSION['mod_proveedor'] = $id = $_GET['id'];
+require_once("modelo/Proveedor.php");
+if(isset($_GET['id'])){
 
-$proveedor = new modificar_proveedor();
+    $id = $_GET['id'];
 
-$proveedor_modificar = $proveedor->get_data();
+$proveedor_mod = new Proveedor();
+
+$proveedor_modificar = $proveedor_mod->get_data($id);
 
 require_once("vista/Modificar_proveedor_view.php");
-
+}
 ?>

@@ -38,9 +38,8 @@ class Proveedor
         return $this->proveedor;
     }
 
-    public function get_data()
+    public function get_data($id)
     {
-        $id = $_SESSION['mod_proveedor'];
         $sql = "SELECT * FROM proveedor WHERE id_proveedor = $id";
         $query = mysqli_query($this->con, $sql);
         return $query;

@@ -1,8 +1,6 @@
 <?php
-    require_once("modelo/ActualizarProveedor.php");
-    require_once("modelo/Repe_Proveedor_modelo.php");
-    $actualizarProveedor = new ActualizarProveedor_modelo();
-    $repe_proveedor = new Repe_Proveedor_modelo();
+    require_once("modelo/Proveedor.php");
+    $proveedor_mod = new Proveedor();
 if(!empty($_POST["modificacion"])){
     if(!empty($_POST["nombre_apellido"]) and !empty($_POST["empresa"]) and !empty($_POST["productos"]) and !empty($_POST["telefono"])) {
         
@@ -14,14 +12,14 @@ if(!empty($_POST["modificacion"])){
         $productos = $_POST["productos"];
         $telefono = $_POST["telefono"];
 
-        $repetido = $repe_proveedor->get_proveedor($nombre_apellido, $empresa, $productos, $telefono);
+        $repetido = $proveedor_mod->get_proveedor($nombre_apellido, $empresa, $productos, $telefono);
 
         if($repetido!=null){
             $estado = 0;
     }
     
     if ($repetido==null){
-        $estado = $actualizarProveedor->update_proveedor($id, $nombre_apellido, $empresa, $productos, $telefono);
+        $estado = $proveedor_mod->update_proveedor($id, $nombre_apellido, $empresa, $productos, $telefono);
     }
 
         

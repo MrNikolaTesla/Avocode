@@ -1,13 +1,15 @@
 <?php
 
-require_once("modelo/Modificar_usuario_modelo.php");
-session_start();
-$_SESSION['mod_usuario'] = $id = $_GET['id'];
+require_once("modelo/Usuario.php");
+if(isset($_GET['id'])){
 
-$usuarios = new modificar_usuario();
+    $id = $_GET['id'];
 
-$usuario_modificar = $usuarios->get_data();
+
+$usuario_mod = new Usuario();
+
+$usuario_modificar = $usuario_mod->get_data($id);
 
 require_once("vista/Modificar_usuario_view.php");
-
+}
 ?>

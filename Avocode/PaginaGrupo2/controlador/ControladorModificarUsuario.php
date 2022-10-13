@@ -1,8 +1,6 @@
 <?php
-    require_once("modelo/ActualizarUsuario.php");
-    require_once("modelo/Repe_Registro_modelo.php");
-    $actualizarUsuario = new ActualizarUsuario_modelo();
-    $repe_registro = new Repe_Registro_modelo();
+    require_once("modelo/Usuario.php");
+    $usuario_mod = new Usuario();
 if(!empty($_POST["modificacion"])){
     if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"]) and isset($_POST["tipo"])) {
         
@@ -16,17 +14,17 @@ if(!empty($_POST["modificacion"])){
         $telefono = $_POST["telefono"];
         $tipo = $_POST["tipo"];
 
-        $repetido_usuario = $repe_registro->get_usuario($id, $nombre, $apellido, $correo, $direccion, $telefono);
+        $repetido_usuario = $usuario_mod->get_usuario($id, $nombre, $apellido, $correo, $direccion, $telefono);
     
     if ($repetido_usuario==2){
-        $repetido_corre = $repe_registro->get_correo($correo);
-        if($repetido_corre!=null){
+        $repetido_correo = $usuario_mod->get_correo($correo);
+        if($repetido_correo!=null){
             $mod_correo = 0;
         }else{
             $mod_correo = 1;
         }
         if($mod_correo == 1){
-            $estado = $actualizarUsuario->update_usuario($id, $nombre, $apellido, $correo, $direccion, $telefono, $tipo);
+            $estado = $usuario_mod->update_usuario($id, $nombre, $apellido, $correo, $direccion, $telefono, $tipo);
         }else{
         $estado = 4;
     }

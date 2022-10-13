@@ -1,13 +1,13 @@
 <?php
 
-require_once("modelo/Modificar_producto_modelo.php");
+require_once("modelo/Producto.php");
 if(isset($_GET['id'])){
 
     $id = $_GET['id'];
 
-$productos = new modificar_producto();
+$producto_mod = new Producto();
 
-$producto_modificar = $productos->get_data($id);
+$producto_modificar = $producto_mod->get_data($id);
 
 require_once("vista/Modificar_producto_view.php");
 }

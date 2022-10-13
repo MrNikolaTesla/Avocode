@@ -1,8 +1,6 @@
 <?php
-    require_once("modelo/ActualizarProducto.php");
-    require_once("modelo/Repe_Producto_modelo.php");
-    $actualizarProducto = new ActualizarProducto_modelo();
-    $repe_producto = new Repe_Producto_modelo();
+    require_once("modelo/Producto.php");
+    $producto_mod = new Producto();
 if(!empty($_POST["modificacion"])){
     if(!empty($_POST["nombre"]) and !empty($_POST["precio"]) and !($_POST["tipo"] == "null")) {
         
@@ -13,7 +11,7 @@ if(!empty($_POST["modificacion"])){
         $precio = $_POST["precio"];
         $tipo = $_POST["tipo"];
 
-        $repetido = $repe_producto->get_producto($nombre, $precio, $tipo);
+        $repetido = $producto_mod->get_producto($nombre, $precio, $tipo);
 
         if($repetido!=null){
             $estado = 0;
@@ -21,7 +19,7 @@ if(!empty($_POST["modificacion"])){
     
     if ($repetido==null){
         
-        $estado = $actualizarProducto->update_producto($id, $nombre, $precio, $tipo);
+        $estado = $producto_mod->update_producto($id, $nombre, $precio, $tipo);
         
         
         //unlink('assets/Productos/id20.png');
@@ -33,6 +31,17 @@ if(!empty($_POST["modificacion"])){
     }     
 
 if($estado==1) {
+    //if($_FILES['imagen'] != null){
+       // $nombre_foto = "id".$id.".png";
+       // $producto_mod->eliminar_imagen($nombre_foto);
+       // $id_imagen = $producto_mod->mayor_id();
+       // $producto_mod->agregar_imagen($id_imagen);
+       /// $_SESSION['message'] = 'Producto e imagen modificado correctamente';
+        //header("Location: GestionDeProductos.php");
+    //}else{
+       // $_SESSION['message'] = 'Producto modificado correctamente';
+    //header("Location: GestionDeProductos.php");
+    //}
     session_start(); 
     $_SESSION['message'] = 'Producto modificado correctamente';
     header("Location: GestionDeProductos.php");
