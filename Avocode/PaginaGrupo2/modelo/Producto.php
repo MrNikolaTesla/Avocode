@@ -40,7 +40,6 @@ class Producto{
     public function get_data($id){
         $sql = "SELECT * FROM articulo WHERE id_articulo = $id";
         $query = mysqli_query($this->con,$sql);
-        echo "Coso";
         return $query;
     }
 
