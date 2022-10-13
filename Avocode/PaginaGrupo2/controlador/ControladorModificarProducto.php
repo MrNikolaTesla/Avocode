@@ -18,16 +18,7 @@ if(!empty($_POST["modificacion"])){
     }
     
     if ($repetido==null){
-        
         $estado = $producto_mod->update_producto($id, $nombre, $precio, $tipo);
-        
-        
-        //unlink('assets/Productos/id20.png');
-
-        //$ruta_nuevo_destino = '../assets/Productos/';
-            //if(move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta_nuevo_destino.'id'.$id.'.png') ) {
-               //echo 'Imagen guardada con éxito';
-        //}
     }     
 
 if($estado==1) {
