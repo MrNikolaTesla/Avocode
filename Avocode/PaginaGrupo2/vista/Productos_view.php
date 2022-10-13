@@ -102,7 +102,7 @@
                                 <tr>
                                     <th scope="row"><?php echo $producto['id_articulo'] ?></th>
                                     <?php $dir_imagen = "assets/Productos/id" . $producto['id_articulo'] . ".png"; ?>
-                                    <th><img src="<?php echo $dir_imagen; ?>" alt="Imagen" width="60" height="50"></th>
+                                    <th><img src="<?php echo $dir_imagen; ?>" alt="Imagen" width="120" height="80"></th>
                                     <td><?php echo $producto['nombre'] ?></td>
                                     <td><?php echo $producto['precio'] ?></td>
                                     <td><?php echo $producto['tipo'] ?></td>
