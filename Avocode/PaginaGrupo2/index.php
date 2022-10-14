@@ -11,7 +11,7 @@
 
 <body>
   <header id="header">
-    <img src="assets/logo.jpg" alt="LOGO BURGERFACTORY" />
+    <img src="assets/logo.png" alt="LOGO BURGERFACTORY" />
     <ul>
       <li><a href="#" class="active">Inicio</a></li>
       <li><a href="#">Cartilla</a></li>
@@ -41,7 +41,7 @@
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-12">
             <p class="copyright-text">Copyright &copy; 2022 Todos los Derechos Reservados
-              <a href="#">Avocode</a>.
+              <a href="https://github.com/MrNikolaTesla/Avocode">Avocode</a>.
             </p>
           </div>
 

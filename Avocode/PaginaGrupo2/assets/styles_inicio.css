@@ -21,9 +21,10 @@
       background-position: center;
     }
 
-    body::-webkit-scrollbar{
+    body::-webkit-scrollbar {
       width: 0;
     }
+
     @media screen and (min-width: 1200px) {
       #header {
         position: static;
@@ -36,10 +37,14 @@
         align-items: center;
       }
 
-      #header img{
-        margin-top: -22px;
+      #header img {
+        margin-top: -5px;
         margin-bottom: 100px;
-        margin-left: -95px;
+        height: 25vh;
+        width: 15vw;
+        object-fit: fill;
+        
+
       }
 
       #header ul {
