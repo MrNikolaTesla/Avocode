@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style_menu_principal.css">
-    <title>Document</title>
-</head>
-
-<body>
-    <?php
+<?php
     if ($permiso == "cliente") {
     ?>
         <div class="menu-nav-cliente">
@@ -73,6 +61,3 @@
             </ul>
         </div>
     <?php } ?>
-</body>
-
-</html>

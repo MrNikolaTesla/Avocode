@@ -11,7 +11,8 @@ class Usuario
         $this->con = Conectar::conexion();
         $this->usuario = array();
     }
-
+    
+    //LISTA TODOS LOS USUARIOS Y SUS DATOS
     public function listar_usuarios()
     {
 
@@ -25,6 +26,7 @@ class Usuario
         return $this->usuario;
     }
 
+    //SE LLEVA TODOS LOS DATOS DE UN USUARIO QUE TENGA EL MISMO CORREO QUE EL CORREO ENVIADO
     public function get_correo($correo)
     {
         $sql = "SELECT * FROM usuario WHERE correo = '$correo'";
@@ -33,23 +35,26 @@ class Usuario
         return $result;
     }
 
-    public function get_usuario($id, $nombre, $apellido, $correo, $direccion, $telefono)
+    //VERIFICA CORREO IDENTICO
+    public function get_usuario($id, $correo)
     {
-        $sql = "SELECT * FROM usuario WHERE nombre LIKE '%$nombre%' and apellido LIKE '%$apellido%' and correo = '$correo' and direccion = '$direccion' and telefono = 'telefono'";
-        $query = mysqli_query($this->con, $sql);
-        $result = mysqli_fetch_array($query);
-        $verificacion = "SELECT * FROM usuario WHERE id_usuario = '$id'";
-        $query_veri = mysqli_query($this->con, $verificacion);
+        $query = "SELECT * FROM usuario WHERE correo = '$correo'";
+        $query_veri = mysqli_query($this->con, $query);
         $veri = mysqli_fetch_array($query_veri);
-        if($veri['id_usuario'] == $id && $correo == $veri['correo']){
+        if($veri){
+        if($veri['id_usuario'] == $id){
+            //Se puede
             $repetido = 2;
         return $repetido;
-    }else if ($veri['id_usuario'] != $id && $correo == $veri['correo']){
+    }else{
+        //Algo crasheo
         $repetido = 1;
         return $repetido;
+    }
+    //DIRECTAMENTE NO HAY NINGUN CORREO IDENTICO
     }else{
-        $repetido = 2;
-        return $repetido;
+    $repetido = 2;
+    return $repetido;
     }
     }
 
@@ -81,7 +86,6 @@ class Usuario
     }
 
     public function eliminar_usuario ($id) {
-        session_start(); 
         $permiso = $_SESSION['tipo'];
         $id_personal = $_SESSION['id'];
         $verificacion = "SELECT * FROM usuario WHERE id_usuario = '$id'";
@@ -112,34 +116,42 @@ class Usuario
     }
 
     public function update_usuario ($id, $nombre, $apellido, $correo, $direccion, $telefono, $tipo) {
+        //Guarda el tipo de permiso y la id del usuario a modificar.
+        session_start();
         $permiso = $_SESSION['tipo'];
         $id_personal = $_SESSION['id'];
+        //Verifica que usuario estamos tratando de modificar, si somos nosotros mismos, de ser ese el caso, va a tener que dejar que un empleado modifique un empleado (Lo mismo pasa como admin) para que nos podamos modificar
         $verificacion = "SELECT * FROM usuario WHERE id_usuario = '$id'";
         $query_veri = mysqli_query($this->con, $verificacion);
         $tipo_veri = mysqli_fetch_array($query_veri);
-        if($tipo_veri['tipo'] == "administrador" || $tipo_veri['tipo'] == "empleado" && $permiso == "empleado" && $id_personal != $tipo_veri['id_usuario']){
-            $estado=0;
+        //Si el usuario a modificar es administrador o empleado, y el tipo de NUESTRO usuario es empleado, y no se esta intentando modificar ↓ a si mismo, entonces.
+        if($tipo_veri['tipo'] == "administrador" || $tipo_veri['tipo'] == "empleado" && $permiso != "administrador"){
+            $estado=2; //No puede modificar otras entidades a su mismo o mayor nivel
             return $estado;
-            }else if($tipo_veri['tipo'] == "empleado" && $permiso == "empleado" && $tipo=="administrador"){
-                $tipo = "empleado";
-        $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
-        $query = mysqli_query($this->con,$sql);
-        $estado=2;
-        return $estado;
-        }else if($tipo_veri['tipo'] == "cliente" && $permiso == "empleado" && $tipo=="administrador"){
-        $tipo = "cliente";
-        $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
-        $query = mysqli_query($this->con,$sql);
-        $estado=3;
-        return $estado;
+            //Si un empleado esta tratando de modificar otro empleado para volverlo admin ↓
+            }else if($tipo_veri['tipo'] == "cliente" && $permiso == "empleado" && $tipo=="administrador" || $tipo=="empleado"){
+                $estado=2; //No puede modificar otras entidades a su mismo o mayor nivel
+                return $estado;
         }else{
+            //Coso, todo de pana
             $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
             $query = mysqli_query($this->con,$sql);
             $estado=1;
             return $estado;
         }
     }
-    
+
+    public function update_perfil ($id, $nombre, $apellido, $correo, $direccion, $telefono) {
+            $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', direccion = '$direccion', telefono = '$telefono' WHERE id_usuario = $id";
+            $query = mysqli_query($this->con,$sql);
+            if($query){
+                $resultado = 1;
+                return $resultado;
+            }else{
+                $resultado = 0;
+                return $resultado;
+            }
+        } 
 }
 
 ?>

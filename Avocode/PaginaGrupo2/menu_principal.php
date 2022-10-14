@@ -10,7 +10,19 @@
 </head>
 
 <body>
+
+<div>
     <?php require_once("controlador/MenuPrincipal_VerificacionPermisos.php"); ?>
+</div>
+
+<div>
+    <?php require_once("controlador/Controlador_PerfilUsuario.php"); ?>
+</div>
+
+<div>
+<?php require_once("vista/mensaje_perfil.php"); ?>
+</div>
+
 </body>
 
 </html>

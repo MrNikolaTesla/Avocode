@@ -21,6 +21,7 @@
 </head>
 
 <body>
+
         <div class="container-fluid cont-pers">
                 <!-- INICIO FORMULARIO ALTA -->
                 <?php require_once("vista/RegistroDeUsuarios.php"); ?>

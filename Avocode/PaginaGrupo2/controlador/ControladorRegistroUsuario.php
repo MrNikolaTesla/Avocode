@@ -18,6 +18,8 @@ if(!empty($_POST["boton_registro"])){
     
     if ($repetido==null){
         $estado = $usuario->set_usuario($nombre, $apellido, $correo, $password, $direccion, $telefono, $tipo);
+    }else{
+        $estado = null;
     }
 
 if($estado==1) {
