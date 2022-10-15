@@ -11,7 +11,7 @@
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
-    
+
     body {
       overflow-x: hidden;
       background: #fff;
@@ -38,16 +38,21 @@
       }
 
       #header img {
-        max-height: 175px;
-        max-width: 195px;
-        margin-left: -45px;
+        margin-top: -5px;
+        margin-bottom: 100px;
+        height: 25vh;
+        width: 15vw;
+        object-fit:cover;
+        min-height: 25vh;
+        min-width: 15vw;
+
       }
 
       #header ul {
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        margin-top: -50px;
+        margin-top: -95px;
       }
 
       #header ul li {
@@ -176,9 +181,9 @@
       }
 
       #header img {
-        max-height: 175px;
-        max-width: 195px;
-        margin-left: -5px;
+        margin-top: -40px;
+        margin-bottom: 100px;
+        margin-left: -55px;
       }
 
       #header ul {
