@@ -1,5 +1,4 @@
 body {
-  background-image: url("fondo_listado.png");
   font-family: 'Roboto', sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
@@ -301,6 +300,7 @@ margin:auto;
 
 .form-flex{
   margin-top: 30px;
+  position: flex;
 }
 .alert alert-warning alert-dismissible fade show{
 background-color: #298e46;

@@ -16,6 +16,8 @@
 	border: 1px solid #000000;
 	border-radius: 8px;
     float: right;
+	overflow: auto;
+	margin-right: auto;
 }
 
 .izquierda{
