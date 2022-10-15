@@ -42,8 +42,9 @@
         margin-bottom: 100px;
         height: 25vh;
         width: 15vw;
-        object-fit: fill;
-        
+        object-fit:cover;
+        min-height: 25vh;
+        min-width: 15vw;
 
       }
 
