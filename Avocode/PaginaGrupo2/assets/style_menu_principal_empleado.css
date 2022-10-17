@@ -1,31 +1,3 @@
-/* In progress */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-body{
-    background-image: url("fondoinicio.png");
-    background-size: cover;
-	background-position: center;
-}
-ul{
-	list-style: none;
-	margin-top: 1.6vh;
-	width: 292px;
-}
-li{
-	padding: 10px;
-  margin-left: 25px;
-	text-align: center;
-}
-hr{
-	margin-left: -13%;
-	margin-right: -13%;
-}
-
 .menu-nav-empleado{
 	background-color: rgba(87, 27, 27, 0.4);
   	background-image: radial-gradient( #bd393973 60%, #2900007e 100%);
@@ -76,6 +48,8 @@ hr{
 	font-size: 20px;
 	border: 1px solid #000000;
 	border-radius: 8px;
+	min-width: 250px;
+	text-align:center;
 }
 .btn-empleado:hover{
 	background-color: #792626;
