@@ -1,4 +1,5 @@
 <?php
+//RECORDAR!!!!!!!!!! EL SEGUNDO MENSAJE DE BIENVENIDA SE ELIMINARA SEGUN TENGAMOS FUNCIONANDO EL MODIFICAR PERFIL DE USUARIO CORRECTAMENTE
     if ($permiso == "cliente") {
     ?>
         <div class="menu-nav-cliente">
@@ -54,7 +55,7 @@
                 echo "<li><a class='btn-admin' href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#743535'>";
                 echo "<li><a class='btn-admin' href='GestionDeProductos.php?update=<?php echo rand(0,2581023);'>Gestor de Productos</a></li><hr size=5 noshade='noshade' color='#743535'>";
                 echo "<li><a class='btn-admin' href='GestionDeProveedores.php'>Gestor de Proveedores</a></li><hr size=5 noshade='noshade' color='#743535'>";
-                echo "<li><a class='btn-admin' href=''>3OpcionAdministrador</a></li><hr size=5 noshade='noshade' color='#743535'>";
+                echo "<li><a class='btn-admin' href='GestionDeMesas.php'>Gestor de Mesas</a></li><hr size=5 noshade='noshade' color='#743535'>";
                 echo "<li><a class='btn-admin' href=''>4OpcionAdministrador</a></li><hr size=5 noshade='noshade' color='#743535'>";
                 echo "<li><a class='btn-admin' href='controlador/Logout.php'>Logout</a></li><hr size=5 noshade='noshade' color='#743535'>";
                 ?>
