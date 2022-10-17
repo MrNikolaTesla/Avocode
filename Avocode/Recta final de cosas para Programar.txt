@@ -1,8 +1,7 @@
 -Hacer llover CSS (Lautaro y Facundo en ustedes confio)
--Mesas con JS
--CRUD de Productos V2 (Con cosa para ingresar imagenes y guardarlas en un sitio en assets - MARTIN tenes video en carpeta raiz del proyecto para esto)
+-Lado del Cliente (Principalmente menu y demas)
+-Eliminacion de Cuenta
+-Modificar mensaje_gestor.php (o el que sea) para que se muestren los mensajes correctamente, es asunto del CSS.
 (Deberia de actualizar automaticamente el estado de las mesas cuando se haga un pedido local u online / reserva)
 -Lado del Cliente (Principalmente menu y demas | Si consigo lo de arriba esto es facil)
--Modificacion de Cuenta / Eliminacion 
--Terminar de armar los procesos de modelo unificados en un solo archivo
 -Pedidos (Esto va a estar feo)

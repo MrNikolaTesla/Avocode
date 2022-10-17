@@ -1,6 +1,0 @@
--Hacer llover CSS (Lautaro y Facundo en ustedes confio)
--No mostrar contrase�as en Usuarios + cambiar todo lo que las actualiza y demas
--CRUD de Productos V2 (Con cosa para ingresar imagenes y guardarlas en un sitio en assets)
--Lado del Cliente (Principalmente menu y demas
--Modificacion de Cuenta / Eliminacion 
--Modificar mensaje_gestor.php (o el que sea) para que se muestren los mensajes correctamente, es asunto del CSS.
