@@ -108,6 +108,12 @@ class Usuario
         }
     }
 
+    public function eliminar_cuenta ($id) {
+            $sql = "DELETE FROM usuario WHERE id_usuario = $id";
+            $query = mysqli_query($this->con, $sql);
+            return $query;
+    }
+
     public function buscar_usuarios ($nombre)
     {
         $sql = "SELECT * FROM usuario WHERE nombre LIKE '%$nombre%'";

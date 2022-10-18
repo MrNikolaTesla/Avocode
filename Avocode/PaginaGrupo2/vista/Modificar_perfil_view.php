@@ -21,7 +21,7 @@
 <body>
         <?php if($id_a_Modificar == $id_perfil){ ?>
                 <form class="col-4" method="POST">
-                        <h3 class="text-center">Modificacion de Perfil</h3>
+                        <h3 class="text-center">Informacion de Perfil</h3>
                         <?php require_once("controlador/ControladorModificarPerfil.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Id - Inalterable</label>
@@ -49,6 +49,7 @@
                         </div>
                         <button type="submit" class="button-2"><a href="menu_principal.php" style="color:white;">Regresar</a></button>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
+                        <a href="controlador/EliminarPerfil_controlador.php?id=<?php echo $id_perfil ?>"><button type="submit" class="button-4">Eliminar cuenta</a></button>
                 </form>
         <?php }else{  ?>
                 <div class="centrado">No estas modificando tu propio perfil...</div>
