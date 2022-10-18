@@ -27,7 +27,7 @@ if($estado==1) {
         $producto_mod->eliminar_imagen($direccion_foto);
         $producto_mod->agregar_imagen($id);
         session_start();
-        $_SESSION['message'] = 'Producto e imagen modificada correctamente';
+        $_SESSION['message'] = 'Producto modificado correctamente';
         //El echo rand es para evitar que la imagen no cambie por el cache al ser modificada.
         header("Location: PAGINA_GestionProductos.php?update=<?php echo rand(0,2581023);");
     }else{
@@ -41,7 +41,7 @@ if($estado==1) {
         $producto_mod->eliminar_imagen($direccion_foto);
         $producto_mod->agregar_imagen($id);
         session_start();
-        $_SESSION['message'] = 'Imagen modificada correctamente';
+        $_SESSION['message'] = 'Producto modificado correctamente';
         header("Location: PAGINA_GestionProductos.php?update=<?php echo rand(0,2581023);");
     }else{
     session_start();
