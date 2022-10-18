@@ -9,22 +9,22 @@ require_once("../modelo/Usuario.php");
 if($estado== 1) {
     session_start(); 
     $_SESSION['message'] = 'Usuario eliminado correctamente';
-    header("Location: ../GestionDeUsuarios.php");
+    header("Location: ../PAGINA_GestionUsuarios.php");
 }else if($estado == 2){
     session_start(); 
     $_SESSION['message'] = 'No puedes eliminarte a ti mismo!';
-    header("Location: ../GestionDeUsuarios.php");
+    header("Location: ../PAGINA_GestionUsuarios.php");
 }else if($estado==0){
     session_start(); 
     $_SESSION['message'] = 'No tienes los permisos para realizar esta accion.';
-    header("Location: ../GestionDeUsuarios.php");
+    header("Location: ../PAGINA_GestionUsuarios.php");
     
 }else{
     session_start(); 
     $_SESSION['message'] = 'El usuario seleccionado no existe.';
-    header("Location: ../GestionDeUsuarios.php");
+    header("Location: ../PAGINA_GestionUsuarios.php");
 }
 }else{
-    header("Location: ../GestionDeUsuarios.php");
+    header("Location: ../PAGINA_GestionUsuarios.php");
 }
 ?>
