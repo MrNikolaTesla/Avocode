@@ -1,14 +1,17 @@
 <?php
-
-require_once("modelo/Usuario.php");
+session_start();
 if(isset($_GET['id'])){
 
-    $id = $_GET['id'];
+    $id_a_Modificar = $_GET['id'];
 
-$perfil_mod = new Usuario();
-
-$perfil_modificar = $perfil_mod->get_data($id);
-
-require_once("vista/Modificar_perfil_view.php");
+    $id_perfil = $_SESSION['id'];
+    $permiso = $_SESSION['tipo'];
+    $nombre = $_SESSION['nombre'];
+    $apellido = $_SESSION['apellido']; 
+    $correo = $_SESSION['correo'];
+    $direccion = $_SESSION['direccion'];
+    $telefono = $_SESSION['telefono'];
+    
+    require_once("vista/Modificar_perfil_view.php");
 }
 ?>

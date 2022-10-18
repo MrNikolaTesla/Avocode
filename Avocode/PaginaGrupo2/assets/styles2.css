@@ -310,5 +310,8 @@ table.table td i {
 .menu-nav-admin {
   overflow: auto;
   float: right;
+}
 
+.centrado {
+  text-align: center;
 }
