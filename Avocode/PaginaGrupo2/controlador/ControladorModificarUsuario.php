@@ -1,9 +1,9 @@
 <?php
+session_start();
     require_once("modelo/Usuario.php");
     $usuario_mod = new Usuario();
 if(!empty($_POST["modificacion"])){
     if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"]) and isset($_POST["tipo"])) {
-        
         //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
         $id = $_POST["id"];
@@ -24,11 +24,9 @@ if(!empty($_POST["modificacion"])){
             }
 
 if($estado==1 && $repetido == false) {
-    session_start();
     $_SESSION['message'] = 'Usuario modificado correctamente';
     header("Location: PAGINA_GestionUsuarios.php");
 }else if($estado==2 && $repetido == false){
-    session_start();
     $_SESSION['message'] = 'No es posible cambiar tu tipo de usuario a una posicion superior.';
     header("Location: PAGINA_GestionUsuarios.php");
 }
