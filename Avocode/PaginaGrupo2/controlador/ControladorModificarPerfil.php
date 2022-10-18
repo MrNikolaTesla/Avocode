@@ -12,6 +12,7 @@ if(!empty($_POST["modificacion"])){
         $correo = $_POST["correo"];
         $direccion = $_POST["direccion"];
         $telefono = $_POST["telefono"];
+
         //Verifica si ya hay un usuario identico
         $ver_usuario_rep = $usuario_mod->get_usuario($id, $correo);
     //2 = No hay usuario identico
@@ -29,6 +30,12 @@ if($estado==1 && $repetido==false) {
     session_start();
         $_SESSION['correo'] = $correo;
     $_SESSION['message'] = 'Perfil modificado correctamente';
+    $_SESSION['id'] = $id;
+    $_SESSION['nombre'] = $nombre;
+    $_SESSION['apellido'] = $apellido;
+    $_SESSION['correo'] = $correo;
+    $_SESSION['direccion'] = $direccion;
+    $_SESSION['telefono'] =  $telefono;
     header("Location: menu_principal.php");
 }else if($estado==0 && $repetido==false){
     session_start();

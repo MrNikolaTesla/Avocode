@@ -19,38 +19,41 @@
 </head>
 
 <body>
-        <?php foreach ($perfil_modificar as $perfil) : ?>
+        <?php if($id_a_Modificar == $id_perfil){ ?>
                 <form class="col-4" method="POST">
                         <h3 class="text-center">Modificacion de Perfil</h3>
                         <?php require_once("controlador/ControladorModificarPerfil.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Id - Inalterable</label>
-                                <input type="text" class="form-control" name="id" value="<?php echo $perfil['id_usuario'] ?>" readonly>
+                                <input type="text" class="form-control" name="id" value="<?php echo $id_perfil ?>" readonly>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Nombre/s - Inalterable</label>
-                                <input type="text" class="form-control" name="nombre" value="<?php echo $perfil['nombre'] ?>" readonly>
+                                <input type="text" class="form-control" name="nombre" value="<?php echo $nombre ?>" readonly>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Apellido/s - Inalterable</label>
-                                <input type="text" class="form-control" name="apellido" value="<?php echo $perfil['apellido'] ?>" readonly>
+                                <input type="text" class="form-control" name="apellido" value="<?php echo $apellido ?>" readonly>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Correo</label>
-                                <input type="email" class="form-control" name="correo" value="<?php echo $perfil['correo'] ?>">
+                                <input type="email" class="form-control" name="correo" value="<?php echo $correo ?>">
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Direccion</label>
-                                <input type="text" class="form-control" name="direccion" value="<?php echo $perfil['direccion'] ?>">
+                                <input type="text" class="form-control" name="direccion" value="<?php echo $direccion ?>">
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Telefono</label>
-                                <input type="number" class="form-control" name="telefono" value="<?php echo $perfil['telefono'] ?>">
+                                <input type="number" class="form-control" name="telefono" value="<?php echo $telefono ?>">
                         </div>
                         <button type="submit" class="button-2"><a href="menu_principal.php" style="color:white;">Regresar</a></button>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
                 </form>
-        <?php endforeach; ?>
+        <?php }else{  ?>
+                <div class="centrado">No estas modificando tu propio perfil...</div>
+                <button type="submit" class="button-2"><a href="menu_principal.php" style="color:white;">Regresar</a></button>
+        <?php } ?>
 
 </body>
 
