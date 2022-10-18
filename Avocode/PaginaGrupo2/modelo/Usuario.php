@@ -130,7 +130,7 @@ class Usuario
             }else if($tipo_veri['tipo'] == "cliente" && $permiso == "empleado" && $tipo=="administrador" || $tipo=="empleado"){
                 $estado=2; //No puede modificar otras entidades a su mismo o mayor nivel
                 return $estado;
-        }else if($tipo_veri['tipo'] == "administrador" && $tipo=="administrador"){
+        }else if($tipo_veri['tipo'] == "administrador" && $tipo=="administrador" && $permiso=="administrador"){
             //Coso, todo de pana
             $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
             $query = mysqli_query($this->con,$sql);
