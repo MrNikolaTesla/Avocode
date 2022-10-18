@@ -1,9 +1,9 @@
 <?php
+session_start();
     require_once("modelo/Usuario.php");
     $usuario_mod = new Usuario();
 if(!empty($_POST["modificacion"])){
     if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"]) and isset($_POST["tipo"])) {
-        session_start();
         //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
         $id = $_POST["id"];

@@ -117,9 +117,7 @@ class Usuario
 
     public function update_usuario ($id, $nombre, $apellido, $correo, $direccion, $telefono, $tipo) {
         //Guarda el tipo de permiso y la id del usuario a modificar.
-        session_start();
         $permiso = $_SESSION['tipo'];
-        $id_personal = $_SESSION['id'];
         //Verifica que usuario estamos tratando de modificar, si somos nosotros mismos, de ser ese el caso, va a tener que dejar que un empleado modifique un empleado (Lo mismo pasa como admin) para que nos podamos modificar
         $verificacion = "SELECT * FROM usuario WHERE id_usuario = '$id'";
         $query_veri = mysqli_query($this->con, $verificacion);
