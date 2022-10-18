@@ -10,11 +10,11 @@
 if($estado==1) {
     session_start(); 
     $_SESSION['message'] = 'Estado de la mesa modificado correctamente';
-    header("Location: ../GestionDeMesas.php");
+    header("Location: ../PAGINA_GestionMesas.php");
 }else{
     session_start(); 
     $_SESSION['message'] = 'Estado de la mesa no modificado, algo ha fallado.';
-    header("Location: ../GestionDeMesas.php");
+    header("Location: ../PAGINA_GestionMesas.php");
 }
 }
 ?>

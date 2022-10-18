@@ -27,15 +27,15 @@ if(!empty($_POST["modificacion"])){
 if($estado==1) {
     session_start(); 
     $_SESSION['message'] = 'Proveedor modificado correctamente';
-    header("Location: GestionDeProveedores.php");
+    header("Location: PAGINA_GestionProveedores.php");
 }else if($repetido!=null){
     session_start(); 
     $_SESSION['message'] = 'Producto equivalente ya encontrado en el sistema.';
-    header("Location: GestionDeProveedores.php");
+    header("Location: PAGINA_GestionProveedores.php");
 }else{
     session_start(); 
     $_SESSION['message'] = 'Proveedor no modificado, algo ha fallado.';
-    header("Location: GestionDeProveedores.php");
+    header("Location: PAGINA_GestionProveedores.php");
 }
 }
 echo "Algunos de los campos necesarios estan vacios";
