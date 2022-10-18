@@ -84,5 +84,8 @@
 }
 
 .alert-icon {
-
+padding: 5px;
+margin: 5px;
+}
+.btn-close{
 }

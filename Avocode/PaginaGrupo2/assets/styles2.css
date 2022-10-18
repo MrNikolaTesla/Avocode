@@ -6,12 +6,15 @@ body {
 
 .table-responsive {
   margin: 30px 0;
+  margin-top: 20px;
 }
 
 .table-wrapper {
   min-width: 1000px;
   background: #fff;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
 
@@ -339,14 +342,21 @@ table.table td i {
 }
 
 .form-flex {
+  margin-top: 5px;
   position: flex;
 }
 
 .menu-nav-admin {
   overflow: auto;
   float: right;
+
 }
 
-.centrado {
+.container-fluid cont-pers{
+  margin: 0px;
+  padding: 0px;
+}
+
+.material-icons{
 text-align: center;
 }
