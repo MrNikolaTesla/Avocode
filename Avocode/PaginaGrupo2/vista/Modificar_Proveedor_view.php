@@ -42,7 +42,7 @@
                         <div class="mb-3">
                                 <label class="form-label">Telefono</label>
                                 <input type="text" class="form-control" name="telefono" value="<?php echo $proveedor['telefono'] ?>">
-                                <button type="submit" class="button-2"><a href="PAGINA_GestionProveedores.php.php" style="color:white;">Regresar al Listado</a></button>
+                                <button type="submit" class="button-2"><a href="PAGINA_GestionProveedores.php" style="color:white;">Regresar al Listado</a></button>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar!</button>
                         </div>
                 </form>
