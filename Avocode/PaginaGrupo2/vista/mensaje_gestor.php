@@ -1,11 +1,27 @@
-<link rel="stylesheet" href="assets/styles2.css">
+<link rel="stylesheet" href="assets/styles_alertas.css">
+<script>
+    $("#MyButton").click(function() {
+        alert('Confirm to refresh alert messages.');
+        $("#refreshDivID").load("#refreshDivID .reloaded-divs > *");
+    });
+</script>
+
 
 <?php session_start();
 if (isset($_SESSION['message']) && $_SESSION['message'] != "no") { ?>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+<aside class="container text-center ">
+    <aside id="refreshDivID">
+        <aside class="reloaded-divs">
+    <aside class="alerta-success" role="alert">
         <?= $_SESSION['message'] ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span>
+        </button>
+    </aside>
+    
+</aside>
+</aside>
+</aside>
+</aside>
 
 <?php $_SESSION['message'] = 'no';
 } ?>
