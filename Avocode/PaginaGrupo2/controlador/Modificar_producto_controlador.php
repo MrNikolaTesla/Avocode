@@ -9,6 +9,6 @@ $producto_mod = new Producto();
 
 $producto_modificar = $producto_mod->get_data($id);
 
-require_once("vista/Modificar_producto_view.php");
+require_once("vista/MODIFICAR_Producto_VISTA.php");
 }
 ?>

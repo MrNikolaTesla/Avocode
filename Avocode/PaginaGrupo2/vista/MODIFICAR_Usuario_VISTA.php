@@ -58,7 +58,7 @@
                                         <option value="administrador">Administrador</option>
                                 </select>
                         </div>
-                        <button type="submit" class="button-2"><a href="GestionDeUsuarios.php" style="color:white;">Regresar al Listado</a></button>
+                        <button type="submit" class="button-2"><a href="PAGINA_GestionUsuarios.php" style="color:white;">Regresar al Listado</a></button>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
                 </form>
         <?php endforeach; ?>

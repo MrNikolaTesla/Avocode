@@ -10,6 +10,6 @@ $usuario_mod = new Usuario();
 
 $usuario_modificar = $usuario_mod->get_data($id);
 
-require_once("vista/Modificar_usuario_view.php");
+require_once("vista/MODIFICAR_Usuario_VISTA.php");
 }
 ?>

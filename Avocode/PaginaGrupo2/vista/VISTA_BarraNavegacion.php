@@ -31,11 +31,11 @@ if ($permiso == "cliente") {
             } else {
                 echo "<li><p class='saludo-empleado'>" . $nombre . "</p></li><hr size=5 noshade='noshade' color='#000'>";
             }
-            echo "<li><a class='btn-admin' href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#743535'>";
-            echo "<li><a class='btn-admin' href=''>Opcion 1</a></li><hr size=5 noshade='noshade' color='#743535'>";
-            echo "<li><a class='btn-admin' href=''>Opcion 2</a></li><hr size=5 noshade='noshade' color='#743535'>";
-            echo "<li><a class='btn-admin' href=''>Opcion 3</a></li><hr size=5 noshade='noshade' color='#743535'>";
-            echo "<li><a class='btn-admin' href=''>Opcion 4</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href='PAGINA_GestionUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href='PAGINA_'>Opcion 1</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href='PAGINA_'>Opcion 2</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href='PAGINA_'>Opcion 3</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href='PAGINA_'>Opcion 4</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='controlador/Logout.php'>Logout</a></li><hr size=5 noshade='noshade' color='#743535'>";
             ?>
         </ul>
@@ -52,11 +52,11 @@ if ($permiso == "cliente") {
             } else {
                 echo "<li><p class='saludo-admin'>" . $nombre . " " . $apellido . "</p></li><hr size=5 noshade='noshade' color='#743535'>";
             }
-            echo "<li><a class='btn-admin' href='GestionDeUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#743535'>";
-            echo "<li><a class='btn-admin' href='GestionDeProductos.php?update=<?php echo rand(0,2581023);'>Gestor de Productos</a></li><hr size=5 noshade='noshade' color='#743535'>";
-            echo "<li><a class='btn-admin' href='GestionDeProveedores.php'>Gestor de Proveedores</a></li><hr size=5 noshade='noshade' color='#743535'>";
-            echo "<li><a class='btn-admin' href='GestionDeMesas.php'>Gestor de Mesas</a></li><hr size=5 noshade='noshade' color='#743535'>";
-            echo "<li><a class='btn-admin' href=''>4OpcionAdministrador</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href='PAGINA_GestionUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href='PAGINA_GestionProductos.php?update=<?php echo rand(0,2581023);'>Gestor de Productos</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href='PAGINA_GestionProveedores.php'>Gestor de Proveedores</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href='PAGINA_GestionMesas.php'>Gestor de Mesas</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href='PAGINA_'>4OpcionAdministrador</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='controlador/Logout.php'>Logout</a></li><hr size=5 noshade='noshade' color='#743535'>";
             ?>
         </ul>

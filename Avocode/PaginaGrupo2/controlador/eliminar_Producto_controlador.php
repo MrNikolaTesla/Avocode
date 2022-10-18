@@ -15,17 +15,17 @@ if($estado==1) {
 
     session_start(); 
     $_SESSION['message'] = 'Producto eliminado correctamente';
-    header("Location: ../GestionDeProductos.php");
+    header("Location: ../PAGINA_GestionProductos.php");
 }else{
     session_start(); 
     $_SESSION['message'] = 'No se ha podido eliminar el producto seleccionado.';
-    header("Location: ../GestionDeProductos.php");
+    header("Location: ../PAGINA_GestionProductos.php");
 }
 
 }else{
     session_start(); 
     $_SESSION['message'] = 'El producto seleccionado no existe.';
-    header("Location: ../GestionDeProductos.php");
+    header("Location: ../PAGINA_GestionProductos.php");
 }
 
 ?>

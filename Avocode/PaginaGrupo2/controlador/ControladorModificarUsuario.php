@@ -26,11 +26,11 @@ if(!empty($_POST["modificacion"])){
 if($estado==1 && $repetido == false) {
     session_start();
     $_SESSION['message'] = 'Usuario modificado correctamente';
-    header("Location: GestionDeUsuarios.php");
+    header("Location: PAGINA_GestionUsuarios.php");
 }else if($estado==2 && $repetido == false){
     session_start();
     $_SESSION['message'] = 'No es posible cambiar tu tipo de usuario a una posicion superior.';
-    header("Location: GestionDeUsuarios.php");
+    header("Location: PAGINA_GestionUsuarios.php");
 }
 }else
 echo '<div class="alert alert-danger">No se ha elegido un tipo de usuario.</div>';
