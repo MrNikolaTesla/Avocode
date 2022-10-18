@@ -1,8 +1,9 @@
 -Hacer llover CSS (Lautaro y Facundo en ustedes confio)
 -Lado del Cliente (Principalmente menu y demas)
--Eliminacion de Cuenta
--Modificar mensaje_gestor.php (o el que sea) para que se muestren los mensajes correctamente, es asunto del CSS.
 (Deberia de actualizar automaticamente el estado de las mesas cuando se haga un pedido local u online / reserva)
 -Lado del Cliente (Principalmente menu y demas | Si consigo lo de arriba esto es facil)
 -Pedidos (Esto va a estar feo)
 -Paginado en Productos
+-CRUD de Reserva lado admin
+-CRUD de Reserva lado cliente
+-Botones area 100%
