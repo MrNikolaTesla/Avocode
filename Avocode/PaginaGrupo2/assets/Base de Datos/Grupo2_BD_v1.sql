@@ -49,7 +49,9 @@ CREATE TABLE `reserva` (
   `empleado` int(10) NOT NULL COMMENT 'Empleado que atendio la Mesa'
 );
 
-/*Muy probablemente tengamos que hacer una nueva entidad a nombre de empleados para las FK a futuro*/
+/*CONSTRAINT cliente FOREIGN KEY (id_usuario) REFERENCES
+usuario(id_usuario) );*/
+
 CREATE TABLE `usuario` (
   `id_usuario` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID del Usuario',
   `nombre` varchar(40) NOT NULL COMMENT 'Nombre del Usuario',
@@ -57,8 +59,7 @@ CREATE TABLE `usuario` (
   `correo` varchar(60) NOT NULL COMMENT 'Correo del Usuario',
   `password` varchar(20) NOT NULL COMMENT 'Clave del Usuario',
   `direccion` varchar(80) DEFAULT NULL COMMENT 'Direccion de envio del Usuario',
-  `telefono` varchar(18) DEFAULT NULL COMMENT 'Telefono de contacto del Usuario',/*Por algun motivo si ponemos el 0 primero la BD lo elimina, he de suponer porque el valor realmente*/
-  /*no cambia, eso habria que cambiarlo segun sepamos porque sucede.*/
+  `telefono` varchar(18) DEFAULT NULL COMMENT 'Telefono de contacto del Usuario',
   `tipo` varchar(30) NOT NULL DEFAULT 'cliente' COMMENT 'Tipo de usuario, para las jerarquias'
 );
 
