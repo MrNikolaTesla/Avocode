@@ -2,11 +2,12 @@
 	background-color: rgba(87, 27, 27, 0.4);
   	background-image: radial-gradient( #bd393973 60%, #2900007e 100%);
 	position: block;
-	padding-top: 0.01vh;
-	height: 100vh;
-	width: 20.4em;
+	padding-top: 1px;
+	height: 99.6vh;
+	width: 20em;
 	overflow-y: scroll hidden;
 	overflow-x: hidden;
+	display: inline-block;
 }
 .menu-nav-admin::-webkit-scrollbar{
 	width: 8px;

@@ -294,15 +294,21 @@ table.table td i {
 }
 
 .col-4 {
-margin:auto;
+  margin: auto;
 
 }
 
-.form-flex{
+.form-flex {
   margin-top: 30px;
   position: flex;
 }
 
-.alert alert-warning alert-dismissible fade show{
-background-color: #298e46;
+.alert alert-warning alert-dismissible fade show {
+  background-color: #298e46;
+}
+
+.menu-nav-admin {
+  overflow: auto;
+  float: right;
+
 }

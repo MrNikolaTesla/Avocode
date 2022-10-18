@@ -1,9 +1,10 @@
-.fuera_del_perfil{
+.fuera_del_perfil {
 	background-color: #8f3a3a;
 	color: #000000;
 	font-size: 16px;
 	font-family: 'Poppins', sans-serif;
 	display: inline;
+
 	padding-bottom: 5px;
 	padding-top: 5px;
 	padding-right: 5px;
@@ -11,19 +12,21 @@
 	margin: 0;
 	letter-spacing: 2px;
 	align-items: center;
+
 	cursor: default;
+
 	width: 250px;
 	border: 1px solid #000000;
 	border-radius: 8px;
-    float: right;
+	float: right;
 	overflow: auto;
 	margin-right: auto;
 }
 
-.izquierda{
+.izquierda {
 	text-align: left;
 }
 
-.derecha{
+.derecha {
 	align-items: right;
 }
