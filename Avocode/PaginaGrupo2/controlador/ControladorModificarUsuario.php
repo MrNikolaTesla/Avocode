@@ -29,6 +29,9 @@ if($estado==1 && $repetido == false) {
 }else if($estado==2 && $repetido == false){
     $_SESSION['message'] = 'No es posible cambiar tu tipo de usuario a una posicion superior.';
     header("Location: PAGINA_GestionUsuarios.php");
+}else if($estado==3 && $repetido == false){
+    $_SESSION['message'] = 'No tienes permisos para modificar otros administradores del sistema.';
+    header("Location: PAGINA_GestionUsuarios.php");
 }
 }else
 echo '<div class="alert alert-danger">No se ha elegido un tipo de usuario.</div>';

@@ -118,29 +118,35 @@ class Usuario
     public function update_usuario ($id, $nombre, $apellido, $correo, $direccion, $telefono, $tipo) {
         //Guarda el tipo de permiso y la id del usuario a modificar.
         $permiso = $_SESSION['tipo'];
+        $id_personal = $_SESSION['id'];
         //Verifica que usuario estamos tratando de modificar, si somos nosotros mismos, de ser ese el caso, va a tener que dejar que un empleado modifique un empleado (Lo mismo pasa como admin) para que nos podamos modificar
         $verificacion = "SELECT * FROM usuario WHERE id_usuario = '$id'";
         $query_veri = mysqli_query($this->con, $verificacion);
         $tipo_veri = mysqli_fetch_array($query_veri);
-        //Si el usuario a modificar es administrador o empleado, y el tipo de NUESTRO usuario es empleado, y no se esta intentando modificar ↓ a si mismo, entonces.
-        if($tipo_veri['tipo'] == "administrador" || $tipo_veri['tipo'] == "empleado" && $permiso != "administrador"){
-            $estado=2; //No puede modificar otras entidades a su mismo o mayor nivel
-            return $estado;
-            //Si un empleado esta tratando de modificar otro empleado para volverlo admin ↓
+        
+        if($permiso != "administrador"){
+            if($tipo_veri['tipo'] == "administrador" || $tipo_veri['tipo'] == "empleado"){
+                $estado=2; //No puede modificar otras entidades a su mismo o mayor nivel
+                return $estado;
             }else if($tipo_veri['tipo'] == "cliente" && $permiso == "empleado" && $tipo=="administrador" || $tipo=="empleado"){
                 $estado=2; //No puede modificar otras entidades a su mismo o mayor nivel
                 return $estado;
-        }else if($tipo_veri['tipo'] == "administrador" && $tipo=="administrador" && $permiso=="administrador"){
-            //Coso, todo de pana
-            $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
-            $query = mysqli_query($this->con,$sql);
-            $estado=1;
-            return $estado;
+            }else{
+                $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
+                $query = mysqli_query($this->con,$sql);
+                $estado=1;
+                return $estado;
+            }
         }else{
-            $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
-            $query = mysqli_query($this->con,$sql);
-            $estado=1;
-            return $estado;
+            if($tipo_veri['tipo'] == "administrador" && $id_personal != $id){
+                $estado=3;
+                return $estado;
+            }else{
+                $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', direccion = '$direccion', telefono = '$telefono', tipo = '$tipo' WHERE id_usuario = $id";
+                $query = mysqli_query($this->con,$sql);
+                $estado=1;
+                return $estado;  
+            }
         }
     }
 
