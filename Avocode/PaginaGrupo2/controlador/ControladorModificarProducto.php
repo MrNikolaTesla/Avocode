@@ -1,7 +1,6 @@
 <?php
     require_once("modelo/Producto.php");
     $producto_mod = new Producto();
-    session_start();
 if(!empty($_POST["modificacion"])){
     if(!empty($_POST["nombre"]) and !empty($_POST["precio"]) and !($_POST["tipo"] == "null")) {
         
@@ -21,7 +20,7 @@ if(!empty($_POST["modificacion"])){
     if ($repetido==null){
         $estado = $producto_mod->update_producto($id, $nombre, $precio, $tipo);
     }     
-
+    session_start();
 if($estado==1) {
     if($_FILES['imagen'] != ""){
         $direccion_foto = "assets/Productos/id".$id.".png";
