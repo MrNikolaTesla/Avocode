@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once("modelo/Producto.php");
     $producto_mod = new Producto();
 if(!empty($_POST["modificacion"])){
@@ -22,34 +23,25 @@ if(!empty($_POST["modificacion"])){
     }     
 
     //TEMA NO CAPTA SI HAY O NO IMAGENES, COSO, QUIZAS NUEVO VALOR EN "FILES?"
-if($estado==1) {
-    if($_FILES['imagen'] != ""){
+if($estado==1 && $_FILES['imagen'] != "") {
         $direccion_foto = "assets/Productos/id".$id.".png";
         $producto_mod->eliminar_imagen($direccion_foto);
         $producto_mod->agregar_imagen($id);
         $_SESSION['message'] = 'Producto modificado correctamente';
         //El echo rand es para evitar que la imagen no cambie por el cache al ser modificada.
-        header("Location: PAGINA_GestionProductos.php?update=<?php echo rand(0,2581023);");
-    }else{
+        header("Location: PAGINA_GestionProductos.php?update=<?php echo rand(0,9000000);");
+    }else if($estado==1 && $_FILES['imagen'] == "") {
     $_SESSION['message'] = 'Producto modificado correctamente.';
-    header("Location: PAGINA_GestionProductos.php?update=<?php echo rand(0,2581023);");
-     }
-}else if($repetido!=null){
-    if($_FILES['imagen'] != ""){
-        $direccion_foto = "assets/Productos/id".$id.".png";
-        $producto_mod->eliminar_imagen($direccion_foto);
-        $producto_mod->agregar_imagen($id);
-        $_SESSION['message'] = 'Producto modificado correctamente';
-        header("Location: PAGINA_GestionProductos.php?update=<?php echo rand(0,2581023);");
-    }else{
+    header("Location: PAGINA_GestionProductos.php?update=<?php echo rand(0,9000000);");
+     }else if($repetido!=null && $estado==0){
     $_SESSION['message'] = 'Producto equivalente ya encontrado en el sistema.';
-    header("Location: PAGINA_GestionProductos.php?update=<?php echo rand(0,2581023);");
-     }
+    header("Location: PAGINA_GestionProductos.php?update=<?php echo rand(0,9000000);");
+    }
 }else{
     $_SESSION['message'] = 'Producto no modificado, algo ha fallado.';
-    header("Location: PAGINA_GestionProductos.php?update=<?php echo rand(0,2581023);");
+    header("Location: PAGINA_GestionProductos.php?update=<?php echo rand(0,9000000);");
 }
 }
-}
+
 
 ?>
