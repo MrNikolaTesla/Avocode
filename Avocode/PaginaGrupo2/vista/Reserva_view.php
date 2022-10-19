@@ -89,8 +89,10 @@
                                 <th>Numero de Mesa<i class="fa fa-sort"></i></th>
                                 <th>Fecha</th>
                                 <th>Hora</th>
-                                <th>Cliente</th>
-                                <th>Empleado</th>
+                                <th>ID Cliente</th>
+                                <th>Nombre Cliente</th>
+                                <th>ID Empleado</th>
+                                <th>Nombre Empleado</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -105,7 +107,10 @@
                             <td><?php echo $reserva['fecha'] ?></td>
                             <td><?php echo $reserva['hora'] ?></td>
                             <td><?php echo $reserva['cliente'] ?></td> <!--Aca tendria que haber una funcion para buscar el nombre del empleado y ponerlo a la izquierda de la ID-->
-                            <td><?php echo $reserva['empleado'] ?></td><!--Lo mismo que aca-->
+                            <td><?php echo $reserva['cliente_nom'] ?></td>
+                            <td><?php echo $reserva['empleado'] ?></td>
+                            <td><?php echo $reserva['empleado_nom'] ?></td>
+                            
                             <td>
                                 <a href="ModificarReserva_pagina.php?id=<?php echo $reserva['id_reserva'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                                 <a href="controlador/eliminar_Reserva_controlador.php?id=<?php echo $reserva['id_reserva'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>

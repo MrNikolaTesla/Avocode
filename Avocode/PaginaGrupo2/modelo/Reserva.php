@@ -27,8 +27,9 @@ class Reserva
 
     public function listar_reservas()
     {
-
-        $sql = "SELECT * FROM reserva ORDER BY id_reserva";
+        $sql = "SELECT reserva.id_reserva, reserva.mesa, reserva.fecha, reserva.hora, usuario.id_usuario as cliente, usuario.id_usuario as empleado, usuario.nombre as cliente_nom, usuario.nombre as empleado_nom
+        FROM reserva , usuario
+        WHERE reserva.cliente = usuario.id_usuario ORDER BY id_reserva";
         $query = mysqli_query($this->con, $sql);
 
         while ($filas = mysqli_fetch_array($query)) {
