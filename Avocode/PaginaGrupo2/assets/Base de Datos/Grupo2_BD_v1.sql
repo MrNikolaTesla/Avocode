@@ -59,7 +59,7 @@ CREATE TABLE `reserva` (
   `hora` varchar(10) NOT NULL COMMENT 'Hora en que se ocupo la Mesa',
   `cliente` int(10) NOT NULL COMMENT 'Cliente que ocupo la Mesa',
   `empleado` int(10) NOT NULL COMMENT 'Empleado que atendio la Mesa',
-  CONSTRAINT cliente FOREIGN KEY (cliente) REFERENCES usuario(id_usuario)
+  CONSTRAINT cliente FOREIGN KEY (cliente) REFERENCES usuario(id_usuario),
   CONSTRAINT empleado FOREIGN KEY (empleado) REFERENCES usuario(id_usuario)
 );
 
