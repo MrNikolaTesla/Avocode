@@ -35,10 +35,9 @@ if($estado==1) {
     $_SESSION['message'] = 'Proveedor no modificado, algo ha fallado.';
     header("Location: PAGINA_GestionProveedores.php");
 }
-}
-echo "Algunos de los campos necesarios estan vacios";
 }else{
 echo "Algunos de los campos necesarios estan vacios";
+}
 }
 
 ?>

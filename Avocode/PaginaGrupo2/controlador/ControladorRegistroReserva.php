@@ -1,5 +1,4 @@
 <?php
-session_start();
     require_once("modelo/Reserva.php");
     $reserva = new Reserva();
 if(!empty($_POST["boton_registro"])){
@@ -24,14 +23,14 @@ if(!empty($_POST["boton_registro"])){
 
 if($estado==1) {
     $_SESSION['message'] = 'Reserva registrada correctamente!';
-    header("Location: PAGINA_GestionUsuarios.php");
+    header("Location: PAGINA_GestionReservas.php");
 }else if(!$estado){
     $_SESSION['message'] = 'La reserva ya ha sido agregado al sistema previamente.';
-    header("Location: PAGINA_GestionUsuarios.php");
+    header("Location: PAGINA_GestionReservas.php");
 } 
 }else{
     $_SESSION['message'] = 'Alguno de los campos está vacio.';
-    header("Location: PAGINA_GestionUsuarios.php");
+    header("Location: PAGINA_GestionReservas.php");
 }
 }
 

@@ -12,7 +12,7 @@ class Reserva
 
     public function set_reserva($num_mesa, $fecha, $hora, $cliente_id, $id_empleado_reserva)
     {
-        $sql = "INSERT INTO reserva (mesa, fecha, cliente, empleado) VALUES ('$num_mesa', '$fecha', '$hora', '$cliente_id', '$id_empleado_reserva')";
+        $sql = "INSERT INTO reserva (mesa, fecha, hora, cliente, empleado) VALUES ('$num_mesa', '$fecha', '$hora', '$cliente_id', '$id_empleado_reserva')";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }
@@ -25,7 +25,7 @@ class Reserva
         return $result;
     }
 
-    public function listar_reserva()
+    public function listar_reservas()
     {
 
         $sql = "SELECT * FROM reserva ORDER BY id_reserva";

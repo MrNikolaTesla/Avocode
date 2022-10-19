@@ -36,10 +36,9 @@ if($estado==1) {
     $_SESSION['message'] = 'Reserva no modificada, algo ha fallado.';
     header("Location: PAGINA_GestionReservas.php");
 }
-}
-echo "Algunos de los campos necesarios estan vacios";
 }else{
 echo "Algunos de los campos necesarios estan vacios";
+}
 }
 
 ?>

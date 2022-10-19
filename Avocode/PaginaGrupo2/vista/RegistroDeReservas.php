@@ -1,7 +1,7 @@
 <?php require_once("vista/mensaje_gestor.php"); ?>
 <form class="form-flex" method="POST">
         <h3 class="text-center2">Registro de Reservas</h3>
-        <?php require_once("controlador/ControladorReserva.php"); ?>
+        <?php require_once("controlador/ControladorRegistroReserva.php"); ?>
         <div class="mb-3">
                 <label class="form-label">Numero de Mesa</label>
                 <p><input type="number" class="tablas-input" name="num_mesa"></p>

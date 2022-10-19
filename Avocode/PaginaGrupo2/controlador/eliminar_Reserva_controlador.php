@@ -8,15 +8,15 @@ require_once("../modelo/Reserva.php");
         $estado = $reserva->eliminar_reserva($id);
 
 if($estado==1) {
-    $_SESSION['message'] = 'Reserva eliminado correctamente';
+    $_SESSION['message'] = 'Reserva eliminada correctamente';
     header("Location: ../PAGINA_GestionReservas.php");
 }else{
-    $_SESSION['message'] = 'No se ha podido eliminar el reserva seleccionado.';
+    $_SESSION['message'] = 'No se ha podido eliminar la reserva seleccionada.';
     header("Location: ../PAGINA_GestionReservas.php.php");
 }
 
 }else{
-    $_SESSION['message'] = 'El reserva seleccionado no existe.';
+    $_SESSION['message'] = 'La reserva seleccionada no existe.';
     header("Location: ../PAGINA_GestionReservas.php.php");
 }
 
