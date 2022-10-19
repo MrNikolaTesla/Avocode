@@ -1,8 +1,7 @@
 <?php require_once("vista/mensaje_gestor.php"); ?>
 <form class="form-flex" method="POST">
-<?php require_once("controlador/ControladorRegistroUsuario.php"); ?>
-
         <h3 class="text-center2">Registro de Usuarios</h3>
+        <?php require_once("controlador/ControladorRegistroUsuario.php"); ?>
         <div class="mb-3">
                 <label class="form-label">Nombre/s</label>
                 <p><input type="text" class="tablas-input" name="nombre"></p>

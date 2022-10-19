@@ -18,34 +18,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- BOOTSTRAP JAVASCRIPT -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-        <script>
-                $(document).ready(function() {
-                        $('[data-toggle="tooltip"]').tooltip();
-                        // Animate select box length
-                        var searchInput = $(".search-box input");
-                        var inputGroup = $(".search-box .input-group");
-                        var boxWidth = inputGroup.width();
-                        searchInput.focus(function() {
-                                inputGroup.animate({
-                                        width: "300"
-                                });
-                        }).blur(function() {
-                                inputGroup.animate({
-                                        width: boxWidth
-                                });
-                        });
-                });
-                // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
-                function asegurar() {
-                        rc = confirm("ADVERTENCIA, esto eliminará PERMANENTEMENTE su USUARIO");
-                        return rc;
-                }
-        </script>
 </head>
 
 <body>
-        <?php if ($id_a_Modificar == $id_perfil) { ?>
+        <?php if($id_a_Modificar == $id_perfil){ ?>
                 <form class="col-4" method="POST">
                         <h3 class="text-center">Informacion de Perfil</h3>
                         <?php require_once("controlador/ControladorModificarPerfil.php"); ?>
@@ -75,9 +51,9 @@
                         </div>
                         <a href="menu_principal.php" class="button-2" style="color:white; text-decoration:none;">Regresar</a>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
-                        <a href="controlador/EliminarPerfil_controlador.php?id=<?php echo $id_perfil ?>" style="color:white;"><button type="submit" class="button-4" style="color:white;"> <i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a></button>
+                        <a href="controlador/EliminarPerfil_controlador.php?id=<?php echo $id_perfil ?>" style="color:white;"><button type="submit" class="button-4" style="color:white;">Eliminar cuenta</a></button>
                 </form>
-        <?php } else {  ?>
+        <?php }else{  ?>
                 <div class="centrado">No estas modificando tu propio perfil...</div>
                 <a href="menu_principal.php" class="button-2" style="color:white; text-decoration:none;">Regresar</a>
         <?php } ?>
