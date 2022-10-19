@@ -20,7 +20,7 @@ if(!empty($_POST["modificacion"])){
     if ($repetido==null){
         $estado = $producto_mod->update_producto($id, $nombre, $precio, $tipo);
     }     
-    session_start();
+
 if($estado==1) {
     if($_FILES['imagen'] != ""){
         $direccion_foto = "assets/Productos/id".$id.".png";
