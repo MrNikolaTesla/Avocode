@@ -1,7 +1,6 @@
 <?php
     require_once("modelo/Usuario.php");
     $usuario_mod = new Usuario();
-    session_start();
 if(!empty($_POST["modificacion"])){
     if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"])) {
         
