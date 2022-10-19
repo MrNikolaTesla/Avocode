@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once("modelo/Proveedor.php");
     $proveedor_mod = new Proveedor();
 if(!empty($_POST["modificacion"])){
@@ -25,15 +26,12 @@ if(!empty($_POST["modificacion"])){
         
 
 if($estado==1) {
-    session_start(); 
     $_SESSION['message'] = 'Proveedor modificado correctamente';
     header("Location: PAGINA_GestionProveedores.php");
 }else if($repetido!=null){
-    session_start(); 
     $_SESSION['message'] = 'Producto equivalente ya encontrado en el sistema.';
     header("Location: PAGINA_GestionProveedores.php");
 }else{
-    session_start(); 
     $_SESSION['message'] = 'Proveedor no modificado, algo ha fallado.';
     header("Location: PAGINA_GestionProveedores.php");
 }

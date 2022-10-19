@@ -28,30 +28,21 @@ if (!empty($_POST["boton_añadir"])) {
         }
 
         if ($estado == 1) {
-
         // MAYOR ID //
         $id = $producto->mayor_id();
         // FIN DE MAYOR ID //
-
         // SUBIDA DE IMAGEN //
         $producto->agregar_imagen($id);
         // FIN DE SUBIDA DE IMAGEN //
-
-            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            Producto agregado correctamente!
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>';
+        $_SESSION['message'] = 'Producto agregado correctamente!';
+        header("Location: PAGINA_GestionUsuarios.php");
         } else if ($repetido != null) {
-            echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-            El producto ya ha sido agregado al sistema previamente.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>';
+        $_SESSION['message'] = 'El producto ya ha sido agregado al sistema previamente.';
+        header("Location: PAGINA_GestionUsuarios.php");
         }
     }else{
-        echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-        Alguno de los campos está vacio.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>';
+        $_SESSION['message'] = 'Alguno de los campos está vacio.';
+        header("Location: PAGINA_GestionUsuarios.php");
     }
 }
 

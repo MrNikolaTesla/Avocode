@@ -23,26 +23,18 @@ if(!empty($_POST["boton_registro"])){
     }
 
 if($estado==1) {
-    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-    Usuario '.$tipo.' registrado correctamente!
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    $_SESSION['message'] = 'Usuario '.$tipo.' registrado correctamente!';
+    header("Location: PAGINA_GestionUsuarios.php");
 }else if($repetido!=null){
-    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-    El correo ya esta en uso.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    $_SESSION['message'] = 'No tienes los permisos para realizar esta accion.';
+    header("Location: PAGINA_GestionUsuarios.php");
 }else if($estado==2) {
-    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-    No tienes los permisos para realizar esta accion.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    $_SESSION['message'] = 'No tienes los permisos para realizar esta accion.';
+    header("Location: PAGINA_GestionUsuarios.php");
 }
 }else{
-    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-    Alguno de los campos está vacio.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    $_SESSION['message'] = 'Alguno de los campos está vacio.';
+    header("Location: PAGINA_GestionUsuarios.php");
 }
 }
 

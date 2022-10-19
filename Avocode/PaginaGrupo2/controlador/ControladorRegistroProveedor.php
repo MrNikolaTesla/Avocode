@@ -21,21 +21,15 @@ if(!empty($_POST["boton_registro"])){
     }
 
 if($estado==1) {
-    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-    Proveedor registrado correctamente!
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    $_SESSION['message'] = 'Proveedor registrado correctamente!';
+    header("Location: PAGINA_GestionUsuarios.php");
 }else if(!$estado){
-    echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    El proveedor ya ha sido agregado al sistema previamente.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    $_SESSION['message'] = 'El proveedor ya ha sido agregado al sistema previamente.';
+    header("Location: PAGINA_GestionUsuarios.php");
 } 
 }else{
-    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-    Alguno de los campos está vacio.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    $_SESSION['message'] = 'Alguno de los campos está vacio.';
+    header("Location: PAGINA_GestionUsuarios.php");
 }
 }
 

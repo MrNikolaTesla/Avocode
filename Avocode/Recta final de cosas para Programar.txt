@@ -7,6 +7,5 @@
 -CRUD de Reserva lado admin
 -CRUD de Reserva lado cliente
 -Botones area 100%
--Exceso de Sessions
 -Imagenes de CRUD Producto
 -Mandar todo al host

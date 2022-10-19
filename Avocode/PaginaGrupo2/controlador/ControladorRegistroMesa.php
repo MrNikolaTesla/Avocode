@@ -10,15 +10,11 @@
     }
 
 if($estado==1) {
-    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-    Mesa agregada correctamente!
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    $_SESSION['message'] = 'Mesa agregada correctamente!';
+    header("Location: PAGINA_GestionUsuarios.php");
 }else{
-    echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    Algo ha sucedido, intente de nuevo mas tarde.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    $_SESSION['message'] = 'Algo ha sucedido, intente de nuevo mas tarde.';
+    header("Location: PAGINA_GestionUsuarios.php");
 } 
 }
 

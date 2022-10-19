@@ -1,4 +1,5 @@
 <?php
+session_start(); 
 require_once("modelo/InicioSesion.php");
 $inicio_sesion = new Inicio_usuario();
 if(!empty($_POST["boton_inicio"])){
@@ -13,7 +14,6 @@ if(!empty($_POST["boton_inicio"])){
 
 if($estado) {
 
-session_start(); 
 $_SESSION['id'] = $estado['id_usuario']; 
 $_SESSION['tipo'] = $estado['tipo']; 
 $_SESSION['nombre'] = $estado['nombre']; 
@@ -30,7 +30,7 @@ $_SESSION['nuevo_ingreso'] = "true";
 }
 
 } else {
-    echo '<div class="alert alert-danger">Vacio.</div>'; 
+    echo '<div class="alert alert-danger">Algunos de los campos esta vacio.</div>'; 
 }
 }
 
