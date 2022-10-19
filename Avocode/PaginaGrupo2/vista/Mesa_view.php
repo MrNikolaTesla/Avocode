@@ -96,7 +96,7 @@
                             <td scope="row"><?php echo $mesa['id_mesa'] ?></td>
                             <td><?php echo $mesa['estado'] ?></td>
                             <td>
-                                <a href="controlador/ControladorModificarMesa.php?id=<?php echo $mesa['id_mesa'] ?>" class="edit" title="Cambiar estado" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                <a href="controlador/ControladorModificarMesa.php?id=<?php echo $mesa['id_mesa'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                                 <a href="controlador/eliminar_mesa_controlador.php?id=<?php echo $mesa['id_mesa'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
                             </td>
                         </tr>
@@ -104,7 +104,7 @@
                 </tbody>
                 </table>
                 <!-- Regreso al inicio -->
-                <div><a href="menu_principal.php" class="button-2" style="color:white; text-decoration:none;">Regresar al inicio</a></div>
+                <div><button type="submit" class="button-2"><a href="menu_principal.php" style="color:white;">Regresar al inicio</a></button></div>
             </div>
 
             <!-- INICIO Paginado -->

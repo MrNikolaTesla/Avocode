@@ -7,7 +7,7 @@ class Conectar{
     
             $host ="localhost";
             $user ="root";
-            $pass="ubuntulamp";
+            $pass="";
             $bd="proyecto_grupo2";
             $con = mysqli_connect($host,$user,$pass);
             mysqli_select_db($con,$bd);

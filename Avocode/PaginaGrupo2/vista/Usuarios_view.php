@@ -119,7 +119,7 @@
                 </table>
 
                 <!-- Regreso al inicio -->
-                <div><a href="menu_principal.php" class="button-2" style="color:white; text-decoration:none;">Regresar al inicio</a></div>
+                <div><button type="submit" class="button-2"><a href="menu_principal.php" style="color:white;">Regresar al inicio</a></button></div>
             </div>
 
             <!-- INICIO Paginado -->

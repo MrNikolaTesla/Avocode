@@ -49,13 +49,13 @@
                                 <label class="form-label">Telefono</label>
                                 <input type="number" class="form-control" name="telefono" value="<?php echo $telefono ?>">
                         </div>
-                        <a href="menu_principal.php" class="button-2" style="color:white; text-decoration:none;">Regresar</a>
+                        <button type="submit" class="button-2"><a href="menu_principal.php" style="color:white;">Regresar</a></button>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
                         <a href="controlador/EliminarPerfil_controlador.php?id=<?php echo $id_perfil ?>" style="color:white;"><button type="submit" class="button-4" style="color:white;">Eliminar cuenta</a></button>
                 </form>
         <?php }else{  ?>
                 <div class="centrado">No estas modificando tu propio perfil...</div>
-                <a href="menu_principal.php" class="button-2" style="color:white; text-decoration:none;">Regresar</a>
+                <button type="submit" class="button-2"><a href="menu_principal.php" style="color:white;">Regresar</a></button>
         <?php } ?>
 
 </body>

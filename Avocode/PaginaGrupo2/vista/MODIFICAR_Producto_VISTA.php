@@ -49,7 +49,7 @@
                                 (En caso de querer modificar la imagen del producto, sube una imagen aqui: ↓)
                                 <input type="file" accept="image/*" name="imagen" />
                         </div>
-                        <a href="PAGINA_GestionProductos.php" class="button-2" style="color:white; text-decoration:none;">Regresar al Listado</a>
+                        <button type="submit" class="button-2"><a href="PAGINA_GestionProductos.php" style="color:white;">Regresar al Listado</a></button>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
                         </div>
                         
