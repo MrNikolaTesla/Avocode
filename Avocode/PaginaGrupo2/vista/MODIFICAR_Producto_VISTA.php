@@ -44,7 +44,7 @@
                         </select>
                         <div class="mb-3">
                                 <label class="form-label">Imagen</label>
-                                <img src="<?php echo $dir_imagen; ?>"  alt="Imagen" width="100" height="100">
+                                <img src="<?php echo $dir_imagen; ?>"  alt="Imagen" width="150" height="100">
                                 <br>
                                 (En caso de querer modificar la imagen del producto, sube una imagen aqui: ↓)
                                 <input type="file" accept="image/*" name="imagen" />
