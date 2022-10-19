@@ -18,6 +18,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- BOOTSTRAP JAVASCRIPT -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+        // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
+        function asegurar() {
+            rc = confirm("Se ELIMINARA PERMANENTEMENTE su usuario ¿Esta seguro de continuar?");
+            return rc;
+        }
+    </script>
+
 </head>
 
 <body>
@@ -51,8 +59,8 @@
                         </div>
                         <a href="menu_principal.php" class="button-2" style="color:white; text-decoration:none;">Regresar</a>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
-                        <a href="controlador/EliminarPerfil_controlador.php?id=<?php echo $id_perfil ?>" class="button-4" style="color:white; text-decoration:none;">Eliminar cuenta</a></button>
-                </form>
+                        <a href="controlador/EliminarPerfil_controlador.php?id=<?php echo $id_perfil ?>" style="color:white;"><button type="submit" class="button-4" style="color:white;"> <i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a></button>
+                        </form>
         <?php }else{  ?>
                 <div class="centrado">No estas modificando tu propio perfil...</div>
                 <a href="menu_principal.php" class="button-2" style="color:white; text-decoration:none;">Regresar</a>

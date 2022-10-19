@@ -38,7 +38,7 @@
                 });
             });
         });
-        // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
+        // Confirmación de eliminar producto, funciona cada vez que se quiere eliminar un producto
         function asegurar() {
             rc = confirm("¿Seguro que desea Eliminar este producto?");
             return rc;
