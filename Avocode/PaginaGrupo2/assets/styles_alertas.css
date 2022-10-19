@@ -76,8 +76,24 @@
     padding-top: 10px;
   }
 }
+
 .col-md-122 {
-  width: 45vw;
+  width: 40em;
   position: inherit;
   float: initial;
+  margin-left: 3em;
+  margin-bottom: -3em;
+}
+
+.btn-close {
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: .25em .25em;
+  color: #000;
+  background: transparent;
+  align-items: center;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 8px;
 }

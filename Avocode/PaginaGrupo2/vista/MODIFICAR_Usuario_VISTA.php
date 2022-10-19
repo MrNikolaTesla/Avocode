@@ -60,7 +60,8 @@
                                 </select>
                         </div>
                         <div><a href="PAGINA_GestionUsuarios.php" class="button-2" style="color:white; text-decoration:none;">Regresar al Listado</a>
-                        <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button></div>
+                                <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
+                        </div>
                 </form>
         <?php endforeach; ?>
 

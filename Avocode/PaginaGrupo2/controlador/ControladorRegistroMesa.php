@@ -11,10 +11,10 @@
 
 if($estado==1) {
     $_SESSION['message'] = 'Mesa agregada correctamente!';
-    header("Location: PAGINA_GestionUsuarios.php");
+    header("Location: PAGINA_GestionMesas.php");
 }else{
     $_SESSION['message'] = 'Algo ha sucedido, intente de nuevo mas tarde.';
-    header("Location: PAGINA_GestionUsuarios.php");
+    header("Location: PAGINA_GestionMesasphp");
 } 
 }
 
