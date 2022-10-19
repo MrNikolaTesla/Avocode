@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Menu Principal</title>
-    <link rel="stylesheet" type="text/css" href="assets/styles-alertas">
     <link rel="stylesheet" type="text/css" href="assets/style_menu_principal_admin.css">
     <link rel="stylesheet" type="text/css" href="assets/style_menu_principal_empleado.css">
     <link rel="stylesheet" type="text/css" href="assets/style_menu_principal_cliente.css">
@@ -14,8 +13,8 @@
 <body>
 
     <?php require_once("controlador/MenuPrincipal_VerificacionPermisos.php"); ?>
-    <?php require_once("vista/mensaje_perfil.php"); ?>
     <?php require_once("controlador/Controlador_PerfilUsuario.php"); ?>
+    <?php require_once("vista/mensaje_perfil.php"); ?>
 
 </body>
 
