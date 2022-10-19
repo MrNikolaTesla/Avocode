@@ -27,6 +27,7 @@ if(!empty($_POST["modificacion"])){
     }
 
 if($estado==1 && $repetido==false) {
+    session_start();
         $_SESSION['correo'] = $correo;
     $_SESSION['message'] = 'Perfil modificado correctamente';
     $_SESSION['id'] = $id;
@@ -37,12 +38,15 @@ if($estado==1 && $repetido==false) {
     $_SESSION['telefono'] =  $telefono;
     header("Location: menu_principal.php");
 }else if($estado==0 && $repetido==false){
+    session_start();
     $_SESSION['message'] = 'No hemos podido modificar su perfil, intente de nuevo mas tarde.';
     header("Location: menu_principal.php");
 }else if($repetido==true){
+    session_start();
     $_SESSION['message'] = 'Correo modificado ya en uso por otro usuario.';
     header("Location: menu_principal.php");
 }else if($repetido==null){
+    session_start();
     $_SESSION['message'] = 'Algo revento.';
     header("Location: menu_principal.php");
 }
