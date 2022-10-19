@@ -35,7 +35,7 @@ if ($permiso == "cliente") {
             echo "<li><a class='btn-admin' href='PAGINA_GestionProductos.php?update=<?php echo rand(0,2581023);'>Gestor de Productos</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='PAGINA_GestionProveedores.php'>Gestor de Proveedores</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='PAGINA_GestionMesas.php'>Gestor de Mesas</a></li><hr size=5 noshade='noshade' color='#743535'>";
-            echo "<li><a class='btn-admin' href='PAGINA_'>Opcion 4</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href='PAGINA_GestionReservas.php'>Gestor de Reservas</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='controlador/Logout.php'>Logout</a></li><hr size=5 noshade='noshade' color='#743535'>";
             ?>
         </ul>
@@ -56,7 +56,7 @@ if ($permiso == "cliente") {
             echo "<li><a class='btn-admin' href='PAGINA_GestionProductos.php?update=<?php echo rand(0,2581023);'>Gestor de Productos</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='PAGINA_GestionProveedores.php'>Gestor de Proveedores</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='PAGINA_GestionMesas.php'>Gestor de Mesas</a></li><hr size=5 noshade='noshade' color='#743535'>";
-            echo "<li><a class='btn-admin' href='PAGINA_'>4OpcionAdministrador</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href='PAGINA_GestionReservas.php'>Gestor de Reservas</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='controlador/Logout.php'>Logout</a></li><hr size=5 noshade='noshade' color='#743535'>";
             ?>
         </ul>
