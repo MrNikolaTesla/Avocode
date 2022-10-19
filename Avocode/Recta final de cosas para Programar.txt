@@ -1,11 +1,9 @@
 -Hacer llover CSS (Lautaro y Facundo en ustedes confio)
 -Lado del Cliente (Principalmente menu y demas)
-(Deberia de actualizar automaticamente el estado de las mesas cuando se haga un pedido local u online / reserva)
 -Lado del Cliente (Principalmente menu y demas | Si consigo lo de arriba esto es facil)
 -Pedidos (Esto va a estar feo)
 -Paginado en Productos
--CRUD de Reserva lado admin
+-Empleado y Cliente Ver en listado Reserva + agregar VIEW de empleado, cliente y mesa en el registro de reserva
 -CRUD de Reserva lado cliente
 -Botones area 100%
--Imagenes de CRUD Producto
 -Mandar todo al host
