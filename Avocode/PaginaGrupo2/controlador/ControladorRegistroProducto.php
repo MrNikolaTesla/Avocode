@@ -35,14 +35,14 @@ if (!empty($_POST["boton_añadir"])) {
         $producto->agregar_imagen($id);
         // FIN DE SUBIDA DE IMAGEN //
         $_SESSION['message'] = 'Producto agregado correctamente!';
-        header("Location: PAGINA_GestionUsuarios.php");
+        header("Location: PAGINA_GestionProductos.php");
         } else if ($repetido != null) {
         $_SESSION['message'] = 'El producto ya ha sido agregado al sistema previamente.';
-        header("Location: PAGINA_GestionUsuarios.php");
+        header("Location: PAGINA_GestionProductos.php");
         }
     }else{
         $_SESSION['message'] = 'Alguno de los campos está vacio.';
-        header("Location: PAGINA_GestionUsuarios.php");
+        header("Location: PAGINA_GestionProductos.php");
     }
 }
 
