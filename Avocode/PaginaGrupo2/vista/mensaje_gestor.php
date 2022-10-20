@@ -4,6 +4,8 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" rel="stylesheet">
 
+
+
 <script>
     $("#MyButton").click(function() {
         alert('Confirm to refresh alert messages.');
@@ -15,7 +17,7 @@
 if (isset($_SESSION['message']) && $_SESSION['message'] != "no") { ?>
     <div class="container-alert">
         <br>
-        <div class="col-md-12">
+        <div class="col-md-122">
             <div class="alert alert-info alert-dismissable">
                 <div class="alert-icon">
                     <span class="fa fa-info my_appended_icon"></span>
