@@ -1,0 +1,19 @@
+.table {
+    width: 0px;
+}
+
+.img-mesa {
+    display: -webkit-box;
+    position: inherit;
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+}
+
+.edit {
+    position: absolute;
+}
+
+.delete {
+    position: absolute;
+}

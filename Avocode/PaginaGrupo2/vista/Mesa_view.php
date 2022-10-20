@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/mesas-view.css">
     <link rel="stylesheet" href="assets/styles2.css">
     <link rel="stylesheet" href="assets/style_status.css">
 
@@ -23,23 +24,7 @@
 
     <!-- Search Box -->
     <script>
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-            // Animate select box length
-            var searchInput = $(".search-box input");
-            var inputGroup = $(".search-box .input-group");
-            var boxWidth = inputGroup.width();
-            searchInput.focus(function() {
-                inputGroup.animate({
-                    width: "300"
-                });
-            }).blur(function() {
-                inputGroup.animate({
-                    width: boxWidth
-                });
-            });
-        });
-        // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
+        // Confirmación de eliminar mesa, funciona cada vez que se quiere eliminar una mesa
         function asegurar() {
             rc = confirm("¿Seguro que desea Eliminar esta mesa?");
             return rc;
@@ -82,40 +67,27 @@
                         <div class="col-xs-4">
                             <h2 class="text-center">Listado de <b>Mesas</b></h2>
                         </div>
-                        <!------------------------------------------------------------------------------->
 
-                        <!------------------------------------------------------------------------------->
                         <!-- COMIENZO DEL FORMULARIO DE MESAS -->
                         <form method="POST">
                             <table class="table table-bordered">
-                                <br>
-                                <thead>
-                                    <tr>
-                                        <th>#ID</th>
-                                        <th>Estado<i class="fa fa-sort"></i></th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-                        </form>
 
-                        <!-- CUERPO DE TABLA -->
-                        <tbody>
-                            <?php foreach ($matrizMesa as $mesa) : ?>
-                                <tr>
-                                    <td scope="row"><?php echo $mesa['id_mesa'] ?></td>
-                                    <td width="600">
-                                        <!-- CORRELACIONAR ESTADO MESAS CON LA CLASE DIV QUE CORRESPONDA, SEGURAMENTE UTILIZANDO IF ESTADO MESA==1 ENTONCES DIV CLASS "TASK-DONE"-->
-                                        <div class="clausurada"></div>
-                                        <?php echo $mesa['estado'] ?>
-                                    </td>
-                                    <td>
-                                        <a href="controlador/ControladorModificarMesa.php?id=<?php echo $mesa['id_mesa'] ?>" class="edit" title="Cambiar estado" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                        <a href="controlador/eliminar_mesa_controlador.php?id=<?php echo $mesa['id_mesa'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                        </table>
+                                <!-- CUERPO DE TABLA -->
+                                <tbody>
+                                    <?php foreach ($matrizMesa as $mesa) : ?>
+                                        <tr>
+
+                                            <td>
+                                                <a href="controlador/ControladorModificarMesa.php?id=<?php echo $mesa['id_mesa'] ?>" class="edit" title="Cambiar estado" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                                <?php echo $mesa['estado'] ?> <a href="" target="_blank"><img class="img-mesa" src="assets/mesa.png"></a>
+                                                <?php echo $mesa['id_mesa'] ?>
+                                                <a href="controlador/eliminar_mesa_controlador.php?id=<?php echo $mesa['id_mesa'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </form>
                         <!-- Regreso al inicio -->
                         <div><a href="menu_principal.php" class="button-2" style="color:white; text-decoration:none;">Regresar al inicio</a></div>
                     </div>
