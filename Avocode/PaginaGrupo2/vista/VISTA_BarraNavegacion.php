@@ -36,6 +36,7 @@ if ($permiso == "cliente") {
             echo "<li><a class='btn-admin' href='PAGINA_GestionProveedores.php'>Gestor de Proveedores</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='PAGINA_GestionMesas.php'>Gestor de Mesas</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='PAGINA_GestionReservas.php'>Gestor de Reservas</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href=''>Espacio para Comandas</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='controlador/Logout.php'>Logout</a></li><hr size=5 noshade='noshade' color='#743535'>";
             ?>
         </ul>
@@ -57,6 +58,7 @@ if ($permiso == "cliente") {
             echo "<li><a class='btn-admin' href='PAGINA_GestionProveedores.php'>Gestor de Proveedores</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='PAGINA_GestionMesas.php'>Gestor de Mesas</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='PAGINA_GestionReservas.php'>Gestor de Reservas</a></li><hr size=5 noshade='noshade' color='#743535'>";
+            echo "<li><a class='btn-admin' href=''>Espacio para Comandas</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='controlador/Logout.php'>Logout</a></li><hr size=5 noshade='noshade' color='#743535'>";
             ?>
         </ul>
