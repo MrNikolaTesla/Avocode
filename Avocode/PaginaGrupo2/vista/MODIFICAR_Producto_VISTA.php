@@ -20,13 +20,13 @@
 
 <body>
         <?php foreach ($producto_modificar as $producto) : 
-                $dir_imagen = "assets/Productos/id".$producto['id_articulo'].".png"; ?>
+                $dir_imagen = "assets/Productos/id".$producto['id_producto'].".png"; ?>
                 <form class="col-4" method="POST" enctype="multipart/form-data">
                         <h3 class="text-center">Modificacion de Productos</h3>
                         <?php require_once("controlador/ControladorModificarProducto.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Id - Inalterable</label>
-                                <input type="text" class="form-control" name="id" value="<?php echo $producto['id_articulo'] ?>" readonly>
+                                <input type="text" class="form-control" name="id" value="<?php echo $producto['id_producto'] ?>" readonly>
                         </div>
                         <div class="mb-3">
                                 <label class="form-label">Nombre</label>
@@ -38,9 +38,9 @@
                         </div>
                         <label class="form-label">Tipo (Anteriormente: <?php echo $producto['tipo'] ?>)</label>
                         <select id="cmbMake" name="tipo">
-                                <option value="hamburguesa">Hamburguesa</option>
-                                <option value="bebida">Bebida</option>
-                                <option value="acompanamiento">Acompañamiento</option>
+                                <option value="Hamburguesa">Hamburguesa</option>
+                                <option value="Bebida">Bebida</option>
+                                <option value="Acompanamiento">Acompañamiento</option>
                         </select>
                         <div class="mb-3">
                                 <label class="form-label">Imagen</label>

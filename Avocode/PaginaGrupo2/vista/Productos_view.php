@@ -100,15 +100,15 @@
                         <tbody>
                             <?php foreach ($matrizProducto as $producto) : ?>
                                 <tr>
-                                    <th scope="row"><?php echo $producto['id_articulo'] ?></th>
-                                    <?php $dir_imagen = "assets/Productos/id" . $producto['id_articulo'] . ".png"; ?>
+                                    <th scope="row"><?php echo $producto['id_producto'] ?></th>
+                                    <?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?>
                                     <th><img src="<?php echo $dir_imagen; ?>" alt="Imagen" width="120" height="80"></th>
                                     <td><?php echo $producto['nombre'] ?></td>
                                     <td><?php echo $producto['precio'] ?></td>
                                     <td><?php echo $producto['tipo'] ?></td>
                                     <td>
-                                        <a href="ModificarProducto_pagina.php?id=<?php echo $producto['id_articulo'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                        <a href="controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id_articulo'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                        <a href="ModificarProducto_pagina.php?id=<?php echo $producto['id_producto'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id_producto'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

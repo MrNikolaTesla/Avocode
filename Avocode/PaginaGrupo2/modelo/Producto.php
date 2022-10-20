@@ -13,7 +13,7 @@ class Producto{
 
     public function listar_productos(){
 
-        $sql = "SELECT * FROM articulo ORDER BY id_articulo";
+        $sql = "SELECT * FROM producto ORDER BY id_producto";
         $query = mysqli_query($this->con,$sql);
 
         while($filas = mysqli_fetch_array($query)){
@@ -25,41 +25,41 @@ class Producto{
 
     public function get_producto($nombre, $precio, $tipo)
     {
-        $sql = "SELECT * FROM articulo WHERE nombre = '$nombre' and precio = '$precio' and tipo = '$tipo'";
+        $sql = "SELECT * FROM producto WHERE nombre = '$nombre' and precio = $precio and tipo = '$tipo'";
         $query = mysqli_query($this->con, $sql);
         $result = mysqli_fetch_array($query);
         return $result;
     }
 
     public function set_producto ($nombre, $precio, $tipo) {
-        $sql = "INSERT INTO articulo (nombre, precio, tipo) VALUES ('$nombre', '$precio', '$tipo')";
+        $sql = "INSERT INTO producto (nombre, precio, tipo) VALUES ('$nombre', '$precio', '$tipo')";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }
 
     public function get_data($id){
-        $sql = "SELECT * FROM articulo WHERE id_articulo = $id";
+        $sql = "SELECT * FROM producto WHERE id_producto = $id";
         $query = mysqli_query($this->con,$sql);
         return $query;
     }
 
     public function buscar_productos ($nombre)
     {
-        $sql = "SELECT * FROM articulo WHERE nombre LIKE '%$nombre%'";
+        $sql = "SELECT * FROM producto WHERE nombre LIKE '%$nombre%'";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }
 
     public function eliminar_producto($id)
     {
-        $sql = "DELETE FROM articulo WHERE id_articulo = $id";
+        $sql = "DELETE FROM producto WHERE id_producto = $id";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }
 
     public function mayor_id()
     {
-        $sql = "SELECT max(id_articulo) as mayor from articulo";
+        $sql = "SELECT max(id_producto) as mayor from producto";
         $query = mysqli_query($this->con, $sql);
         $result = mysqli_fetch_array($query);
         $bucle = true;
@@ -76,7 +76,7 @@ class Producto{
 
     public function update_producto($id, $nombre, $precio, $tipo)
     {
-        $sql = "UPDATE articulo set nombre = '$nombre', precio = '$precio', tipo = '$tipo' WHERE id_articulo = $id";
+        $sql = "UPDATE producto set nombre = '$nombre', precio = '$precio', tipo = '$tipo' WHERE id_producto = $id";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }
@@ -90,7 +90,6 @@ class Producto{
 
     public function eliminar_imagen($id_foto)
     {
-        echo "COso2";
         unlink($id_foto); //adsd
     }
 }
