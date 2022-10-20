@@ -102,14 +102,19 @@
                 <tbody>
                     <?php foreach ($matrizReserva as $reserva) : ?>
                         <tr>
+                        <?php $_SESSION['cliente_reserva'] = $reserva['cliente']; 
+                            $_SESSION['empleado_reserva'] = $reserva['empleado']; 
+                            require("controlador/Controlador_Nombre_Cliente_Reserva.php");
+                            require("controlador/Controlador_Nombre_Empleado_Reserva.php");
+                        ?>
                             <td scope="row"><?php echo $reserva['id_reserva'] ?></td>
                             <td><?php echo $reserva['mesa'] ?></td>
                             <td><?php echo $reserva['fecha'] ?></td>
                             <td><?php echo $reserva['hora'] ?></td>
-                            <td><?php echo $reserva['cliente'] ?></td> <!--Aca tendria que haber una funcion para buscar el nombre del empleado y ponerlo a la izquierda de la ID-->
-                            <td><?php echo $reserva['cliente_nom'] ?></td>
+                            <td><?php echo $reserva['cliente']; ?></td>
+                            <td><?php echo $_SESSION['cliente_reserva']?></td>
                             <td><?php echo $reserva['empleado'] ?></td>
-                            <td><?php echo $reserva['empleado_nom'] ?></td>
+                            <td><?php echo $_SESSION['empleado_reserva']?></td>
                             
                             <td>
                                 <a href="ModificarReserva_pagina.php?id=<?php echo $reserva['id_reserva'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>

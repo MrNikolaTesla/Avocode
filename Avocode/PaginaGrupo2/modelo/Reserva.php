@@ -27,7 +27,7 @@ class Reserva
 
     public function listar_reservas()
     {
-        $sql = "SELECT reserva.id_reserva, reserva.mesa, reserva.fecha, reserva.hora, usuario.id_usuario as cliente, usuario.id_usuario as empleado, usuario.nombre as cliente_nom, usuario.nombre as empleado_nom
+        $sql = "SELECT reserva.id_reserva, reserva.mesa, reserva.fecha, reserva.hora, reserva.cliente, reserva.empleado
         FROM reserva , usuario
         WHERE reserva.cliente = usuario.id_usuario ORDER BY id_reserva";
         $query = mysqli_query($this->con, $sql);
@@ -35,9 +35,27 @@ class Reserva
         while ($filas = mysqli_fetch_array($query)) {
             $this->reserva[] = $filas;
         }
-
         return $this->reserva;
     }
+
+    public function nombre_cliente($id_cliente)
+    {
+        $sql = "SELECT nombre FROM usuario
+        WHERE $id_cliente = id_usuario";
+        $query = mysqli_query($this->con, $sql);
+        $resultado = mysqli_fetch_array($query);
+        return $resultado;
+    }
+
+    public function nombre_empleado($id_empleado)
+    {
+        $sql = "SELECT nombre FROM usuario
+        WHERE $id_empleado = id_usuario";
+        $query = mysqli_query($this->con, $sql);
+        $resultado = mysqli_fetch_array($query);
+        return $resultado;
+    }
+
 
     public function get_data($id)
     {
