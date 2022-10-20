@@ -1,5 +1,4 @@
 <?php
-session_start();
     require_once("modelo/Usuario.php");
     $usuario_mod = new Usuario();
 if(!empty($_POST["modificacion"])){
