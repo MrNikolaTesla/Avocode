@@ -21,6 +21,7 @@ if(!empty($_POST["modificacion"])){
         $estado = $producto_mod->update_producto($id, $nombre, $precio, $tipo);
     }     
 
+    //TEMA NO CAPTA SI HAY O NO IMAGENES, COSO, QUIZAS NUEVO VALOR EN "FILES?"
 if($estado==1) {
     if($_FILES['imagen'] != ""){
         $direccion_foto = "assets/Productos/id".$id.".png";
