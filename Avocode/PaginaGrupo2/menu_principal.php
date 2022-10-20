@@ -13,8 +13,8 @@
 <body>
 
     <?php require_once("controlador/MenuPrincipal_VerificacionPermisos.php"); ?>
-    <?php require_once("vista/mensaje_perfil.php"); ?>
     <?php require_once("controlador/Controlador_PerfilUsuario.php"); ?>
+    <?php require_once("vista/mensaje_perfil.php"); ?>
 
 </body>
 
