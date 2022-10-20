@@ -230,7 +230,7 @@ table.table td i {
   line-height: 16px;
   padding: 10px 16px;
   margin-top: 1px;
-  
+
 }
 
 .button-2:hover {
@@ -307,8 +307,8 @@ table.table td i {
   font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 12px;
   font-weight: 700;
-  line-height: 16px;
-  padding: 10px 16px;
+  line-height: 22px;
+  padding: 0.5em 1em;
   margin-top: 10px;
   margin-left: 8px;
 }
@@ -350,5 +350,13 @@ table.table td i {
 }
 
 .centrado {
-text-align: center;
+  text-align: center;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-size: 16px;
+
+
+
 }
