@@ -22,14 +22,14 @@ if ($permiso == "cliente") {
 <?php
 } else if ($permiso == "empleado") {
 ?>
-    <div class="menu-nav-empleado">
+    <div class="menu-nav-admin">
         <ul>
             <?php
             if ($_SESSION['nuevo_ingreso'] == "true") {
-                echo "<p class='saludo-empleado'>¡Bienvenido " . $nombre . "!</p><hr size=5 noshade='noshade' color='#000'>";
+                echo "<li><p class='saludo-admin'>¡Bienvenido " . $nombre . "!</p></li><hr size=5 noshade='noshade' color='#743535'>";
                 $_SESSION['nuevo_ingreso'] = "false";
             } else {
-                echo "<li><p class='saludo-empleado'>" . $nombre . "</p></li><hr size=5 noshade='noshade' color='#000'>";
+                echo "<li><p class='saludo-admin'>" . $nombre . " " . $apellido . "</p></li><hr size=5 noshade='noshade' color='#743535'>";
             }
             echo "<li><a class='btn-admin' href='PAGINA_GestionUsuarios.php'>Gestor de Usuarios</a></li><hr size=5 noshade='noshade' color='#743535'>";
             echo "<li><a class='btn-admin' href='PAGINA_GestionProductos.php?update=<?php echo rand(0,2581023);'>Gestor de Productos</a></li><hr size=5 noshade='noshade' color='#743535'>";
