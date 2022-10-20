@@ -91,7 +91,7 @@ class Producto{
     public function eliminar_imagen($id_foto)
     {
         echo "COso2";
-        unlink($id_foto);
+        unlink($id_foto); //adsd
     }
 }
 
