@@ -16,7 +16,7 @@
         </div>
         <div class="mb-3">
                 <label class="form-label">Telefono</label>
-                <p><input type="text" class="tablas-input" name="telefono"></p>
+                <p><input type="number" class="tablas-input" name="telefono"></p>
         </div>
         <button type="submit" class="button-2" name="boton_registro" value="enviar">Enviar</button>
 </form>
