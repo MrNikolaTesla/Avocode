@@ -107,7 +107,8 @@
                                     <td><?php echo $producto['precio'] ?></td>
                                     <td><?php echo $producto['tipo'] ?></td>
                                     <td>
-                                        <a href="ModificarProducto_pagina.php?id=<?php echo $producto['id_producto'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="ModificarProductoImagen_pagina.php?id=<?php echo $producto['id_producto'] ?>" class="edit" title="Editar Imagen" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="ModificarProducto_pagina.php?id=<?php echo $producto['id_producto'] ?>" class="edit" title="Editar Informacion" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                                         <a href="controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id_producto'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
                                     </td>
                                 </tr>

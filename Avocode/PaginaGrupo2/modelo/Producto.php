@@ -88,9 +88,17 @@ class Producto{
             }
     }
 
-    public function eliminar_imagen($id_foto)
+    public function eliminar_imagen($direccion_foto)
     {
-        unlink($id_foto); //adsd
+        unlink($direccion_foto);
+    }
+
+    public function modificar_imagen($id,$direccion_foto)
+    {
+        unlink($direccion_foto);
+        if(move_uploaded_file($_FILES['imagen']['tmp_name'], 'assets/Productos/id'.$id.'.png') ) {
+            echo 'Imagen guardada con éxito';
+        }
     }
 }
 

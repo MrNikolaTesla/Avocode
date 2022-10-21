@@ -19,28 +19,22 @@
 </head>
 
 <body>
-        <?php foreach ($producto_modificar as $producto) : ?>
+        <?php foreach ($producto_modificar as $producto) : 
+                $dir_imagen = "assets/Productos/id".$producto['id_producto'].".png"; ?>
                 <form class="col-4" method="POST" enctype="multipart/form-data">
-                        <h3 class="text-center">Modificacion de Productos</h3>
-                        <?php require_once("controlador/ControladorModificarProducto.php"); ?>
+                        <h3 class="text-center">Modificacion de Imagen</h3>
+                        <?php require_once("controlador/ControladorModificarProductoImagen.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Id - Inalterable</label>
                                 <input type="text" class="form-control" name="id" value="<?php echo $producto['id_producto'] ?>" readonly>
                         </div>
                         <div class="mb-3">
-                                <label class="form-label">Nombre</label>
-                                <input type="text" class="form-control" name="nombre" value="<?php echo $producto['nombre'] ?>">
+                                <label class="form-label">Imagen</label>
+                                <img src="<?php echo $dir_imagen; ?>"  alt="Imagen" width="150" height="100">
+                                <br>
+                                (Subir imagen aqui: ↓)
+                                <input type="file" accept="image/*" name="imagen" />
                         </div>
-                        <div class="mb-3">
-                                <label class="form-label">Precio</label>
-                                <input type="number" class="form-control" name="precio" value="<?php echo $producto['precio'] ?>">
-                        </div>
-                        <label class="form-label">Tipo (Anteriormente: <?php echo $producto['tipo'] ?>)</label>
-                        <select id="cmbMake" name="tipo">
-                                <option value="Hamburguesa">Hamburguesa</option>
-                                <option value="Bebida">Bebida</option>
-                                <option value="Acompanamiento">Acompañamiento</option>
-                        </select>
                         <a href="PAGINA_GestionProductos.php" class="button-2" style="color:white; text-decoration:none;">Regresar al Listado</a>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
                         </div>
