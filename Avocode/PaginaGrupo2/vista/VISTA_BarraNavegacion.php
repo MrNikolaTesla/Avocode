@@ -6,16 +6,11 @@ if ($permiso == "cliente") {
         <ul>
             <?php
             if ($_SESSION['nuevo_ingreso'] == "true") {
-                echo "<p class='saludo-cliente'>¡Bienvenido " . $nombre . "!</p><hr size=5 noshade='noshade' color='#000'>";
-                $_SESSION['nuevo_ingreso'] = "false";
-            } else {
-                echo "<li><p class='saludo-cliente'>" . $nombre . "</p></li><hr size=5 noshade='noshade' color='#000'>";
+                $_SESSION['sesion_iniciada'] = "true";
+                header("Location: index.php");
+            }else{
+                echo "<p class='saludo-cliente'>Algo ha sucedido, intentelo de nuevo mas tarde.</p>";
             }
-            echo "<li><a class='btn-cliente' href=''>1OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
-            echo "<li><a class='btn-cliente' href=''>2OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
-            echo "<li><a class='btn-cliente' href=''>3OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
-            echo "<li><a class='btn-cliente' href=''>4OpcionCliente</a></li><hr size=5 noshade='noshade' color='#000'>";
-            echo "<li><a class='btn-cliente' href='controlador/Logout.php'>Logout</a></li><hr size=5 noshade='noshade' color='#000'>";
             ?>
         </ul>
     </div>
