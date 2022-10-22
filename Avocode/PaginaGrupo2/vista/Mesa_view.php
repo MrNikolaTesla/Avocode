@@ -79,7 +79,7 @@
 
                                             <td>
                                                 <a href="controlador/ControladorModificarMesa.php?id=<?php echo $mesa['id_mesa'] ?>" class="edit" title="Cambiar estado" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                                <?php echo $mesa['estado'] ?> <a href="" target="_blank"><img class="img-mesa" src="assets/mesa.png"></a>
+                                                <?php echo $mesa['estado'] ?> <a href="" target="_blank"><img class="img-mesa" src="assets/iconos/icono-mesa.png"></a>
                                                 <?php echo $mesa['id_mesa'] ?>
                                                 <a href="controlador/eliminar_mesa_controlador.php?id=<?php echo $mesa['id_mesa'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
                                             </td>

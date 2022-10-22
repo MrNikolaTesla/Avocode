@@ -21,7 +21,7 @@
 </head>
 
 <body>
-<?php require_once("vista/mensaje_gestor.php"); ?>
+        <?php require_once("vista/mensaje_gestor.php"); ?>
 
         <div class="container-fluid cont-pers">
                 <!-- INICIO FORMULARIO ALTA -->
@@ -32,6 +32,8 @@
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("controlador/Reserva_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
+                        <?php require_once("vista/TESTEO-NAVBAR.php"); ?>
+
                 </div>
         </div>
 </body>
