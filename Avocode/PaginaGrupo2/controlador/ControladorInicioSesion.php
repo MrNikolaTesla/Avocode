@@ -24,7 +24,7 @@ $_SESSION['direccion'] = $estado['direccion'];
 $_SESSION['telefono'] = $estado['telefono']; 
 $_SESSION['nuevo_ingreso'] = "true";
  
-    header("Location: menu_principal.php");
+    header("Location: PAGINA_GestionUsuarios.php");
 }else {
     echo '<div class="alert alert-danger">Contraseña o correo incorrecto.</div>';
 }
