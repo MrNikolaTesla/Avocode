@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 if (isset($_SESSION['sesion_iniciada']) && $_SESSION['sesion_iniciada'] == "true"){ ?>
     <li><a href="#" class="active">Inicio</a></li>
     <li><a href="#">Cartilla</a></li>
