@@ -27,9 +27,6 @@
 <!------------------------ Banner Principal ------------------------->
 <?php require_once("Sliders-index.html") ?>
 
-<div id="main-banner">
-  <img src="assets/burger.png" alt="Girl in a jacket" width="500" height="600" alt="Burger Factory ">
-</div>
 <!------------------------------------------------------------------->
 <?php require_once("vista/Cartilla_view.php") ?>
 
