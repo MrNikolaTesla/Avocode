@@ -58,9 +58,9 @@
 
     <!------------------------ Copyright ------------------------->
     <ul>
-      <li><img src="https://image.ibb.co/iivzoF/logo_footer.png" alt="logo"></li>
+      <li><img class="logo" src="assets/logo.png" alt="logo"></li>
       <li class="copyright-text">Copyright &copy; 2022 Todos los Derechos Reservados
-        <a href="https://github.com/MrNikolaTesla/Avocode">Avocode</a>.
+        <a href="https://github.com/MrNikolaTesla/Avocode">Avocode</a>
       </li>
     </ul>
   </div>

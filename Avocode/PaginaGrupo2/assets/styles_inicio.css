@@ -4,12 +4,14 @@ body {
   background: url(fondo-index.jpg);
   height: 100%;
   margin: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main {
   background: #fff;
   min-height: 100%;
-  width: 90%;
+  width: 65em;
   margin: 20px auto;
   box-sizing: border-box;
   padding: 10px 20px;
@@ -19,14 +21,15 @@ main {
 
 .top-bar {
   margin-top: 80px;
+  color:white;
 
 }
 
 .slider {
   position: sticky;
   overflow: hidden;
-  height: 100em;
-  width: 100%;
+  height: 40em;
+  width: 65em;
 
 }
 
@@ -66,15 +69,16 @@ main {
 }
 
 .buttons button#next {
-  position: absolute;
-  top: 40%;
-  right: 15px;
+  
+  position: absolute !important;
+  top: 40% !important;
+  right: 15px !important;
 }
 
 .buttons button#prev {
-  position: absolute;
-  top: 40%;
-  left: 15px;
+  position: absolute !important;
+  top: 40% !important;
+  left: 15px !important;
 }
 
 .buttons button {
@@ -173,8 +177,10 @@ header nav li {
 
 header nav li a {
   text-decoration: none;
-  color: #333;
-  font-size: 18px;
+  color: rgb(255, 255, 255);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 22px;
+  font-weight: 50px;
 }
 
 #main-banner,
@@ -328,7 +334,7 @@ footer a {
 /* Background Images */
 
 .slide:first-child {
-  background: url('https://source.unsplash.com/RyRpq9SUwAU/1600x900') no-repeat center top/cover;
+  background: url('burger.png') no-repeat center top/cover;
 }
 
 .slide:nth-child(2) {

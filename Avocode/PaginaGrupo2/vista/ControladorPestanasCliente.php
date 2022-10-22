@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="assets/styles_inicio.css">
     <title>Pestañas Cliente</title>
 </head>
-
 <body>
     <?php
 
