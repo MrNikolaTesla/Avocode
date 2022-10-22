@@ -3,13 +3,13 @@
 }
 
 .alert {
-  position: relative;
-  border-radius: 1px;
-  padding: 0 1em 0 0;
-  font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  color: #ffffff;
+  padding: 15px;
+  padding-right: 15px;
+  margin-bottom: -50px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin-top: 3em;
+  margin-left: 1.5em;
 }
 
 .alert.alert-info {
@@ -77,8 +77,8 @@
   }
 }
 
-.col-md-122 {
-  width: 40em;
+.col-md-12-1 {
+  width: 30em;
   position: inherit;
   float: initial;
   margin-left: 3em;

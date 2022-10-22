@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Menú Principal</title>
-    <link rel="stylesheet" type="text/css" href="assets/style_menu_principal_admin.css">
-    <link rel="stylesheet" type="text/css" href="assets/style_menu_principal_cliente.css">
-    <link rel="stylesheet" type="text/css" href="assets/style_menu_principal.css">
+
 </head>
 
 <body>

@@ -116,9 +116,6 @@
                         </tbody>
                         </table>
 
-                        <!-- Regreso al inicio -->
-                        <div><a href="menu_principal.php" class="button-2" style="color:white; text-decoration:none;">Regresar al inicio</a></div>
-
                         <!-- INICIO Paginado -->
                         <div class="clearfix">
                             <div class="hint-text">Mostrando <b>5</b> de <b>25</b> entradas</div>

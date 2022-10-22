@@ -35,16 +35,16 @@ if($estado==1 && $repetido==false) {
     $_SESSION['correo'] = $correo;
     $_SESSION['direccion'] = $direccion;
     $_SESSION['telefono'] =  $telefono;
-    header("Location: menu_principal.php");
+    header("Location: PAGINA_GestionUsuarios.php");
 }else if($estado==0 && $repetido==false){
     $_SESSION['message'] = 'No hemos podido modificar su perfil, intente de nuevo mas tarde.';
-    header("Location: menu_principal.php");
+    header("Location: PAGINA_GestionUsuarios.php");
 }else if($repetido==true){
     $_SESSION['message'] = 'Correo modificado ya en uso por otro usuario.';
-    header("Location: menu_principal.php");
+    header("Location: PAGINA_GestionUsuarios.php");
 }else if($repetido==null){
-    $_SESSION['message'] = 'Algo revento.';
-    header("Location: menu_principal.php");
+    $_SESSION['message'] = 'Algo reventó.';
+    header("Location: PAGINA_GestionUsuarios.php");
 }
 }
 ?>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style_navbar.css">
+    <link rel="stylesheet" href="assets/styles_navbar.css">
     <title>TESTEO 1</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -21,10 +21,10 @@
 </head>
 
 <body>
-<?php require_once("controlador/Controlador_PerfilUsuario.php"); ?>
+    <?php require_once("controlador/Controlador_PerfilUsuario.php"); ?>
 
     <header>
-        <span class="menu"><i class="material-icons">menu</i></span>
+        <span class="menu" ><i class="material-icons">menu</i></span>
     </header>
     <aside class="keep">
         <ul>
