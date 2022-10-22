@@ -31,6 +31,12 @@
                 </a>
             </li>
             <li>
+                <a class="message" href="index.php" style="text-decoration:none">
+                    <span><img src="assets/iconos/icono-inicio.svg" alt="Inicio" width="30" height="30"></span>
+                    Inicio
+                </a>
+            </li>
+            <li>
                 <a class="message" href="PAGINA_GestionUsuarios.php" style="text-decoration:none">
                     <span><img src="assets/iconos/icono-usuario2.svg" alt="Usuarios" width="30" height="30"></span>
                     Usuarios
