@@ -6,7 +6,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- CSS only -->
-        <link rel="stylesheet" href="assets/styles2.css">
         <title>PAGINA Gestión de Mesas </title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <!-- Recursos Misceláneos (Bootstrap CSS, Tipografías, CSS variado) -->
@@ -21,9 +20,10 @@
 </head>
 
 <body>
-<?php require_once("vista/mensaje_gestor.php"); ?>
+        <?php require_once("vista/mensaje_gestor.php"); ?>
 
         <div class="container-fluid cont-pers">
+
                 <!-- INICIO FORMULARIO ALTA -->
                 <?php require_once("vista/RegistroDeMesas.php"); ?>
                 <!-- FIN FORMULARIO ALTA -->
@@ -32,6 +32,8 @@
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("controlador/Mesa_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
+                        <?php require_once("vista/TESTEO-NAVBAR.php"); ?>
+
                 </div>
         </div>
 </body>

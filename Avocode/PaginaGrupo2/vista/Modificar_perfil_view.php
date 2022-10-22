@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="stylesheet" href="assets/styles2.css">
+        <link rel="stylesheet" href="assets/styles2.css">
 
         <title>Modificacion de Usuario</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -19,17 +19,17 @@
         <!-- BOOTSTRAP JAVASCRIPT -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
-        // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
-        function asegurar() {
-            rc = confirm("Se ELIMINARA PERMANENTEMENTE su usuario ¿Esta seguro de continuar?");
-            return rc;
-        }
-    </script>
+                // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
+                function asegurar() {
+                        rc = confirm("Se ELIMINARA PERMANENTEMENTE su usuario ¿Esta seguro de continuar?");
+                        return rc;
+                }
+        </script>
 
 </head>
 
 <body>
-        <?php if($id_a_Modificar == $id_perfil){ ?>
+        <?php if ($id_a_Modificar == $id_perfil) { ?>
                 <form class="col-4" method="POST">
                         <h3 class="text-center">Informacion de Perfil</h3>
                         <?php require_once("controlador/ControladorModificarPerfil.php"); ?>
@@ -60,8 +60,8 @@
                         <a href="menu_principal.php" class="button-2" style="color:white; text-decoration:none;">Regresar</a>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
                         <a href="controlador/EliminarPerfil_controlador.php?id=<?php echo $id_perfil ?>" style="color:white;"><button type="submit" class="button-4" style="color:white;"> <i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a></button>
-                        </form>
-        <?php }else{  ?>
+                </form>
+        <?php } else {  ?>
                 <div class="centrado">No estas modificando tu propio perfil...</div>
                 <a href="menu_principal.php" class="button-2" style="color:white; text-decoration:none;">Regresar</a>
         <?php } ?>

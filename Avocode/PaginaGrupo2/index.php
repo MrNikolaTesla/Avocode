@@ -11,7 +11,7 @@
 
 <body>
   <header id="header">
-    <img src="assets/logo.png" alt="LOGO BURGERFACTORY" />
+    <img src="assets/logo.png"  width="140" height="140" alt="LOGO BURGERFACTORY" />
     <ul>
       <?php require_once("vista/ControladorPestanasCliente.php"); ?>
     </ul>

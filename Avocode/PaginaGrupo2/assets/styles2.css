@@ -5,7 +5,8 @@ body {
 }
 
 .table-responsive {
-  margin: 30px 0;
+  margin: 40px 0;
+  margin-left: 20px;
 }
 
 .table-wrapper {
@@ -155,7 +156,8 @@ table.table td i {
 
 .pagination li i {
   font-size: 16px;
-  padding-top: 6px
+  padding-top: 6px;
+
 }
 
 .hint-text {
@@ -166,6 +168,9 @@ table.table td i {
 
 .form-flex {
   float: right;
+  margin-top: 40px;
+  position: flex;
+  margin-right: -150px;
 }
 
 .tablas-input {
@@ -339,11 +344,6 @@ table.table td i {
 
 }
 
-.form-flex {
-  margin-top: 30px;
-  position: flex;
-}
-
 .menu-nav-admin {
   overflow: auto;
   float: right;
@@ -356,7 +356,5 @@ table.table td i {
 .material-icons {
   font-family: 'Material Icons';
   font-size: 16px;
-
-
 
 }

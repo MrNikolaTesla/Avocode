@@ -23,6 +23,7 @@
 <body>
 
         <div class="container-fluid cont-pers">
+                
                 <!-- INICIO FORMULARIO ALTA -->
                 <?php require_once("vista/RegistroDeUsuarios.php"); ?>
                 <!-- FIN FORMULARIO ALTA -->
@@ -31,6 +32,8 @@
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("controlador/Usuario_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
+                        <?php require_once("vista/TESTEO-NAVBAR.php"); ?>
+
                 </div>
         </div>
 </body>
