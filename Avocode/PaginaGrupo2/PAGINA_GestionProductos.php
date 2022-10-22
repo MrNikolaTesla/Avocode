@@ -30,7 +30,7 @@
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("controlador/Producto_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
-                        <?php require_once("vista/TESTEO-NAVBAR.php"); ?>
+                        <?php require_once("vista/BarraNavegacion.php"); ?>
 
                 </div>
         </div>

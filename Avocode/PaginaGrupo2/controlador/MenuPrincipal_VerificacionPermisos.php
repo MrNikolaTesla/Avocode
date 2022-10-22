@@ -8,5 +8,4 @@ $permiso = $_SESSION['tipo'];
 $nombre = $_SESSION['nombre'];
 $apellido = $_SESSION['apellido']; 
 
-require_once("vista/VISTA_BarraNavegacion.php");
 ?>
