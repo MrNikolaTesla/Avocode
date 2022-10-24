@@ -26,7 +26,7 @@ $_SESSION['nuevo_ingreso'] = "true";
  
 
 // Tipo de Usuario Cliente --> Index  // Empleado ó Admin --> Gestión Usuarios
-    header("Location: PAGINA_GestionUsuarios.php");
+    header("Location: Controlador_Redireccion_Por_Permisos.php");
 }else {
     echo '<div class="alert alert-danger">Contraseña o correo incorrecto.</div>';
 }
