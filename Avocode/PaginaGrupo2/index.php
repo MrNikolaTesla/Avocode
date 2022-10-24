@@ -16,7 +16,7 @@
     <nav>
       <h2>Principal</h2>
       <ul>
-        <?php require_once("vista/ControladorPestanasCliente.php") ?>
+        <?php require_once("vista/VistaPestanasCliente.php") ?>
 
       </ul>
     </nav>

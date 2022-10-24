@@ -1,5 +1,6 @@
-hi
-<a href="index.php">Regresar</a>
+<p>CARTILLA VIRTUAL</p><br>
+En Construccion...
+<br><a href="index.php">Regresar</a>
 
 <!--Llamar al controlador para traer la cartilla-->
 
