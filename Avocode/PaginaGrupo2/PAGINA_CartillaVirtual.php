@@ -2,7 +2,7 @@
 En Construccion...
 <br><a href="index.php">Regresar</a>
 
-<?php require_once("controlador/ControladorMostrarCartilla.php"); ?>
+<?php session_start(); require_once("controlador/ControladorMostrarCartilla.php"); ?>
 
 <!--Llamar al controlador para traer la cartilla-->
 
