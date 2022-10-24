@@ -18,29 +18,29 @@ if (!empty($_POST["boton_añadir"])) {
 
         if ($repetido == null) {
 
-        // ALTA DE PRODUCTO //
-        $estado = $producto->set_producto($nombre, $precio, $tipo);
-        // FIN DE ALTA DE PRODUCTO //
+            // ALTA DE PRODUCTO //
+            $estado = $producto->set_producto($nombre, $precio, $tipo);
+            // FIN DE ALTA DE PRODUCTO //
 
-        // ------------------------------SUBIDA DE IMAGEN-------------------------------------- //
+            // ------------------------------SUBIDA DE IMAGEN-------------------------------------- //
 
-        
+
         }
 
         if ($estado == 1) {
-        // MAYOR ID //
-        $id = $producto->mayor_id();
-        // FIN DE MAYOR ID //
-        // SUBIDA DE IMAGEN //
-        $producto->agregar_imagen($id);
-        // FIN DE SUBIDA DE IMAGEN //
-        $_SESSION['message'] = 'Producto agregado correctamente!';
-        header("Location: PAGINA_GestionProductos.php");
+            // MAYOR ID //
+            $id = $producto->mayor_id();
+            // FIN DE MAYOR ID //
+            // SUBIDA DE IMAGEN //
+            $producto->agregar_imagen($id);
+            // FIN DE SUBIDA DE IMAGEN //
+            $_SESSION['message'] = 'Producto agregado correctamente!';
+            header("Location: PAGINA_GestionProductos.php");
         } else if ($repetido != null) {
-        $_SESSION['message'] = 'El producto ya ha sido agregado al sistema previamente.';
-        header("Location: PAGINA_GestionProductos.php");
+            $_SESSION['message'] = 'El producto ya ha sido agregado al sistema previamente.';
+            header("Location: PAGINA_GestionProductos.php");
         }
-    }else{
+    } else {
         $_SESSION['message'] = 'Alguno de los campos está vacio.';
         header("Location: PAGINA_GestionProductos.php");
     }
