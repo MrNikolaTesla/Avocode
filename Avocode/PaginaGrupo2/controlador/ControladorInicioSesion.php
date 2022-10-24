@@ -24,7 +24,7 @@ $_SESSION['direccion'] = $estado['direccion'];
 $_SESSION['telefono'] = $estado['telefono']; 
 $_SESSION['nuevo_ingreso'] = "true";
  
-    header("Location: PAGINA_GestionUsuarios.php");
+    header("Location: controlador/Controlador_Redireccion_Por_Permisos.php");
 }else {
     echo '<div class="alert alert-danger">Contraseña o correo incorrecto.</div>';
 }
