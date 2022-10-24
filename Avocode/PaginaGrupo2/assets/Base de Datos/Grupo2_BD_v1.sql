@@ -127,8 +127,8 @@ VALUES ('1', '1', '2022-09-07', '19:00', '3', '2');
 INSERT INTO reserva (id_reserva, mesa, fecha, hora, cliente, empleado)
 VALUES ('2', '2', '2022-09-09', '21:00', '4', '2');
 
-INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado)
+INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado_orden)
 VALUES ('1', '3', '1', '2', 'Take Away', '16:00', null, '2022-10-21', 'Especificaciones de orden IDK', 'Completada');
 
-INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado)
+INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado_orden)
 VALUES ('2', '4', '2', '1', 'Local', '12:00', null, '2022-10-24', 'Mas cosas importantes', 'Completada');
