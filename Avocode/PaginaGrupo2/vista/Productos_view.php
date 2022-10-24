@@ -20,8 +20,8 @@
     <!-- BOOTSTRAP JAVASCRIPT -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Search Box -->
     <script>
+        // Casilla de Búsqueda
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
             // Animate select box length
@@ -107,7 +107,7 @@
                                     <td><?php echo $producto['precio'] ?></td>
                                     <td><?php echo $producto['tipo'] ?></td>
                                     <td>
-                                        <a href="ModificarProductoImagen_pagina.php?id=<?php echo $producto['id_producto'] ?>" class="edit" title="Editar Imagen" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        <a href="ModificarProductoImagen_pagina.php?id=<?php echo $producto['id_producto'] ?>" title="Editar Imagen" data-toggle="tooltip"><i></i><img src="assets/iconos/icono-imagen.svg"></a>
                                         <a href="ModificarProducto_pagina.php?id=<?php echo $producto['id_producto'] ?>" class="edit" title="Editar Informacion" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                                         <a href="controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id_producto'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
                                     </td>
