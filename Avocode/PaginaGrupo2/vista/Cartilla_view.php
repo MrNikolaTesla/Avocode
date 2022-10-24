@@ -64,6 +64,7 @@
                                         <th>Imagen</th>
                                         <th>Nombre<i class="fa fa-sort"></i></th>
                                         <th>Precio<i class="fa fa-sort"></i></th>
+                                        <?php require_once("controlador/ControladorColumnaParaAgregarAOrden.php"); ?>
                                     </tr>
                                 </thead>
                         <!-- CUERPO DE TABLA -->
@@ -76,7 +77,7 @@
                                     <th><img src="<?php echo $dir_imagen; ?>" alt="Imagen" width="120" height="80"></th>
                                     <td><?php echo $producto['nombre'] ?></td>
                                     <td><?php echo $producto['precio'] ?></td>
-                                    <!--Controlador aca | si la sesion esta iniciada y estas pidiendo una orden, aca aparece un boton de + !!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?>
                                 </tr>
                                 <!--</form> !!!!!!!!!!!!!!!!!!!!!!!!!!!-->
                             <?php endforeach; ?>
