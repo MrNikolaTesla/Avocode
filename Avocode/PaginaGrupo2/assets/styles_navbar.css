@@ -166,7 +166,7 @@ aside ul li:hover a span.notif.green {
 }
 
 aside.keep.width {
-    width: 200px;
+    width: 230px;
 }
 
 aside.keep.width ul li a span.notif {
@@ -215,5 +215,5 @@ p.blink.mah span {
 
 .message {
     font-family: 'Signika', sans-serif;
-    font-size: 10px;
+    font-size: 12px;
 }
