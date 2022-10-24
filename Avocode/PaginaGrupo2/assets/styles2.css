@@ -356,5 +356,5 @@ table.table td i {
 .material-icons {
   font-family: 'Material Icons';
   font-size: 16px;
-
+  vertical-align: text-top;
 }
