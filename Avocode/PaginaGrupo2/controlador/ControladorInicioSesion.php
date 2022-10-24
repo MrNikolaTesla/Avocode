@@ -24,14 +24,15 @@ $_SESSION['direccion'] = $estado['direccion'];
 $_SESSION['telefono'] = $estado['telefono']; 
 $_SESSION['nuevo_ingreso'] = "true";
  
+
+// Tipo de Usuario Cliente --> Index  // Empleado ó Admin --> Gestión Usuarios
     header("Location: PAGINA_GestionUsuarios.php");
 }else {
     echo '<div class="alert alert-danger">Contraseña o correo incorrecto.</div>';
 }
 
 } else {
-    echo '<div class="alert alert-danger">Algunos de los campos esta vacio.</div>'; 
+    echo '<div class="alert alert-danger">Algunos de los campos esta vacío.</div>'; 
 }
 }
-
 ?>
