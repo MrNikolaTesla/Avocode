@@ -44,7 +44,7 @@
       </li>
     </ul>
     <ul>
-      <li><a href="contacto">Contacto</a></li>
+      <li><a href="contacto.php">Contacto</a></li>
       <li><a href="sobre-nosotros">Sobre nosotros</a></li>
       <li><a href="filosofia-empresa">Filosofía de la empresa</a></li>
     </ul>
