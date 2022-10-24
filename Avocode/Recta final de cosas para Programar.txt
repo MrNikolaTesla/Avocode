@@ -7,5 +7,6 @@
 -modificacion perfil lado cliente
 -paginado de CRUD Productos
 -agregar VIEW de empleado, cliente y mesa en el REGISTRO DE RESERVA (Para no poder simplemente ID A CIEGAS)
+-La casita nos va a matar el sistema
 
 -Esto y lo que salga, porque sabemos que siempre pasan cosas
