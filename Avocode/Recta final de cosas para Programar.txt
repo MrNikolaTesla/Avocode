@@ -1,8 +1,11 @@
 -Hacer llover CSS (Lautaro y Facundo en ustedes confio)
--Lado del Cliente (Principalmente menu y demas)
--Lado del Cliente (Principalmente menu y demas | Si consigo lo de arriba esto es facil)
--Pedidos (Esto va a estar feo)
--Paginado en Productos
--Empleado y Cliente Ver en listado Reserva + agregar VIEW de empleado, cliente y mesa en el registro de reserva
--CRUD de Reserva lado cliente
--Mandar todo al host
+-Reserva lado cliente
+-Orden lado cliente
+-Listado de orden lado empleado/admin
+-Seguimiento de orden lado cliente
+-perfil lado cliente
+-modificacion perfil lado cliente
+-paginado de CRUD Productos
+-agregar VIEW de empleado, cliente y mesa en el REGISTRO DE RESERVA (Para no poder simplemente ID A CIEGAS)
+
+-Esto y lo que salga, porque sabemos que siempre pasan cosas
