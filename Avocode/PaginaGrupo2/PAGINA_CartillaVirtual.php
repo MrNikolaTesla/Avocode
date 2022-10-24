@@ -1,6 +1,6 @@
 <p>CARTILLA VIRTUAL</p><br>
 En Construccion...
-<br><a href="index.php">Regresar</a>
+<br><a href="index.php">Regresar</a><br>
 
 <?php session_start(); require_once("controlador/ControladorMostrarCartilla.php"); ?>
 

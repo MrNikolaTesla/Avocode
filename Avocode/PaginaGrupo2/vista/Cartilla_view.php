@@ -26,7 +26,7 @@
 </head>
 
 <body>
-
+<?php require_once("controlador/Controlador_ProductosEnTuOrden.php"); ?>
     <!-- DIV'S CON CLASES DIFERENTES PARA EL RESPONSIVE, DISPOSICIÓN EN LA PÁGINA -->
     <div class="container">
         <div class="table-responsive">
@@ -52,6 +52,7 @@
                             <h2 class="text-center">Listado de <b>Productos</b></h2>
                         </div>
                         <!------------------------------------------------------------------------------->
+
 
                         <!-- DIV DE BÚSQUEDA-->
                         <?php require_once("vista/buscar_producto_cartilla_view.php"); ?>
