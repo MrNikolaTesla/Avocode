@@ -30,7 +30,7 @@
                         </select>
                 </div>
                 <div class="mb-3">
-                        <input type="file" accept="image/*" name="imagen" />
+                        <input type="file" accept="image/*" name="imagen" required/>
                 </div>
                 <button type="submit" class="button-2" name="boton_añadir" value="enviar">Agregar</button>
         </form>

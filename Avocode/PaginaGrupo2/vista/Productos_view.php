@@ -24,7 +24,7 @@
         // Casilla de Búsqueda
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
-            // Animate select box length
+            // Casilla animada
             var searchInput = $(".search-box input");
             var inputGroup = $(".search-box .input-group");
             var boxWidth = inputGroup.width();
