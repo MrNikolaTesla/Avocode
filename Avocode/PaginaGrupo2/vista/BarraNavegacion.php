@@ -41,7 +41,7 @@
             <li>
                 <a class="message" href="PAGINA_GestionUsuarios.php" style="text-decoration:none">
                     <span><img src="assets/iconos/icono-usuario2.svg" alt="Usuarios" width="30" height="30"></span>
-                    Usuarios
+                    Gestor de Usuarios
                 </a>
             </li>
             <li>
@@ -52,25 +52,25 @@
             <li>
                 <a class="message" href="PAGINA_GestionProveedores.php" style="text-decoration:none">
                     <span><img src="assets/iconos/icono-proveedor.svg" alt="Proveedores" width="30" height="30"></span>
-                    Proveedores
+                    Gestor de Proveedores
                 </a>
             </li>
             <li>
                 <a class="message" href="PAGINA_GestionMesas.php" style="text-decoration:none">
                     <span><img src="assets/iconos/icono-mesa2.png" alt="Mesas" width="30" height="30"></span>
-                    Mesas
+                    Gestor de Mesas
                 </a>
             </li>
             <li>
                 <a class="message" href="PAGINA_GestionReservas.php" style="text-decoration:none">
                     <span><img src="assets/iconos/icono-reserva.svg" alt="Reservas" width="30" height="30"></span>
-                    Reservas
+                    Gestor de Reservas
                 </a>
             </li>
             <li>
                 <a class="message" href="/" style="text-decoration:none">
                     <span><img src="assets/iconos/icono-comanda.svg" alt="Comandas" width="30" height="30"></span>
-                    Comandas
+                    Gestor de Órdenes
                 </a>
             </li>
             <li>
