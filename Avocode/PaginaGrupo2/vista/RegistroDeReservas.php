@@ -8,11 +8,11 @@
         </div>
         <div class="mb-3">
                 <label class="form-label">Fecha</label>
-                <p><input type="text" class="tablas-input" name="fecha"></p>
+                <p><input type="date" class="tablas-input" name="fecha"></p>
         </div>
         <div class="mb-3">
                 <label class="form-label">Hora</label>
-                <p><input type="text" class="tablas-input" name="hora"></p>
+                <p><input type="time" class="tablas-input" name="hora"></p>
         </div>
         <div class="mb-3">
                 <label class="form-label">ID del Cliente</label>
