@@ -43,6 +43,7 @@ CREATE TABLE `orden` (
   `direccion` varchar(80) NULL COMMENT '',
   `fecha` date NOT NULL COMMENT 'Fecha de la orden realizada',
   `observacion` varchar(90) NOT NULL COMMENT 'Comentarios para realizar el pedido',
+  `tipo_orden` enum('Generandose...','Pendiente','En Proceso','Completada') NOT NULL COMMENT 'Estado de la orden',
   CONSTRAINT cliente_orden FOREIGN KEY (cliente_orden) REFERENCES usuario(id_usuario),
   CONSTRAINT empleado_orden FOREIGN KEY (empleado_orden) REFERENCES usuario(id_usuario),
   CONSTRAINT mesa_orden FOREIGN KEY (mesa_orden) REFERENCES mesa(id_mesa)
@@ -126,8 +127,8 @@ VALUES ('1', '1', '2022-09-07', '19:00', '3', '2');
 INSERT INTO reserva (id_reserva, mesa, fecha, hora, cliente, empleado)
 VALUES ('2', '2', '2022-09-09', '21:00', '4', '2');
 
-INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion)
-VALUES ('1', '3', '1', '2', 'Take Away', '16:00', null, '2022-10-21', 'Especificaciones de orden IDK');
+INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado)
+VALUES ('1', '3', '1', '2', 'Take Away', '16:00', null, '2022-10-21', 'Especificaciones de orden IDK', 'Completada');
 
-INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion)
-VALUES ('2', '4', '2', '1', 'Local', '12:00', null, '2022-10-24', 'Mas cosas importantes');
+INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado)
+VALUES ('2', '4', '2', '1', 'Local', '12:00', null, '2022-10-24', 'Mas cosas importantes', 'Completada');
