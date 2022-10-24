@@ -5,5 +5,4 @@
 -Paginado en Productos
 -Empleado y Cliente Ver en listado Reserva + agregar VIEW de empleado, cliente y mesa en el registro de reserva
 -CRUD de Reserva lado cliente
--Botones area 100%
 -Mandar todo al host
