@@ -24,6 +24,7 @@
             <p>Estoy de acuerdo con <a href="Terminos.php">Términos y Condiciones</a></p>
             <input class="buttons" type="submit" name="boton_registro" value="Registrar"></input>
             <p><a href="FormularioInicioSesion.php">Ya tengo Cuenta</a></p>
+            <p><a href="index.php">Volver al inicio</a></p>
         </section>
     </form>
 

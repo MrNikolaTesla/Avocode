@@ -28,8 +28,6 @@
 <?php require_once("Sliders-index.html") ?>
 
 <!------------------------------------------------------------------->
-<?php require_once("vista/Cartilla_view.php") ?>
-
 
 </body>
 
@@ -37,30 +35,33 @@
 <footer>
   <div class="wrapper">
     <ul>
-      <li>New York Restaurant</li>
-      <li>3926 Anmoore Road</li>
-      <li>New York, NY 10014</li>
-      <li>718-749-1714</li>
+      <li>Av. Martiniano Chiossi</li>
+      <li>20100 Punta del Este</li>
+      <li>Departamento de Maldonado</li>
+      <li>
+        <a href="https://www.google.com/maps/place/BurgerFactory/@-34.9186076,-54.9528046,15z/data=!4m2!3m1!1s0x0:0xca880886d25fb1a5?sa=X&ved=2ahUKEwjZ-tz9wvf6AhXwrJUCHZJABdEQ_BJ6BAhoEAU">
+          <img width="50" height="50" src="assets/imagenes/ubication.png" alt="logo"> </a>
+      </li>
     </ul>
     <ul>
-      <li>France Restaurant</li>
-      <li>68, rue de le Couronne</li>
-      <li>75002 PARIS</li>
-      <li>02.94.23.69.56</li>
+      <li><a href="contacto">Contacto</a></li>
+      <li><a href="sobre-nosotros">Sobre nosotros</a></li>
+      <li><a href="filosofia-empresa">Filosofía de la empresa</a></li>
     </ul>
     <ul>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Careers</a></li>
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Contact</a></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
     </ul>
+
     <!----------------------------------------------------------->
 
     <!------------------------ Copyright ------------------------->
     <ul>
-      <li><img class="logo" src="assets/logo.png" alt="logo"></li>
+      <li><img width="80" height="50" src="assets/imagenes/persea.png" alt="logo"></li>
       <li class="copyright-text">Copyright &copy; 2022 Todos los Derechos Reservados
-        <a href="https://github.com/MrNikolaTesla/Avocode">Avocode</a>
+        <a href="https://github.com/MrNikolaTesla/Avocode">Persea SRL</a>
       </li>
     </ul>
   </div>

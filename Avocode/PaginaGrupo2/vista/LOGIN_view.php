@@ -17,6 +17,7 @@
             <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña"></input>
             <input class="buttons" type="submit" name="boton_inicio" value="Iniciar Sesion"></input>
             <p><a href="FormularioRegistroCliente.php">Registrarse</a></p>
+            <p><a href="index.php">Volver al inicio</a></p>
         </section>
     </form>
 </body>
