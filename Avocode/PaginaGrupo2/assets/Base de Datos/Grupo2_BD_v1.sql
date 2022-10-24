@@ -43,7 +43,7 @@ CREATE TABLE `orden` (
   `direccion` varchar(80) NULL COMMENT '',
   `fecha` date NOT NULL COMMENT 'Fecha de la orden realizada',
   `observacion` varchar(90) NOT NULL COMMENT 'Comentarios para realizar el pedido',
-  `tipo_orden` enum('Generandose...','Pendiente','En Proceso','Completada') NOT NULL COMMENT 'Estado de la orden',
+  `estado_orden` enum('Generandose...','Pendiente','En Proceso','Completada') NOT NULL COMMENT 'Estado de la orden',
   CONSTRAINT cliente_orden FOREIGN KEY (cliente_orden) REFERENCES usuario(id_usuario),
   CONSTRAINT empleado_orden FOREIGN KEY (empleado_orden) REFERENCES usuario(id_usuario),
   CONSTRAINT mesa_orden FOREIGN KEY (mesa_orden) REFERENCES mesa(id_mesa)
