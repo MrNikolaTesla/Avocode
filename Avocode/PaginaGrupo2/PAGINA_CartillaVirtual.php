@@ -2,6 +2,8 @@
 En Construccion...
 <br><a href="index.php">Regresar</a>
 
+<?php require_once("controlador/ControladorMostrarCartilla.php"); ?>
+
 <!--Llamar al controlador para traer la cartilla-->
 
 <!--Boton para empezar a crear una orden (view)-->
