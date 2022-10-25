@@ -30,7 +30,7 @@ header {
 }
 
 aside {
-    width: 55px;
+    width: 4em;
     background: #fff;
     padding: 0px 0px 10px 0px;
     position: absolute;
@@ -40,6 +40,7 @@ aside {
     box-shadow: 0px 3px 5px #6d6d6d;
     overflow: hidden;
     z-index: 99;
+    height: 46.5em;
 }
 
 aside ul {

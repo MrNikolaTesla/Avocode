@@ -4,13 +4,18 @@ body {
   background-size: cover;
 }
 
+.container-2 {
+  width: 100em;
+  margin-left: 40px;
+}
+
 .table-responsive {
   margin: 50px 0;
   margin-left: 20px;
 }
 
 .table-wrapper {
-  min-width: 1000px;
+  min-width: 35em;
   background: #fff;
   padding: 20px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
@@ -95,13 +100,12 @@ table.table th i {
 }
 
 table.table td:last-child {
-  width: 130px;
+  width: fit-content;
 }
 
 table.table td a {
   color: #a0a5b1;
-  display: inline-block;
-  margin: 0 5px;
+
 }
 
 table.table td a.view {
@@ -168,7 +172,7 @@ table.table td i {
 
 .form-flex {
   float: right;
-  margin-top: 40px;
+  margin-top: 50px;
   position: flex;
   margin-right: -150px;
 }
@@ -358,3 +362,24 @@ table.table td i {
   font-size: 16px;
   vertical-align: text-top;
 }
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px olivedrab;
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: yellowgreen; 
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+  background: #7bac10;
+  }

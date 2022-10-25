@@ -14,7 +14,7 @@
                 <h3 class="text-center2">Ingreso de Mesas</h3>
                 <div class="mb-3">
                         <?php require_once("controlador/ControladorRegistroMesa.php"); ?>
-                        <label class="form-label">Cantidad de mesas</label>
+                        <label class="form-label">Cantidad de mesas (Cada 1 es una mesa extra)</label>
                         <p><input type="number" class="tablas-input" name="numero"></p>
                 </div>
 

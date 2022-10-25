@@ -44,7 +44,7 @@
 <body>
 
     <!-- DIV'S CON CLASES DIFERENTES PARA EL RESPONSIVE Y DISPOSICIÓN EN LA PÁGINA -->
-    <div class="container">
+    <div class="container-2">
         <div class="table-responsive">
             <div class="table-wrapper">
                 <div class="table-title">
@@ -70,43 +70,48 @@
 
                         <!-- COMIENZO DEL FORMULARIO DE MESAS -->
                         <form method="POST">
-                            <table class="table table-bordered">
+                            <table class="table">
 
                                 <!-- CUERPO DE TABLA -->
                                 <tbody>
                                     <?php foreach ($matrizMesa as $mesa) : ?>
-                                        <tr>
 
-                                            <td>
-                                                <a href="controlador/ControladorModificarMesa.php?id=<?php echo $mesa['id_mesa'] ?>" class="edit" title="Cambiar estado" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                                <?php echo $mesa['estado'] ?> <a href="" target="_blank"><img class="img-mesa" src="assets/iconos/icono-mesa.png"></a>
+                                        <div class="div-mesa">
+                                            <td class="td-mesa">
                                                 <?php echo $mesa['id_mesa'] ?>
+
                                                 <a href="controlador/eliminar_mesa_controlador.php?id=<?php echo $mesa['id_mesa'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                                <a href="" target="_blank"><img class="img-mesa" src="assets/iconos/icono-mesa.png"></a>
+                                                <?php echo $mesa['estado'] ?>
+                                                <a href="controlador/ControladorModificarMesa.php?id=<?php echo $mesa['id_mesa'] ?>" class="edit" title="Cambiar estado" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                                             </td>
-                                        </tr>
+
+
+                                        </div>
+
                                     <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </form>
 
-                    <!-- INICIO Paginado -->
-                    <div class="clearfix">
-                        <div class="hint-text">Mostrando <b>5</b> de <b>25</b> entradas</div>
-                        <ul class="pagination">
-                            <li class="page-item disabled"><a href="#">Anterior</a></li>
-                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                            <li class="page-item"><a href="#" class="page-link">2</a></li>
-                            <li class="page-item"><a href="#" class="page-link">3</a></li>
-                            <li class="page-item"><a href="#" class="page-link">4</a></li>
-                            <li class="page-item"><a href="#" class="page-link">5</a></li>
-                            <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
-                        </ul>
-                    </div>
-                    <!-- FIN Paginado -->
+                        <!-- INICIO Paginado -->
+                        <div class="clearfix">
+                            <div class="hint-text">Mostrando <b>5</b> de <b>25</b> entradas</div>
+                            <ul class="pagination">
+                                <li class="page-item disabled"><a href="#">Anterior</a></li>
+                                <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
+                            </ul>
+                        </div>
+                        <!-- FIN Paginado -->
 
+                    </div>
                 </div>
             </div>
-        </div>
 </body>
 
 </html>

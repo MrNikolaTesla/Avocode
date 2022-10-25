@@ -41,6 +41,7 @@
                                 <option value="Bebida">Bebida</option>
                                 <option value="Acompanamiento">Acompañamiento</option>
                         </select>
+                        <div>
                         <a href="PAGINA_GestionProductos.php" class="button-2" style="color:white; text-decoration:none;">Regresar al Listado</a>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
                         </div>
