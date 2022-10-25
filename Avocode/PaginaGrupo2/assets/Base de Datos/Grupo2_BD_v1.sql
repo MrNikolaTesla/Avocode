@@ -2,7 +2,8 @@ CREATE TABLE `producto` (
   `id_producto` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID del Producto',
   `nombre` varchar(30) NOT NULL COMMENT 'Nombre del Producto',
   `precio` int(20) NOT NULL COMMENT 'Precio del Producto',
-  `tipo` varchar(15) NOT NULL COMMENT 'Tipo de producto (vegano, vegetariano, celiaco,  etc).'
+  `tipo` varchar(15) NOT NULL COMMENT 'Tipo de producto (vegano, vegetariano, celiaco,  etc).',
+  `descripcion` varchar(180) NULL COMMENT 'Descripcion del Producto'
 );
 
 CREATE TABLE `factura` (
@@ -79,14 +80,14 @@ CREATE TABLE `reserva` (
   CONSTRAINT mesa FOREIGN KEY (mesa) REFERENCES mesa(id_mesa)
 );
 
-INSERT INTO producto (id_producto, nombre, precio, tipo)
-VALUES ('1','Hamburguesa de Conocimiento', '500', 'Hamburguesa');
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('1','Hamburguesa de Conocimiento', '500', 'Hamburguesa', 'Datos del Producto');
 
-INSERT INTO producto (id_producto, nombre, precio, tipo)
-VALUES ('2','Hamburguesa Clasica', '230', 'Hamburguesa');
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('2','Hamburguesa Clasica', '230', 'Hamburguesa', 'Datos del Producto');
 
-INSERT INTO producto (id_producto, nombre, precio, tipo)
-VALUES ('3','Hamburguesa Vegana', '270', 'Hamburguesa');
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('3','Hamburguesa Vegana', '270', 'Hamburguesa', 'Datos del Producto');
 
 INSERT INTO factura (id_factura, cliente, empleado, fecha, hora, forma_pago, productos, monto)
 VALUES ('1','3', '2', '2022-09-07', '19:00', 'Credito', '2', '230');
