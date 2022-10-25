@@ -7,6 +7,6 @@ require_once("../modelo/Usuario.php");
         $id = $_GET['id'];
         $usuario->eliminar_cuenta($id);
 
-    header("Location: ../index.php");
+    header("Location: Logout.php");
 }
 ?>

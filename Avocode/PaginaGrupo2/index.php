@@ -28,6 +28,7 @@
 <?php require_once("Sliders-index.html") ?>
 
 <!------------------------------------------------------------------->
+<?php require_once("vista/mensaje_perfil.php"); ?>
 
 </body>
 
