@@ -102,27 +102,30 @@
                                             <?php foreach ($matrizProducto as $producto) : ?>
 
 
-                                                <!--<form> !!!!!!!!!!!!!!!!!!!!! -->
 
-                                                <?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?>
 
                                                 <tr>
                                                     <?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?>
                                                     <td></td>
                                                     <td></td>
                                                 </tr>
-                                                <!--</form> !!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
                                                 <div id="menu-wrapper">
                                                     <div class="breakfast menu-restaurant">
                                                         <span class="clearfix">
+
                                                             <a><img src="<?php echo $dir_imagen; ?>" alt="Imagen" width="120" height="80"></a>
+                                                            <?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?>
+
                                                             <a class="menu-title" href="#" data-meal-img=".jpg"><?php echo $producto['nombre'] ?></a>
+
                                                             <span style="left:166px;right:44px;" class="menu-line"></span>
                                                             <span class="menu-price">$.<?php echo $producto['precio'] ?></span>
                                                         </span>
                                                         <span class="menu-subtitle"><?php echo $producto['descripcion'] ?></span>
                                                     </div>
+                                                    </form>
+
                                                 <?php endforeach; ?>
                                 </section>
 
