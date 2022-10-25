@@ -80,10 +80,6 @@
                             </thead>
                             <!-- CUERPO DE TABLA -->
                             <tbody>
-
-
-                                <!------------- COMIENZO DE MENU Y RESERVA, FALTA ADAPTAR---------------- -->
-
                                 <section id="menu-list" class="section-padding">
                                     <div class="container">
                                         <div class="row">
@@ -101,14 +97,19 @@
                                                     <li><a class="filter" data-filter=".dinner">Bebidas</a></li>
                                                 </ul>
                                             </div>
-                                            <!--<form> !!!!!!!!!!!!!!!!!!!!! -->
 
+                                            <!------------- COMIENZO DE MENU Y RESERVA, FALTA ADAPTAR---------------- -->
                                             <?php foreach ($matrizProducto as $producto) : ?>
+
+
+                                                <!--<form> !!!!!!!!!!!!!!!!!!!!! -->
+
+                                                <?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?>
+
                                                 <tr>
                                                     <?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?>
                                                     <td></td>
                                                     <td></td>
-                                                    <?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?>
                                                 </tr>
                                                 <!--</form> !!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
@@ -129,9 +130,9 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12 text-center">
-                                                <h1 class="header-h">Make a Reservation</h1>
-                                                <p class="header-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                                                    <br>nibh euismod tincidunt ut laoreet dolore magna aliquam.
+
+                                                <h1 class="header-h">Realiza una reserva</h1>
+                                                <p class="header-p">Ingresa los datos requeridos para poder realizar una reserva
                                                 </p>
                                             </div>
                                         </div>
@@ -142,8 +143,10 @@
                                                         <div class="contact-phone bg-1 text-center"><span class="phone-in-talk fa fa-phone fa-3x"></span></div>
                                                     </div>
                                                     <div class="media-body">
-                                                        <h4 class="dark-blue regular">Phone Numbers</h4>
-                                                        <p class="light-blue regular alt-p">012 345 6789 - <span class="contacts-sp">Phone Booking</span></p>
+                                                        <h4 class="dark-blue regular">Contacto</h4>
+                                                        <p class="light-blue regular alt-p">4226 8278 - <span class="contacts-sp">Telefono fijo</span></p>
+                                                        <p class="light-blue regular alt-p">091 646 540 - <span class="contacts-sp">Whatsapp</span></p>
+
                                                     </div>
                                                 </div>
                                                 <div class="media-2">
@@ -151,10 +154,10 @@
                                                         <div class="contact-email bg-14 text-center"><span class="hour-icon fa fa-clock-o fa-3x"></span></div>
                                                     </div>
                                                     <div class="media-body">
-                                                        <h4 class="dark-blue regular">Opening Hours</h4>
-                                                        <p class="light-blue regular alt-p"> Monday to Friday 09.00 - 24:00</p>
+                                                        <h4 class="dark-blue regular">Horarios de atencion</h4>
+                                                        <p class="light-blue regular alt-p"> Martes a Sabados de 20 a 23 hs</p>
                                                         <p class="light-blue regular alt-p">
-                                                            Weekend 08:00 - 03.00
+                                                            Lunes y Domingo cerrados
                                                         </p>
                                                     </div>
                                                 </div>
