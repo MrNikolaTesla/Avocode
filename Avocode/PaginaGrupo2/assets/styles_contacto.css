@@ -8,19 +8,19 @@ body {
   }
 h1{
   font-size: 55px;
-  margin-left: 750px;
+  margin-left: 700px;
   margin-top: 150px;
 }
 p{
   padding: 10px auto;
-  margin-left: 800px;
+  margin-left: 750px;
   width:350px ;
   max-width: 350px ;
 }
 .logos{
     background-color: rgba(0, 0, 0, 0.671);
   padding: 10px auto;
-  margin-left: 780px;
+  margin-left: 730px;
   margin-right: 770px;
   margin-top: 200px;
   width:350px ;
@@ -48,7 +48,7 @@ p{
   line-height: 16px;
   padding: 10px 16px;
   margin-top: 10px;
-  margin-left: 910px;
+  margin-left: 855px;
   
 }
 
