@@ -32,3 +32,43 @@ p{
     padding: 2px auto;
     float: left;
 }
+.button-1 {
+  appearance: none;
+  background-color: #1d689e;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  padding: 10px 16px;
+  margin-top: 10px;
+  margin-left: 910px;
+  
+}
+
+.button-1:hover {
+  background-color: #11507ebd;
+}
+
+.button-1:focus {
+  box-shadow: 1d689e;
+  outline: none;
+}
+
+.button-1:disabled {
+  background-color: #1d689e;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-1:active {
+  background-color: #1d689edc;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}

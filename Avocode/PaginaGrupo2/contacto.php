@@ -30,8 +30,8 @@
   </div>
 
 </body>
-<div class="boton">
-<br><a href="index.php">Regresar</a><br>
+<div>
+<br><a class="button-1" href="index.php">Regresar</a><br>
 </div>
 
 </html>
