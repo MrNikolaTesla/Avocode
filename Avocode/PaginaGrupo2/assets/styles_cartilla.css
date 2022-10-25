@@ -28,7 +28,9 @@ ul {
     width: 50%;
     float: left;
     padding: 15px;
-    position: realtive;
+    position: relative;
+    display: flex;
+    
 
 }
 
@@ -37,7 +39,7 @@ ul {
     font-family: Montserrat, arial;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #FFB03B;
+    color: #000000;
 }
 
 .menu-restaurant .menu-line {
@@ -82,7 +84,7 @@ ul {
     color: #fff;
     text-transform: capitalize;
     letter-spacing: 1px;
-    margin-botttom: 40px;
+    margin-bottom: 40px;
 }
 
 #menu-filters ul li a {
@@ -124,7 +126,7 @@ ul {
 }
 
 .bg-1 {
-    background-color: #fecc17;
+    background-color: #861c1c;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -132,7 +134,7 @@ ul {
 }
 
 .bg-14 {
-    background-color: #ccdb38;
+    background-color: #3628f0;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -263,7 +265,15 @@ ul {
 .show {
     display: block;
 }
+
 .input-cartilla {
     width: max-content;
 
+}
+
+.imagen-cartilla {
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    display: block ruby;
 }
