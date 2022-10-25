@@ -29,6 +29,7 @@
           </div>
       </div>   
 
+      <br><a href="index.php">Regresar</a><br>
 
 
 </html>
