@@ -1,0 +1,29 @@
+body {
+    font-family: Georgia;
+    background: url(imagenes/contacto.png);
+    height: 100%;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+h1{
+    width: 300px ;
+    margin: auto auto;
+    margin-top: 30px; 
+}
+p{
+    width: 600px;
+    margin: 100px 420px;
+    margin-top: 30px; 
+}
+.logos{
+    background-color: rgba(0, 0, 0, 0.671);
+  padding: 10px auto;
+  margin: 150px 490px;
+  overflow: hidden;
+}
+.logo{
+    margin:  22px  ;
+    padding: 2px auto;
+    float: left;
+}
