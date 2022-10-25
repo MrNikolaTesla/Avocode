@@ -44,9 +44,6 @@
         }
     </script>
 
-    <!-- JAVASCRIPT DE SWEETALERT SIN USO ACTUALMENTE -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 </head>
 
 <body>
