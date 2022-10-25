@@ -39,11 +39,11 @@ CREATE TABLE `orden` (
   `cliente_orden` int(10) NOT NULL COMMENT '',
   `empleado_orden` int(10) NULL COMMENT '',
   `mesa_orden` int(10) NULL COMMENT '',
-  `tipo_orden` enum('Local','Take Away','Delivery') NOT NULL COMMENT 'Tipo de orden funcional',
-  `hora` varchar(10) NULL COMMENT '',
+  `tipo_orden` enum('Local','Take Away','Delivery') NULL COMMENT 'Tipo de orden funcional',
+  `hora` varchar(10) NOT NULL COMMENT '',
   `direccion` varchar(80) NULL COMMENT '',
   `fecha` date NOT NULL COMMENT 'Fecha de la orden realizada',
-  `observacion` varchar(90) NOT NULL COMMENT 'Comentarios para realizar el pedido',
+  `observacion` varchar(90) NULL COMMENT 'Comentarios para realizar el pedido',
   `estado_orden` enum('Generandose...','Pendiente','En Proceso','Completada') NOT NULL COMMENT 'Estado de la orden',
   CONSTRAINT cliente_orden FOREIGN KEY (cliente_orden) REFERENCES usuario(id_usuario),
   CONSTRAINT empleado_orden FOREIGN KEY (empleado_orden) REFERENCES usuario(id_usuario),
@@ -133,3 +133,9 @@ VALUES ('1', '3', '1', '2', 'Take Away', '16:00', null, '2022-10-21', 'Especific
 
 INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado_orden)
 VALUES ('2', '4', '2', '1', 'Local', '12:00', null, '2022-10-24', 'Mas cosas importantes', 'Completada');
+
+INSERT INTO detalles_orden (id_detalle_orden, orden, producto, cantidad_producto)
+VALUES ('1','1','2','1');
+
+INSERT INTO detalles_orden (id_detalle_orden, orden, producto, cantidad_producto)
+VALUES ('2','2','3','3');

@@ -100,7 +100,6 @@
 
                                         <!------------- COMIENZO DE CARTILLA ------------------>
                                         <?php foreach ($matrizProducto as $producto) : ?>
-                                            <form method="POST">
                                             <!-- Desconocimiento de su utilidad -->
                                             <?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?>
                                             <!------------------------------------>
@@ -119,7 +118,6 @@
                                                     </div>
                                                     <span class="menu-subtitle"><?php echo $producto['descripcion'] ?></span>
                                                 </div>
-                                                </form>
                                             <?php endforeach; ?>
                             </section>
                             <!---------- FIN DE CARTILLA ----------->
