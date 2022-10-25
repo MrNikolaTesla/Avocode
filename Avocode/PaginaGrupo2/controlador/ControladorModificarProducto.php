@@ -9,13 +9,14 @@ if(!empty($_POST["modificacion"])){
         $nombre = $_POST["nombre"];
         $precio = $_POST["precio"];
         $tipo = $_POST["tipo"];
+        $descripcion = $_POST["descripcion"];
 
-        $repetido = $producto_mod->get_producto($nombre, $precio, $tipo);
+        $repetido = $producto_mod->get_producto($nombre, $precio, $tipo, $descripcion);
 
         if($repetido!=null){
             $estado = 3;
     }else if($repetido==null){
-        $estado = $producto_mod->update_producto($id, $nombre, $precio, $tipo);
+        $estado = $producto_mod->update_producto($id, $nombre, $precio, $tipo, $descripcion);
     }
 
     //TEMA NO CAPTA SI HAY O NO IMAGENES, COSO, QUIZAS NUEVO VALOR EN "FILES?"

@@ -88,129 +88,41 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12 text-center  marb-35">
-                                                <h1 class="header-h">Menu List</h1>
-                                                <p class="header-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                                                    <br>nibh euismod tincidunt ut laoreet dolore magna aliquam.
+                                                <h1 class="header-h">Cartilla Virtual</h1>
+                                                <p class="header-p">En nuestro establecimiento ofrecemos una amplia gama de hamburguesas de excelente calidad
                                                 </p>
 
                                             </div>
                                             <div class="col-md-12 text-center" id="menu-filters">
                                                 <ul>
-                                                    <li><a class="filter active" data-filter=".menu-restaurant">Show All</a></li>
-                                                    <li><a class="filter " data-filter=".breakfast">Breakfast</a></li>
-                                                    <li><a class="filter" data-filter=".lunch">Lunch</a></li>
-                                                    <li><a class="filter" data-filter=".dinner">Dinner</a></li>
+                                                    <li><a class="filter active" data-filter=".menu-restaurant">Mostrar todo</a></li>
+                                                    <li><a class="filter " data-filter=".breakfast">Edicion Limitada</a></li>
+                                                    <li><a class="filter" data-filter=".lunch">Hamburguesas</a></li>
+                                                    <li><a class="filter" data-filter=".dinner">Bebidas</a></li>
                                                 </ul>
                                             </div>
-                                            <div id="menu-wrapper">
-                                                <div class="breakfast menu-restaurant">
-                                                    <span class="clearfix">
-                                                        <a class="menu-title" href="#" data-meal-img=".jpg">Food Item Name</a>
-                                                        <span style="left:166px;right:44px;" class="menu-line"></span>
-                                                        <span class="menu-price">$20.99</span>
-                                                    </span>
-                                                    <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-                                                </div>
-                                                <div class="breakfast menu-restaurant">
-                                                    <span class="clearfix">
-                                                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-                                                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
-                                                        <span class="menu-price">$20.99</span>
-                                                    </span>
-                                                    <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-                                                </div>
+                                            <!--<form> !!!!!!!!!!!!!!!!!!!!! -->
 
-                                                <div class="breakfast menu-restaurant">
-                                                    <span class="clearfix">
-                                                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-                                                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
-                                                        <span class="menu-price">$20.99</span>
-                                                    </span>
-                                                    <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-                                                </div>
+                                            <?php foreach ($matrizProducto as $producto) : ?>
+                                                <tr>
+                                                    <?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?>
+                                                </tr>
+                                                <!--</form> !!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
-                                                <div class="breakfast menu-restaurant">
-                                                    <span class="clearfix">
-                                                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-                                                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
-                                                        <span class="menu-price">$20.99</span>
-                                                    </span>
-                                                    <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-                                                </div>
-                                                <div class="lunch menu-restaurant">
-                                                    <span class="clearfix">
-                                                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-                                                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
-                                                        <span class="menu-price">$20.99</span>
-                                                    </span>
-                                                    <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-                                                </div>
-
-                                                <div class="lunch menu-restaurant">
-                                                    <span class="clearfix">
-                                                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-                                                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
-                                                        <span class="menu-price">$20.99</span>
-                                                    </span>
-                                                    <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-                                                </div>
-
-                                                <div class="lunch menu-restaurant">
-                                                    <span class="clearfix">
-                                                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-                                                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
-                                                        <span class="menu-price">$20.99</span>
-                                                    </span>
-                                                    <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-                                                </div>
-
-                                                <div class="lunch menu-restaurant">
-                                                    <span class="clearfix">
-                                                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-                                                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
-                                                        <span class="menu-price">$20.99</span>
-                                                    </span>
-                                                    <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-                                                </div>
-
-                                                <div class="lunch menu-restaurant">
-                                                    <span class="clearfix">
-                                                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-                                                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
-                                                        <span class="menu-price">$20.99</span>
-                                                    </span>
-                                                    <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-                                                </div>
-                                                <div class="dinner menu-restaurant">
-                                                    <span class="clearfix">
-                                                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-                                                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
-                                                        <span class="menu-price">$20.99</span>
-                                                    </span>
-                                                    <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-                                                </div>
-
-                                                <div class="dinner menu-restaurant">
-                                                    <span class="clearfix">
-                                                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-                                                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
-                                                        <span class="menu-price">$20.99</span>
-                                                    </span>
-                                                    <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-                                                </div>
-
-                                                <div class="dinner menu-restaurant">
-                                                    <span class="clearfix">
-                                                        <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Food Item Name</a>
-                                                        <span style="left: 166px; right: 44px;" class="menu-line"></span>
-                                                        <span class="menu-price">$20.99</span>
-                                                    </span>
-                                                    <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                                <div id="menu-wrapper">
+                                                    <div class="breakfast menu-restaurant">
+                                                        <span class="clearfix">
+                                                            <a><img src="<?php echo $dir_imagen; ?>" alt="Imagen" width="120" height="80"></a>
+                                                            <a class="menu-title" href="#" data-meal-img=".jpg"><?php echo $producto['nombre'] ?></a>
+                                                            <span style="left:166px;right:44px;" class="menu-line"></span>
+                                                            <span class="menu-price">$.<?php echo $producto['precio'] ?></span>
+                                                        </span>
+                                                        <span class="menu-subtitle"><?php echo $producto['descripcion'] ?></span>
+                                                    </div>
+                                                <?php endforeach; ?>
                                 </section>
 
                                 <section id="contact" class="section-padding">
@@ -307,18 +219,6 @@
                     </section>
                     <!------------------------ FALTA ADAPTAR ------------------------------------->
 
-                    <?php foreach ($matrizProducto as $producto) : ?>
-
-                        <!--<form> !!!!!!!!!!!!!!!!!!!!! -->
-                        <tr>
-                            <?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?>
-                            <th><img src="<?php echo $dir_imagen; ?>" alt="Imagen" width="120" height="80"></th>
-                            <td><?php echo $producto['nombre'] ?></td>
-                            <td><?php echo $producto['precio'] ?></td>
-                            <?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?>
-                        </tr>
-                        <!--</form> !!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-                    <?php endforeach; ?>
                     </tbody>
                     </table>
 

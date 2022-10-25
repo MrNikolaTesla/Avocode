@@ -89,6 +89,7 @@
                                         <th>Nombre<i class="fa fa-sort"></i></th>
                                         <th>Precio<i class="fa fa-sort"></i></th>
                                         <th>Tipo de Producto</th>
+                                        <th>Descripcion</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
@@ -103,6 +104,7 @@
                                     <td><?php echo $producto['nombre'] ?></td>
                                     <td><?php echo $producto['precio'] ?></td>
                                     <td><?php echo $producto['tipo'] ?></td>
+                                    <td><?php echo $producto['descripcion'] ?></td>
                                     <td>
                                         <a href="ModificarProductoImagen_pagina.php?id=<?php echo $producto['id_producto'] ?>" title="Editar Imagen" data-toggle="tooltip"><i></i><img src="assets/iconos/icono-imagen.svg"></a>
                                         <a href="ModificarProducto_pagina.php?id=<?php echo $producto['id_producto'] ?>" class="edit" title="Editar Informacion" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>

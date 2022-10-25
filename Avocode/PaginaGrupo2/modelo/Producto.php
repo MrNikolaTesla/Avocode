@@ -23,16 +23,16 @@ class Producto{
         return $this->producto;
     }
 
-    public function get_producto($nombre, $precio, $tipo)
+    public function get_producto($nombre, $precio, $tipo, $descripcion)
     {
-        $sql = "SELECT * FROM producto WHERE nombre = '$nombre' and precio = $precio and tipo = '$tipo'";
+        $sql = "SELECT * FROM producto WHERE nombre = '$nombre' and precio = $precio and tipo = '$tipo' and descripcion = '$descripcion'";
         $query = mysqli_query($this->con, $sql);
         $result = mysqli_fetch_array($query);
         return $result;
     }
 
-    public function set_producto ($nombre, $precio, $tipo) {
-        $sql = "INSERT INTO producto (nombre, precio, tipo) VALUES ('$nombre', '$precio', '$tipo')";
+    public function set_producto ($nombre, $precio, $tipo, $descripcion) {
+        $sql = "INSERT INTO producto (nombre, precio, tipo, descripcion) VALUES ('$nombre', '$precio', '$tipo', '$descripcion')";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }
@@ -74,9 +74,9 @@ class Producto{
         return $id;
     }
 
-    public function update_producto($id, $nombre, $precio, $tipo)
+    public function update_producto($id, $nombre, $precio, $tipo, $descripcion)
     {
-        $sql = "UPDATE producto set nombre = '$nombre', precio = '$precio', tipo = '$tipo' WHERE id_producto = $id";
+        $sql = "UPDATE producto set nombre = '$nombre', precio = '$precio', tipo = '$tipo', descripcion = '$descripcion' WHERE id_producto = $id";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }
@@ -101,5 +101,3 @@ class Producto{
         }
     }
 }
-
-?>

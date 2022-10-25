@@ -35,6 +35,10 @@
                                 <label class="form-label">Precio</label>
                                 <input type="number" class="form-control" name="precio" value="<?php echo $producto['precio'] ?>">
                         </div>
+                        <div class="mb-3">
+                                <label class="form-label">Descripcion</label>
+                                <input type="text" class="form-control" name="descripcion" value="<?php echo $producto['descripcion'] ?>">
+                        </div>
                         <label class="form-label">Tipo (Anteriormente: <?php echo $producto['tipo'] ?>)</label>
                         <select id="cmbMake" name="tipo">
                                 <option value="Hamburguesa">Hamburguesa</option>
@@ -42,10 +46,10 @@
                                 <option value="Acompanamiento">Acompañamiento</option>
                         </select>
                         <div>
-                        <a href="PAGINA_GestionProductos.php" class="button-2" style="color:white; text-decoration:none;">Regresar al Listado</a>
-                        <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
+                                <a href="PAGINA_GestionProductos.php" class="button-2" style="color:white; text-decoration:none;">Regresar al Listado</a>
+                                <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
                         </div>
-                        
+
                 </form>
         <?php endforeach; ?>
 </body>

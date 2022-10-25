@@ -8,9 +8,11 @@
   <title>Inicio</title>
   <link rel="stylesheet" type="text/css" href="assets/styles_inicio.css">
 </head>
+<body>
 
 <!----------------------------- Pestañas del Cliente ------------------------------>
 <header>
+
   <div class="wrapper">
     <img class="logo" src="assets/logo.png" alt="Burger Factory ">
     <nav>
@@ -23,12 +25,12 @@
   </div>
 </header>
 <!--------------------------------------------------------------------------------->
+<?php require_once("vista/mensaje_perfil.php"); ?>
 
 <!------------------------ Banner Principal ------------------------->
 <?php require_once("Sliders-index.html") ?>
 
 <!------------------------------------------------------------------->
-<?php require_once("vista/mensaje_perfil.php"); ?>
 
 </body>
 

@@ -9,8 +9,8 @@ if (!empty($_POST["boton_añadir"])) {
         $nombre = $_POST["nombre"];
         $precio = $_POST["precio"];
         $tipo = $_POST["tipo"];
-
-        $repetido = $producto->get_producto($nombre, $precio, $tipo);
+        $descripcion = $_POST["descripcion"];
+        $repetido = $producto->get_producto($nombre, $precio, $tipo, $descripcion);
 
         if ($repetido != null) {
             $estado = 0;
@@ -19,7 +19,7 @@ if (!empty($_POST["boton_añadir"])) {
         if ($repetido == null) {
 
             // ALTA DE PRODUCTO //
-            $estado = $producto->set_producto($nombre, $precio, $tipo);
+            $estado = $producto->set_producto($nombre, $precio, $tipo, $descripcion);
             // FIN DE ALTA DE PRODUCTO //
 
             // ------------------------------SUBIDA DE IMAGEN-------------------------------------- //
