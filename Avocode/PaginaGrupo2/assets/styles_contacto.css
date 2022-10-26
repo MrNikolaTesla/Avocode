@@ -34,7 +34,7 @@ p{
 }
 .button-1 {
   appearance: none;
-  background-color: #1d689e;
+  background-color: #268bd3;
   border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 6px;
   box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
@@ -57,7 +57,7 @@ p{
 }
 
 .button-1:focus {
-  box-shadow: 1d689e;
+  box-shadow: #1d689e;
   outline: none;
 }
 
