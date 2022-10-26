@@ -13,6 +13,7 @@ h1{
   }  
 .form-register {
     width: 400px;
+    max-width: 400px ;
     height: auto;
     background: #ffffffda;
     padding: 30px;
@@ -31,7 +32,8 @@ h1{
   }
   
   .controls {
-    width: 100%;
+    width: 100px;
+    max-width: 100px ;
     background: #4e575f;
     padding: 10px;
     border-radius: 4px;
@@ -94,7 +96,7 @@ h1{
   }
   
   .button-1:focus {
-    box-shadow: 1d689e;
+    box-shadow: #1d689e;
     outline: none;
   }
   

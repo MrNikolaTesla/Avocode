@@ -10,9 +10,14 @@ h1{
     font-size: 55px;
     margin-left: 730px;
     margin-top: 100px;
+    width: 500px ;
+    max-width: 500px ;
+    
+
   }  
 .form-register {
     width: 400px;
+    max-width: 400px ;
     height: auto;
     background: #ffffffda;
     padding: 30px;
