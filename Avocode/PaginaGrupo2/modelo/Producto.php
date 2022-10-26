@@ -52,6 +52,11 @@ class Producto{
 
     public function eliminar_producto($id)
     {
+        //ESTO TENDRIA QUE ESTAR LLAMANDO A OTRO MODELO//
+        $sql1 = "UPDATE FROM detalles_orden WHERE producto = $id";
+        $query = mysqli_query($this->con, $sql1);
+        //////////////////////////////////////////////
+
         $sql = "DELETE FROM producto WHERE id_producto = $id";
         $query = mysqli_query($this->con, $sql);
         return $query;

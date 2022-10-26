@@ -31,8 +31,15 @@ class Mesa
     }
 
     public function eliminar_mesa ($id) {
-        $sql = "DELETE FROM mesa WHERE id_mesa = $id";
-        $query = mysqli_query($this->con, $sql);
+        //ESTO TENDRIA QUE ESTAR LLAMANDO A OTRO MODELO//
+        $sql1 = "UPDATE orden set mesa_orden=null WHERE mesa_orden = $id";
+        mysqli_query($this->con, $sql1);
+        $sql2 = "UPDATE reserva set mesa=null WHERE mesa = $id";
+        mysqli_query($this->con, $sql2);
+        //////////////////////////////////////////////
+
+        $sql3 = "DELETE FROM mesa WHERE id_mesa = $id";
+        $query = mysqli_query($this->con, $sql3);
         //Impedir vacio numerico
         $m = $this->listar_mesas();
         $numero_listado = 1;

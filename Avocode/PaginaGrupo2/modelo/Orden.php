@@ -90,6 +90,11 @@ class Orden
 
     public function eliminar_productos_orden($id)
     {
+        //ESTO TENDRIA QUE ESTAR LLAMANDO A OTRO MODELO//
+        $sql1 = "UPDATE detalles_orden set orden=null WHERE orden = $id";
+        mysqli_query($this->con, $sql1);
+        //////////////////////////////////////////////
+
         $orden_cargada = $_SESSION['id_orden_actual'];
         $sql = "DELETE FROM detalles_orden WHERE orden = $orden_cargada AND id_detalle_orden = $id";
         $result = mysqli_query($this->con, $sql);
