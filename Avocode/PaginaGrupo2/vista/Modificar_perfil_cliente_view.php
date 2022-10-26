@@ -28,7 +28,7 @@
 
 </head>
 
-<body>
+<body class="body-2">
         <?php if ($id_a_Modificar == $id_perfil) { ?>
                 <form class="col-4" method="POST">
                         <h3 class="text-center">Informacion de Perfil</h3>

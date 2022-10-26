@@ -67,8 +67,15 @@ class Orden
 
     }
 
-    public function update_orden()
+    public function update_orden($cliente_orden, $empleado_orden, $mesa_orden, $tipo_orden, $direccion, $observacion, $estado_orden)
     {
+        //$hora = date('h:i');
+        //$fecha = date('y-m-d');
+        //$sql = "UPDATE orden set cliente_orden = '$cliente_orden', empleado_orden = '$empleado_orden', mesa_orden = '$mesa_orden', tipo_orden  = '$tipo_orden'
+        //, hora  = '$hora', direccion  = '$direccion', fecha = '$fecha', observacion = 'observacion', estado_orden = '$estado_orden'
+        //WHERE id_orden = $id";
+        //$result = mysqli_query($this->con, $sql);
+        //return $result;
         //MODIFICAR ORDEN, TAMBIEN UTILIZADO PARA REEMPLAZAR LOS DATOS DE LA ORDEN GENERANDOSE POR LOS REALES
     }
 
@@ -77,12 +84,16 @@ class Orden
         $orden_cargada = $_SESSION['id_orden_actual'];
         $sql = "SELECT detalles_orden.producto,id_producto as identificador_producto, detalles_orden.producto,nombre as nombre_producto, detalles_orden.producto,precio as precio
         FROM [detalles_orden] , producto WHERE orden = $orden_cargada ORDER BY id_detalle_orden";
+        $result = mysqli_query($this->con, $sql);
+        return $result;
     }
 
     public function eliminar_productos_orden($id)
     {
         $orden_cargada = $_SESSION['id_orden_actual'];
         $sql = "DELETE FROM detalles_orden WHERE orden = $orden_cargada AND id_detalle_orden = $id";
+        $result = mysqli_query($this->con, $sql);
+        return $result;
     }
 
     public function listar_ordenes()

@@ -4,6 +4,7 @@
 -Listado de orden lado empleado/admin
 -Seguimiento de orden lado cliente
 -paginado de CRUD Productos
+-Mensaje gestor en registro cliente
 -agregar VIEW de empleado, cliente y mesa en el REGISTRO DE RESERVA (Para no poder simplemente ID A CIEGAS)
 -Detener el dupping de el CRUD de mesas
 
