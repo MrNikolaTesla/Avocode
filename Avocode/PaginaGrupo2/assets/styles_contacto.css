@@ -7,14 +7,14 @@ body {
     background-size: cover;
   }
 h1{
-  margin-left: 38px;
-  font-size: 50px;
-  margin-bottom: 30px;
+  margin-left: 830px;
+  margin-top: 150px;
 }
 p{
-    width: 650px;
-    margin-left: 30px;
-    margin-top: 30px; 
+  padding: 10px auto;
+  margin-left: 800px;
+  width:350px ;
+  max-width: 350px ;
 }
 .logos{
     background-color: rgba(0, 0, 0, 0.671);

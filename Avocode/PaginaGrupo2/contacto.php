@@ -9,11 +9,6 @@
   </div>
 </head>
 
-<body>
-  <div>
-    <p> Mantente siempre al tanto y comunicate con nosotros atraves de nuestras redes sociales </p>
-  </div>
-
 </body>
 <div class="logos">
   <div class="logo" id="logo1">
@@ -29,6 +24,12 @@
       <img width="70" height="70" src="assets/imagenes/facebook.png" alt="facebook"> </a>
   </div>
 </div>
+<body>
+  <div>
+    <p> Mantente siempre al tanto y comunicate con nosotros atraves de nuestras redes sociales </p>
+  </div>
+
+</body>
 
 <br><a href="index.php">Regresar</a><br>
 
