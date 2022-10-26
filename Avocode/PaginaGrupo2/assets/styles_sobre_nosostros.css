@@ -1,0 +1,117 @@
+body {
+    font-family: Georgia;
+    background: url(imagenes/fondo-index.jpg);
+    height: 100%;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+h1{
+    font-size: 55px;
+    margin-left: 730px;
+    margin-top: 100px;
+    width: 500px ;
+    max-width: 500px ;
+    
+
+  }  
+.form-register {
+    width: 400px;
+    max-width: 400px ;
+    height: auto;
+    background: #ffffffda;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: rgb(0, 0, 0);
+    box-shadow: 7px 13px 37px #000;
+    opacity: 0.85;
+  }
+  
+  .form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .controls {
+    width: 100%;
+    background: #4e575f;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #330606;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+  }
+  
+  .form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+  }
+  
+  .form-register a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .form-register a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .form-register .buttons {
+    width: 100%;
+    background: #292527;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+  }
+
+  .button-1 {
+    appearance: none;
+    background-color: #268bd3;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    padding: 10px 16px;
+    margin-top: 10px;
+    margin-left: 900px;
+    
+  }
+  
+  .button-1:hover {
+    background-color: #11507ebd;
+  }
+  
+  .button-1:focus {
+    box-shadow: 1d689e;
+    outline: none;
+  }
+  
+  .button-1:disabled {
+    background-color: #1d689e;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+  }
+  
+  .button-1:active {
+    background-color: #1d689edc;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+  }
+  
