@@ -45,7 +45,7 @@
                         <a class="nav-link" id="acompanamientos" data-toggle="tab" href="#" role="tab">Acompañamientos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="bebidas-postres" data-toggle="tab" href="#" role="tab">Bebidas y postres</a>
+                        <a class="nav-link" id="bebidas-postres" data-toggle="tab" href="#" role="tab">Bebidas y Postres</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="cervezas" data-toggle="tab" href="#" role="tab">Cervezas</a>
@@ -58,27 +58,20 @@
                     <div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
                         <div class="row">
 
-                            <div class="col-md-6">
-                                <?php foreach ($matrizProducto as $producto) : ?>
-                                    <div class="single_menu">
-
-                                        <img src="<?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?><?php echo $dir_imagen; ?>" alt="burger">
-                                        <div class="menu_content">
-                                            <h4><?php echo $producto['nombre'] ?><span>$<?php echo $producto['precio'] ?></span></h4>
-                                            <p><?php echo $producto['descripcion'] ?>
-                                                <?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?>
-
-                                            </p>
-
-                                        </div>
+                            <?php foreach ($matrizProducto as $producto) : ?>
+                                <div class="single_menu">
+                                    <img src="<?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?><?php echo $dir_imagen; ?>" alt="burger">
+                                    <div class="menu_content">
+                                        <h4><?php echo $producto['nombre'] ?><span>$<?php echo $producto['precio'] ?></span></h4>
+                                        <p><?php echo $producto['descripcion'] ?><?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?></p>
                                     </div>
-                                <?php endforeach; ?>
-                            </div>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
-                <a href="#" class=" menu_btn btn btn-danger">Ver más</a>
             </div>
+            <a href="#" class=" menu_btn btn btn-danger">Ver más</a>
         </div>
     </section>
     <!---------- FIN DE CARTILLA ----------->
