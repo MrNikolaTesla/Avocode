@@ -22,25 +22,15 @@ if(!empty($_POST["boton_registro"])){
     }
 
 if($estado==1) {
-    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-    Usuario registrado correctamente!
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    $_SESSION['message_reg'] = 'Usuario registrado correctamente!';
 }else if($estado==0 && $repetido){
-    echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    El correo ya esta en uso.
-    <button type="button" class="btn/-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
+    $_SESSION['message_reg'] = 'El correo ya esta en uso.';
 }else{
-    echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    El correo ya esta en uso.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>';
-    echo '<div class="alert alert-danger">Algo ha ocurrido, intente de nuevo mas tarde.</div>';
+    $_SESSION['message_reg'] = 'Algo ha ocurrido, intente de nuevo mas tarde.';
 }
 
 } else {
-    echo '<div class="alert alert-danger">Alguno de los campos está vacio.</div>';
+    $_SESSION['message_reg'] = 'Alguno de los campos está vacio.';
 }
 }
 

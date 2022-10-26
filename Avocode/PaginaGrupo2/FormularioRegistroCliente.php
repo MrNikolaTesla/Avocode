@@ -14,7 +14,8 @@
 <body>
     <form method="POST">
         <section class="form-register">
-            <h4>Formulario de Registro</h4>
+            <h4>Formulario de Registro</h4><br>
+            <?php require_once("vista/mensaje_registro.php"); ?>
             <?php require_once("controlador/ControladorRegistroCliente.php"); ?>
             <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre"></input>
             <input class="controls" type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido"></input>
