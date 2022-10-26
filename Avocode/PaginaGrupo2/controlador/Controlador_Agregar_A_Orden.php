@@ -4,11 +4,12 @@
     $orden = new Orden();
 
     if(!empty($_POST["agregar_a_orden"])){
-        if(!empty($_POST["cantidad_producto"])) {
+    
+        if(!empty($_POST['cantidad_producto'])) {
 
         $id_cliente = $_SESSION['id'];
         $id_producto = $_POST["id_producto"];
-        $cantidad_producto = $_POST["cantidad_producto"];
+        $cantidad_producto = $_POST['cantidad_producto'];
         
         if(!isset($_SESSION['orden_iniciada']) || $_SESSION['orden_iniciada'] != "true"){
             $inicio_orden = $orden->creando_orden($id_cliente);
