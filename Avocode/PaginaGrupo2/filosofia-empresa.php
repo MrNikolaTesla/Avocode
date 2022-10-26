@@ -15,12 +15,7 @@
 <section class="form-register">
   <h2> Nuestra Filosofia</h2>
   </div>
-<div> <h3>blablablablablablablablablablablablablablablablabb
-lablablablablablablablablablablablablablablablablabla
-lablablablablablablablablablablablablablablablablabla
-lablablablablablablablablablablablablablablablablabla
-lablablablablablablablablablablablablablablablablabla
-lablablablablablablablablablablablablablablablablabla.
+<div> <h3>En Burger Factory nuestra filosofía es "inserte filosofía " 
 </h3>
   </div>
 </section>
