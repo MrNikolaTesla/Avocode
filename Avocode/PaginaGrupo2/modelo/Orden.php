@@ -53,13 +53,17 @@ class Orden
         $_SESSION['id_orden_actual'] = null;
     }
 
-    public function nueva_orden()
+    public function nueva_orden($cliente, $mesa, $tipo_orden, $direccion, $observacion)
     {
         //ALTA DE ORDEN PARA USUARIO EMPLEADO/ADMINISTRADOR
+        //$empleado_id = $_SESSION['id'];
         //date_default_timezone_set('America/Argentina/Buenos_Aires');
-        //$date = date('d-m-y h:i');
-        //echo $date;
-        //$sql = "INSERT INTO orden(id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado_orden) VALUES ('$nombre', '$precio', '$tipo', '$descripcion')";
+        //$hora = date('h:i');
+        //$fecha = date('y-m-d');
+        //$sql = "INSERT INTO orden(cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado_orden)
+        //VALUES ('$cliente', '$empleado_id', '$mesa', '$tipo_orden', $hora, $direccion, $fecha, $observacion, 'Pendiente')";
+        //$result = mysqli_query($this->con, $sql);
+        //return $result;
 
     }
 

@@ -25,10 +25,11 @@
   </div>
 </div>
 <body>
-  <div>
-    <p> Mantente siempre al tanto y comunicate con nosotros atraves de nuestras redes sociales </p>
-  </div>
 
+  <div class="form-register">
+    <p> <h4>Mantente siempre al tanto y comunicate con nosotros atraves de nuestras redes sociales</h4> </p>
+  </div>
+  </section>
 </body>
 <div>
 <br><a class="button-1" href="index.php">Regresar</a><br>

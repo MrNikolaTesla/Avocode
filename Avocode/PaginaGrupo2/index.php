@@ -25,7 +25,6 @@
   </div>
 </header>
 <!--------------------------------------------------------------------------------->
-<?php require_once("vista/mensaje_perfil.php"); ?>
 
 <!------------------------ Banner Principal ------------------------->
 <?php require_once("Sliders-index.html") ?>

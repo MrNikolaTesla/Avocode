@@ -1,6 +1,6 @@
 body {
     font-family: Georgia;
-    background: url(imagenes/contacto.png);
+    background: url(imagenes/fondo-index.jpg);
     height: 100%;
     margin: 10px;
     background-repeat: no-repeat;
@@ -73,6 +73,20 @@ p{
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
 
+.form-register {
+  width: 300px;
+  max-width: 300px ;
+  height: auto;
+  background: #ffffffda;
+  padding: 3px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: rgb(0, 0, 0);
+  box-shadow: 7px 13px 37px #000;
+  opacity: 0.85;
+}
  
 
 

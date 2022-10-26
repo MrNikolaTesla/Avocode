@@ -23,7 +23,7 @@
                 </div>
                 <div class="mb-3">
                         <label class="form-label">Descripcion</label>
-                        <p><input type="text" class="tablas-input" name="descripcion"></p>
+                        <p><input type="text" class="tablas-input" name="descripcion" maxlength="180"></p>
                 </div>
                 <div class="mb-3">
                         <label class="form-label">Tipo</label>
