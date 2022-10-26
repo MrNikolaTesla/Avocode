@@ -9,7 +9,7 @@ body {
 h1{
   font-size: 55px;
   margin-left: 740px;
-  margin-top: 150px;
+  margin-top: 200px;
 }
 p{
   padding: 10px auto;
@@ -22,7 +22,7 @@ p{
   padding: 10px auto;
   margin-left: 770px;
   margin-right: 770px;
-  margin-top: 200px;
+  margin-top: 130px;
   width:350px ;
   max-width: 350px ;
   overflow: hidden;
