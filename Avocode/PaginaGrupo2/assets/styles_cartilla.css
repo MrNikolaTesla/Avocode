@@ -46,7 +46,6 @@
     color: #fff;
     font-weight: 700;
     border: 1px solid #c0392b;
-    text-transform: capitalize;
 }
 .nav-link {
     color: #000;
@@ -60,6 +59,8 @@
     position: relative;
     margin-bottom: 75px;
     transition: .3s;
+    width: fit-content;
+    margin-right: 40px;
 }
 .single_menu:hover img{
     -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
@@ -92,6 +93,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     float: right;
     font-style: italic;
     color: #6e0d0d;
+    margin-left: 20px;
 }
 .menu_content p {
     font-weight: 200;

@@ -64,7 +64,7 @@ CREATE TABLE `proveedor` (
   `id_proveedor` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID del Proveedor',
   `nombre_apellido` varchar(60) NOT NULL COMMENT 'Nombre y Apellido del Proveedor',
   `empresa` varchar(40) NOT NULL COMMENT 'Empresa a la que pertenece el Proveedor',
-  `productos` varchar(30) NOT NULL COMMENT 'Productos que proporciona el Proveedor',
+  `productos` varchar(180) NOT NULL COMMENT 'Productos que proporciona el Proveedor',
   `telefono` varchar(18) NOT NULL COMMENT 'Teléfono del Proveedor'
 );
 
