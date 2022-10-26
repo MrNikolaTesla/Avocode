@@ -52,14 +52,17 @@
                     </li>
                 </ul>
             </div>
-            <?php foreach ($matrizProducto as $producto) : ?>
 
                 <div class="row">
                     <div class="tab-content col-lg-12" id="myTabContent">
                         <div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
                             <div class="row">
+
                                 <div class="col-md-6">
+                                <?php foreach ($matrizProducto as $producto) : ?>
+
                                     <div class="single_menu">
+
                                         <img src="<?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?><?php echo $dir_imagen; ?>" alt="burger">
                                         <div class="menu_content">
                                             <h4><?php echo $producto['nombre'] ?><span>$<?php echo $producto['precio'] ?></span></h4>
