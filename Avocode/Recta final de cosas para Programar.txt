@@ -1,14 +1,13 @@
--Hacer llover CSS (Lautaro y Facundo en ustedes confio)
--Reserva lado cliente
--Orden lado cliente
--Listado de orden lado empleado/admin
--paginado de CRUD Productos
--agregar VIEW de empleado, cliente y mesa en el REGISTRO DE RESERVA (Para no poder simplemente ID A CIEGAS)
--Detener el dupping de el CRUD de mesas
+- Hacer llover CSS (Lautaro y Facundo en ustedes confio)
+- Reserva lado cliente
+- Orden lado cliente
+- Listado de orden lado empleado/admin
+- Paginado de CRUD Productos
+- Agregar VIEW de empleado, cliente y mesa en el REGISTRO DE RESERVA (Para no poder simplemente ID A CIEGAS)
 
--Esto y lo que salga, porque sabemos que siempre pasan cosas
+- Esto y lo que salga, porque sabemos que siempre pasan cosas
 
 LOW PRIORITY / Easy Tasks:
--Seguimiento de orden lado cliente
--Mensaje gestor en registro cliente
--Mover update para eliminar a sus respectivos productos y relacionar
+- Seguimiento de orden lado cliente
+- Mensaje gestor en registro cliente
+- Mover update para eliminar a sus respectivos productos y relacionar

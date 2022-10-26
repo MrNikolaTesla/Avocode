@@ -24,14 +24,10 @@
     <?php require_once("controlador/Controlador_PerfilUsuario.php"); ?>
 
     <header>
-        <span class="menu" ><i class="material-icons">menu</i></span>
+        <span class="menu"><i class="material-icons">menu</i></span>
     </header>
     <aside class="keep">
         <ul>
-            <li>
-                <a>
-                </a>
-            </li>
             <li>
                 <a class="message" href="index.php" style="text-decoration:none">
                     <span><img src="assets/iconos/icono-inicio.svg" alt="Inicio" width="30" height="30"></span>
@@ -46,7 +42,8 @@
             </li>
             <li>
                 <a class="message" href="PAGINA_GestionProductos.php" style="text-decoration:none">
-                    <span><img src="assets/iconos/icono-producto.svg" alt="Productos" width="30" height="30"></span> Productos
+                    <span><img src="assets/iconos/icono-producto.svg" alt="Productos" width="30" height="30"></span>
+                    Gestor de Productos
                 </a>
             </li>
             <li>
@@ -70,19 +67,7 @@
             <li>
                 <a class="message" href="/" style="text-decoration:none">
                     <span><img src="assets/iconos/icono-comanda.svg" alt="Comandas" width="30" height="30"></span>
-                    Gestor de Órdenes
-                </a>
-            </li>
-            <li>
-                <a class="message" href="/" style="text-decoration:none">
-                    <span><i class="material-icons">event</i></span>
-                    event
-                </a>
-            </li>
-            <li>
-                <a class="message" href="/" style="text-decoration:none">
-                    <span><i class="material-icons">restaurant_menu</i></span>
-                    Restaurant
+                    Gestor de Ordenes
                 </a>
             </li>
             <li>

@@ -81,7 +81,8 @@ h1 {
 
 .material-icons {
     vertical-align: text-top;
-
+    display: flex;
+    margin-left:auto;
 }
 
 .td-mesa {
