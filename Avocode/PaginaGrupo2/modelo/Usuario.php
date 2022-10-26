@@ -102,13 +102,13 @@ class Usuario
             
         }else{
             //ESTO TENDRIA QUE ESTAR LLAMANDO A OTRO MODELO//
-            $sql1 = "UPDATE reserva set cliente=null WHERE cliente = $id";
+            $sql1 = "UPDATE reserva SET cliente = NULL WHERE cliente = $id";
             mysqli_query($this->con, $sql1);
-            $sql2 = "UPDATE reserva set empleado=null WHERE empleado = $id";
+            $sql2 = "UPDATE reserva SET empleado = NULL WHERE empleado = $id";
             mysqli_query($this->con, $sql2);
-            $sql3 = "UPDATE orden set cliente_orden=null WHERE cliente_orden = $id";
+            $sql3 = "UPDATE orden SET cliente_orden = NULL WHERE cliente_orden = $id";
             mysqli_query($this->con, $sql3);
-            $sql4 = "UPDATE orden set empleado_orden=null WHERE empleado_orden = $id";
+            $sql4 = "UPDATE orden SET empleado_orden = NULL WHERE empleado_orden = $id";
             mysqli_query($this->con, $sql4);
             //////////////////////////////////////////////
 

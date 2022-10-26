@@ -36,7 +36,7 @@ CREATE TABLE `usuario` (
 
 CREATE TABLE `orden` (
   `id_orden` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID de la orden', /*Se crearan FK cliente y empleado para verificar e origen y direccion de la orden*/
-  `cliente_orden` int(10) NOT NULL COMMENT '',
+  `cliente_orden` int(10) NULL COMMENT '',
   `empleado_orden` int(10) NULL COMMENT '',
   `mesa_orden` int(10) NULL COMMENT '',
   `tipo_orden` enum('Local','Take Away','Delivery') NULL COMMENT 'Tipo de orden funcional',
@@ -52,8 +52,8 @@ CREATE TABLE `orden` (
 
 CREATE TABLE `detalles_orden` (
   `id_detalle_orden` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID de la orden', /*Se crearan FK cliente y empleado para verificar e origen y direccion de la orden*/
-  `orden` int(10) NOT NULL COMMENT '',
-  `producto` int(10) NOT NULL COMMENT '',
+  `orden` int(10) NULL COMMENT '',
+  `producto` int(10) NULL COMMENT '',
   `cantidad_producto` int(10) NOT NULL COMMENT '',
   CONSTRAINT orden FOREIGN KEY (orden) REFERENCES orden(id_orden),
   CONSTRAINT producto FOREIGN KEY (producto) REFERENCES producto(id_producto)
@@ -70,10 +70,10 @@ CREATE TABLE `proveedor` (
 
 CREATE TABLE `reserva` (
   `id_reserva` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID de Mesa',
-  `mesa` int(10) NOT NULL COMMENT 'Numero de Mesa',
+  `mesa` int(10) NULL COMMENT 'Numero de Mesa',
   `fecha` date NOT NULL COMMENT 'Fecha en la que se ocupo la Mesa',
   `hora` varchar(10) NOT NULL COMMENT 'Hora en que se ocupo la Mesa',
-  `cliente` int(10) NOT NULL COMMENT 'Cliente que ocupo la Mesa',
+  `cliente` int(10) NULL COMMENT 'Cliente que ocupo la Mesa',
   `empleado` int(10) NULL COMMENT 'Empleado que atendio la Mesa',
   CONSTRAINT cliente FOREIGN KEY (cliente) REFERENCES usuario(id_usuario),
   CONSTRAINT empleado FOREIGN KEY (empleado) REFERENCES usuario(id_usuario),
