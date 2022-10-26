@@ -63,7 +63,9 @@
                                     <img src="<?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?><?php echo $dir_imagen; ?>" alt="burger">
                                     <div class="menu_content">
                                         <h4><?php echo $producto['nombre'] ?><span>$<?php echo $producto['precio'] ?></span></h4>
-                                        <p><?php echo $producto['descripcion'] ?><?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?></p>
+                                        <p><?php echo $producto['descripcion'] ?>
+                                            <?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?>
+                                        </p>
                                     </div>
                                 </div>
                             <?php endforeach; ?>
@@ -72,6 +74,7 @@
                 </div>
             </div>
             <a href="#" class=" menu_btn btn btn-danger">Ver más</a>
+        </div>
         </div>
     </section>
     <!---------- FIN DE CARTILLA ----------->

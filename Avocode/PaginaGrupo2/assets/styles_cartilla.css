@@ -59,7 +59,7 @@
     position: relative;
     margin-bottom: 75px;
     transition: .3s;
-    width: fit-content;
+    width: 30em;
     margin-right: 40px;
 }
 .single_menu:hover img{
@@ -99,6 +99,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     font-weight: 200;
     font-size: 16px;
     letter-spacing: 1px;
+    margin-left: 20px;
 }
 .menu_btn.btn.btn-danger {
     margin: 0 auto;
