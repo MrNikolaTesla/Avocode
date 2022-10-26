@@ -1,6 +1,6 @@
 body {
     font-family: Georgia;
-    background: url(imagenes/filosofia-empresa.png);
+    background: url(imagenes/sobre_nosostros.png);
     height: 100%;
     margin: 10px;
     background-repeat: no-repeat;
@@ -14,7 +14,7 @@ h1{
 .form-register {
     width: 400px;
     height: auto;
-    background: #1eccf7d2;;
+    background: #ffffffda;
     padding: 30px;
     margin: auto;
     margin-top: 100px;
