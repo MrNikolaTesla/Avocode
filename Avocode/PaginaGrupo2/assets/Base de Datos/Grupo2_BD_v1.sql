@@ -53,10 +53,10 @@ CREATE TABLE `orden` (
 CREATE TABLE `detalles_orden` (
   `id_detalle_orden` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID de la orden', /*Se crearan FK cliente y empleado para verificar e origen y direccion de la orden*/
   `orden` int(10) NULL COMMENT '',
-  `producto` int(10) NULL COMMENT '',
+  `producto_det` int(10) NULL COMMENT '',
   `cantidad_producto` int(10) NOT NULL COMMENT '',
   CONSTRAINT orden FOREIGN KEY (orden) REFERENCES orden(id_orden),
-  CONSTRAINT producto FOREIGN KEY (producto) REFERENCES producto(id_producto)
+  CONSTRAINT producto_det FOREIGN KEY (producto_det) REFERENCES producto(id_producto)
 );
 
 /*Esta tabla es solo un archivador de datos, no se relacionara con ninguna de las otras*/
@@ -134,8 +134,8 @@ VALUES ('1', '3', '1', '2', 'Take Away', '16:00', null, '2022-10-21', 'Especific
 INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado_orden)
 VALUES ('2', '4', '2', '1', 'Local', '12:00', null, '2022-10-24', 'Mas cosas importantes', 'Completada');
 
-INSERT INTO detalles_orden (id_detalle_orden, orden, producto, cantidad_producto)
+INSERT INTO detalles_orden (id_detalle_orden, orden, producto_det, cantidad_producto)
 VALUES ('1','1','2','1');
 
-INSERT INTO detalles_orden (id_detalle_orden, orden, producto, cantidad_producto)
+INSERT INTO detalles_orden (id_detalle_orden, orden, producto_det, cantidad_producto)
 VALUES ('2','2','3','3');

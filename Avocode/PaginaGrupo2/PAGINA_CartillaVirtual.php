@@ -1,8 +1,8 @@
 <p>CARTILLA VIRTUAL</p><br>
 En Construccion...
 <br><a href="index.php">Regresar</a><br>
-
-<?php session_start(); require_once("controlador/ControladorMostrarCartilla.php"); ?>
+<?php require_once("controlador/Controlador_Listar_Productos_En_Orden.php"); ?>
+<?php require_once("controlador/ControladorMostrarCartilla.php"); ?>
 
 <!--Llamar al controlador para traer la cartilla-->
 

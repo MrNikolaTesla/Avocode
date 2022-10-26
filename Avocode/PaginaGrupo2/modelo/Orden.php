@@ -41,7 +41,7 @@ class Orden
 
     public function crear_fila_orden($id_orden, $id_producto, $cantidad)
     {
-        $sql = "INSERT INTO detalles_orden(orden, producto, cantidad_producto) VALUES
+        $sql = "INSERT INTO detalles_orden(orden, producto_det, cantidad_producto) VALUES
         ('$id_orden', '$id_producto', '$cantidad')";
         $result = mysqli_query($this->con, $sql);
         return $result;
@@ -79,11 +79,9 @@ class Orden
         //MODIFICAR ORDEN, TAMBIEN UTILIZADO PARA REEMPLAZAR LOS DATOS DE LA ORDEN GENERANDOSE POR LOS REALES
     }
 
-    public function listar_productos_orden()
+    public function listar_productos_orden($id_orden)
     {
-        $orden_cargada = $_SESSION['id_orden_actual'];
-        $sql = "SELECT detalles_orden.producto,id_producto as identificador_producto, detalles_orden.producto,nombre as nombre_producto, detalles_orden.producto,precio as precio
-        FROM [detalles_orden] , producto WHERE orden = $orden_cargada ORDER BY id_detalle_orden";
+        $sql = "SELECT detalles_orden.id_detalle_orden,producto.id_producto, producto.nombre, producto.precio FROM detalles_orden , producto WHERE detalles_orden.producto_det = producto.id_producto AND orden = $id_orden";
         $result = mysqli_query($this->con, $sql);
         return $result;
     }
@@ -98,6 +96,15 @@ class Orden
         $orden_cargada = $_SESSION['id_orden_actual'];
         $sql = "DELETE FROM detalles_orden WHERE orden = $orden_cargada AND id_detalle_orden = $id";
         $result = mysqli_query($this->con, $sql);
+        return $result;
+    }
+
+    public function multi_del_precio($id_detalle)
+    {
+        $sql = "SELECT precio*cantidad_producto as total FROM detalles_orden , producto WHERE id_detalle_orden = $id_detalle AND producto_det = id_producto";
+        $result = mysqli_query($this->con, $sql);
+        $resultado = mysqli_fetch_array($result);
+        //$sql = "SELECT sum(producto.precio) as total FROM detalles_orden , producto WHERE orden = $id_orden AND producto = id_producto";
         return $result;
     }
 
