@@ -2,11 +2,13 @@
 -Reserva lado cliente
 -Orden lado cliente
 -Listado de orden lado empleado/admin
--Seguimiento de orden lado cliente
 -paginado de CRUD Productos
--Mensaje gestor en registro cliente
 -agregar VIEW de empleado, cliente y mesa en el REGISTRO DE RESERVA (Para no poder simplemente ID A CIEGAS)
 -Detener el dupping de el CRUD de mesas
--Arreglar eliminar usuario cliente
 
 -Esto y lo que salga, porque sabemos que siempre pasan cosas
+
+LOW PRIORITY / Easy Tasks:
+-Seguimiento de orden lado cliente
+-Mensaje gestor en registro cliente
+-Mover update para eliminar a sus respectivos productos y relacionar
