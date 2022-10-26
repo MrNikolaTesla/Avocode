@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-<link rel="stylesheet" type="text/css" href="assets/styles_sobre_nosostros.css">
+<link rel="stylesheet" type="text/css" href="assets/styles_sobre_nosotros.css">
 
   <title>Sobre Nosotros</title>
 </div>
