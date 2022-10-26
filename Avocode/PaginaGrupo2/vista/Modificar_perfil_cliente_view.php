@@ -21,7 +21,7 @@
         <script>
                 // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
                 function asegurar() {
-                        rc = confirm("Se ELIMINARA PERMANENTEMENTE su usuario ¿Esta seguro de continuar?");
+                        rc = confirm("Se ELIMINARÁ PERMANENTEMENTE su usuario ¿Está seguro de continuar?");
                         return rc;
                 }
         </script>
