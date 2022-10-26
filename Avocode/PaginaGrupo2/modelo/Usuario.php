@@ -178,6 +178,20 @@ class Usuario
         }
     }
 
+        //LISTA TODOS LOS USUARIOS Y SUS DATOS
+        public function listar_clientes()
+        {
+
+            $sql = "SELECT * FROM usuario WHERE tipo='cliente' ORDER BY id_usuario";
+            $query = mysqli_query($this->con, $sql);
+
+            while ($filas = mysqli_fetch_array($query)) {
+                $this->usuario[] = $filas;
+            }
+
+            return $this->usuario;
+   }
+
     public function update_perfil ($id, $nombre, $apellido, $correo, $direccion, $telefono) {
             $sql = "UPDATE usuario set nombre = '$nombre', apellido = '$apellido', correo = '$correo', direccion = '$direccion', telefono = '$telefono' WHERE id_usuario = $id";
             $query = mysqli_query($this->con,$sql);

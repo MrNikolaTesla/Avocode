@@ -3,7 +3,8 @@
 - Orden lado cliente
 - Listado de orden lado empleado/admin
 - Paginado de CRUD Productos
-- Agregar VIEW de empleado, cliente y mesa en el REGISTRO DE RESERVA (Para no poder simplemente ID A CIEGAS)
+- Pulir finalmente el listado de clientes con reservas
+
 
 - Esto y lo que salga, porque sabemos que siempre pasan cosas
 

@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles2.css">
-    <!--BOOTSTRAP CSS PRINCIPAL -->
     <title>Vista de Usuarios</title>
     <!-- Recursos Misceláneos (Bootstrap CSS, Tipografías, CSS variado) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -76,7 +75,6 @@
                         <!------------------------------------------------------------------------------->
 
                         <!-- COMIENZO DEL FORMULARIO DE USUARIOS -->
-                        <form method="POST">
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -90,7 +88,6 @@
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
-                        </form>
 
                         <!-- CUERPO DE TABLA -->
                         <tbody>
@@ -112,24 +109,24 @@
                         </tbody>
                         </table>
 
-                    <!-- INICIO Paginado -->
-                    <div class="clearfix">
-                        <div class="hint-text">Mostrando <b>5</b> de <b>25</b> entradas</div>
-                        <ul class="pagination">
-                            <li class="page-item disabled"><a href="#">Anterior</a></li>
-                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                            <li class="page-item"><a href="#" class="page-link">2</a></li>
-                            <li class="page-item"><a href="#" class="page-link">3</a></li>
-                            <li class="page-item"><a href="#" class="page-link">4</a></li>
-                            <li class="page-item"><a href="#" class="page-link">5</a></li>
-                            <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
-                        </ul>
-                    </div>
-                    <!-- FIN Paginado -->
+                        <!-- INICIO Paginado -->
+                        <div class="clearfix">
+                            <div class="hint-text">Mostrando <b>5</b> de <b>25</b> entradas</div>
+                            <ul class="pagination">
+                                <li class="page-item disabled"><a href="#">Anterior</a></li>
+                                <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
+                            </ul>
+                        </div>
+                        <!-- FIN Paginado -->
 
+                    </div>
                 </div>
             </div>
-        </div>
 </body>
 
 </html>

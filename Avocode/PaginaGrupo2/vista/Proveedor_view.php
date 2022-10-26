@@ -74,36 +74,34 @@
                         <!------------------------------------------------------------------------------->
 
                         <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
-                        <form method="POST">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>#ID</th>
-                                        <th>Nombre<i class="fa fa-sort"></i></th>
-                                        <th>Empresa</th>
-                                        <th>Productos</th>
-                                        <th>Telefono</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-                        </form>
-
-                        <!-- CUERPO DE TABLA -->
-                        <tbody>
-                            <?php foreach ($matrizProveedor as $proveedor) : ?>
+                        <table class="table table-bordered">
+                            <thead>
                                 <tr>
-                                    <td scope="row"><?php echo $proveedor['id_proveedor'] ?></td>
-                                    <td><?php echo $proveedor['nombre_apellido'] ?></td>
-                                    <td><?php echo $proveedor['empresa'] ?></td>
-                                    <td><?php echo $proveedor['productos'] ?></td>
-                                    <td><?php echo $proveedor['telefono'] ?></td>
-                                    <td>
-                                        <a href="ModificarProveedor_pagina.php?id=<?php echo $proveedor['id_proveedor'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                        <a href="controlador/eliminar_Proveedor_controlador.php?id=<?php echo $proveedor['id_proveedor'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
-                                    </td>
+                                    <th>#ID</th>
+                                    <th>Nombre<i class="fa fa-sort"></i></th>
+                                    <th>Empresa</th>
+                                    <th>Productos</th>
+                                    <th>Telefono</th>
+                                    <th>Acciones</th>
                                 </tr>
-                            <?php endforeach; ?>
-                        </tbody>
+                            </thead>
+
+                            <!-- CUERPO DE TABLA -->
+                            <tbody>
+                                <?php foreach ($matrizProveedor as $proveedor) : ?>
+                                    <tr>
+                                        <td scope="row"><?php echo $proveedor['id_proveedor'] ?></td>
+                                        <td><?php echo $proveedor['nombre_apellido'] ?></td>
+                                        <td><?php echo $proveedor['empresa'] ?></td>
+                                        <td><?php echo $proveedor['productos'] ?></td>
+                                        <td><?php echo $proveedor['telefono'] ?></td>
+                                        <td>
+                                            <a href="ModificarProveedor_pagina.php?id=<?php echo $proveedor['id_proveedor'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                            <a href="controlador/eliminar_Proveedor_controlador.php?id=<?php echo $proveedor['id_proveedor'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
                         </table>
 
                         <!-- INICIO Paginado -->

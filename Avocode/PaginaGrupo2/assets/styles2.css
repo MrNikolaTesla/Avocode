@@ -10,6 +10,7 @@ body {
 }
 
 .container-2 {
+  margin-top: -100px;
   width: 100em;
   margin-left: 40px;
 }

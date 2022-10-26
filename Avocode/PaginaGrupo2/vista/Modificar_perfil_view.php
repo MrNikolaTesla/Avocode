@@ -59,7 +59,7 @@
                         </div>
                         <a href="PAGINA_GestionUsuarios.php" class="button-2" style="color:white; text-decoration:none;">Regresar</a>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
-                        <a href="controlador/EliminarPerfil_controlador.php?id=<?php echo $id_perfil ?>" style="color:white;"><button type="submit" class="button-4" style="color:white;"> <i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a></button>
+                        <a href="controlador/EliminarPerfil_controlador.php?id=<?php echo $id_perfil ?>" class="button-4" style="color:white;"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
                 </form>
         <?php } else {  ?>
                 <div class="centrado">No estás modificando tu propio perfil...</div>

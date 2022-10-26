@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/mesas-view.css">
+    <link rel="stylesheet" href="assets/styles_mesas-view.css">
     <link rel="stylesheet" href="assets/styles2.css">
     <link rel="stylesheet" href="assets/styles_status.css">
     <title>Vista de Mesa</title>
@@ -35,7 +35,7 @@
 <body>
 
     <!-- DIV'S CON CLASES DIFERENTES PARA EL RESPONSIVE Y DISPOSICIÓN EN LA PÁGINA -->
-    <div class="container-2">
+    <div class="container-mesa">
         <div class="table-responsive">
             <div class="table-wrapper">
                 <div class="table-title">
@@ -60,27 +60,27 @@
                         </div>
 
                         <!-- COMIENZO DEL FORMULARIO DE MESAS -->
-                        <form method="POST">
-                            <table class="table">
+                        <table class="table">
 
-                                <!-- CUERPO DE TABLA -->
-                                <tbody>
-                                    <?php foreach ($matrizMesa as $mesa) : ?>
+                            <!-- CUERPO DE TABLA -->
+                            <tbody>
+                            <div class="div-mesa">
 
-                                        <div class="div-mesa">
-                                            <td class="td-mesa">
-                                                <?php echo $mesa['id_mesa'] ?>
-                                                <a href="controlador/eliminar_mesa_controlador.php?id=<?php echo $mesa['id_mesa'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
-                                                <img class="img-mesa" src="assets/iconos/icono-mesa.png">
-                                                <?php echo $mesa['estado'] ?>
-                                                <a href="controlador/ControladorModificarMesa.php?id=<?php echo $mesa['id_mesa'] ?>" class="edit" title="Cambiar estado" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                            </td>
-                                        </div>
+                                <?php foreach ($matrizMesa as $mesa) : ?>
 
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
-                        </form>
+                                        <td class="td-mesa">
+                                            <?php echo $mesa['id_mesa'] ?>
+                                            <a href="controlador/eliminar_mesa_controlador.php?id=<?php echo $mesa['id_mesa'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                            <img class="img-mesa" src="assets/iconos/icono-mesa.png">
+                                            <?php echo $mesa['estado'] ?>
+                                            <a href="controlador/ControladorModificarMesa.php?id=<?php echo $mesa['id_mesa'] ?>" class="edit" title="Cambiar estado" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                        </td>
+
+                                <?php endforeach; ?>
+                                </div>
+
+                            </tbody>
+                        </table>
 
                         <!-- INICIO Paginado -->
                         <div class="clearfix">

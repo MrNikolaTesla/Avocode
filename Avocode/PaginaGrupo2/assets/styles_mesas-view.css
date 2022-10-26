@@ -38,6 +38,15 @@ body {
     justify-content: center;
     align-items: center;
 }
+.container-mesa {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+}
 
 
 h1 {
@@ -74,20 +83,17 @@ h1 {
 .div-mesa {
     width: fit-content;
     display: inline-block;
-    padding-top: 60px;
-    margin: 10px;
-
+    padding-top: 40px;
 }
 
 .material-icons {
     vertical-align: text-top;
     display: flex;
-    margin-left:auto;
+    margin-left: auto;
 }
 
 .td-mesa {
     color: #a0a5b1;
     display: inline-block;
     width: fit-content;
-
 }

@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles2.css">
-    <!--BOOTSTRAP CSS PRINCIPAL -->
     <title>Vista de Reserva</title>
     <!-- Recursos Misceláneos (Bootstrap CSS, Tipografías, CSS variado) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,16 +34,14 @@
             });
         });
         // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
-            function asegurar() {
-                   rc = confirm("¿Seguro que desea Eliminar esta reserva?");
-                   return rc;
-               } 
+        function asegurar() {
+            rc = confirm("¿Seguro que desea Eliminar esta reserva?");
+            return rc;
+        }
     </script>
-
 </head>
 
 <body>
-
     <!-- DIV'S CON CLASES DIFERENTES PARA EL RESPONSIVE Y DISPOSICIÓN EN LA PÁGINA -->
     <div class="container">
         <div class="table-responsive">
@@ -52,9 +49,9 @@
                 <div class="table-title">
                     <div class="row">
                         <div class="col-xs-4">
-    <!------------------------------------------------------------------------------->
+                            <!------------------------------------------------------------------------------->
 
-    <!-- DIV DE SELECCIÓN DE ENTRADAS-->
+                            <!-- DIV DE SELECCIÓN DE ENTRADAS-->
                             <div class="show-entries">
                                 <span>Mostrar</span>
                                 <select>
@@ -69,74 +66,73 @@
                         <div class="col-xs-4">
                             <h2 class="text-center">Listado de <b>Reservas</b></h2>
                         </div>
-    <!------------------------------------------------------------------------------->
+                        <!------------------------------------------------------------------------------->
 
-    <!-- DIV DE BÚSQUEDA-->
-    <?php require_once("vista/buscar_reserva_view.php"); ?>   
-    <!------------------------------------------------------------------------------->
+                        <!-- DIV DE BÚSQUEDA-->
+                        <?php require_once("vista/buscar_reserva_view.php"); ?>
+                        <!------------------------------------------------------------------------------->
+                        <!-- Cabeza de la tabla -->
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#ID</th>
+                                    <th>Numero de Mesa<i class="fa fa-sort"></i></th>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                    <th>ID Cliente</th>
+                                    <th>Nombre Cliente</th>
+                                    <th>ID Empleado</th>
+                                    <th>Nombre Empleado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
 
-                <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
-                <form method="POST">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>#ID</th>
-                                <th>Numero de Mesa<i class="fa fa-sort"></i></th>
-                                <th>Fecha</th>
-                                <th>Hora</th>
-                                <th>ID Cliente</th>
-                                <th>Nombre Cliente</th>
-                                <th>ID Empleado</th>
-                                <th>Nombre Empleado</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                </form>
+                            <!-- CUERPO DE TABLA -->
+                            <tbody>
+                                <?php foreach ($matrizReserva as $reserva) : ?>
+                                    <tr>
+                                        <?php $_SESSION['cliente_reserva'] = $reserva['cliente'];
+                                        $_SESSION['empleado_reserva'] = $reserva['empleado'];
+                                        require("controlador/Controlador_Nombre_Cliente_Reserva.php");
+                                        require("controlador/Controlador_Nombre_Empleado_Reserva.php");
+                                        ?>
+                                        <td scope="row"><?php echo $reserva['id_reserva'] ?></td>
+                                        <td><?php echo $reserva['mesa'] ?></td>
+                                        <td><?php echo $reserva['fecha'] ?></td>
+                                        <td><?php echo $reserva['hora'] ?></td>
+                                        <td><?php echo $reserva['cliente']; ?></td>
+                                        <td><?php echo $_SESSION['cliente_reserva'] ?></td>
+                                        <td><?php echo $reserva['empleado'] ?></td>
+                                        <td><?php echo $_SESSION['empleado_reserva'] ?></td>
 
-                <!-- CUERPO DE TABLA -->               
-                <tbody>
-                    <?php foreach ($matrizReserva as $reserva) : ?>
-                        <tr>
-                        <?php $_SESSION['cliente_reserva'] = $reserva['cliente']; 
-                            $_SESSION['empleado_reserva'] = $reserva['empleado']; 
-                            require("controlador/Controlador_Nombre_Cliente_Reserva.php");
-                            require("controlador/Controlador_Nombre_Empleado_Reserva.php");
-                        ?>
-                            <td scope="row"><?php echo $reserva['id_reserva'] ?></td>
-                            <td><?php echo $reserva['mesa'] ?></td>
-                            <td><?php echo $reserva['fecha'] ?></td>
-                            <td><?php echo $reserva['hora'] ?></td>
-                            <td><?php echo $reserva['cliente']; ?></td>
-                            <td><?php echo $_SESSION['cliente_reserva']?></td>
-                            <td><?php echo $reserva['empleado'] ?></td>
-                            <td><?php echo $_SESSION['empleado_reserva']?></td>
-                            
-                            <td>
-                                <a href="ModificarReserva_pagina.php?id=<?php echo $reserva['id_reserva'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a href="controlador/eliminar_Reserva_controlador.php?id=<?php echo $reserva['id_reserva'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-                </table>
+                                        <td>
+                                            <a href="ModificarReserva_pagina.php?id=<?php echo $reserva['id_reserva'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                            <a href="controlador/eliminar_Reserva_controlador.php?id=<?php echo $reserva['id_reserva'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
 
-            <!-- INICIO Paginado -->
-            <div class="clearfix">
-                <div class="hint-text">Mostrando <b>5</b> de <b>25</b> entradas</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Anterior</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
-                </ul>
+                        <!-- INICIO Paginado -->
+                        <div class="clearfix">
+                            <div class="hint-text">Mostrando <b>5</b> de <b>25</b> entradas</div>
+                            <ul class="pagination">
+                                <li class="page-item disabled"><a href="#">Anterior</a></li>
+                                <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
+                            </ul>
+                        </div>
+                        <!-- FIN Paginado -->
+
+                    </div>
+                </div>
             </div>
-            <!-- FIN Paginado -->
-
         </div>
-    </div>
     </div>
 </body>
 

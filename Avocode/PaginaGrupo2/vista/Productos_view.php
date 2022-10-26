@@ -75,39 +75,37 @@
                         <!------------------------------------------------------------------------------->
 
                         <!-- COMIENZO DEL FORMULARIO DE PRODUCTOS -->
-                        <form method="POST">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>#ID</th>
-                                        <th>Imagen</th>
-                                        <th>Nombre<i class="fa fa-sort"></i></th>
-                                        <th>Precio<i class="fa fa-sort"></i></th>
-                                        <th>Tipo de Producto</th>
-                                        <th>Descripcion</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-                        </form>
-                        <!-- CUERPO DE TABLA -->
-                        <tbody>
-                            <?php foreach ($matrizProducto as $producto) : ?>
+                        <table class="table table-bordered">
+                            <thead>
                                 <tr>
-                                    <th scope="row"><?php echo $producto['id_producto'] ?></th>
-                                    <?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?>
-                                    <th><img src="<?php echo $dir_imagen; ?>" alt="Imagen" width="120" height="80"></th>
-                                    <td><?php echo $producto['nombre'] ?></td>
-                                    <td><?php echo $producto['precio'] ?></td>
-                                    <td><?php echo $producto['tipo'] ?></td>
-                                    <td><?php echo $producto['descripcion'] ?></td>
-                                    <td>
-                                        <a href="ModificarProductoImagen_pagina.php?id=<?php echo $producto['id_producto'] ?>" title="Editar Imagen" data-toggle="tooltip"><i></i><img src="assets/iconos/icono-imagen.svg"></a>
-                                        <a href="ModificarProducto_pagina.php?id=<?php echo $producto['id_producto'] ?>" class="edit" title="Editar Informacion" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                        <a href="controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id_producto'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
-                                    </td>
+                                    <th>#ID</th>
+                                    <th>Imagen</th>
+                                    <th>Nombre<i class="fa fa-sort"></i></th>
+                                    <th>Precio<i class="fa fa-sort"></i></th>
+                                    <th>Tipo de Producto</th>
+                                    <th>Descripcion</th>
+                                    <th>Acciones</th>
                                 </tr>
-                            <?php endforeach; ?>
-                        </tbody>
+                            </thead>
+                            <!-- CUERPO DE TABLA -->
+                            <tbody>
+                                <?php foreach ($matrizProducto as $producto) : ?>
+                                    <tr>
+                                        <th scope="row"><?php echo $producto['id_producto'] ?></th>
+                                        <?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?>
+                                        <th><img src="<?php echo $dir_imagen; ?>" alt="Imagen" width="120" height="80"></th>
+                                        <td><?php echo $producto['nombre'] ?></td>
+                                        <td><?php echo $producto['precio'] ?></td>
+                                        <td><?php echo $producto['tipo'] ?></td>
+                                        <td><?php echo $producto['descripcion'] ?></td>
+                                        <td>
+                                            <a href="ModificarProductoImagen_pagina.php?id=<?php echo $producto['id_producto'] ?>" title="Editar Imagen" data-toggle="tooltip"><i></i><img src="assets/iconos/icono-imagen.svg"></a>
+                                            <a href="ModificarProducto_pagina.php?id=<?php echo $producto['id_producto'] ?>" class="edit" title="Editar Informacion" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                            <a href="controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id_producto'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
                         </table>
 
                         <!-- INICIO Paginado -->

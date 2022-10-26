@@ -24,7 +24,7 @@
     <?php require_once("controlador/Controlador_PerfilUsuario.php"); ?>
 
     <header>
-        <span class="menu"><i class="material-icons">menu</i></span>
+        <span class="menu"><i><img src="assets/iconos/icono-desplegable.svg" alt="Inicio" width="20" height="20"></i></span>
     </header>
     <aside class="keep">
         <ul>

@@ -31,11 +31,13 @@
                         <!-- No se cual es esta class porque es del boostrap -->
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("controlador/Reserva_controlador.php"); ?>
+                        <div>
+                                <?php require_once("controlador/ClienteReserva_controlador.php"); ?>
+                        </div>
                         <!-- FIN TABLA LISTAR -->
                         <?php require_once("vista/BarraNavegacion.php"); ?>
 
                 </div>
-        </div>
 </body>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
