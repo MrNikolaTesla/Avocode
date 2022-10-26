@@ -31,7 +31,7 @@
 
 </body>
 <div>
-<br><button class="button-1"><a href="index.php">Regresar</a></button><br>
+<br><a class="button-1" href="index.php">Regresar</a><br>
 </div>
 
 </html>
