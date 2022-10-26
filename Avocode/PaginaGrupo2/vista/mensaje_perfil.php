@@ -7,15 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles_alertas.css">
     <title>Mensaje Perfil</title>
+
 </head>
 
 <body>
-    <script>
-        $("#MyButton").click(function() {
-            alert('Confirm to refresh alert messages.');
-            $("#refreshDivID").load("#refreshDivID .reloaded-divs > *");
-        });
-    </script>
 
     <?php
     if (isset($_SESSION['message']) && $_SESSION['message'] != "no") { ?>
