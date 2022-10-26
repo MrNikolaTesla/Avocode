@@ -99,7 +99,7 @@ h1{
   }
   
   .button-1:focus {
-    box-shadow: 1d689e;
+    box-shadow: #1d689e;
     outline: none;
   }
   
