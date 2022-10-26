@@ -13,7 +13,7 @@
 <body>
 </div>
 <section class="form-register">
-  <h2> Sobre Nosotros</h2>
+  <h2><u> Sobre Nosotros</u></h2>
   </div>
 <div> <h3>Somos un establecimiento gastronómico con un menú enfocado en las hamburguesas y sus acompañamientos. <br><br>Dentro de nuestro menú tenemos diferentes tipos de hamburguesas las cuales incluimos son: hamburguesas clásica, Burger Gringa, Burger Cabrona, Burger Champi , Burger Red Hot, Burger Super Cheese, Sanderburger.<br>
 <br>
