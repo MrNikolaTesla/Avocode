@@ -67,8 +67,13 @@ class Orden
 
     }
 
-    public function update_orden()
+    public function update_orden($cliente_orden, $empleado_orden, $mesa_orden, $tipo_orden, $direccion, $observacion, $estado_orden)
     {
+        //$hora = date('h:i');
+        //$fecha = date('y-m-d');
+        //$sql = "UPDATE orden set cliente_orden = '$cliente_orden', empleado_orden = '$empleado_orden', mesa_orden = '$mesa_orden', tipo_orden  = '$tipo_orden'
+        //, hora  = '$hora', direccion  = '$direccion', fecha = '$fecha', observacion = 'observacion', estado_orden = '$estado_orden'
+        //WHERE id_orden = $id";
         //MODIFICAR ORDEN, TAMBIEN UTILIZADO PARA REEMPLAZAR LOS DATOS DE LA ORDEN GENERANDOSE POR LOS REALES
     }
 
