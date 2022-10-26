@@ -101,16 +101,38 @@ class Usuario
             return $estado;
             
         }else{
-            $sql = "DELETE FROM usuario WHERE id_usuario = $id";
-                $query = mysqli_query($this->con, $sql);
+            //ESTO TENDRIA QUE ESTAR LLAMANDO A OTRO MODELO//
+            $sql1 = "UPDATE reserva set cliente=null WHERE cliente = $id";
+            mysqli_query($this->con, $sql1);
+            $sql2 = "UPDATE reserva set empleado=null WHERE empleado = $id";
+            mysqli_query($this->con, $sql2);
+            $sql3 = "UPDATE orden set cliente_orden=null WHERE cliente_orden = $id";
+            mysqli_query($this->con, $sql3);
+            $sql4 = "UPDATE orden set empleado_orden=null WHERE empleado_orden = $id";
+            mysqli_query($this->con, $sql4);
+            //////////////////////////////////////////////
+
+            $sql5 = "DELETE FROM usuario WHERE id_usuario = $id";
+                $query = mysqli_query($this->con, $sql5);
                 $estado=1;
                 return $estado;
         }
     }
 
     public function eliminar_cuenta ($id) {
-            $sql = "DELETE FROM usuario WHERE id_usuario = $id";
-            $query = mysqli_query($this->con, $sql);
+        //ESTO TENDRIA QUE ESTAR LLAMANDO A OTRO MODELO//
+        $sql1 = "UPDATE reserva set cliente=null WHERE cliente = $id";
+        mysqli_query($this->con, $sql1);
+        $sql2 = "UPDATE reserva set empleado=null WHERE empleado = $id";
+        mysqli_query($this->con, $sql2);
+        $sql3 = "UPDATE orden set cliente_orden=null WHERE cliente_orden = $id";
+        mysqli_query($this->con, $sql3);
+        $sql4 = "UPDATE orden set empleado_orden=null WHERE empleado_orden = $id";
+        mysqli_query($this->con, $sql4);
+        //////////////////////////////////////////////
+
+            $sql5 = "DELETE FROM usuario WHERE id_usuario = $id";
+            $query = mysqli_query($this->con, $sql5);
             return $query;
     }
 
