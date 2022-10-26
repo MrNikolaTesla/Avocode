@@ -11,7 +11,7 @@
 
 <body>
   <div>
-    <p> Mantente al tanto y comunicate con nosotros atraves de nuestras redes sociales </p>
+    <p> Mantente siempre al tanto y comunicate con nosotros atraves de nuestras redes sociales </p>
   </div>
 
 </body>

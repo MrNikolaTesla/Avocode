@@ -7,19 +7,23 @@ body {
     background-size: cover;
   }
 h1{
-    width: 300px ;
-    margin: auto auto;
-    margin-top: 30px; 
+  margin-left: 38px;
+  font-size: 50px;
+  margin-bottom: 30px;
 }
 p{
-    width: 600px;
-    margin: 100px 420px;
+    width: 650px;
+    margin-left: 30px;
     margin-top: 30px; 
 }
 .logos{
     background-color: rgba(0, 0, 0, 0.671);
   padding: 10px auto;
-  margin: 150px 490px;
+  margin-left: 780px;
+  margin-right: 770px;
+  margin-top: 200px;
+  width:350px ;
+  max-width: 350px ;
   overflow: hidden;
 }
 .logo{
