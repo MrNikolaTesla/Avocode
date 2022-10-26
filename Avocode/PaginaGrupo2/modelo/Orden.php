@@ -44,6 +44,7 @@ class Orden
         $sql = "INSERT INTO detalles_orden(orden, producto, cantidad_producto) VALUES
         ('$id_orden', '$id_producto', '$cantidad')";
         $result = mysqli_query($this->con, $sql);
+        return $result;
     }
 
     public function completar_orden()
