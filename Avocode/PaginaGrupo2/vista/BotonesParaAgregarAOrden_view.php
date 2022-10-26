@@ -2,7 +2,7 @@
  <form method="POST">
  <?php require("controlador/Controlador_Agregar_A_Orden.php"); ?>   
  <input type="number" name="cantidad_producto"></input>
-    <input type="text" name="id_producto" value="<?php echo $producto['id_producto'] ?>" hidden></input>
+    <input type="text" name="id_producto<?php echo $producto['id_producto'] ?>" value="<?php echo $producto['id_producto'] ?>" hidden></input>
     <button type="submit" name="agregar_a_orden" value="Agregar">+</button>
 </form>
  <!--<a href="controlador/Controlador_Agregar_A_Orden.php?id=echodeid">IDK!</a>-->
