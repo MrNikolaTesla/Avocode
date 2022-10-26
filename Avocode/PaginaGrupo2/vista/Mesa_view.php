@@ -8,21 +8,15 @@
     <link rel="stylesheet" href="assets/mesas-view.css">
     <link rel="stylesheet" href="assets/styles2.css">
     <link rel="stylesheet" href="assets/styles_status.css">
-
-    <!--BOOTSTRAP CSS PRINCIPAL -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <title>Vista de Mesa</title>
     <!-- Recursos Misceláneos (Bootstrap CSS, Tipografías, CSS variado) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- BOOTSTRAP JAVASCRIPT -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Search Box -->
     <script>
         // Confirmación de eliminar mesa, funciona cada vez que se quiere eliminar una mesa
         function asegurar() {
@@ -36,9 +30,6 @@
             });
         });
     </script>
-    <!-- JAVASCRIPT DE SWEETALERT SIN USO ACTUALMENTE -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 </head>
 
 <body>
@@ -79,14 +70,11 @@
                                         <div class="div-mesa">
                                             <td class="td-mesa">
                                                 <?php echo $mesa['id_mesa'] ?>
-
                                                 <a href="controlador/eliminar_mesa_controlador.php?id=<?php echo $mesa['id_mesa'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
-                                                <a href="" target="_blank"><img class="img-mesa" src="assets/iconos/icono-mesa.png"></a>
+                                                <img class="img-mesa" src="assets/iconos/icono-mesa.png">
                                                 <?php echo $mesa['estado'] ?>
                                                 <a href="controlador/ControladorModificarMesa.php?id=<?php echo $mesa['id_mesa'] ?>" class="edit" title="Cambiar estado" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                                             </td>
-
-
                                         </div>
 
                                     <?php endforeach; ?>
