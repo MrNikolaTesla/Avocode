@@ -68,6 +68,19 @@ class Orden
         //MODIFICAR ORDEN, TAMBIEN UTILIZADO PARA REEMPLAZAR LOS DATOS DE LA ORDEN GENERANDOSE POR LOS REALES
     }
 
+    public function listar_productos_orden()
+    {
+        $orden_cargada = $_SESSION['id_orden_actual'];
+        $sql = "SELECT detalles_orden.producto,id_producto as identificador_producto, detalles_orden.producto,nombre as nombre_producto, detalles_orden.producto,precio as precio
+        FROM [detalles_orden] , producto WHERE orden = $orden_cargada ORDER BY id_detalle_orden";
+    }
+
+    public function eliminar_productos_orden($id)
+    {
+        $orden_cargada = $_SESSION['id_orden_actual'];
+        $sql = "DELETE FROM detalles_orden WHERE orden = $orden_cargada AND id_detalle_orden = $id";
+    }
+
     public function listar_ordenes()
     {
         $sql = "SELECT *
