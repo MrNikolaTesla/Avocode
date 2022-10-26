@@ -2,7 +2,7 @@ body {
   font-family: Georgia;
   background: url(imagenes/fondo-index.jpg);
   height: 100%;
-  margin: 10px;
+  margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
 }
