@@ -17,7 +17,7 @@
 <body>
     <?php require_once("controlador/Controlador_ProductosEnTuOrden.php"); ?>
     <!------------------------------------------------------------------------------->
-    <?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?>
+
     <?php require_once("controlador/ControladorColumnaParaAgregarAOrden.php"); ?>
     <!-- DIV DE BÚSQUEDA-->
     <?php require_once("vista/buscar_producto_cartilla_view.php"); ?>
@@ -53,31 +53,32 @@
                 </ul>
             </div>
 
-                <div class="row">
-                    <div class="tab-content col-lg-12" id="myTabContent">
-                        <div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
-                            <div class="row">
+            <div class="row">
+                <div class="tab-content col-lg-12" id="myTabContent">
+                    <div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
+                        <div class="row">
 
-                                <div class="col-md-6">
+                            <div class="col-md-6">
                                 <?php foreach ($matrizProducto as $producto) : ?>
-
                                     <div class="single_menu">
 
                                         <img src="<?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?><?php echo $dir_imagen; ?>" alt="burger">
                                         <div class="menu_content">
                                             <h4><?php echo $producto['nombre'] ?><span>$<?php echo $producto['precio'] ?></span></h4>
                                             <p><?php echo $producto['descripcion'] ?>
+                                                <?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?>
+
                                             </p>
 
                                         </div>
                                     </div>
                                 <?php endforeach; ?>
-                                </div>
                             </div>
                         </div>
                     </div>
-                    <a href="#" class=" menu_btn btn btn-danger">Ver más</a>
                 </div>
+                <a href="#" class=" menu_btn btn btn-danger">Ver más</a>
+            </div>
         </div>
     </section>
     <!---------- FIN DE CARTILLA ----------->
