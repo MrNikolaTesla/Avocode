@@ -81,13 +81,29 @@ CREATE TABLE `reserva` (
 );
 
 INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
-VALUES ('1','Hamburguesa de Conocimiento', '500', 'Hamburguesa', 'Datos del Producto');
+VALUES ('1','Burger Clásica ', '350', 'hamburguesa', ' 160grs de carne, doble cheddar, lechuga, cebolla, tomate y mayonesa. Acompañada de papas rústicas');
 
 INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
-VALUES ('2','Hamburguesa Clasica', '230', 'Hamburguesa', 'Datos del Producto');
+VALUES ('2','Burger Gringa ', '390', 'hamburguesa', ' 160grs de carne, doble cheddar, pepinillos, panceta y ketchup. Acompañada de papas rústicas. ');
 
 INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
-VALUES ('3','Hamburguesa Vegana', '270', 'Hamburguesa', 'Datos del Producto');
+VALUES ('3','Burger Cabrona ', '460', 'hamburguesa', ' 160grs de carne, queso de cabra, muzzarella, pesto de tomates secos, berenjena y mayonesa. Acompañada de papas rústicas. ');
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('4','Burger Champi ', '430', 'hamburguesa', ' 160grs de carne, muzzarella, champiñones, tomate, cebolla caramelizada, rúcula, mostaza a la antigua y miel. Acompañada de papas rústicas. ');
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('5','Burger Red Hot ', '430', 'hamburguesa', ' 160grs de carne, muzzarella, guacamole, lechuga, tomate, salsa factory picante. Acompañada de papas rústicas. ');
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('6','Burger Super Cheese ', '460', 'hamburguesa', ' 160grs de carne, provolone, queso azul, muzzarella, queso crema con hierbas y tomate con orégano. Acompañada de papas rústicas. ');
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('7','Sanderburger', '540', 'hamburguesa', 'Doble carne, extra cheddar, extra panceta, huevo a la plancha, lechuga, tomate, cebolla caramelizada y salsa barbacoa. Acompañada de papas rústicas. ');
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('8','Edición I-Limitada ', '410', 'hamburguesa', ' 160grs de carne, panceta, doble cheddar, aros de cebolla, mostaza, ketchup. Acompañada de papas rústicas. ');
+
 
 INSERT INTO factura (id_factura, cliente, empleado, fecha, hora, forma_pago, productos, monto)
 VALUES ('1','3', '2', '2022-09-07', '19:00', 'Credito', '2', '230');
