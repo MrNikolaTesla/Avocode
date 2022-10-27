@@ -54,19 +54,6 @@ class Mesa
 
         $sql3 = "DELETE FROM mesa WHERE id_mesa = $id";
         $query = mysqli_query($this->con, $sql3);
-        //Impedir vacio numerico
-        $m = $this->listar_mesas();
-        $numero_listado = 1;
-        foreach ($m as $mesa) {
-            if ($numero_listado == $mesa['id_mesa']) {
-                //Vacio Existencial
-            } else {
-                $original_id = $mesa['id_mesa'];
-                $idupdate = "UPDATE mesa set id_mesa = '$numero_listado' WHERE id_mesa = $original_id";
-                mysqli_query($this->con, $idupdate);
-            }
-            $numero_listado = $numero_listado + 1;
-        }
         return $query;
     }
 
