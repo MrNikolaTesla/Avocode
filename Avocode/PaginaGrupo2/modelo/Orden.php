@@ -137,6 +137,14 @@ class Orden
         }
         return $this->orden;
     }
+
+    public function listar_datos_de_orden($orden_cargada)
+    {
+        $sql = "SELECT *
+        FROM orden WHERE id_orden = $orden_cargada";
+        $query = mysqli_query($this->con, $sql);
+        return $query;
+    }
 }
 
 ?>
