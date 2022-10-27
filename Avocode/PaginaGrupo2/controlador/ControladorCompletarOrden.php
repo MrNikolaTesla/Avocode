@@ -15,8 +15,8 @@ if (!empty($_POST["completar"])) {
 
         if($resultado){
             require_once("modelo/Mesa.php");
-            $mesa = new Mesa();
-            $mesa->ocupar_mesa($mesa);
+            $mesa_a_ocupar = new Mesa();
+            $mesa_a_ocupar->ocupar_mesa($mesa);
             $_SESSION['completando_orden'] = "false";
             require_once("Controlador_CompletarOrden.php");
         }else{

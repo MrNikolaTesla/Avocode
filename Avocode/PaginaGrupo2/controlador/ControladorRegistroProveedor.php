@@ -12,18 +12,18 @@ if(!empty($_POST["boton_registro"])){
         $telefono = $_POST["telefono"];
 
         $repetido = $proveedor->get_proveedor($nombre_apellido, $empresa, $productos, $telefono);
-        if($repetido!=null){
+        if($repetido==1){
             $estado = 0;
     }
     
-    if ($repetido==null){
+    if ($repetido!=1){
         $estado = $proveedor->set_proveedor($nombre_apellido, $empresa, $productos, $telefono);
     }
 
 if($estado==1) {
     $_SESSION['message'] = 'Proveedor registrado correctamente!';
     header("Location: PAGINA_GestionProveedores.php");
-}else if($repetido!=null){
+}else if($estado == 0){
     $_SESSION['message'] = 'El proveedor ya ha sido agregado al sistema previamente.';
     header("Location: PAGINA_GestionProveedores.php");
 } 
