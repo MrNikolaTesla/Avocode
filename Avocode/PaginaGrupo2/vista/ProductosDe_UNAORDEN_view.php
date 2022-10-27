@@ -2,12 +2,13 @@
                             <!------------------------------------------------------------------------------->
 
                         <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
-                        <h3 class="centrado">Tu Orden :</h3>
+                        <h3 class="centrado">Productos dentro de esta Orden :</h3>
                         <form method="POST">
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>Nombre</th>
+                                        <th>ID del Producto</th>
+                                        <th>Nombre del Producto</th>
                                         <th>Cantidad</th>
                                         <th>Precio Unitario</th>
                                         <th>Precio Total</th>
@@ -18,8 +19,9 @@
 
                         <!-- CUERPO DE TABLA -->
                         <tbody>
-                        <?php $precio_total = 0; foreach ($matrizProdOrden as $detalle) : ?>
+                        <?php $precio_total = 0; foreach ($resultado as $detalle) : ?>
                                 <tr>
+                                    <td><?php echo $detalle['id_producto'] ?></td>
                                     <td><?php echo $detalle['nombre'] ?></td>
                                     <td><?php echo $detalle['cantidad'] ?></td>
                                     <td><?php echo $detalle['precio_linea'] ?></td>
@@ -33,5 +35,4 @@
                         </tbody>
                         </table>
                         <div class="centrado"><b>Total : $<?php echo $precio_total; ?></b></div>
-                        <div class="centrado"><a class="button-2" href="PAGINA_ContinuarOrden.php" style="color:white;">Continuar</a></div>
-                        <div class="centrado"><a class="button-3" href="controlador/Controlador_CancelarOrden.php" style="color:white;">Cancelar Orden</a></div>
+                        <div class="centrado"><a class="button-2" href="PAGINA_GestionOrdenes.php" style="color:white;">Regresar</a></div>

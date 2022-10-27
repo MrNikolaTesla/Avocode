@@ -73,6 +73,8 @@ class Orden
         $eliminar_detalles = "DELETE FROM detalles_orden WHERE orden = $orden_cargada";
         mysqli_query($this->con, $eliminar_detalles);
         $sql = "DELETE FROM orden WHERE id_orden = $orden_cargada AND estado_orden = 'Generandose...'";
+        $_SESSION['orden_iniciada'] = "false";
+        $_SESSION['id_orden_actual'] = null;
         $result = mysqli_query($this->con, $sql);
         return $result;
     }
@@ -99,6 +101,24 @@ class Orden
         return $result;
     }
 
+    public function nombre_cliente($id_cliente)
+    {
+        $sql = "SELECT nombre FROM usuario
+        WHERE $id_cliente = id_usuario";
+        $query = mysqli_query($this->con, $sql);
+        $resultado = mysqli_fetch_array($query);
+        return $resultado;
+    }
+
+    public function nombre_empleado($id_empleado)
+    {
+        $sql = "SELECT nombre FROM usuario
+        WHERE $id_empleado = id_usuario";
+        $query = mysqli_query($this->con, $sql);
+        $resultado = mysqli_fetch_array($query);
+        return $resultado;
+    }
+
     public function update_orden_delivery($id, $direccion, $tipo_orden, $observacion, $estado_orden)
     {
         $sql = "UPDATE orden set direccion = '$direccion', tipo_orden  = '$tipo_orden'
@@ -119,7 +139,7 @@ class Orden
 
     public function listar_productos_orden($id_orden)
     {
-        $sql = "SELECT detalles_orden.id_detalle_orden as identificador_detalle,
+        $sql = "SELECT producto.id_producto as id_producto, detalles_orden.id_detalle_orden as identificador_detalle,
         producto.nombre as nombre,
         detalles_orden.cantidad_producto as cantidad,
         producto.precio as precio_linea, producto.precio*detalles_orden.cantidad_producto as total_linea 
@@ -140,15 +160,14 @@ class Orden
     }
 
     ///////////////////WTF
-    public function eliminar_productos_orden($id)
+    public function eliminar_orden($id)
     {
         //ESTO TENDRIA QUE ESTAR LLAMANDO A OTRO MODELO//
         $sql1 = "UPDATE detalles_orden set orden=null WHERE orden = $id";
         mysqli_query($this->con, $sql1);
         //////////////////////////////////////////////
 
-        $orden_cargada = $_SESSION['id_orden_actual'];
-        $sql = "DELETE FROM detalles_orden WHERE orden = $orden_cargada AND id_detalle_orden = $id";
+        $sql = "DELETE FROM orden WHERE id_orden = $id";
         $result = mysqli_query($this->con, $sql);
         return $result;
     }

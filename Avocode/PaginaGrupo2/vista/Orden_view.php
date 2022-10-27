@@ -78,8 +78,10 @@
                             <thead>
                                 <tr>
                                     <th>#ID</th>
-                                    <th>ID Cliente<i class="fa fa-sort"></i></th>
+                                    <th>ID Cliente</th>
+                                    <th>Nombre Cliente</th>
                                     <th>ID Empleado</th>
+                                    <th>Nombre Empleado</th>
                                     <th>ID Mesa</th>
                                     <th>Tipo de Orden</th>
                                     <th>Hora</th>
@@ -87,6 +89,7 @@
                                     <th>Fecha</th>
                                     <th>Observacion</th>
                                     <th>Estado</th>
+                                    <th>Acciones</th>
                                 </tr>
                             </thead>
 
@@ -94,9 +97,16 @@
                             <tbody>
                                 <?php foreach ($matrizOrden as $orden) : ?>
                                     <tr>
+                                    <?php $_SESSION['cliente_orden'] = $orden['cliente_orden'];
+                                        $_SESSION['empleado_orden'] = $orden['empleado_orden'];
+                                        require("controlador/Controlador_Nombre_Cliente_Orden.php");
+                                        require("controlador/Controlador_Nombre_Empleado_Orden.php");
+                                        ?>
                                         <td scope="row"><?php echo $orden['id_orden'] ?></td>
                                         <td><?php echo $orden['cliente_orden'] ?></td>
+                                        <td><?php echo $_SESSION['cliente_orden'] ?></td>
                                         <td><?php echo $orden['empleado_orden'] ?></td>
+                                        <td><?php echo $_SESSION['empleado_orden'] ?></td>
                                         <td><?php echo $orden['mesa_orden'] ?></td>
                                         <td><?php echo $orden['tipo_orden'] ?></td>
                                         <td><?php echo $orden['hora'] ?></td>
@@ -106,7 +116,8 @@
                                         <td><?php echo $orden['estado_orden'] ?></td>
                                         <td>
                                             <!--<a href="ModificarProveedor_pagina.php?id= echo $proveedor['id_proveedor'] " class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>-->
-                                            <a href="controlador/eliminar_Proveedor_controlador.php?id=<?php echo $proveedor['id_proveedor'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                            <a href="VerOrden_pagina.php?id=<?php echo $orden['id_orden'] ?>" class="edit" title="Ver Productos" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                            <a href="controlador/eliminar_Orden_controlador.php?id=<?php echo $orden['id_orden'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

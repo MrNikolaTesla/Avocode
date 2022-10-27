@@ -5,7 +5,7 @@ if($_SESSION['tipo_orden'] == "local"){
 ?>
 <form class="col-5" method="POST">
                         <h3>Completar Datos de la Orden : Local</h3>
-                        <?php require_once("controlador/ControladorCompletarOrden.php"); ?>
+                        <?php require_once("controlador/ControladorProcesarOrden.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Numero de Mesa</label>
                                 <input type="number" class="form-control" name="num_mesa">
@@ -22,7 +22,7 @@ if($_SESSION['tipo_orden'] == "local"){
         ?>
 <form class="col-5" method="POST">
                         <h3>Completar Datos de la Orden : Delivery</h3>
-                        <?php require_once("controlador/ControladorCompletarOrden.php"); ?>
+                        <?php require_once("controlador/ControladorProcesarOrden.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Direccion</label>
                                 <input type="text" class="form-control" name="direccion">
@@ -38,7 +38,7 @@ if($_SESSION['tipo_orden'] == "local"){
         ?>
 <form class="col-5" method="POST">
                         <h3>Completar Datos de la Orden : Take Away</h3>
-                        <?php require_once("controlador/ControladorCompletarOrden.php"); ?>
+                        <?php require_once("controlador/ControladorProcesarOrden.php"); ?>
                         <div class="mb-3">
                         <label class="form-label">Fecha</label>
                         <input type="date" class="form-control" name="fecha">
