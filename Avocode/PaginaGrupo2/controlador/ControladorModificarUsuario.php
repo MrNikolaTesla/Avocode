@@ -27,7 +27,7 @@ if($estado==1 && $repetido == false) {
     $_SESSION['message'] = 'Usuario modificado correctamente';
     header("Location: PAGINA_GestionUsuarios.php");
 }else if($estado==2 && $repetido == false){
-    $_SESSION['message'] = 'No es posible cambiar un usuario a una posicion superior.';
+    $_SESSION['message'] = 'No es posible cambiar el tipo de este usuario con tus permisos actuales.';
     header("Location: PAGINA_GestionUsuarios.php");
 }else if($estado==3 && $repetido == false){
     $_SESSION['message'] = 'No tienes permisos para modificar otros administradores del sistema.';
