@@ -2,6 +2,7 @@
                             <!------------------------------------------------------------------------------->
 
                         <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
+                        <h3 class="centrado">Tu Orden :</h3>
                         <form method="POST">
                             <table class="table table-bordered">
                                 <thead>

@@ -1,5 +1,4 @@
 <?php
-
     require_once("modelo/Orden.php");
     $orden = new Orden();
 
@@ -20,6 +19,6 @@
             }
         
         $resultado = $orden->crear_fila_orden($id_orden, $id_producto, $cantidad_producto);
-
+        header("Refresh");
         }
     }

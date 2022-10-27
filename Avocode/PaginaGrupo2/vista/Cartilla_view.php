@@ -15,10 +15,6 @@
 </head>
 
 <body>
-    <?php require_once("controlador/Controlador_ProductosEnTuOrden.php"); ?>
-    <!------------------------------------------------------------------------------->
-
-    <?php require_once("controlador/ControladorColumnaParaAgregarAOrden.php"); ?>
 
     <!------------- COMIENZO DE CARTILLA ------------------>
 
@@ -69,7 +65,6 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class=" menu_btn btn btn-danger">Ver más</a>
         </div>
         </div>
     </section>

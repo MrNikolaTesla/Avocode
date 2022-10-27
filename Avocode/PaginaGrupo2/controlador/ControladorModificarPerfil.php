@@ -24,7 +24,6 @@ if(!empty($_POST["modificacion"])){
         }else if($ver_usuario_rep==1){
         $repetido = true;
         }
-    }
 
 if($estado==1 && $repetido==false) {
         $_SESSION['correo'] = $correo;
@@ -43,8 +42,12 @@ if($estado==1 && $repetido==false) {
     $_SESSION['message'] = 'Correo modificado ya en uso por otro usuario.';
     header("Location: PAGINA_GestionUsuarios.php");
 }else if($repetido==null){
-    $_SESSION['message'] = 'Algo reventó.';
+    $_SESSION['message'] = 'Algo ha sucedido, intentalo de nuevo mas tarde.';
     header("Location: PAGINA_GestionUsuarios.php");
+}
+}else{
+    $_SESSION['message'] = 'Alguno de los campos esta vacio.';
+    header("Location: index.php");
 }
 }
 ?>
