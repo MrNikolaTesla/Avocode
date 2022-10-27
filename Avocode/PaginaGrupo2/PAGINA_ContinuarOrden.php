@@ -21,7 +21,7 @@
 </head>
 
 <body>
-        <div class="container-fluid-2">
+        <div class="container-fluid cont-pers">
                 <div class="col-8 ">
                         <!-- No se cual es esta class porque es del boostrap -->
                         <!-- INICIO TABLA LISTAR -->

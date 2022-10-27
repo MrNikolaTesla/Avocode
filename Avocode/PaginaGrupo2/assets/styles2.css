@@ -3,8 +3,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-
+.body-2 {
+  background-image: url('imagenes/fondo-index.jpg');
+  background-repeat: no-repeat;
+  color: white;
+}
 
 .container-2 {
   margin-top: -100px;
@@ -12,14 +15,7 @@ body {
   margin-left: 40px;
 }
 
-.container-fluid-2 {
-  margin: 20px;
-  width: 60em;
-  float: left;
-
-}
-
-.no_hay_registros {
+.no_hay_registros{
   width: 100em;
   margin-left: 40px;
   padding-top: 10em;
@@ -44,14 +40,6 @@ body {
   padding-bottom: 10px;
   margin: 0 0 10px;
   min-height: 45px;
-}
-
-.table-title-2 {
-  width: fit-content;
-  font-size: 15px;
-  float: right;
-  display: flex;
-  justify-content:flex-end;
 }
 
 .table-title h2 {
