@@ -72,20 +72,32 @@ class Orden
     {
         $eliminar_detalles = "DELETE FROM detalles_orden WHERE orden = $orden_cargada";
         mysqli_query($this->con, $eliminar_detalles);
-        $sql = "DELETE FROM orden WHERE id_orden = $orden_cargada";
+        $sql = "DELETE FROM orden WHERE id_orden = $orden_cargada AND estado_orden = 'Generandose...'";
         $result = mysqli_query($this->con, $sql);
         return $result;
     }
 
-    public function update_orden($cliente_orden, $empleado_orden, $mesa_orden, $tipo_orden, $direccion, $observacion, $estado_orden)
+    public function update_orden($id, $cliente_orden, $empleado_orden, $mesa_orden, $tipo_orden, $hora, $direccion, $fecha, $observacion, $estado_orden)
     {
-        //$hora = date('h:i');
-        //$fecha = date('y-m-d');
-        //$sql = "UPDATE orden set cliente_orden = '$cliente_orden', empleado_orden = '$empleado_orden', mesa_orden = '$mesa_orden', tipo_orden  = '$tipo_orden'
-        //, hora  = '$hora', direccion  = '$direccion', fecha = '$fecha', observacion = 'observacion', estado_orden = '$estado_orden'
-        //WHERE id_orden = $id";
-        //$result = mysqli_query($this->con, $sql);
-        //return $result;
+        if($hora && $fecha = ""){
+            $hora = date('h:i');
+            $fecha = date('y-m-d');
+        }
+        $sql = "UPDATE orden set cliente_orden = '$cliente_orden', empleado_orden = '$empleado_orden', mesa_orden = '$mesa_orden', tipo_orden  = '$tipo_orden'
+        , hora  = '$hora', direccion  = '$direccion', fecha = '$fecha', observacion = 'observacion', estado_orden = '$estado_orden'
+        WHERE id_orden = $id";
+        $result = mysqli_query($this->con, $sql);
+        return $result;
+        //MODIFICAR ORDEN, TAMBIEN UTILIZADO PARA REEMPLAZAR LOS DATOS DE LA ORDEN GENERANDOSE POR LOS REALES
+    }
+
+    public function update_orden_local($id, $mesa_orden, $tipo_orden, $observacion, $estado_orden)
+    {
+        $sql = "UPDATE orden set mesa_orden = '$mesa_orden', tipo_orden  = '$tipo_orden'
+        , observacion = '$observacion', estado_orden = '$estado_orden'
+        WHERE id_orden = $id";
+        $result = mysqli_query($this->con, $sql);
+        return $result;
         //MODIFICAR ORDEN, TAMBIEN UTILIZADO PARA REEMPLAZAR LOS DATOS DE LA ORDEN GENERANDOSE POR LOS REALES
     }
 

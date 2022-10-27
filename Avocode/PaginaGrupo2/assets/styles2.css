@@ -277,6 +277,46 @@ table.table td i {
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
 
+.button-2-Pero_margin {
+  appearance: none;
+  background-color: #1077d8;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 16px;
+  padding: 10px 16px;
+  margin-top: 15px;
+  margin-bottom: 1px;
+}
+
+.button-2-Pero_margin:hover {
+  background-color: #1d689e;
+}
+
+.button-2-Pero_margin:focus {
+  box-shadow: rgba(51, 114, 209, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-2-Pero_margin:disabled {
+  background-color: #3b80b8;
+  border-color: rgba(25, 102, 179, 0.1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-2-Pero_margin:active {
+  background-color: #0a3d5c;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
 .button-3 {
   appearance: none;
   background-color: #d6be36;
@@ -354,6 +394,46 @@ table.table td i {
 
 .button-4:active {
   background-color: #8e5629;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.button-5 {
+  appearance: none;
+  background-color: #447bad;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 16px;
+  padding: 10px 16px;
+  margin-top: 1px;
+
+}
+
+.button-5:hover {
+  background-color: #447fa8;
+}
+
+.button-5:focus {
+  box-shadow: rgba(51, 114, 209, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-5:disabled {
+  background-color: #3b80b8;
+  border-color: rgba(25, 102, 179, 0.1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-5:active {
+  background-color: #0a3d5c;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
 

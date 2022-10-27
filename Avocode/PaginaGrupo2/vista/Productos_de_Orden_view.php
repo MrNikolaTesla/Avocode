@@ -32,4 +32,4 @@
                         </tbody>
                         </table>
                         <div class="centrado"><b>Total : $<?php echo $precio_total; ?></b></div>
-                        <div class="centrado"><a class="button-2" href="PAGINA_ContinuarOrden.php">Continuar</a></div>
+                        <div class="centrado"><a class="button-2" href="PAGINA_ContinuarOrden.php" style="color:white;">Continuar</a></div>

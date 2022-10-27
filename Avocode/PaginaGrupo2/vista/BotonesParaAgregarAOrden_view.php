@@ -7,4 +7,3 @@
 </form>
  <!--<a href="controlador/Controlador_Agregar_A_Orden.php?id=echodeid">IDK!</a>-->
  <!--Da por finalizada la orden, esto es temporal-->
-    <a href="controlador/APAGAESOOTTO.php">Apagar</a>
