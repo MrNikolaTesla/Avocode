@@ -3,7 +3,7 @@ require_once("modelo/Orden.php");
 $orden = new Orden();
 if (!empty($_POST["completar"])) {
     if($_SESSION['tipo_orden'] == "local"){
-        if (!empty($_POST["num_mesa"]) and !empty($_POST["observacion"])) {
+        if (!empty($_POST["num_mesa"])) {
 
         $id_orden = $_SESSION['id_orden_actual'];
         $mesa = $_POST["num_mesa"];
@@ -14,12 +14,50 @@ if (!empty($_POST["completar"])) {
         $resultado = $orden->update_orden_local($id_orden, $mesa, $tipo_orden, $observacion, $estado_orden);
 
         if($resultado){
+            $_SESSION['completando_orden'] = "false";
             require_once("Controlador_CompletarOrden.php");
         }else{
-            echo "LOL";
+            echo "Algo ha fallado, intentelo de nuevo mas tarde.";
         }
     }
 }else if($_SESSION['tipo_orden'] == "delivery"){
+    if (!empty($_POST["direccion"])) {
+
+        $id_orden = $_SESSION['id_orden_actual'];
+        $direccion = $_POST["direccion"];
+        $tipo_orden = $_SESSION['tipo_orden'];
+        $observacion = $_POST["observacion"];
+        $estado_orden = "Pendiente";
+
+        $resultado = $orden->update_orden_delivery($id_orden, $direccion, $tipo_orden, $observacion, $estado_orden);
+
+        if($resultado){
+            $_SESSION['completando_orden'] = "false";
+            require_once("Controlador_CompletarOrden.php");
+
+        }else{
+            echo "Algo ha fallado, intentelo de nuevo mas tarde.";
+        }
+    }
+}else if($_SESSION['tipo_orden'] == "takeaway"){
+    if (!empty($_POST["hora"]) && !empty($_POST["fecha"])) {
+
+        $id_orden = $_SESSION['id_orden_actual'];
+        $fecha = $_POST["fecha"];
+        $hora = $_POST["hora"];
+        $tipo_orden = "Take Away";
+        $observacion = $_POST["observacion"];
+        $estado_orden = "Pendiente";
+
+        $resultado = $orden->update_orden_takeaway($id_orden, $hora, $fecha, $tipo_orden, $observacion, $estado_orden);
+
+        if($resultado){
+            $_SESSION['completando_orden'] = "false";
+            require_once("Controlador_CompletarOrden.php");
+        }else{
+            echo "Algo ha fallado, intentelo de nuevo mas tarde.";
+        }
+    }
 }
 }
 
