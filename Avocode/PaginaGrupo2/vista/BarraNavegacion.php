@@ -65,8 +65,8 @@
                 </a>
             </li>
             <li>
-                <a class="message" href="/" style="text-decoration:none">
-                    <span><img src="assets/iconos/icono-comanda.svg" alt="Comandas" width="30" height="30"></span>
+                <a class="message" href="PAGINA_GestionOrdenes.php" style="text-decoration:none">
+                    <span><img src="assets/iconos/icono-comanda.svg" alt="Ordenes" width="30" height="30"></span>
                     Gestor de Ordenes
                 </a>
             </li>

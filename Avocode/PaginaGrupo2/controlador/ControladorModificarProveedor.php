@@ -29,7 +29,7 @@ if($estado==1) {
     $_SESSION['message'] = 'Proveedor modificado correctamente';
     header("Location: PAGINA_GestionProveedores.php");
 }else if($repetido!=null){
-    $_SESSION['message'] = 'Producto equivalente ya encontrado en el sistema.';
+    $_SESSION['message'] = 'Proveedor equivalente ya encontrado en el sistema.';
     header("Location: PAGINA_GestionProveedores.php");
 }else{
     $_SESSION['message'] = 'Proveedor no modificado, algo ha fallado.';

@@ -97,7 +97,7 @@ class Mesa
 
     public function ocupar_mesa($id)
     {
-        $sql = "UPDATE mesa set estado = 'Ocupada' WHERE id_mesa = $id";
+        $sql = "UPDATE mesa set estado = 'Ocupada' WHERE id_mesa = '$id'";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }

@@ -23,7 +23,7 @@ if(!empty($_POST["boton_registro"])){
 if($estado==1) {
     $_SESSION['message'] = 'Proveedor registrado correctamente!';
     header("Location: PAGINA_GestionProveedores.php");
-}else if(!$estado){
+}else if($repetido!=null){
     $_SESSION['message'] = 'El proveedor ya ha sido agregado al sistema previamente.';
     header("Location: PAGINA_GestionProveedores.php");
 } 

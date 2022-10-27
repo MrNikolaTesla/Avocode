@@ -7,13 +7,16 @@ if (!empty($_POST["completar"])) {
 
         $id_orden = $_SESSION['id_orden_actual'];
         $mesa = $_POST["num_mesa"];
-        $tipo_orden = $_SESSION['tipo_orden'];
+        $tipo_orden = "Local";
         $observacion = $_POST["observacion"];
         $estado_orden = "Pendiente";
 
         $resultado = $orden->update_orden_local($id_orden, $mesa, $tipo_orden, $observacion, $estado_orden);
 
         if($resultado){
+            require_once("modelo/Mesa.php");
+            $mesa = new Mesa();
+            $mesa->ocupar_mesa($mesa);
             $_SESSION['completando_orden'] = "false";
             require_once("Controlador_CompletarOrden.php");
         }else{
@@ -25,7 +28,7 @@ if (!empty($_POST["completar"])) {
 
         $id_orden = $_SESSION['id_orden_actual'];
         $direccion = $_POST["direccion"];
-        $tipo_orden = $_SESSION['tipo_orden'];
+        $tipo_orden = "Delivery";
         $observacion = $_POST["observacion"];
         $estado_orden = "Pendiente";
 
