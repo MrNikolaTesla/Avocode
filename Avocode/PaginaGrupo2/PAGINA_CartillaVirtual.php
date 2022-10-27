@@ -1,6 +1,7 @@
 <p>CARTILLA VIRTUAL</p><br>
 En Construccion...
 <br><a href="index.php">Regresar</a><br>
+<link rel="stylesheet" href="assets/styles2.css">
 
 <?php require_once("controlador/ControladorMostrarCartilla.php"); ?>
 <?php require_once("controlador/Controlador_Listar_Productos_En_Orden.php"); ?>

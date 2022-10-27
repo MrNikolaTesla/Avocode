@@ -19,9 +19,6 @@
     <!------------------------------------------------------------------------------->
 
     <?php require_once("controlador/ControladorColumnaParaAgregarAOrden.php"); ?>
-    <!-- DIV DE BÚSQUEDA-->
-    <?php require_once("vista/buscar_producto_cartilla_view.php"); ?>
-    <!------------------------------------------------------------------------------->
 
     <!------------- COMIENZO DE CARTILLA ------------------>
 

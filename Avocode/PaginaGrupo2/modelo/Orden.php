@@ -68,6 +68,15 @@ class Orden
 
     }
 
+    public function eliminar_orden_incompleta($orden_cargada)
+    {
+        $eliminar_detalles = "DELETE FROM detalles_orden WHERE orden = $orden_cargada";
+        mysqli_query($this->con, $eliminar_detalles);
+        $sql = "DELETE FROM orden WHERE id_orden = $orden_cargada";
+        $result = mysqli_query($this->con, $sql);
+        return $result;
+    }
+
     public function update_orden($cliente_orden, $empleado_orden, $mesa_orden, $tipo_orden, $direccion, $observacion, $estado_orden)
     {
         //$hora = date('h:i');
@@ -82,7 +91,12 @@ class Orden
 
     public function listar_productos_orden($id_orden)
     {
-        $sql = "SELECT detalles_orden.id_detalle_orden as identificador_detalle, producto.nombre as nombre,detalles_orden.cantidad_producto as cantidad,producto.precio as precio_linea, producto.precio*detalles_orden.cantidad_producto as total_linea FROM detalles_orden , producto WHERE detalles_orden.orden = $id_orden AND detalles_orden.producto_det = producto.id_producto ORDER BY id_detalle_orden";
+        $sql = "SELECT detalles_orden.id_detalle_orden as identificador_detalle,
+        producto.nombre as nombre,
+        detalles_orden.cantidad_producto as cantidad,
+        producto.precio as precio_linea, producto.precio*detalles_orden.cantidad_producto as total_linea 
+        FROM detalles_orden , producto 
+        WHERE detalles_orden.orden = $id_orden AND detalles_orden.producto_det = producto.id_producto ORDER BY id_detalle_orden";
         $result = mysqli_query($this->con, $sql);
         while ($filas = mysqli_fetch_array($result)) {
             $this->detalles_orden[] = $filas;

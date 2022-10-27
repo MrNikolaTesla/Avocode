@@ -17,17 +17,19 @@
 
                         <!-- CUERPO DE TABLA -->
                         <tbody>
-                        <?php foreach ($matrizProdOrden as $detalle) : ?>
+                        <?php $precio_total = 0; foreach ($matrizProdOrden as $detalle) : ?>
                                 <tr>
                                     <td><?php echo $detalle['nombre'] ?></td>
                                     <td><?php echo $detalle['cantidad'] ?></td>
                                     <td><?php echo $detalle['precio_linea'] ?></td>
-                                    <td><?php echo $detalle['total_linea'] ?></td>
+                                    <td><?php $precio_total = $precio_total + $detalle['total_linea'];
+                                    echo $detalle['total_linea'] ?></td>
                                     <td>
                                         <a href="controlador/eliminar_LineaOrden.php?id=<?php echo $detalle['identificador_detalle'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                                     </td>
-                                    
                                 </tr>
                                 <?php endforeach; ?>
                         </tbody>
                         </table>
+                        <div class="centrado"><b>Total : $<?php echo $precio_total; ?></b></div>
+                        <div class="centrado"><a class="button-2" href="ContinuarOrder_Controlador.php?id=<?php $_SESSION['id_orden_actual'] ?>">Continuar</a></div>
