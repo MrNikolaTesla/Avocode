@@ -33,7 +33,7 @@ if($estado==1) {
     $_SESSION['message'] = 'Reserva equivalente ya encontrada en el sistema.';
     header("Location: PAGINA_GestionReservas.php");
 }else{
-    $_SESSION['message'] = 'Reserva no modificada, algo ha fallado.';
+    $_SESSION['message'] = 'Reserva no modificada, algo ha fallado, verifique los valores ingresados.';
     header("Location: PAGINA_GestionReservas.php");
 }
 }else{
