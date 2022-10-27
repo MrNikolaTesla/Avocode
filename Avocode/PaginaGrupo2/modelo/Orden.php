@@ -88,7 +88,6 @@ class Orden
         WHERE id_orden = $id";
         $result = mysqli_query($this->con, $sql);
         return $result;
-        //MODIFICAR ORDEN, TAMBIEN UTILIZADO PARA REEMPLAZAR LOS DATOS DE LA ORDEN GENERANDOSE POR LOS REALES
     }
 
     public function update_orden_local($id, $mesa_orden, $tipo_orden, $observacion, $estado_orden)
@@ -98,7 +97,24 @@ class Orden
         WHERE id_orden = $id";
         $result = mysqli_query($this->con, $sql);
         return $result;
-        //MODIFICAR ORDEN, TAMBIEN UTILIZADO PARA REEMPLAZAR LOS DATOS DE LA ORDEN GENERANDOSE POR LOS REALES
+    }
+
+    public function update_orden_delivery($id, $direccion, $tipo_orden, $observacion, $estado_orden)
+    {
+        $sql = "UPDATE orden set direccion = '$direccion', tipo_orden  = '$tipo_orden'
+        , observacion = '$observacion', estado_orden = '$estado_orden'
+        WHERE id_orden = $id";
+        $result = mysqli_query($this->con, $sql);
+        return $result;
+    }
+
+    public function update_orden_takeaway($id, $hora, $fecha, $tipo_orden, $observacion, $estado_orden)
+    {
+        $sql = "UPDATE orden set hora = '$hora', fecha = '$fecha', tipo_orden  = '$tipo_orden'
+        , observacion = '$observacion', estado_orden = '$estado_orden'
+        WHERE id_orden = $id";
+        $result = mysqli_query($this->con, $sql);
+        return $result;
     }
 
     public function listar_productos_orden($id_orden)
