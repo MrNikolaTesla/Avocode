@@ -463,6 +463,11 @@ table.table td i {
   text-align: center;
 }
 
+.centrado_y_alejado_bottom {
+  text-align: center;
+  padding-bottom: 5em;
+}
+
 .material-icons {
   font-family: 'Material Icons';
   font-size: 16px;

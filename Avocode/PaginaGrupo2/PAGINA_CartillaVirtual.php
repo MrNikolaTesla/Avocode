@@ -1,10 +1,10 @@
 <br><a href="index.php">Regresar</a><br>
-<br><a href="#orden">Ver mi Orden</a><br>
+<?php require_once("controlador/BtnVerMiOrden_Controlador.php"); ?>
 <link rel="stylesheet" href="assets/styles2.css">
 
 <?php require_once("controlador/ControladorMostrarCartilla.php"); ?>
 <a name="orden">
-<?php require("controlador/Controlador_Listar_Productos_En_Orden.php"); ?>
+<?php require_once("controlador/Controlador_Listar_Productos_En_Orden.php"); ?>
 </a>
 
 <!--Llamar al controlador para traer la cartilla-->
