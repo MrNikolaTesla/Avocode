@@ -16,11 +16,13 @@
 
     <div class="wrapper">
       <img class="logo" src="assets/logo.png" alt="Burger Factory ">
+
       <nav>
+        
         <h2>Principal</h2>
         <ul>
           <?php require_once("vista/VistaPestanasCliente.php") ?>
-          <?php require_once("vista/mensaje_perfil.php") ?>
+          <?php require_once("vista/mensaje_perfil_INDEX.php") ?>
 
         </ul>
       </nav>

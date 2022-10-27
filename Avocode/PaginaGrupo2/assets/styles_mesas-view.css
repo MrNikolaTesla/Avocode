@@ -97,3 +97,8 @@ h1 {
     display: inline-block;
     width: fit-content;
 }
+
+.container-fluid cont-pers{
+    width: fit-content;
+    padding: 10220px;
+}

@@ -14,7 +14,7 @@ if($estado==1) {
     header("Location: PAGINA_GestionMesas.php");
 }else{
     $_SESSION['message'] = 'Algo ha sucedido, intente de nuevo mas tarde.';
-    header("Location: PAGINA_GestionMesasphp");
+    header("Location: PAGINA_GestionMesas.php");
 } 
 }
 

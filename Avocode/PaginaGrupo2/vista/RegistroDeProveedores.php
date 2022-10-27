@@ -18,5 +18,5 @@
                 <label class="form-label">Telefono</label>
                 <p><input type="number" class="tablas-input" name="telefono"></p>
         </div>
-        <button type="submit" class="button-2" name="boton_registro" value="enviar">Enviar</button>
+        <button type="submit" class="button-2" name="boton_registro" value="enviar">Agregar</button>
 </form>

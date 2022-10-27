@@ -34,5 +34,5 @@
                         <option value="administrador">Administrador</option>
                 </select>
         </div>
-        <button type="submit" class="button-2" name="boton_registro" value="enviar">Enviar</button>
+        <button type="submit" class="button-2" name="boton_registro" value="enviar">Agregar</button>
 </form>
