@@ -6,6 +6,10 @@ $proveedores = new Proveedor();
 
 $matrizProveedor = $proveedores->listar_proveedores();
 
-require_once("vista/Proveedor_view.php");
+if($matrizProveedor){
+    require_once("vista/Proveedor_view.php");
+    }else{
+        ?><div class="no_hay_registros"><?php echo "No hay proveedores registrados en el sistema";?></div><?php
+}
 
 ?>

@@ -6,6 +6,12 @@ $reservas = new Reserva();
 
 $matrizReserva = $reservas->listar_reservas();
 
-require_once("vista/Reserva_view.php");
+if($matrizReserva){
+    require_once("vista/Reserva_view.php");
+    }else{
+        ?><div class="no_hay_registros"><?php echo "No hay reservas registradas en el sistema";?></div><?php
+}
+
+?>
 
 ?>

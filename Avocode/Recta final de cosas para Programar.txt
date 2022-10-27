@@ -11,3 +11,4 @@ LOW PRIORITY / Easy Tasks:
 - Mensaje gestor en registro cliente
 - Mensaje gestor en index tras modificar perfil
 - Mover update para eliminar a sus respectivos modelos y relacionar
+- Cuando eliminas todas las mesas todo el css muere

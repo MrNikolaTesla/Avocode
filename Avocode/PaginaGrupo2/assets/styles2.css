@@ -15,6 +15,14 @@ body {
   margin-left: 40px;
 }
 
+.no_hay_registros{
+  width: 100em;
+  margin-left: 40px;
+  padding-top: 10em;
+  padding-left: 45em;
+}
+
+
 .table-responsive {
   margin: 50px 0;
   margin-left: 20px;

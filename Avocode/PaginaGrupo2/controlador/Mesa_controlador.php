@@ -6,6 +6,10 @@ $mesas = new Mesa();
 
 $matrizMesa = $mesas->listar_mesas();
 
-require_once("vista/Mesa_view.php");
+if($matrizMesa){
+    require_once("vista/Mesa_view.php");
+    }else{
+        ?><div class="no_hay_registros"><?php echo "No hay mesas registradas en el sistema";?></div><?php
+}
 
 ?>

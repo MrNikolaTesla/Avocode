@@ -26,7 +26,7 @@ if($estado==1) {
     $_SESSION['message'] = 'Usuario '.$tipo.' registrado correctamente!';
     header("Location: PAGINA_GestionUsuarios.php");
 }else if($repetido!=null){
-    $_SESSION['message'] = 'No tienes los permisos para realizar esta accion.';
+    $_SESSION['message'] = 'Correo ya esta en uso.';
     header("Location: PAGINA_GestionUsuarios.php");
 }else if($estado==2) {
     $_SESSION['message'] = 'No tienes los permisos para realizar esta accion.';
