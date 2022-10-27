@@ -4,11 +4,10 @@
 - Listado de orden lado empleado/admin
 - Paginado de CRUD Productos
 - Pulir finalmente el listado de clientes con reservas
-
-
-- Esto y lo que salga, porque sabemos que siempre pasan cosas
+- Arreglar el problema de sumar multiples productos (help)
 
 LOW PRIORITY / Easy Tasks:
 - Seguimiento de orden lado cliente
 - Mensaje gestor en registro cliente
-- Mover update para eliminar a sus respectivos productos y relacionar
+- Mensaje gestor en index tras modificar perfil
+- Mover update para eliminar a sus respectivos modelos y relacionar

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once("modelo/Producto.php");
 
 $productos = new Producto();

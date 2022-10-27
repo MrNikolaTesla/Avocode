@@ -3,6 +3,7 @@ class Orden
 {
     private $con;
     private $orden;
+    private $detalles_orden;
 
     public function __construct()
     {
@@ -81,11 +82,22 @@ class Orden
 
     public function listar_productos_orden($id_orden)
     {
-        $sql = "SELECT detalles_orden.id_detalle_orden,producto.id_producto, producto.nombre, producto.precio FROM detalles_orden , producto WHERE detalles_orden.producto_det = producto.id_producto AND orden = $id_orden";
+        $sql = "SELECT detalles_orden.id_detalle_orden as identificador_detalle, producto.nombre as nombre,detalles_orden.cantidad_producto as cantidad,producto.precio as precio_linea, producto.precio*detalles_orden.cantidad_producto as total_linea FROM detalles_orden , producto WHERE detalles_orden.orden = $id_orden AND detalles_orden.producto_det = producto.id_producto ORDER BY id_detalle_orden";
+        $result = mysqli_query($this->con, $sql);
+        while ($filas = mysqli_fetch_array($result)) {
+            $this->detalles_orden[] = $filas;
+        }
+        return $this->detalles_orden;
+    }
+
+    public function eliminar_linea_orden($orden_cargada, $id)
+    {
+        $sql = "DELETE FROM detalles_orden WHERE orden = $orden_cargada AND id_detalle_orden = $id";
         $result = mysqli_query($this->con, $sql);
         return $result;
     }
 
+    ///////////////////WTF
     public function eliminar_productos_orden($id)
     {
         //ESTO TENDRIA QUE ESTAR LLAMANDO A OTRO MODELO//
@@ -98,15 +110,7 @@ class Orden
         $result = mysqli_query($this->con, $sql);
         return $result;
     }
-
-    public function multi_del_precio($id_detalle)
-    {
-        $sql = "SELECT precio*cantidad_producto as total FROM detalles_orden , producto WHERE id_detalle_orden = $id_detalle AND producto_det = id_producto";
-        $result = mysqli_query($this->con, $sql);
-        $resultado = mysqli_fetch_array($result);
-        //$sql = "SELECT sum(producto.precio) as total FROM detalles_orden , producto WHERE orden = $id_orden AND producto = id_producto";
-        return $result;
-    }
+    /////////////////////////////
 
     public function listar_ordenes()
     {
