@@ -6,4 +6,4 @@
 <a href="controlador/Controlador_Generar_Formulario_Orden.php?tipo=delivery" class="button-5" style="color:white;">Delivery</a>
 <a href="controlador/Controlador_Generar_Formulario_Orden.php?tipo=takeaway" class="button-5" style="color:white;">Take Away</a><br>
 
-<?php require_once("vista/Formulariw.php"); ?>
+<?php require_once("vista/TipoOrden_Formulario.php"); ?>
