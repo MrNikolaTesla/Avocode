@@ -79,10 +79,10 @@
                                     <th>Numero de Mesa<i class="fa fa-sort"></i></th>
                                     <th>Fecha</th>
                                     <th>Hora</th>
-                                    <th>ID Cliente</th>
-                                    <th>Nombre Cliente</th>
-                                    <th>ID Empleado</th>
-                                    <th>Nombre Empleado</th>
+                                    <th>ID Usuario (Propietario)</th>
+                                    <th>Nombre</th>
+                                    <th>ID Usuario (Creador de la Reserva)</th>
+                                    <th>Nombre</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>

@@ -12,7 +12,6 @@
                                         <th>Cantidad</th>
                                         <th>Precio Unitario</th>
                                         <th>Precio Total</th>
-                                        <th>Eliminar</th>
                                     </tr>
                                 </thead>
                         </form>
@@ -27,9 +26,6 @@
                                     <td><?php echo $detalle['precio_linea'] ?></td>
                                     <td><?php $precio_total = $precio_total + $detalle['total_linea'];
                                     echo $detalle['total_linea'] ?></td>
-                                    <td>
-                                        <a href="controlador/eliminar_LineaOrden.php?id=<?php echo $detalle['identificador_detalle'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                    </td>
                                 </tr>
                                 <?php endforeach; ?>
                         </tbody>

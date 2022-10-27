@@ -70,7 +70,7 @@
                         <!------------------------------------------------------------------------------->
 
                         <!-- DIV DE BÚSQUEDA-->
-                        <?php require_once("vista/buscar_proveedor_view.php"); ?>
+                        <?php require_once("vista/buscar_orden_view.php"); ?>
                         <!------------------------------------------------------------------------------->
 
                         <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
@@ -78,9 +78,9 @@
                             <thead>
                                 <tr>
                                     <th>#ID</th>
-                                    <th>ID Cliente</th>
+                                    <th>ID Usuario (Propietario)</th>
                                     <th>Nombre Cliente</th>
-                                    <th>ID Empleado</th>
+                                    <th>ID Usuario (Creador de la Orden)</th>
                                     <th>Nombre Empleado</th>
                                     <th>ID Mesa</th>
                                     <th>Tipo de Orden</th>
@@ -118,6 +118,7 @@
                                             <!--<a href="ModificarProveedor_pagina.php?id= echo $proveedor['id_proveedor'] " class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>-->
                                             <a href="VerOrden_pagina.php?id=<?php echo $orden['id_orden'] ?>" class="edit" title="Ver Productos" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                                             <a href="controlador/eliminar_Orden_controlador.php?id=<?php echo $orden['id_orden'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                            <a href="AvanzarEstadoOrden_controlador.php?id=<?php echo $orden['id_orden'] ?>" class="edit" title="Ver Productos" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

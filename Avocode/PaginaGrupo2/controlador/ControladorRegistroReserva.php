@@ -24,10 +24,13 @@ if(!empty($_POST["boton_registro"])){
 if($estado==1) {
     $_SESSION['message'] = 'Reserva registrada correctamente!';
     header("Location: PAGINA_GestionReservas.php");
-}else if(!$estado){
+}else if($estado==0 && $repetido!=null){
     $_SESSION['message'] = 'La reserva ya ha sido agregado al sistema previamente.';
     header("Location: PAGINA_GestionReservas.php");
-} 
+}else if($estado==0 && $repetido==null){
+    $_SESSION['message'] = 'Algo ha fallado, verifica los datos ingresados.';
+    header("Location: PAGINA_GestionReservas.php");
+}
 }else{
     $_SESSION['message'] = 'Alguno de los campos está vacio.';
     header("Location: PAGINA_GestionReservas.php");
