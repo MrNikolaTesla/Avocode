@@ -11,7 +11,7 @@ $_SESSION['tipo_orden'] = "delivery";
 }else if($tipo_de_orden == "takeaway"){
 $_SESSION['tipo_orden'] = "takeaway";
 }
-$_SESSION['completando_orden'] = 1;
+$_SESSION['completando_orden'] = "true";
 
 header("Location: ../PAGINA_ContinuarOrden.php");
 }
