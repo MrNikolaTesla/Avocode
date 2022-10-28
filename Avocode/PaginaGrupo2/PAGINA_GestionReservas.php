@@ -33,6 +33,7 @@
                         <?php require_once("controlador/Reserva_controlador.php"); ?>
                         <div>
                                 <?php require_once("controlador/ClienteReserva_controlador.php"); ?>
+                                <?php require("controlador/Controlador_MostrasMesas_Libres_LADOEMPLEADO.php"); ?>
                         </div>
                         <!-- FIN TABLA LISTAR -->
                         <?php require_once("vista/BarraNavegacion.php"); ?>

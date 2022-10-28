@@ -16,7 +16,7 @@ if($_SESSION['tipo_orden'] == "local"){
                         </div>
                         <button type="submit" class="button-5" name="completar" value="enviar">Completar orden!</button>
                 </form>
-                <?php require("controlador/Controlador_MostrasMesas_Cliente.php"); ?>
+                <?php require("controlador/Controlador_MostrasMesas_Libres.php"); ?>
                 <?php
 }else if($_SESSION['tipo_orden'] == "delivery"){
         ?>

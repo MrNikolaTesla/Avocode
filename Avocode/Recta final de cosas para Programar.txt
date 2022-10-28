@@ -1,9 +1,8 @@
 - Hacer llover CSS (Lautaro y Facundo en ustedes confio)
 - Reserva lado cliente
-- Paginado de CRUD Productos
 - Agregar listado de mesas a reservas
 - Seguimiento de orden lado cliente
-- Mover update para eliminar a sus respectivos modelos y relacionar
+- Paginado de CRUD Productos !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 - Arreglar el problema de sumar multiples productos (help)
 
 LOW PRIORITY / Easy Tasks:
