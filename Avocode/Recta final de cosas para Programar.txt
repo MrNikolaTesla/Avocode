@@ -1,12 +1,13 @@
 - Hacer llover CSS (Lautaro y Facundo en ustedes confio)
 - Reserva lado cliente
-- Seguimiento de orden lado cliente
 - Paginado de CRUD Productos !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 - Arreglar el problema de sumar multiples productos (help)
 
 LOW PRIORITY / Easy Tasks:
 - Mensaje gestor en registro cliente
 - HTML, CSS de PAGINA_Orden_Completa
+- HTML, CSS de PAGINA_Mis Ordenes
+- CSS de Orden_DeUsuario_view
 - CSS de la tabla de mesas libres en MesasLibres_Reserva_view.php
 - Boton <a> "Regresar" y div de informacion en cartilla_view (vista)
 - Boton <a> "Ver mi orden" en BtnVerMiOrden_Controlador (controlador)
