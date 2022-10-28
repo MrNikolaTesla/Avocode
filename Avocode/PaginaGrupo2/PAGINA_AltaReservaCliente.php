@@ -25,16 +25,16 @@
 
         <div class="container-fluid cont-pers">
                 <!-- INICIO FORMULARIO ALTA -->
-                <?php require_once("vista/RegistroDeReservas.php"); ?>
+                <?php require_once("vista/RegistroDeReservasCliente.php"); ?>
                 <!-- FIN FORMULARIO ALTA -->
                 <div class="col-8 ">
                         <!-- No se cual es esta class porque es del boostrap -->
                         <!-- INICIO TABLA LISTAR -->
                         <div>
-                                <?php require("controlador/Controlador_MostrasMesas_Libres.php"); ?>
+                                <?php require("controlador/Controlador_MostrasMesas_Libres_Reserva.php"); ?>
                         </div>
+                        <a class="button1" href="index.php">Volver</a>
                         <!-- FIN TABLA LISTAR -->
-                        <?php require_once("vista/BarraNavegacion.php"); ?>
 
                 </div>
 </body>

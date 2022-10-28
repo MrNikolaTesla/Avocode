@@ -92,9 +92,13 @@
                                 <?php foreach ($matrizReserva as $reserva) : ?>
                                     <tr>
                                         <?php $_SESSION['cliente_reserva'] = $reserva['cliente'];
-                                        $_SESSION['empleado_reserva'] = $reserva['empleado'];
+                                        if($reserva['empleado'] != null){
+                                            $_SESSION['empleado_reserva'] = $reserva['empleado'];
+                                            require("controlador/Controlador_Nombre_Empleado_Reserva.php");
+                                        }else{
+                                            $_SESSION['empleado_reserva'] = null;
+                                        }
                                         require("controlador/Controlador_Nombre_Cliente_Reserva.php");
-                                        require("controlador/Controlador_Nombre_Empleado_Reserva.php");
                                         ?>
                                         <td scope="row"><?php echo $reserva['id_reserva'] ?></td>
                                         <td><?php echo $reserva['mesa'] ?></td>
