@@ -1,14 +1,12 @@
 - Hacer llover CSS (Lautaro y Facundo en ustedes confio)
 - Reserva lado cliente
-- Orden lado cliente
-- Listado de orden lado empleado/admin
+- Cambio de esatdo de orden administrador/empleado
 - Paginado de CRUD Productos
-- Pulir finalmente el listado de clientes con reservas
+- Agregar listado de mesas a reservas
 - Arreglar el problema de sumar multiples productos (help)
 
 LOW PRIORITY / Easy Tasks:
 - Seguimiento de orden lado cliente
 - Mensaje gestor en registro cliente
-- Mensaje gestor en index tras modificar perfil
 - Mover update para eliminar a sus respectivos modelos y relacionar
 - Cuando eliminas todas las mesas todo el css muere (Suspendido)

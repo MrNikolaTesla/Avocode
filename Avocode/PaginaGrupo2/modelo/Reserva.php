@@ -12,17 +12,25 @@ class Reserva
 
     public function set_reserva($num_mesa, $fecha, $hora, $cliente_id, $id_empleado_reserva)
     {
-        $sql = "INSERT INTO reserva (mesa, fecha, hora, cliente, empleado) VALUES ('$num_mesa', '$fecha', '$hora', '$cliente_id', '$id_empleado_reserva')";
+            $sql = "INSERT INTO reserva (mesa, fecha, hora, cliente, empleado) VALUES ('$num_mesa', '$fecha', '$hora', '$cliente_id', '$id_empleado_reserva')";
+            $query = mysqli_query($this->con, $sql);
+            return $query;
+        }
+
+        //No quiere funcionar
+    public function get_reserva($num_mesa, $fecha, $cliente_id)
+    {
+        $cosa = $this->get_estado_mesa_reserva($num_mesa);
+
+    if($cosa ==1){
+        $sql = "SELECT * FROM reserva WHERE mesa = '$num_mesa' and fecha = '$fecha' and cliente = '$cliente_id'";
         $query = mysqli_query($this->con, $sql);
         return $query;
+    }else{
+        $query = 3;
+        return $query;
     }
-
-    public function get_reserva($num_mesa, $fecha, $hora, $cliente_id)
-    {
-        $sql = "SELECT * FROM reserva WHERE mesa = '$num_mesa' and fecha = '$fecha' and hora = '$hora' and cliente = '$cliente_id'";
-        $query = mysqli_query($this->con, $sql);
-        $result = mysqli_fetch_array($query);
-        return $result;
+        
     }
 
     public function listar_reservas()

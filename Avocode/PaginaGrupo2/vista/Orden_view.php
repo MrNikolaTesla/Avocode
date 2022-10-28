@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         <div class="col-xs-4">
-                            <h2 class="text-center">Listado de <b>Proveedores</b></h2>
+                            <h2 class="text-center">Listado de <b>Ordenes</b></h2>
                         </div>
                         <!------------------------------------------------------------------------------->
 
