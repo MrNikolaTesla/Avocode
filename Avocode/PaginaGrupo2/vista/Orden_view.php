@@ -97,7 +97,7 @@
                             <tbody>
                                 <?php foreach ($matrizOrden as $orden) : ?>
                                     <tr>
-                                    <?php $_SESSION['cliente_orden'] = $orden['cliente_orden'];
+                                        <?php $_SESSION['cliente_orden'] = $orden['cliente_orden'];
                                         $_SESSION['empleado_orden'] = $orden['empleado_orden'];
                                         require("controlador/Controlador_Nombre_Cliente_Orden.php");
                                         require("controlador/Controlador_Nombre_Empleado_Orden.php");
@@ -116,9 +116,9 @@
                                         <td><?php echo $orden['estado_orden'] ?></td>
                                         <td>
                                             <!--<a href="ModificarProveedor_pagina.php?id= echo $proveedor['id_proveedor'] " class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>-->
-                                            <a href="VerOrden_pagina.php?id=<?php echo $orden['id_orden'] ?>" class="edit" title="Ver Productos" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                            <a href="controlador/eliminar_Orden_controlador.php?id=<?php echo $orden['id_orden'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
-                                            <a href="AvanzarEstadoOrden_controlador.php?id=<?php echo $orden['id_orden'] ?>" class="edit" title="Avanzar Estado" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                            <a href="VerOrden_pagina.php?id=<?php echo $orden['id_orden'] ?>" title="Ver Orden"><img src="assets/iconos/icono-lupa.svg"></a>
+                                            <a href="controlador/eliminar_Orden_controlador.php?id=<?php echo $orden['id_orden'] ?>" title="Editar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
+                                            <a href="AvanzarEstadoOrden_controlador.php?id=<?php echo $orden['id_orden'] ?>" title="Avanzar Estado"><img src="assets/iconos/icono-flecha.svg"></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

@@ -106,8 +106,8 @@
                                         <td><?php echo $_SESSION['empleado_reserva'] ?></td>
 
                                         <td>
-                                            <a href="ModificarReserva_pagina.php?id=<?php echo $reserva['id_reserva'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                            <a href="controlador/eliminar_Reserva_controlador.php?id=<?php echo $reserva['id_reserva'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                            <a href="ModificarReserva_pagina.php?id=<?php echo $reserva['id_reserva'] ?>" title="Editar"><img src="assets/iconos/icono-editar-2.svg"></a>
+                                            <a href="controlador/eliminar_Reserva_controlador.php?id=<?php echo $reserva['id_reserva'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

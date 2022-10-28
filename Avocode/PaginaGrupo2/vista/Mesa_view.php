@@ -64,19 +64,19 @@
 
                             <!-- CUERPO DE TABLA -->
                             <tbody>
-                            <div class="div-mesa">
+                                <div class="div-mesa">
 
-                                <?php foreach ($matrizMesa as $mesa) : ?>
+                                    <?php foreach ($matrizMesa as $mesa) : ?>
 
                                         <td class="td-mesa">
                                             <?php echo $mesa['id_mesa'] ?>
-                                            <a href="controlador/eliminar_mesa_controlador.php?id=<?php echo $mesa['id_mesa'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                            <a href="controlador/eliminar_mesa_controlador.php?id=<?php echo $mesa['id_mesa'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
                                             <img class="img-mesa" src="assets/iconos/icono-mesa.png">
                                             <?php echo $mesa['estado'] ?>
-                                            <a href="controlador/ControladorModificarMesa.php?id=<?php echo $mesa['id_mesa'] ?>" class="edit" title="Cambiar estado" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                            <a href="controlador/ControladorModificarMesa.php?id=<?php echo $mesa['id_mesa'] ?>" title="Cambiar estado"><img src="assets/iconos/icono-editar-2.svg"></a>
                                         </td>
 
-                                <?php endforeach; ?>
+                                    <?php endforeach; ?>
                                 </div>
 
                             </tbody>

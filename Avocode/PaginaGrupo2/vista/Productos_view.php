@@ -99,9 +99,9 @@
                                         <td><?php echo $producto['tipo'] ?></td>
                                         <td><?php echo $producto['descripcion'] ?></td>
                                         <td>
-                                            <a href="ModificarProductoImagen_pagina.php?id=<?php echo $producto['id_producto'] ?>" title="Editar Imagen" data-toggle="tooltip"><i></i><img src="assets/iconos/icono-imagen.svg"></a>
-                                            <a href="ModificarProducto_pagina.php?id=<?php echo $producto['id_producto'] ?>" class="edit" title="Editar Informacion" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                            <a href="controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id_producto'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                            <a href="ModificarProductoImagen_pagina.php?id=<?php echo $producto['id_producto'] ?>" title="Editar Imagen" data-toggle="tooltip"><img src="assets/iconos/icono-imagen.svg"></a>
+                                            <a href="ModificarProducto_pagina.php?id=<?php echo $producto['id_producto'] ?>" title="Editar Informacion"><img src="assets/iconos/icono-editar-2.svg"></a>
+                                            <a href="controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id_producto'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

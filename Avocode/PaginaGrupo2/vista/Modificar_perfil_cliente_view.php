@@ -60,7 +60,7 @@
                         <a href="index.php" class="button-2" style="color:white; text-decoration:none;">Regresar</a>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
                         
-                        <a href="controlador/EliminarPerfil_controlador.php?id=<?php echo $id_perfil ?>" class="button-4" style="color:white;"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                        <a href="controlador/EliminarPerfil_controlador.php?id=<?php echo $id_perfil ?>" class="button-4" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera-2.svg"></a>
                         
                 </form>
         <?php } else {  ?>

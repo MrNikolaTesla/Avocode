@@ -75,38 +75,38 @@
                         <!------------------------------------------------------------------------------->
 
                         <!-- COMIENZO DEL FORMULARIO DE USUARIOS -->
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>#ID</th>
-                                        <th>Nombre<i class="fa fa-sort"></i></th>
-                                        <th>Apellido</th>
-                                        <th>Tipo de usuario<i class="fa fa-sort"></i></th>
-                                        <th>Correo</i></th>
-                                        <th>Teléfono</th>
-                                        <th>Dirección</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-
-                        <!-- CUERPO DE TABLA -->
-                        <tbody>
-                            <?php foreach ($matrizUsuario as $usuario) : ?>
+                        <table class="table table-bordered">
+                            <thead>
                                 <tr>
-                                    <td scope="row"><?php echo $usuario['id_usuario'] ?></td>
-                                    <td><?php echo $usuario['nombre'] ?></td>
-                                    <td><?php echo $usuario['apellido'] ?></td>
-                                    <td><?php echo $usuario['tipo'] ?></td>
-                                    <td><?php echo $usuario['correo'] ?></td>
-                                    <td><?php echo $usuario['telefono'] ?></td>
-                                    <td><?php echo $usuario['direccion'] ?></td>
-                                    <td>
-                                        <a href="ModificarUsuario_pagina.php?id=<?php echo $usuario['id_usuario'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                        <a href="controlador/eliminar_Usuario_controlador.php?id=<?php echo $usuario['id_usuario'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
-                                    </td>
+                                    <th>#ID</th>
+                                    <th>Nombre<i class="fa fa-sort"></i></th>
+                                    <th>Apellido</th>
+                                    <th>Tipo de usuario<i class="fa fa-sort"></i></th>
+                                    <th>Correo</i></th>
+                                    <th>Teléfono</th>
+                                    <th>Dirección</th>
+                                    <th>Acciones</th>
                                 </tr>
-                            <?php endforeach; ?>
-                        </tbody>
+                            </thead>
+
+                            <!-- CUERPO DE TABLA -->
+                            <tbody>
+                                <?php foreach ($matrizUsuario as $usuario) : ?>
+                                    <tr>
+                                        <td scope="row"><?php echo $usuario['id_usuario'] ?></td>
+                                        <td><?php echo $usuario['nombre'] ?></td>
+                                        <td><?php echo $usuario['apellido'] ?></td>
+                                        <td><?php echo $usuario['tipo'] ?></td>
+                                        <td><?php echo $usuario['correo'] ?></td>
+                                        <td><?php echo $usuario['telefono'] ?></td>
+                                        <td><?php echo $usuario['direccion'] ?></td>
+                                        <td>
+                                            <a href="ModificarUsuario_pagina.php?id=<?php echo $usuario['id_usuario'] ?>" title="Editar"><img src="assets/iconos/icono-editar-2.svg"></a>
+                                            <a href="controlador/eliminar_Usuario_controlador.php?id=<?php echo $usuario['id_usuario'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a></a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
                         </table>
 
                         <!-- INICIO Paginado -->

@@ -96,8 +96,8 @@
                                         <td><?php echo $proveedor['productos'] ?></td>
                                         <td><?php echo $proveedor['telefono'] ?></td>
                                         <td>
-                                            <a href="ModificarProveedor_pagina.php?id=<?php echo $proveedor['id_proveedor'] ?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                            <a href="controlador/eliminar_Proveedor_controlador.php?id=<?php echo $proveedor['id_proveedor'] ?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons" onclick="javascript:return asegurar();">&#xE872;</i></a>
+                                            <a href="ModificarProveedor_pagina.php?id=<?php echo $proveedor['id_proveedor'] ?>" title="Editar"><img src="assets/iconos/icono-editar-2.svg"></a>
+                                            <a href="controlador/eliminar_Proveedor_controlador.php?id=<?php echo $proveedor['id_proveedor'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
