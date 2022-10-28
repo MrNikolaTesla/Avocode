@@ -17,7 +17,7 @@ class Reserva
             return $query;
         }
 
-        //No quiere funcionar | Permite crear reserva incluso si la mesa esta ocupada o reservada
+        //No quiere funcionar | Permite crear reserva incluso si la mesa esta ocupada o reservada, despues va modificar
     public function get_reserva($num_mesa, $fecha, $cliente_id)
     {
         $sql = "SELECT * FROM reserva WHERE mesa = '$num_mesa' and fecha = '$fecha' and cliente = '$cliente_id'";
