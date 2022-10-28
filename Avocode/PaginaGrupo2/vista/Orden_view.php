@@ -118,7 +118,7 @@
                                             <!--<a href="ModificarProveedor_pagina.php?id= echo $proveedor['id_proveedor'] " class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>-->
                                             <a href="VerOrden_pagina.php?id=<?php echo $orden['id_orden'] ?>" title="Ver Orden"><img src="assets/iconos/icono-lupa.svg"></a>
                                             <a href="controlador/eliminar_Orden_controlador.php?id=<?php echo $orden['id_orden'] ?>" title="Editar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
-                                            <a href="AvanzarEstadoOrden_controlador.php?id=<?php echo $orden['id_orden'] ?>" title="Avanzar Estado"><img src="assets/iconos/icono-flecha.svg"></a>
+                                            <a href="controlador/AvanzarEstadoOrden_controlador.php?id=<?php echo $orden['id_orden'] ?>" title="Avanzar Estado"><img src="assets/iconos/icono-flecha.svg"></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

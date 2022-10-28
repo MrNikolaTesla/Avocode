@@ -79,17 +79,31 @@ class Orden
         return $result;
     }
 
-    public function update_orden($id, $cliente_orden, $empleado_orden, $mesa_orden, $tipo_orden, $hora, $direccion, $fecha, $observacion, $estado_orden)
+    public function update_orden_avanzar($id_orden)
     {
-        if($hora && $fecha = ""){
-            $hora = date('h:i');
-            $fecha = date('y-m-d');
+        $estado_original = "SELECT * FROM orden WHERE id_orden = '$id_orden'";
+        $origin_state = mysqli_query($this->con, $estado_original);
+        foreach ($origin_state as $origin) {
+            if ($origin['estado_orden'] == "Generandose...") {
+                $estado=3;
+                return $estado;
+            } else if ($origin['estado_orden'] == "Pendiente") {
+                $nuevo_estado = 'En Proceso';
+            }else if ($origin['estado_orden'] == "En Proceso") {
+                $nuevo_estado = 'Completada';
+            }else if ($origin['estado_orden'] == "Completada") {
+                $estado=2;
+                return $estado;
+            }else{
+                $estado=0;
+                return $estado;
+            }
         }
-        $sql = "UPDATE orden set cliente_orden = '$cliente_orden', empleado_orden = '$empleado_orden', mesa_orden = '$mesa_orden', tipo_orden  = '$tipo_orden'
-        , hora  = '$hora', direccion  = '$direccion', fecha = '$fecha', observacion = 'observacion', estado_orden = '$estado_orden'
-        WHERE id_orden = $id";
-        $result = mysqli_query($this->con, $sql);
-        return $result;
+        if($estado != 0 || $estado != 2 || $estado != 3){
+        $sql = "UPDATE orden set estado_orden = '$nuevo_estado' WHERE id_orden = $id_orden";
+            $query = mysqli_query($this->con, $sql);
+            return $query;
+        }
     }
 
     public function update_orden_local($id, $mesa_orden, $tipo_orden, $observacion, $estado_orden)
@@ -159,7 +173,6 @@ class Orden
         return $result;
     }
 
-    ///////////////////WTF
     public function eliminar_orden($id)
     {
         //ESTO TENDRIA QUE ESTAR LLAMANDO A OTRO MODELO//
@@ -171,7 +184,6 @@ class Orden
         $result = mysqli_query($this->con, $sql);
         return $result;
     }
-    /////////////////////////////
 
     public function listar_ordenes()
     {
