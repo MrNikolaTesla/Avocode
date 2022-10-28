@@ -1,6 +1,6 @@
 - Hacer llover CSS (Lautaro y Facundo en ustedes confio)
 - Reserva lado cliente
-- Cambio de esatdo de orden administrador/empleado
+- Cambio de estado de orden administrador/empleado
 - Paginado de CRUD Productos
 - Agregar listado de mesas a reservas
 - Seguimiento de orden lado cliente
@@ -14,4 +14,3 @@ LOW PRIORITY / Easy Tasks:
 - Boton <a> "Eliminar" en Orden_view (vista)
 - Boton <a> "Eliminar" en ProductosDe_UNAORDEN.php (vista)
 - Cambiar iconos de lapiz por una lupa y una flecha hacia la derecha (Ver Productos y Avanzar estado respectivamente) en Orden_view
-- Cuando eliminas todas las mesas todo el css muere (Suspendido)
