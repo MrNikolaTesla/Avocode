@@ -17,20 +17,12 @@ class Reserva
             return $query;
         }
 
-        //No quiere funcionar
+        //No quiere funcionar | Permite crear reserva incluso si la mesa esta ocupada o reservada
     public function get_reserva($num_mesa, $fecha, $cliente_id)
     {
-        $cosa = $this->get_estado_mesa_reserva($num_mesa);
-
-    if($cosa ==1){
         $sql = "SELECT * FROM reserva WHERE mesa = '$num_mesa' and fecha = '$fecha' and cliente = '$cliente_id'";
         $query = mysqli_query($this->con, $sql);
         return $query;
-    }else{
-        $query = 3;
-        return $query;
-    }
-        
     }
 
     public function listar_reservas()
