@@ -52,10 +52,24 @@ class Mesa
         mysqli_query($this->con, $sql2);
         //////////////////////////////////////////////
 
-        $sql3 = "DELETE FROM mesa WHERE id_mesa = $id";
-        $query = mysqli_query($this->con, $sql3);
-        return $query;
-    }
+        //Impedir vacio numerico
+        //$m = $this->listar_mesas();
+        //$numero_listado = 1;
+        $sql = "DELETE FROM mesa WHERE id_mesa = $id";
+        $resultado = mysqli_query($this->con, $sql);
+        //foreach ($m as $mesa) {
+           // if ($numero_listado == $mesa['id_mesa']) {
+                //Vacio Existencial
+            //    $numero_listado = $numero_listado + 1;
+            //} else {
+            //    $original_id = $mesa['id_mesa'];
+            //    $idupdate = "UPDATE mesa set id_mesa = '$numero_listado' WHERE id_mesa = $original_id";
+            //    mysqli_query($this->con, $idupdate);
+           //     $numero_listado = $numero_listado + 1;
+           // }
+        //}
+        return $resultado;
+        }
 
     public function update_mesa($id)
     {
@@ -78,6 +92,13 @@ class Mesa
     public function reservar_mesa($id)
     {
         $sql = "UPDATE mesa set estado = 'Reservada' WHERE id_mesa = $id";
+        $query = mysqli_query($this->con, $sql);
+        return $query;
+    }
+
+    public function get_estado_mesa($id)
+    {
+        $sql = "SELECT estado FROM mesa WHERE id_mesa = $id";
         $query = mysqli_query($this->con, $sql);
         return $query;
     }

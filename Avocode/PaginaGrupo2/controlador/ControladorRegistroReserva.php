@@ -1,6 +1,8 @@
 <?php
     require_once("modelo/Reserva.php");
     $reserva = new Reserva();
+    require_once("modelo/Mesa.php");
+    $mesa = new Mesa();
 if(!empty($_POST["boton_registro"])){
     if(!empty($_POST["num_mesa"]) and !empty($_POST["fecha"]) and !empty($_POST["hora"]) and !empty($_POST["cliente_id"])) {
         
@@ -12,14 +14,18 @@ if(!empty($_POST["boton_registro"])){
         $cliente_id = $_POST["cliente_id"];
         $id_empleado_reserva = $_SESSION["id"];
 
-        $repetido = $reserva->get_reserva($num_mesa, $fecha, $cliente_id);
-        if($repetido==0){
-            $estado = 0;
-    }
-    
-    if ($repetido==1){
+        $estado_mesa = $mesa->get_estado_mesa($num_mesa);
+
+            foreach($estado_mesa as $mesa_elegida){
+                $confirmacion_estado = $mesa_elegida['estado'];
+            }
+        
+
+        if($confirmacion_estado != "Libre"){
+            $estado=2;
+        }else{
         $estado = $reserva->set_reserva($num_mesa, $fecha, $hora, $cliente_id, $id_empleado_reserva);
-    }
+        }
 
 if($estado==1) {
     require_once("modelo/Mesa.php");
@@ -27,14 +33,11 @@ if($estado==1) {
             $mesa_a_reservar->reservar_mesa($num_mesa);
     $_SESSION['message'] = 'Reserva registrada correctamente!';
     header("Location: PAGINA_GestionReservas.php");
-}else if($estado==0 && $repetido==0){
-    $_SESSION['message'] = 'La reserva ya ha sido agregado al sistema previamente.';
-    header("Location: PAGINA_GestionReservas.php");
-}else if($estado==0 && $repetido==1){
+}else if($estado==0){
     $_SESSION['message'] = 'Algo ha fallado, verifica los datos ingresados.';
     header("Location: PAGINA_GestionReservas.php");
-}else if($estado==3 && $repetido==1){
-    $_SESSION['message'] = 'Mesa ocupada o reservada.';
+}else if($estado==2){
+    $_SESSION['message'] = 'Mesa ocupada, reservada o no existente.';
     header("Location: PAGINA_GestionReservas.php");
 }
 }else{

@@ -12,10 +12,10 @@ class Reserva
 
     public function set_reserva($num_mesa, $fecha, $hora, $cliente_id, $id_empleado_reserva)
     {
-            $sql = "INSERT INTO reserva (mesa, fecha, hora, cliente, empleado) VALUES ('$num_mesa', '$fecha', '$hora', '$cliente_id', '$id_empleado_reserva')";
-            $query = mysqli_query($this->con, $sql);
-            return $query;
-        }
+        $sql = "INSERT INTO reserva (mesa, fecha, hora, cliente, empleado) VALUES ('$num_mesa', '$fecha', '$hora', '$cliente_id', '$id_empleado_reserva')";
+        $query = mysqli_query($this->con, $sql);
+        return $query;
+    }
 
         //No quiere funcionar | Permite crear reserva incluso si la mesa esta ocupada o reservada, despues va modificar
     public function get_reserva($num_mesa, $fecha, $cliente_id)
