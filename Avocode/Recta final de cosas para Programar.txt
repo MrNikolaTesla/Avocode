@@ -1,6 +1,5 @@
 - Hacer llover CSS (Lautaro y Facundo en ustedes confio)
 - Reserva lado cliente
-- Agregar listado de mesas a reservas
 - Seguimiento de orden lado cliente
 - Paginado de CRUD Productos !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 - Arreglar el problema de sumar multiples productos (help)
