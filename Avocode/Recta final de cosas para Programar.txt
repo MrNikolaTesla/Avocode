@@ -3,7 +3,7 @@
 - Paginado de CRUD Productos !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 - Arreglar el problema de sumar multiples productos (help)
 
-LOW PRIORITY / Easy Tasks:
+MINOR PRIORITY / Medium Tasks:
 - Mensaje gestor en registro cliente
 - HTML, CSS de PAGINA_Orden_Completa
 - HTML, CSS de PAGINA_Mis Ordenes
