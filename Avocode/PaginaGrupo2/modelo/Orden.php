@@ -224,6 +224,18 @@ class Orden
         return $this->orden;
     }
 
+    public function listar_ordenes_usuario($id)
+    {
+        $sql = "SELECT *
+        FROM orden WHERE cliente_orden = $id ORDER BY id_orden";
+        $query = mysqli_query($this->con, $sql);
+
+        while ($filas = mysqli_fetch_array($query)) {
+            $this->orden[] = $filas;
+        }
+        return $this->orden;
+    }
+
     public function listar_datos_de_orden($orden_cargada)
     {
         $sql = "SELECT *

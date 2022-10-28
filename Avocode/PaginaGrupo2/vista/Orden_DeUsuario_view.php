@@ -53,36 +53,18 @@
                             <!------------------------------------------------------------------------------->
 
                             <!-- DIV DE SELECCIÓN DE ENTRADAS-->
-                            <div class="show-entries">
-                                <span>Mostrar</span>
-                                <select>
-                                    <option>5</option>
-                                    <option>10</option>
-                                    <option>15</option>
-                                    <option>20</option>
-                                </select>
-                                <span>entradas</span>
-                            </div>
                         </div>
                         <div class="col-xs-4">
-                            <h2 class="text-center">Listado de <b>Ordenes</b></h2>
+                            <h2 class="text-center">Tus <b>Ordenes : </b></h2>
                         </div>
-                        <!------------------------------------------------------------------------------->
-
-                        <!-- DIV DE BÚSQUEDA-->
-                        <?php require_once("vista/buscar_orden_view.php"); ?>
                         <!------------------------------------------------------------------------------->
 
                         <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>#ID</th>
-                                    <th>ID Usuario (Propietario)</th>
-                                    <th>Nombre Cliente</th>
-                                    <th>ID Usuario (Creador de la Orden)</th>
-                                    <th>Nombre Empleado</th>
-                                    <th>ID Mesa</th>
+                                    <th>Numero de Orden</th>
+                                    <th>Numero de Mesa</th>
                                     <th>Tipo de Orden</th>
                                     <th>Hora</th>
                                     <th>Direccion</th>
@@ -95,50 +77,30 @@
 
                             <!-- CUERPO DE TABLA -->
                             <tbody>
-                                <?php foreach ($matrizOrden as $orden) : ?>
+                                <?php $numero_orden =1; foreach ($matrizOrden as $orden) : ?>
                                     <tr>
-                                        <?php $_SESSION['cliente_orden'] = $orden['cliente_orden'];
-                                        $_SESSION['empleado_orden'] = $orden['empleado_orden'];
-                                        require("controlador/Controlador_Nombre_Cliente_Orden.php");
-                                        require("controlador/Controlador_Nombre_Empleado_Orden.php");
-                                        ?>
-                                        <td scope="row"><?php echo $orden['id_orden'] ?></td>
-                                        <td><?php echo $orden['cliente_orden'] ?></td>
-                                        <td><?php echo $_SESSION['cliente_orden'] ?></td>
-                                        <td><?php echo $orden['empleado_orden'] ?></td>
-                                        <td><?php echo $_SESSION['empleado_orden'] ?></td>
+                                        <td scope="row"><?php echo $numero_orden ?></td>
                                         <td><?php echo $orden['mesa_orden'] ?></td>
                                         <td><?php echo $orden['tipo_orden'] ?></td>
                                         <td><?php echo $orden['hora'] ?></td>
                                         <td><?php echo $orden['direccion'] ?></td>
                                         <td><?php echo $orden['fecha'] ?></td>
                                         <td><?php echo $orden['observacion'] ?></td>
-                                        <td><?php echo $orden['estado_orden'] ?></td>
+                                        <td><?php if($orden['estado_orden'] = "Generandose..."){
+                                                  echo "Sin completar";
+                                        }else{
+                                            echo $orden['estado_orden'] ?></td><?php
+                                        } ?>
+                                        
                                         <td>
                                             <!--<a href="ModificarProveedor_pagina.php?id= echo $proveedor['id_proveedor'] " class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>-->
-                                            <a href="VerOrden_pagina.php?id=<?php echo $orden['id_orden'] ?>" title="Ver Orden"><img src="assets/iconos/icono-lupa.svg"></a>
-                                            <a href="controlador/eliminar_Orden_controlador.php?id=<?php echo $orden['id_orden'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
-                                            <a href="AvanzarEstadoOrden_controlador.php?id=<?php echo $orden['id_orden'] ?>" title="Avanzar Estado"><img src="assets/iconos/icono-flecha.svg"></a>
+                                            <a href="VerProductos_DeTuOrden_pagina.php?id=<?php echo $orden['id_orden'] ?>" title="Informacion de la Orden"><img src="assets/iconos/icono-lupa.svg"></a>
                                         </td>
                                     </tr>
-                                <?php endforeach; ?>
+                                <?php  $numero_orden = $numero_orden + 1; endforeach; ?>
                             </tbody>
                         </table>
 
-                        <!-- INICIO Paginado -->
-                        <div class="clearfix">
-                            <div class="hint-text">Mostrando <b>5</b> de <b>25</b> entradas</div>
-                            <ul class="pagination">
-                                <li class="page-item disabled"><a href="#">Anterior</a></li>
-                                <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                <li class="page-item"><a href="#" class="page-link">3</a></li>
-                                <li class="page-item"><a href="#" class="page-link">4</a></li>
-                                <li class="page-item"><a href="#" class="page-link">5</a></li>
-                                <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
-                            </ul>
-                        </div>
-                        <!-- FIN Paginado -->
 
                     </div>
                 </div>

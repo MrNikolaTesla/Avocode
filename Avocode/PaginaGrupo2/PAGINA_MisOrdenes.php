@@ -1,6 +1,6 @@
-<p>MIS ORDENES</p><br>
-En Construccion...
 <br><a href="index.php">Regresar</a>
+
+<?php require_once("controlador/Mostrar_Ordenes_Usuario_controlador.php"); ?>
 
 <!--Esta pagina permitiria ver el estado de tu orden-->
 
