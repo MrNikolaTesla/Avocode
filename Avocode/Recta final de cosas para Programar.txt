@@ -3,10 +3,15 @@
 - Cambio de esatdo de orden administrador/empleado
 - Paginado de CRUD Productos
 - Agregar listado de mesas a reservas
+- Seguimiento de orden lado cliente
+- Mover update para eliminar a sus respectivos modelos y relacionar
 - Arreglar el problema de sumar multiples productos (help)
 
 LOW PRIORITY / Easy Tasks:
-- Seguimiento de orden lado cliente
 - Mensaje gestor en registro cliente
-- Mover update para eliminar a sus respectivos modelos y relacionar
+- Boton <a> "Regresar" en cartilla_view (vista)
+- Boton <a> "Ver mi orden" en BtnVerMiOrden_Controlador (controlador)
+- Boton <a> "Eliminar" en Orden_view (vista)
+- Boton <a> "Eliminar" en ProductosDe_UNAORDEN.php (vista)
+- Cambiar iconos de lapiz por una lupa y una flecha hacia la derecha (Ver Productos y Avanzar estado respectivamente) en Orden_view
 - Cuando eliminas todas las mesas todo el css muere (Suspendido)
