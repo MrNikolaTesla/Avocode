@@ -86,7 +86,7 @@
                                         <td><?php echo $orden['direccion'] ?></td>
                                         <td><?php echo $orden['fecha'] ?></td>
                                         <td><?php echo $orden['observacion'] ?></td>
-                                        <td><?php if($orden['estado_orden'] = "Generandose..."){
+                                        <td><?php if($orden['estado_orden'] == "Generandose..."){
                                                   echo "Sin completar";
                                         }else{
                                             echo $orden['estado_orden'] ?></td><?php

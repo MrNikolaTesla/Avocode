@@ -101,6 +101,14 @@ class Usuario
             return $estado;
             
         }else{
+            require_once("../modelo/Orden.php");
+            $limpiar_usuario_ordenes = new Orden();
+            require_once("../modelo/Reserva.php");
+            $limpiar_usuario_reserva = new Reserva();
+            $limpiar_usuario_ordenes->null_usuario($id);
+            $limpiar_usuario_ordenes->null_cliente($id);
+            $limpiar_usuario_reserva->null_usuario($id);
+            $limpiar_usuario_reserva->null_cliente($id);
             $sql5 = "DELETE FROM usuario WHERE id_usuario = $id";
                 $query = mysqli_query($this->con, $sql5);
                 $estado=1;

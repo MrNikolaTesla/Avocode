@@ -10,6 +10,7 @@ MINOR PRIORITY | CSS Side-Quests:
 - CSS de la tabla de mesas libres en MesasLibres_Reserva_view.php (Que se note menos que es Copy - Paste y de paso que no quede para el c*lo)
 - Boton <a> "Regresar" y div de informacion en cartilla_view (vista)
 - Boton <a> "Ver mi orden" en BtnVerMiOrden_Controlador (controlador)
+- Boton <a> "Volver" de Terminos y Condiciones
 - Boton <a> "Eliminar" en Orden_view (vista)
 - Boton <a> "Eliminar" en ProductosDe_UNAORDEN.php (vista)
 
