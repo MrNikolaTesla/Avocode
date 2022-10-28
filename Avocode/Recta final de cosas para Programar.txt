@@ -8,6 +8,7 @@
 LOW PRIORITY / Easy Tasks:
 - Mensaje gestor en registro cliente
 - CSS de PAGINA_Orden_Completa
+- CSS de la tabla de mesas libres en MesasLibres_Reserva_view.php
 - Boton <a> "Regresar" en cartilla_view (vista)
 - Boton <a> "Ver mi orden" en BtnVerMiOrden_Controlador (controlador)
 - Boton <a> "Eliminar" en Orden_view (vista)
