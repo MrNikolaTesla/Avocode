@@ -175,14 +175,41 @@ class Orden
 
     public function eliminar_orden($id)
     {
-        //ESTO TENDRIA QUE ESTAR LLAMANDO A OTRO MODELO//
-        $sql1 = "UPDATE detalles_orden set orden=null WHERE orden = $id";
-        mysqli_query($this->con, $sql1);
-        //////////////////////////////////////////////
+        $sql1 = $this->null_detalles_orden($id);
 
         $sql = "DELETE FROM orden WHERE id_orden = $id";
         $result = mysqli_query($this->con, $sql);
         return $result;
+    }
+
+    public function null_orden_detalles_orden($id)
+    {
+        $sql1 = "UPDATE detalles_orden set orden=null WHERE orden = $id";
+        mysqli_query($this->con, $sql1);
+    }
+
+    public function null_producto_detalles_orden($id)
+    {
+        $sql1 = "UPDATE detalles_orden set producto_det=null WHERE producto_det = $id";
+        mysqli_query($this->con, $sql1);
+    }
+
+    public function null_mesas($id)
+    {
+        $sql1 = "UPDATE orden set mesa_orden=null WHERE mesa_orden = $id";
+        mysqli_query($this->con, $sql1);
+    }
+
+    public function null_usuario($id)
+    {
+        $sql1 = "UPDATE orden set cliente_orden=null WHERE cliente_orden = $id";
+        mysqli_query($this->con, $sql1);
+    }
+
+    public function null_cliente($id)
+    {
+        $sql1 = "UPDATE orden set empleado_orden=null WHERE empleado_orden = $id";
+        mysqli_query($this->con, $sql1);
     }
 
     public function listar_ordenes()

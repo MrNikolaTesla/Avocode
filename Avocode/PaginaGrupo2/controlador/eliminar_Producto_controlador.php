@@ -2,9 +2,12 @@
 session_start(); 
 require_once("../modelo/Producto.php");
     $producto = new Producto();
+    require_once("../modelo/Orden.php");
+    $limpiar_mesas_ordenes = new Orden();
     if(isset($_GET['id'])){
 
         $id = $_GET['id'];
+        $limpiar_mesas_ordenes->null_producto_detalles_orden($id);
         $estado = $producto->eliminar_producto($id);
 
 if($estado==1) {
