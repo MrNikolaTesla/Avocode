@@ -19,3 +19,6 @@ Main Bugfixes:
 
 TEDIOUS PRIORITY | ATTENTION !!!:
 - Verificar que todos los titulos y nombres de las paginas esten bien
+
+Addittions :
+- Limpieza de datos sobrantes (Ordenes en generandose, detalle_orden sin id orden, reservas sin usuario propietario / cliente, etc)
