@@ -37,7 +37,7 @@
 </body>
 
 <!------------------------ Pie de Página ------------------------->
-<footer>
+<footer class="index">
   <div class="wrapper">
     <ul>
       <li>Av. Martiniano Chiossi</li>

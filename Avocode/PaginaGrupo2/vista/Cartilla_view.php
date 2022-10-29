@@ -24,7 +24,10 @@
                 <div class="col-lg-12">
                     <div class="page_title text-center mb-4">
                         <h1>Cartilla Virtual</h1>
-                        <div class="single_line"></div>
+                        <div class="single_line">Seleccione el numero de productos que desee y presione + para agregar a su orden<br>
+                            Despues de hacerlo, tu orden y su total aparecera en la parte inferior de esta pagina! <br>
+                            <strong>No podrás realizar el pedido si no has iniciado sesión</strong>
+                        </div>
                     </div>
                 </div>
             </div>
