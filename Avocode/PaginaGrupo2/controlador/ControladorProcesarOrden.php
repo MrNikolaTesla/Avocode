@@ -23,13 +23,13 @@ if (!empty($_POST["completar"])) {
         if($confirmacion_estado != "Libre"){
             $resultado=2;
         }else{
-            $resultado = $orden->update_orden_local($id_orden, $mesa, $tipo_orden, $observacion, $estado_orden);
+            $resultado = $orden->update_orden_local($id_orden, $num_mesa, $tipo_orden, $observacion, $estado_orden);
         }
     
         if($resultado){
             require_once("modelo/Mesa.php");
             $mesa_a_ocupar = new Mesa();
-            $mesa_a_ocupar->ocupar_mesa($mesa);
+            $mesa_a_ocupar->ocupar_mesa($num_mesa);
             $_SESSION['completando_orden'] = "false";
             require_once("Controlador_CompletarOrden.php");
         }else if($resultado==2){
