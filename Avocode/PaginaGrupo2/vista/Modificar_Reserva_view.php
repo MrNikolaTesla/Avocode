@@ -40,11 +40,13 @@
                                 <input type="text" class="form-control" name="hora" value="<?php echo $reserva['hora'] ?>">
                         </div>
                         <div class="mb-3">
-                                <label class="form-label">Cliente (Que realizo la reserva)</label><!--Aca tendria que haber una funcion para buscar el nombre del empleado y ponerlo a la izquierda de la ID-->
+                                <label class="form-label">Cliente (Que realizo la reserva)</label>
+                                <!--Aca tendria que haber una funcion para buscar el nombre del empleado y ponerlo a la izquierda de la ID-->
                                 <input type="text" class="form-control" name="cliente_id" value="<?php echo $reserva['cliente'] ?>">
                         </div>
                         <div class="mb-3">
-                                <label class="form-label">Empleado (Que realizo la reserva)</label><!--Lo mismo aca-->
+                                <label class="form-label">Empleado (Que realizo la reserva)</label>
+                                <!--Lo mismo aca-->
                                 <input type="text" class="form-control" name="empleado_id" value="<?php echo $reserva['empleado'] ?>">
                         </div>
                         <a href="PAGINA_GestionReservas.php" class="button-2" style="color:white; text-decoration:none;">Regresar al Listado</a>

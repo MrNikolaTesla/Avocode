@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles_navbar.css">
-    <title>TESTEO 1</title>
+    <title>Barra de Navegación</title>
+    <!-- JQUERY Necesario-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Script para expansión de la Barra de Navegación -->
@@ -71,7 +72,6 @@
                 </a>
             </li>
             <li>
-
                 <a class="message" href="ModificarPerfil_pagina.php?id=<?php echo $id_perfil ?>" style="text-decoration:none">
                     <span><img src="assets/iconos/icono-ajuste.svg" alt="Configuración" width="30" height="30"></span>
                     Configuración
@@ -85,9 +85,6 @@
             </li>
         </ul>
     </aside>
-
-
-
 </body>
 
 </html>

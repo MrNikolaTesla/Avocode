@@ -1,4 +1,15 @@
-<form method="POST">
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="POST">
         <section class="form-register">
             <h4>Formulario de Registro</h4><br>
             <?php require_once("mensaje_registro.php"); ?>
@@ -14,3 +25,6 @@
             <p><a href="index.php">Volver al inicio</a></p>
         </section>
     </form>
+</body>
+
+</html>

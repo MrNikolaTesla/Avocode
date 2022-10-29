@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/styles2.css">
 
-        <title>Modificacion de Usuario</title>
+        <title>Modificacion de Usuario (Cliente)</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <!-- Recursos Misceláneos (Bootstrap CSS, Tipografías, CSS variado) -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,6 @@
                         return rc;
                 }
         </script>
-
 </head>
 
 <body class="body-2">
@@ -59,9 +58,7 @@
                         </div>
                         <a href="index.php" class="button-2" style="color:white; text-decoration:none;">Regresar</a>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
-                        
                         <a href="controlador/EliminarPerfil_controlador.php?id=<?php echo $id_perfil ?>" class="button-4" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera-2.svg"></a>
-                        
                 </form>
         <?php } else {  ?>
                 <div class="centrado">No estás modificando tu propio perfil...</div>

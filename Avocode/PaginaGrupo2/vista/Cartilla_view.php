@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <title>Vista de Productos</title>
+    <title>Cartilla Digital</title>
     <script></script>
 </head>
 
@@ -28,6 +28,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <ul class="nav nav-tabs menu_tab mb-4" id="myTab" role="tablist">
                     <li class="nav-item">
