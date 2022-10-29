@@ -36,6 +36,4 @@ if($estado==1) {
     header("Location: PAGINA_GestionProductos.php?update=<?php echo rand(0,9000000);");
 }
 }
-
-
 ?>

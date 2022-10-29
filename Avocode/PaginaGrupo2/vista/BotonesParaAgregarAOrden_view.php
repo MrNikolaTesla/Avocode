@@ -1,7 +1,7 @@
  <!--Este boton permitiria agregar un producto a la orden, probablemente vaya a tener un href que se lleve la id del producto, que incluso sin estar mostrada la tenemos detras-->
  <form method="POST">
  <?php require_once("controlador/Controlador_Agregar_A_Orden.php"); ?>   
- <input type="number" min="1" name="cantidad_producto"></input>
+ <input type="number" name="cantidad_producto"></input>
     <input type="text" name="id_producto" value="<?php echo $producto['id_producto'] ?>" hidden></input>
     <button type="submit" name="agregar_a_orden" value="Agregar">+</button>
 </form>

@@ -112,19 +112,13 @@ INSERT INTO factura (id_factura, cliente, empleado, fecha, hora, forma_pago, pro
 VALUES ('2','4', '1', '2022-09-09', '21:00', 'Debito', '3', '300');
 
 INSERT INTO mesa (id_mesa, estado)
-VALUES ('1','Ocupada');
+VALUES ('1','Libre');
 
 INSERT INTO mesa (id_mesa, estado)
 VALUES ('2','Libre');
 
 INSERT INTO mesa (id_mesa, estado)
 VALUES ('3','Libre');
-
-INSERT INTO mesa (id_mesa, estado)
-VALUES ('4','Libre');
-
-INSERT INTO mesa (id_mesa, estado)
-VALUES ('5','Libre');
 
 INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
 VALUES ('1','Joshua Uchiha', 'Bread Industries', 'Panes Simples', '098453122');

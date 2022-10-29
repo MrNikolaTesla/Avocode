@@ -11,4 +11,3 @@ $matrizReserva = $reservas->buscar_reservas($reserva);
 
 require_once("vista/Reserva_view.php");
 }
-?>

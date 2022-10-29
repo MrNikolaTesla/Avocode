@@ -11,4 +11,3 @@ $matrizProveedor = $proveedores->buscar_proveedores($proveedor);
 
 require_once("vista/Proveedor_view.php");
 }
-?>
