@@ -164,3 +164,42 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     text-align: center;
     vertical-align: middle;
 }
+.button-1-cartilla {
+    appearance: none;
+    background-color: #1077d8;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 16px;
+    padding: 10px 16px;
+    margin-top: 1px;
+  
+  }
+  
+  .button-1-cartilla:hover {
+    background-color: #1d689e;
+  }
+  
+  .button-1-cartilla:focus {
+    box-shadow: rgba(51, 114, 209, 0.4) 0 0 0 3px;
+    outline: none;
+  }
+  
+  .button-1-cartilla:disabled {
+    background-color: #3b80b8;
+    border-color: rgba(25, 102, 179, 0.1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+  }
+  
+  .button-1-cartilla:active {
+    background-color: #0a3d5c;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+  }
