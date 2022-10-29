@@ -1,3 +1,4 @@
+<title>Cartilla virtual</title>
 <br><div class="centrado"><a href="index.php">Regresar</a></div><br>
 <div class="centrado">Seleccione el numero de productos que desee y presione + para agregar a su orden<br>
 Despues de hacerlo, tu orden y su total aparecera en la parte inferior de esta pagina!</div>

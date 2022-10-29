@@ -1,3 +1,4 @@
+<title>Mis ordenes</title>
 <br><a href="index.php">Regresar</a>
 
 <?php require_once("controlador/Mostrar_Ordenes_Usuario_controlador.php"); ?>
