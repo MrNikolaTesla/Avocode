@@ -92,10 +92,10 @@
                                 <?php foreach ($matrizReserva as $reserva) : ?>
                                     <tr>
                                         <?php $_SESSION['cliente_reserva'] = $reserva['cliente'];
-                                        if($reserva['empleado'] != null){
+                                        if ($reserva['empleado'] != null) {
                                             $_SESSION['empleado_reserva'] = $reserva['empleado'];
                                             require("controlador/Controlador_Nombre_Empleado_Reserva.php");
-                                        }else{
+                                        } else {
                                             $_SESSION['empleado_reserva'] = null;
                                         }
                                         require("controlador/Controlador_Nombre_Cliente_Reserva.php");
