@@ -23,3 +23,4 @@ TEDIOUS PRIORITY | ATTENTION !!!:
 
 Addittions :
 - Limpieza de datos sobrantes (Ordenes en generandose, detalle_orden sin id orden, reservas sin usuario propietario / cliente, etc)
+- Solo podras pedir segun logueado en cartilla_view
