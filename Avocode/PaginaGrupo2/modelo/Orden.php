@@ -175,7 +175,7 @@ class Orden
 
     public function eliminar_orden($id)
     {
-        $sql1 = $this->null_detalles_orden($id);
+        $sql1 = $this->null_orden_detalles_orden($id);
 
         $sql = "DELETE FROM orden WHERE id_orden = $id";
         $result = mysqli_query($this->con, $sql);
