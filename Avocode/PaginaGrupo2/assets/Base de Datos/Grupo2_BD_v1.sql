@@ -126,6 +126,12 @@ VALUES ('1','Joshua Uchiha', 'Bread Industries', 'Panes Simples', '098453122');
 INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
 VALUES ('2','Edo Brando', 'Green Stairs', 'Lechuga', '093742849');
 
+INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
+VALUES ('3','Amelia Fernandez', 'Porto Dorado', 'Tomate', '093672812');
+
+INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
+VALUES ('4','Lee Tao', 'Manman Tower', 'Carne Simple', '091273479');
+
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
 VALUES ('1', 'Martin', 'Mainentti', 'TEST@gmail.com', 'nonPermanent', 'Un sitio', '092145344', 'administrador');
 
@@ -136,7 +142,13 @@ INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, 
 VALUES ('3', 'Sebastian', 'Amestoy', 'correo2@gmail.com', 'tercerPassword', 'Un lugar', '095732812', 'cliente');
 
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
-VALUES ('4', 'Facundo', 'Guerra', 'Aguacate@gmail.com', 'avocado', 'La Tierra del Aguacate', '097996696', 'cliente');
+VALUES ('4', 'Facundo', 'Guerra', 'Aguacate@gmail.com', 'avocado', 'La Tierra del Aguacate', '094206696', 'cliente');
+
+INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
+VALUES ('5', 'Pepe', 'Perez', 'correo3@gmail.com', 'quintoPassword', 'Casa de Perez', '097162386', 'cliente');
+
+INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
+VALUES ('6', 'Lian', 'Gomez', 'correo4@gmail.com', 'sextaPassword', 'Tal calle entre Tal calle y Tal calle', '097984686', 'cliente');
 
 INSERT INTO reserva (id_reserva, mesa, fecha, hora, cliente, empleado)
 VALUES ('1', '1', '2022-09-07', '19:00', '3', '2');
