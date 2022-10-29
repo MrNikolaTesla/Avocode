@@ -9,16 +9,12 @@ MINOR PRIORITY | CSS Side-Quests:
 - CSS de Orden_DeUsuario_view (Que se note menos que es Copy - Paste | Quizas colorcito)
 - CSS de la tabla de mesas libres en MesasLibres_Reserva_view.php
   (Que se note menos que es Copy - Paste y de paso que no quede para el c*lo)
-- Boton <a> "Regresar" y div de informacion en cartilla_view (vista)
+- CSS de texto en PAGINA_CartillaVirtual
+- Boton <a> "Regresar" y div de informacion en PAGINA_CartillaVirtual
 - Boton <a> "Volver" de Terminos y Condiciones
-
-Main Bugfixes:
-- Limitador de cantidad a negativo
-- Arreglar el problema de sumar multiples productos (help)
 
 TEDIOUS PRIORITY | ATTENTION !!!:
 - Verificar que todos los titulos y nombres de las paginas esten bien
 
 Addittions :
 - Limpieza de datos sobrantes (Ordenes en generandose, detalle_orden sin id orden, reservas sin usuario propietario / cliente, etc)
-- Solo podras pedir segun logueado en cartilla_view
