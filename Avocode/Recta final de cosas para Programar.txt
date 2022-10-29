@@ -16,6 +16,7 @@ MINOR PRIORITY | CSS Side-Quests:
 - Boton <a> "Eliminar" en ProductosDe_UNAORDEN.php (vista)
 
 Main Bugfixes:
+- Limitador de precio a negativo
 - Arreglar el problema de sumar multiples productos (help)
 
 TEDIOUS PRIORITY | ATTENTION !!!:
