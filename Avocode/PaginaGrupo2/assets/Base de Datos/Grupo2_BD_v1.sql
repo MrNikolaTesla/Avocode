@@ -112,7 +112,7 @@ INSERT INTO factura (id_factura, cliente, empleado, fecha, hora, forma_pago, pro
 VALUES ('2','4', '1', '2022-09-09', '21:00', 'Debito', '3', '300');
 
 INSERT INTO mesa (id_mesa, estado)
-VALUES ('1','Libre');
+VALUES ('1','Ocupada');
 
 INSERT INTO mesa (id_mesa, estado)
 VALUES ('2','Libre');
@@ -120,11 +120,23 @@ VALUES ('2','Libre');
 INSERT INTO mesa (id_mesa, estado)
 VALUES ('3','Libre');
 
+INSERT INTO mesa (id_mesa, estado)
+VALUES ('4','Libre');
+
+INSERT INTO mesa (id_mesa, estado)
+VALUES ('5','Libre');
+
 INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
 VALUES ('1','Joshua Uchiha', 'Bread Industries', 'Panes Simples', '098453122');
 
 INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
 VALUES ('2','Edo Brando', 'Green Stairs', 'Lechuga', '093742849');
+
+INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
+VALUES ('3','Amelia Fernandez', '', 'Tomate', '093672812');
+
+INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
+VALUES ('4','Lee Tao', 'Manman Tower', 'Carne Simple', '091273479');
 
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
 VALUES ('1', 'Martin', 'Mainentti', 'TEST@gmail.com', 'nonPermanent', 'Un sitio', '092145344', 'administrador');
