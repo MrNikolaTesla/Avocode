@@ -7,7 +7,8 @@ MINOR PRIORITY | CSS Side-Quests:
 - HTML, CSS de PAGINA_Mis Ordenes (Que se note menos que es Copy - Paste | Quizas colorcito)
 - HTML, CSS de PAGINA_AltaReservaCliente (Que se note menos que es Copy - Paste | Quizas colorcito)
 - CSS de Orden_DeUsuario_view (Que se note menos que es Copy - Paste | Quizas colorcito)
-- CSS de la tabla de mesas libres en MesasLibres_Reserva_view.php (Que se note menos que es Copy - Paste y de paso que no quede para el c*lo)
+- CSS de la tabla de mesas libres en MesasLibres_Reserva_view.php
+  (Que se note menos que es Copy - Paste y de paso que no quede para el c*lo)
 - Boton <a> "Regresar" y div de informacion en cartilla_view (vista)
 - Boton <a> "Ver mi orden" en BtnVerMiOrden_Controlador (controlador)
 - Boton <a> "Volver" de Terminos y Condiciones
