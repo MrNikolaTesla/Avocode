@@ -63,5 +63,4 @@ class Proveedor
         return $query;
     }
 }
-
 ?>

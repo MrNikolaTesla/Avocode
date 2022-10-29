@@ -39,7 +39,5 @@ if($estado==1 && $repetido == false) {
 }else
 echo '<div class="alert alert-danger">No se ha elegido un tipo de usuario.</div>';
 }
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 ?>

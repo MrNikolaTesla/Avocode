@@ -1,18 +1,22 @@
 <?php
-    session_start();
-    require_once("modelo/Orden.php");
-    $orden = new Orden();
+session_start();
+require_once("modelo/Orden.php");
+$orden = new Orden();
 
-    if(isset($_GET['id'])){
+if (isset($_GET['id'])) {
 
-        $id_orden = $_GET['id'];
+    $id_orden = $_GET['id'];
 
     $resultado = $orden->listar_productos_orden($id_orden);
 
-    if($resultado){
+    if ($resultado) {
         require_once("vista/ProductosDe_SuOrden.php");
-    }else{
-        ?><div class="no_hay_registros"><?php echo "No hay productos dentro de esta orden";?></div><?php
+    } else {
+?>
+        <div class="no_hay_registros">
+            <?php echo "No hay productos dentro de esta orden"; ?>
+        </div>
+<?php
     }
-    }
+}
 ?>

@@ -108,5 +108,4 @@ class Reserva
         return $query;
     }
 }
-
 ?>

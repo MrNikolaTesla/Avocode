@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles_navbar.css">
-    <title>TESTEO 1</title>
+    <title>Barra de Navegación</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Script para expansión de la Barra de Navegación -->
@@ -24,7 +24,7 @@
     <?php require_once("controlador/Controlador_PerfilUsuario.php"); ?>
 
     <header>
-        <span class="menu"><i><img src="assets/iconos/icono-desplegable.svg" alt="Inicio" width="20" height="20"></i></span>
+        <span class="menu"><img src="assets/iconos/icono-desplegable.svg" alt="Inicio" width="20" height="20"></span>
     </header>
     <aside class="keep">
         <ul>
