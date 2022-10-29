@@ -88,11 +88,4 @@ class Mesa
         $query = mysqli_query($this->con, $sql);
         return $query;
     }
-
-    public function set_estado_mesa($id, $estado)
-    {
-        $sql = "UPDATE mesa set estado = '$estado' WHERE id_mesa = $id";
-        $query = mysqli_query($this->con, $sql);
-        return $query;
-    }
 }
