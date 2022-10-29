@@ -1,3 +1,4 @@
+<title>Cartilla Virtual</title>
 <br><div class="centrado"><a href="index.php">Regresar</a></div><br>
 <div class="centrado">Solo se puede pedir tras haber iniciado sesion, bla bla, cosas importantes<br>
 Seleccione el numero de productos que desee y presione + para agregar a su orden<br>
