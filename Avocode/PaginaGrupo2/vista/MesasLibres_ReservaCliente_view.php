@@ -34,7 +34,7 @@
                                     <?php foreach ($matrizMesa as $mesa) : ?>
 
                                         <td class="td-mesa">
-                                            Numero <?php echo $mesa['id_mesa'] ?>
+                                        Numero <?php echo $mesa['id_mesa'] ?>
                                             - <?php echo $mesa['estado'] ?>
                                         </td>
 
