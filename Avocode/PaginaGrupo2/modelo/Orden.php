@@ -200,13 +200,13 @@ class Orden
         mysqli_query($this->con, $sql1);
     }
 
-    public function null_usuario($id)
+    public function null_cliente($id)
     {
         $sql1 = "UPDATE orden set cliente_orden=null WHERE cliente_orden = $id";
         mysqli_query($this->con, $sql1);
     }
 
-    public function null_cliente($id)
+    public function null_empleado($id)
     {
         $sql1 = "UPDATE orden set empleado_orden=null WHERE empleado_orden = $id";
         mysqli_query($this->con, $sql1);

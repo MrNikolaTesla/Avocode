@@ -51,13 +51,13 @@ class Reserva
         mysqli_query($this->con, $sql1);
     }
 
-    public function null_usuario($id)
+    public function null_cliente($id)
     {
         $sql1 = "UPDATE reserva set cliente=null WHERE cliente = $id";
         mysqli_query($this->con, $sql1);
     }
 
-    public function null_cliente($id)
+    public function null_empleado($id)
     {
         $sql1 = "UPDATE reserva set empleado=null WHERE empleado = $id";
         mysqli_query($this->con, $sql1);
