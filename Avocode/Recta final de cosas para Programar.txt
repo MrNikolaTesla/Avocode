@@ -12,8 +12,6 @@ MINOR PRIORITY | CSS Side-Quests:
 - Boton <a> "Regresar" y div de informacion en cartilla_view (vista)
 - Boton <a> "Ver mi orden" en BtnVerMiOrden_Controlador (controlador)
 - Boton <a> "Volver" de Terminos y Condiciones
-- Boton <a> "Eliminar" en Orden_view (vista)
-- Boton <a> "Eliminar" en ProductosDe_UNAORDEN.php (vista)
 
 Main Bugfixes:
 - Limitador de cantidad a negativo
