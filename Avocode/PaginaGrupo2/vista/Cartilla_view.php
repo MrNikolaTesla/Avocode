@@ -22,6 +22,7 @@
 
         <div class="container">
             <?php require_once("controlador/BtnVerMiOrden_Controlador.php"); ?>
+            <?php require_once("vista/BarraNavegacion_Cartilla.php"); ?>
 
             <div class="row">
                 <div class="col-lg-12">

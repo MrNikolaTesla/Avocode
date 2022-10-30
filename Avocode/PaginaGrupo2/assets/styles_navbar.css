@@ -88,116 +88,8 @@ aside ul li:hover {
     box-shadow: inset 0px 5px 767px #dedede;
 }
 
-aside ul li a span.notif {
-    position: absolute;
-    top: 8px;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    right: 10px;
-    background: #343436;
-    line-height: 31px;
-    border-radius: 100%;
-    color: #fff;
-}
-
-.red {
-    background: #e74c3c !important;
-    box-shadow: 0px 0px 10px #e74c3c;
-}
-
-.yellow {
-    background: #f1c40f !important;
-    box-shadow: 0px 0px 10px #f1c40f;
-}
-
-.green {
-    background: #27ae60 !important;
-    box-shadow: 0px 0px 10px #27ae60;
-}
-
-aside ul li a span.notif.green {
-    width: 10px;
-    height: 10px;
-    color: transparent;
-    right: 5px;
-    transition: all 0.2s ease;
-}
-
-aside ul li a span.notif.yellow {
-    width: 10px;
-    height: 10px;
-    color: transparent;
-    right: 5px;
-    transition: all 0.2s ease;
-}
-
-aside ul li a span.notif.red {
-    width: 10px;
-    height: 10px;
-    color: transparent;
-    right: 5px;
-    transition: all 0.2s ease;
-}
-
-aside ul li:hover a span.notif.red {
-    width: 30px;
-    height: 30px;
-    right: 15px;
-    color: #fff;
-    box-shadow: 0px 0px 60px #e74c3c;
-    top: 10px;
-}
-
-aside ul li:hover a span.notif.yellow {
-    width: 30px;
-    height: 30px;
-    right: 15px;
-    color: #fff;
-    box-shadow: 0px 0px 60px #f1c40f;
-    top: 10px;
-}
-
-aside ul li:hover a span.notif.green {
-    width: 30px;
-    height: 30px;
-    right: 15px;
-    color: #fff;
-    box-shadow: 0px 0px 60px #27ae60;
-    top: 10px;
-}
-
 aside.keep.width {
     width: 230px;
-}
-
-aside.keep.width ul li a span.notif {
-    width: 30px;
-    height: 30px;
-    right: 10px;
-    color: #fff;
-    box-shadow: 0px 0px 10px transparent;
-    top: 8px;
-}
-
-/*  */
-@-webkit-keyframes blinker {
-    from {
-        opacity: 1.0;
-    }
-
-    to {
-        opacity: 0.0;
-    }
-}
-
-.blink {
-    text-decoration: blink;
-    -webkit-animation-name: blinker;
-    -webkit-animation-duration: 0.6s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-direction: alternate;
 }
 
 p.blink.mah {
@@ -215,7 +107,7 @@ p.blink.mah span {
     left: 360px;
 }
 
-.message {
-    font-family: 'Signika', sans-serif;
+.text {
+    font-family: sans-serif;
     font-size: 12px;
 }
