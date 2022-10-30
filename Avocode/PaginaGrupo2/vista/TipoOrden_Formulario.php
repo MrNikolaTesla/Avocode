@@ -14,7 +14,7 @@ if (isset($_SESSION['completando_orden']) && $_SESSION['completando_orden'] == "
                                 <label class="form-label">Observaciones</label>
                                 <input type="text" class="form-control" name="observacion">
                         </div>
-                        <button type="submit" class="button-5" name="completar" value="enviar">Completar orden!</button>
+                        <button type="submit" class="button-2" name="completar" value="enviar">Completar orden!</button>
                 </form>
                 <?php require("controlador/Controlador_MostrasMesas_Libres.php"); ?>
         <?php
@@ -31,7 +31,7 @@ if (isset($_SESSION['completando_orden']) && $_SESSION['completando_orden'] == "
                                 <label class="form-label">Observaciones</label>
                                 <input type="text" class="form-control" name="observacion">
                         </div>
-                        <button type="submit" class="button-5" name="completar" value="enviar">Completar orden!</button>
+                        <button type="submit" class="button-2" name="completar" value="enviar">Completar orden!</button>
                 </form>
         <?php
         } else if ($_SESSION['tipo_orden'] == "takeaway") {
@@ -51,7 +51,7 @@ if (isset($_SESSION['completando_orden']) && $_SESSION['completando_orden'] == "
                                 <label class="form-label">Observaciones</label>
                                 <input type="text" class="form-control" name="observacion">
                         </div>
-                        <button type="submit" class="button-5" name="completar" value="enviar">Completar orden!</button>
+                        <button type="submit" class="button-2" name="completar" value="enviar">Completar orden!</button>
                 </form>
 <?php
         }

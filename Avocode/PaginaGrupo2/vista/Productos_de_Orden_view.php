@@ -17,7 +17,7 @@
  </form>
 
  <!-- CUERPO DE TABLA -->
- <tbody>X
+ <tbody>
      <?php $precio_total = 0;
         foreach ($matrizProdOrden as $detalle) : ?>
          <tr>

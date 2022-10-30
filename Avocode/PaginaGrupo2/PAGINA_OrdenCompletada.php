@@ -1,6 +1,7 @@
 <title>Orden completada</title>
 <link rel="stylesheet" href="assets/styles2.css">
+
 <body class="centrado">
-felicidades, no sos pobre<br>
-<a href="index.php">Regresar</a>
+    Orden completada con éxito!<br><br>
+    <a href="index.php"><button class="button-2">Regresar</button></a>
 </body>
