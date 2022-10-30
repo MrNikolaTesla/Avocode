@@ -77,7 +77,8 @@
 
                             <!-- CUERPO DE TABLA -->
                             <tbody>
-                                <?php $numero_orden =1; foreach ($matrizOrden as $orden) : ?>
+                                <?php $numero_orden = 1;
+                                foreach ($matrizOrden as $orden) : ?>
                                     <tr>
                                         <td scope="row"><?php echo $numero_orden ?></td>
                                         <td><?php echo $orden['mesa_orden'] ?></td>
@@ -86,18 +87,20 @@
                                         <td><?php echo $orden['direccion'] ?></td>
                                         <td><?php echo $orden['fecha'] ?></td>
                                         <td><?php echo $orden['observacion'] ?></td>
-                                        <td><?php if($orden['estado_orden'] == "Generandose..."){
-                                                  echo "Sin completar";
-                                        }else{
-                                            echo $orden['estado_orden'] ?></td><?php
-                                        } ?>
-                                        
-                                        <td>
-                                            <!--<a href="ModificarProveedor_pagina.php?id= echo $proveedor['id_proveedor'] " class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>-->
-                                            <a href="VerProductos_DeTuOrden_pagina.php?id=<?php echo $orden['id_orden'] ?>" title="Informacion de la Orden"><img src="assets/iconos/icono-lupa.svg"></a>
-                                        </td>
+                                        <td><?php if ($orden['estado_orden'] == "Generandose...") {
+                                                echo "Sin completar";
+                                            } else {
+                                                echo $orden['estado_orden'] ?>
+                                        </td><?php
+                                            } ?>
+
+                                    <td>
+                                        <!--<a href="ModificarProveedor_pagina.php?id= echo $proveedor['id_proveedor'] " class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>-->
+                                        <a href="VerProductos_DeTuOrden_pagina.php?id=<?php echo $orden['id_orden'] ?>" title="Informacion de la Orden"><img src="assets/iconos/icono-lupa.svg"></a>
+                                    </td>
                                     </tr>
-                                <?php  $numero_orden = $numero_orden + 1; endforeach; ?>
+                                <?php $numero_orden = $numero_orden + 1;
+                                endforeach; ?>
                             </tbody>
                         </table>
 

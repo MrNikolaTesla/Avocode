@@ -31,10 +31,11 @@
                         <!-- No se cual es esta class porque es del boostrap -->
                         <!-- INICIO TABLA LISTAR -->
                         <div>
+
                                 <?php require("controlador/Controlador_MostrasMesas_Libres_Reserva.php"); ?>
                         </div>
-                        <a class="button1" href="index.php">Volver</a>
                         <!-- FIN TABLA LISTAR -->
+                        <a href="index.php"><button class="button-2">Volver</button></a>
 
                 </div>
 </body>

@@ -40,7 +40,9 @@
      </tbody>
      </table>
      <div class="centrado"><b>Total : $<?php echo $precio_total; ?></b></div>
-     <div class="centrado"><a class="button-2" href="PAGINA_MisOrdenes.php" style="color:white;">Regresar</a></div>
+     <div class="centrado">
+         <button class="button-2"><a href="PAGINA_MisOrdenes.php" style="color:white;text-decoration:none;">Regresar</a></button>
+     </div>
  </body>
 
  </html>

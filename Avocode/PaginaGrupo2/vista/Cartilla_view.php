@@ -22,7 +22,7 @@
 
         <div class="container">
             <?php require_once("controlador/BtnVerMiOrden_Controlador.php"); ?>
-
+            <div class="div-botones"><a href="index.php"><button class="button-1-cartilla">Regresar</button></a></div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="page_title text-center mb-4">

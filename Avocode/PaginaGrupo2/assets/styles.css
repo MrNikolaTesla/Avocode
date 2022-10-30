@@ -5,8 +5,9 @@
 }
 
 body {
-  background-image: url('../assets/imagenes/fondo1.jpg');
+  background-image: url(imagenes/fondo-index.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .form-register {
@@ -16,6 +17,7 @@ body {
   padding: 30px;
   margin: auto;
   margin-top: 100px;
+  margin-bottom: 100px;
   border-radius: 4px;
   font-family: 'calibri';
   color: white;
