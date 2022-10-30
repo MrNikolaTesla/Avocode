@@ -19,7 +19,10 @@
     <!------------- COMIENZO DE CARTILLA ------------------>
 
     <section id="our_menu" class="pt-5 pb-5">
+
         <div class="container">
+            <?php require_once("controlador/BtnVerMiOrden_Controlador.php"); ?>
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="page_title text-center mb-4">
@@ -28,6 +31,7 @@
                             Despues de hacerlo, tu orden y su total aparecera en la parte inferior de esta pagina! <br>
                             <strong>No podrás realizar el pedido si no has iniciado sesión</strong>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -59,7 +63,8 @@
                                     <div class="menu_content">
                                         <h4><?php echo $producto['nombre'] ?><span>$<?php echo $producto['precio'] ?></span></h4>
                                         <p><?php echo $producto['descripcion'] ?>
-                                            <?php require("controlador/ControladorBotonParaAgregarAOrden.php"); ?>
+                                            <?php require("controlador/ControladorBotonParaAgregarAOrden.php") ?>
+
                                         </p>
                                     </div>
                                 </div>

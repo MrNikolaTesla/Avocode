@@ -1,8 +1,5 @@
 <title>Cartilla virtual</title>
-<br><div class="centrado"><a href="index.php">Regresar</a></div><br>
-<div class="centrado">Seleccione el numero de productos que desee y presione + para agregar a su orden<br>
-Despues de hacerlo, tu orden y su total aparecera en la parte inferior de esta pagina!</div>
-<?php require_once("controlador/BtnVerMiOrden_Controlador.php"); ?>
+<br>
 <link rel="stylesheet" href="assets/styles2.css">
 
 <head>
@@ -14,10 +11,6 @@ Despues de hacerlo, tu orden y su total aparecera en la parte inferior de esta p
 </head>
 
 <body>
-    <br>
-    <div class="centrado"><a href="index.php"><button class="button-2">Regresar</button></a></div><br>
-    <?php require_once("controlador/BtnVerMiOrden_Controlador.php"); ?>
-
     <?php require_once("controlador/ControladorMostrarCartilla.php"); ?>
     <a name="orden">
         <?php require_once("controlador/Controlador_Listar_Productos_En_Orden.php"); ?>

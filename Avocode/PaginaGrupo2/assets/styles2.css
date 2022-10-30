@@ -48,7 +48,7 @@ body {
   font-size: 15px;
   float: right;
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
 
 .table-title h2 {
@@ -443,6 +443,46 @@ table.table td i {
 
 .button-5:active {
   background-color: #0a3d5c;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.button-6 {
+  appearance: none;
+  background-color: #d61d1d;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 16px;
+  padding: 10px 16px;
+  margin-top: 1px;
+
+}
+
+.button-6:hover {
+  background-color: #682525;
+}
+
+.button-6:focus {
+  box-shadow: rgba(100, 37, 37, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-6:disabled {
+  background-color: #7e1437;
+  border-color: rgba(25, 102, 179, 0.1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-6:active {
+  background-color: #3f2024;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
 

@@ -17,7 +17,7 @@
  </form>
 
  <!-- CUERPO DE TABLA -->
- <tbody>
+ <tbody>X
      <?php $precio_total = 0;
         foreach ($matrizProdOrden as $detalle) : ?>
          <tr>
@@ -34,5 +34,6 @@
  </tbody>
  </table>
  <div class="centrado"><b>Total : $<?php echo $precio_total; ?></b></div>
- <div class="centrado"><a class="button-2" href="PAGINA_ContinuarOrden.php" style="color:white;">Continuar</a></div>
- <div class="centrado"><a class="button-3" href="controlador/Controlador_CancelarOrden.php" style="color:white;">Cancelar Orden</a></div>
+ <div class="centrado"><a class="button-2" href="PAGINA_ContinuarOrden.php" style="color:white; text-decoration:none;">Continuar</a>
+     <a class="button-6" href="controlador/Controlador_CancelarOrden.php" style="color:white; text-decoration:none;">Cancelar Orden</a>
+ </div>

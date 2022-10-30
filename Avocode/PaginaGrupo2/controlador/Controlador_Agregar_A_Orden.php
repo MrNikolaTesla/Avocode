@@ -19,7 +19,6 @@ if (!empty($_POST["agregar_a_orden"])) {
         }
 
         $resultado = $orden->crear_fila_orden($id_orden, $id_producto, $cantidad_producto);
-        header("Refresh");
     }
 }
 ?>

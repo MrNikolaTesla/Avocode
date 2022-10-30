@@ -1,6 +1,7 @@
 .page_title {
     padding: 30px 0px;
 }
+
 .page_title h1 {
     color: #c0392b;
     font-weight: 700;
@@ -9,6 +10,7 @@
     position: relative;
     text-transform: capitalize;
 }
+
 .page_title h1::before {
     background: #c0392b;
     width: 70px;
@@ -19,6 +21,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .page_title h1::after {
     position: absolute;
     content: '';
@@ -29,32 +32,39 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 /*Menu starts*/
 .menu_tab {
     margin: 0 auto;
     justify-content: center;
 }
+
 .nav-item {
     display: inline-block;
     text-align: center;
 }
-.nav-tabs .nav-link{
+
+.nav-tabs .nav-link {
     transition: .3s;
 }
+
 .nav-tabs .nav-link.active {
     background: #c0392b;
     color: #fff;
     font-weight: 700;
     border: 1px solid #c0392b;
 }
+
 .nav-link {
     color: #000;
 }
+
 .nav-tabs .nav-link:hover {
     background: #c0392b;
     color: #fff;
     border: 1px solid #c0392b;
 }
+
 .single_menu {
     position: relative;
     margin-bottom: 75px;
@@ -62,11 +72,13 @@
     width: 30em;
     margin-right: 40px;
 }
-.single_menu:hover img{
+
+.single_menu:hover img {
     -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
 
 }
+
 .single_menu img {
     width: 33%;
     position: absolute;
@@ -77,9 +89,11 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
 .menu_content {
     padding-left: 200px;
 }
+
 .menu_content h4 {
     font-size: 25px;
     font-weight: 300;
@@ -87,6 +101,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     line-height: 2;
     text-transform: capitalize;
 }
+
 .menu_content h4 span {
     font-size: 25px;
     font-weight: 800;
@@ -95,46 +110,52 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     color: #6e0d0d;
     margin-left: 20px;
 }
+
 .menu_content p {
     font-weight: 200;
     font-size: 16px;
     letter-spacing: 1px;
     margin-left: 20px;
 }
+
 .menu_btn.btn.btn-danger {
     margin: 0 auto;
     display: block;
     width: 140px;
 }
+
 /*Menu ends*/
 .menu_btn.btn.btn-danger {
-	margin: 0 auto;
-	display: block;
-	width: 140px;
+    margin: 0 auto;
+    display: block;
+    width: 140px;
 }
+
 .btn.btn-danger {
-	background: #4d110a;
-	border: 1px solid #421b16;
-	transition: .3s;
-	position: relative;
-	z-index: 1;
-	text-transform: capitalize;
-	font-weight: 700;
-	overflow: hidden;
-	padding: 15px 25px;
+    background: #4d110a;
+    border: 1px solid #421b16;
+    transition: .3s;
+    position: relative;
+    z-index: 1;
+    text-transform: capitalize;
+    font-weight: 700;
+    overflow: hidden;
+    padding: 15px 25px;
 }
+
 .btn.btn-danger::before {
-	position: absolute;
-	content: '';
-	background: #300b06;
-	width: 100%;
-	height: 100%;
-	left: -100%;
-	top: 100%;
-	transition: .3s;
-	z-index: -1;
+    position: absolute;
+    content: '';
+    background: #300b06;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 100%;
+    transition: .3s;
+    z-index: -1;
 }
-.btn.btn-danger:hover:before{
+
+.btn.btn-danger:hover:before {
     top: 0;
     left: 0;
 }
@@ -164,6 +185,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     text-align: center;
     vertical-align: middle;
 }
+
 .button-1-cartilla {
     appearance: none;
     background-color: #1077d8;
@@ -179,27 +201,36 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     font-weight: 900;
     line-height: 16px;
     padding: 10px 16px;
-    margin-top: 1px;
-  
-  }
-  
-  .button-1-cartilla:hover {
+    margin: 10px;
+
+}
+
+.button-1-cartilla:hover {
     background-color: #1d689e;
-  }
-  
-  .button-1-cartilla:focus {
+}
+
+.button-1-cartilla:focus {
     box-shadow: rgba(51, 114, 209, 0.4) 0 0 0 3px;
     outline: none;
-  }
-  
-  .button-1-cartilla:disabled {
+}
+
+.button-1-cartilla:disabled {
     background-color: #3b80b8;
     border-color: rgba(25, 102, 179, 0.1);
     color: rgba(255, 255, 255, .8);
     cursor: default;
-  }
-  
-  .button-1-cartilla:active {
+}
+
+.button-1-cartilla:active {
     background-color: #0a3d5c;
     box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
-  }
+}
+
+.icono-cartilla {
+    width: 20px;
+    height: 20px;
+}
+
+.div-botones{
+    margin-left: 80px;
+}
