@@ -120,35 +120,44 @@ VALUES ('2','Libre');
 INSERT INTO mesa (id_mesa, estado)
 VALUES ('3','Libre');
 
-INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
-VALUES ('1','Joshua Uchiha', 'Bread Industries', 'Panes Simples', '098453122');
+INSERT INTO mesa (id_mesa, estado)
+VALUES ('4','Libre');
+
+INSERT INTO mesa (id_mesa, estado)
+VALUES ('5','Libre');
+
+INSERT INTO mesa (id_mesa, estado)
+VALUES ('6','Libre');
 
 INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
-VALUES ('2','Edo Brando', 'Green Stairs', 'Lechuga', '093742849');
+VALUES ('1','Proveedor 1', 'Empresa 1', 'Panes simples', '091111111');
 
 INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
-VALUES ('3','Amelia Fernandez', 'Porto Dorado', 'Tomate', '093672812');
+VALUES ('2','Proveedor 2', 'Empresa 2', 'Lechuga, tomate, zanahoria', '092222222');
 
 INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
-VALUES ('4','Lee Tao', 'Manman Tower', 'Carne Simple', '091273479');
+VALUES ('3','Proveedor 3', 'Empresa 3', 'Carne picada Vacuna, Carne picada de Cerdo', '093333333');
+
+INSERT INTO proveedor (id_proveedor, nombre_apellido, empresa, productos, telefono)
+VALUES ('4','Proveedor 4', 'Empresa 4', 'Huevos', '094444444');
 
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
-VALUES ('1', 'Martin', 'Mainentti', 'TEST@gmail.com', 'nonPermanent', 'Un sitio', '092145344', 'administrador');
+VALUES ('1','Administrador 1', 'Apellido 1 ADMIN', 'ADMIN@gmail.com', 'ADMINISTRADOR1', 'DIRECCION 1 ADMIN', '091010101', 'administrador');
 
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
-VALUES ('2', 'Lautaro', 'Galeazzi', 'correo@gmail.com', 'otroPassword', 'Otro sitio', '097834128', 'empleado');
+VALUES ('2','Empleado 1', 'Apellido 1 EMP', 'EMP@gmail.com', 'EMPLEADO1', 'DIRECCION 1 EMP', '092020202', 'empleado');
 
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
-VALUES ('3', 'Sebastian', 'Amestoy', 'correo2@gmail.com', 'tercerPassword', 'Un lugar', '095732812', 'cliente');
+VALUES ('3', 'Cliente 1', 'Apellido 1 CLIENTE', 'CLIENTE1@gmail.com', 'CLIENTE1', 'DIRECCION 1 CLIENTE', '093030303', 'cliente');
 
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
-VALUES ('4', 'Facundo', 'Guerra', 'Aguacate@gmail.com', 'avocado', 'La Tierra del Aguacate', '094206696', 'cliente');
+VALUES ('4', 'Cliente 2', 'Apellido 2 CLIENTE', 'CLIENTE2@gmail.com', 'CLIENTE2', 'DIRECCION 2 CLIENTE', '094040404', 'cliente');
 
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
-VALUES ('5', 'Pepe', 'Perez', 'correo3@gmail.com', 'quintoPassword', 'Casa de Perez', '097162386', 'cliente');
+VALUES ('5', 'Cliente 3', 'Apellido 3 CLIENTE', 'CLIENTE3@gmail.com', 'CLIENTE3', 'DIRECCION 3 CLIENTE', '095050505', 'cliente');
 
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
-VALUES ('6', 'Lian', 'Gomez', 'correo4@gmail.com', 'sextaPassword', 'Tal calle entre Tal calle y Tal calle', '097984686', 'cliente');
+VALUES ('6', 'Cliente 4', 'Apellido 4 CLIENTE', 'CLIENTE4@gmail.com', 'CLIENTE4', 'DIRECCION 4 CLIENTE', '096060606', 'cliente');
 
 INSERT INTO reserva (id_reserva, mesa, fecha, hora, cliente, empleado)
 VALUES ('1', '1', '2022-09-07', '19:00', '3', '2');
@@ -157,13 +166,19 @@ INSERT INTO reserva (id_reserva, mesa, fecha, hora, cliente, empleado)
 VALUES ('2', '2', '2022-09-09', '21:00', '4', '2');
 
 INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado_orden)
-VALUES ('1', '3', '1', '2', 'Take Away', '16:00', null, '2022-10-21', 'Especificaciones de orden IDK', 'Completada');
+VALUES ('1', '3', '1', '2', 'Take Away', '20:00', null, '2022-10-21', 'Observacion 1', 'Completada');
 
 INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado_orden)
-VALUES ('2', '4', '2', '1', 'Local', '12:00', null, '2022-10-24', 'Mas cosas importantes', 'Completada');
+VALUES ('2', '4', '2', '1', 'Local', '21:00', null, '2022-10-22', 'Observacion 2', 'Completada');
+
+INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado_orden)
+VALUES ('3', '5', '2', '1', 'Delivery', '22:00', null, '2022-10-23', 'Observacion 3', 'Completada');
 
 INSERT INTO detalles_orden (id_detalle_orden, orden, producto_det, cantidad_producto)
 VALUES ('1','1','2','1');
 
 INSERT INTO detalles_orden (id_detalle_orden, orden, producto_det, cantidad_producto)
 VALUES ('2','2','3','3');
+
+INSERT INTO detalles_orden (id_detalle_orden, orden, producto_det, cantidad_producto)
+VALUES ('3','3','4','2');
