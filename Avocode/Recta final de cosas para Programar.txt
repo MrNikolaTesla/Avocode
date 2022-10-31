@@ -1,5 +1,4 @@
 MINOR PRIORITY | CSS Side-Quests:
-- Mensaje gestor en registro cliente
 - HTML, CSS de PAGINA_Orden_Completa
 - HTML, CSS de PAGINA_Mis Ordenes (Que se note menos que es Copy - Paste | Quizas colorcito)
 - HTML, CSS de PAGINA_AltaReservaCliente (Que se note menos que es Copy - Paste | Quizas colorcito)
