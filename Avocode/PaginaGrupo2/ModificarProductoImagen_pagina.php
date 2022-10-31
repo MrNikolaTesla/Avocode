@@ -14,7 +14,6 @@
 <body>
 
         <div class="container-fluid row">
-                <!-- No se cual es esta class porque es del boostrap -->
                 <?php require_once("controlador/Modificar_producto_imagen_controlador.php"); ?>
         </div>
 

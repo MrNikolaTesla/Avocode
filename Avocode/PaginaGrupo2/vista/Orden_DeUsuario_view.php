@@ -95,7 +95,6 @@
                                             } ?>
 
                                     <td>
-                                        <!--<a href="ModificarProveedor_pagina.php?id= echo $proveedor['id_proveedor'] " class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>-->
                                         <a href="VerProductos_DeTuOrden_pagina.php?id=<?php echo $orden['id_orden'] ?>" title="Informacion de la Orden"><img src="assets/iconos/icono-lupa.svg"></a>
                                     </td>
                                     </tr>

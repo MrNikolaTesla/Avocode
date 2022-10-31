@@ -19,7 +19,6 @@ if(!empty($_POST["modificacion"])){
         $estado = $producto_mod->update_producto($id, $nombre, $precio, $tipo, $descripcion);
     }
 
-    //TEMA NO CAPTA SI HAY O NO IMAGENES, COSO, QUIZAS NUEVO VALOR EN "FILES?"
 if($estado==1) {
         $_SESSION['message'] = 'Producto modificado correctamente';
         //El echo rand es para evitar que la imagen no cambie por el cache al ser modificada.

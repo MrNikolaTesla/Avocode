@@ -4,7 +4,6 @@ session_start();
     $usuario_mod = new Usuario();
 if(!empty($_POST["modificacion"])){
     if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"]) and isset($_POST["tipo"])) {
-        //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
         $id = $_POST["id"];
         $nombre = $_POST["nombre"];

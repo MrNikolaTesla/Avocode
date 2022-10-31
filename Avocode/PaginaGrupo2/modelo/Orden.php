@@ -65,7 +65,6 @@ class Orden
         //VALUES ('$cliente', '$empleado_id', '$mesa', '$tipo_orden', $hora, $direccion, $fecha, $observacion, 'Pendiente')";
         //$result = mysqli_query($this->con, $sql);
         //return $result;
-
     }
 
     public function eliminar_orden_incompleta($orden_cargada)

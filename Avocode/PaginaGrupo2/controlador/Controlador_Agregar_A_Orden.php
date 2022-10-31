@@ -12,7 +12,7 @@ if (!empty($_POST["agregar_a_orden"])) {
 
         if (!isset($_SESSION['orden_iniciada']) || $_SESSION['orden_iniciada'] != "true") {
             $inicio_orden = $orden->creando_orden($id_cliente);
-            //Codigo para llevarme el mayor id de orden
+            
             $id_orden = $_SESSION['id_orden_actual'];
         } else {
             $id_orden = $_SESSION['id_orden_actual'];

@@ -3,8 +3,6 @@
     $proveedor = new Proveedor();
 if(!empty($_POST["boton_registro"])){
     if(!empty($_POST["nombre_apellido"]) and !empty($_POST["empresa"]) and !empty($_POST["productos"]) and !empty($_POST["telefono"])) {
-        
-        //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
         $nombre_apellido = $_POST["nombre_apellido"];
         $empresa = $_POST["empresa"];

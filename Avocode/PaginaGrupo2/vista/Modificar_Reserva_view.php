@@ -19,6 +19,12 @@
 </head>
 
 <body>
+                <!--$_SESSION['cliente_orden'] = $reserva['cliente'];-->
+                <!--$_SESSION['empleado_orden'] = $reserva['empleado'];-->
+                <!--require("controlador/Controlador_Nombre_Cliente_Orden.php");-->
+                <!--require("controlador/Controlador_Nombre_Empleado_Orden.php");-->
+                <!--$nombre_cliente = $reserva['cliente']." - ".$_SESSION['cliente_orden'];-->
+                <!--$nombre_empleado = $reserva['empleado']." - ".$_SESSION['empleado_orden'];-->
         <?php foreach ($reserva_modificar as $reserva) : ?>
                 <form class="col-4" method="POST">
                         <h3 class="text-center">Modificacion de Reservas</h3>

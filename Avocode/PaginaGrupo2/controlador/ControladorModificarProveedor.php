@@ -4,8 +4,6 @@
     $proveedor_mod = new Proveedor();
 if(!empty($_POST["modificacion"])){
     if(!empty($_POST["nombre_apellido"]) and !empty($_POST["empresa"]) and !empty($_POST["productos"]) and !empty($_POST["telefono"])) {
-        
-        //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
         $id = $_POST["id"];
         $nombre_apellido = $_POST["nombre_apellido"];

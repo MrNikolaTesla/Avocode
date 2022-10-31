@@ -6,8 +6,6 @@
     $mesa = new Mesa();
 if(!empty($_POST["modificacion"])){
     if(!empty($_POST["num_mesa"]) and !empty($_POST["fecha"]) and !empty($_POST["hora"]) and !empty($_POST["cliente_id"])) {
-        
-        //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
         $id = $_POST["id"];
         $num_mesa = $_POST["num_mesa"];

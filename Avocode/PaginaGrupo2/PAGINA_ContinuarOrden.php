@@ -23,7 +23,6 @@
 <body>
         <div class="container-fluid-2">
                 <div class="col-8 ">
-                        <!-- No se cual es esta class porque es del boostrap -->
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("vista/FormularioCompletarOrden_view.php"); ?>
                 </div>

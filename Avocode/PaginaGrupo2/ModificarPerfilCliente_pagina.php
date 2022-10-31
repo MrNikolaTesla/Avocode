@@ -14,7 +14,6 @@
 <body>
 
         <aside class="container-fluid row">
-                <!-- No se cual es esta class porque es del boostrap -->
                 <?php require_once("controlador/Modificar_perfil_cliente_controlador.php"); ?>
         </aside>
 

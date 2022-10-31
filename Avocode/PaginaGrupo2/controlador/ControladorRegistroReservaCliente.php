@@ -5,8 +5,6 @@
     $mesa = new Mesa();
 if(!empty($_POST["boton_registro"])){
     if(!empty($_POST["num_mesa"]) and !empty($_POST["fecha"]) and !empty($_POST["hora"])) {
-        
-        //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
 
         $num_mesa = $_POST["num_mesa"];
         $fecha = $_POST["fecha"];

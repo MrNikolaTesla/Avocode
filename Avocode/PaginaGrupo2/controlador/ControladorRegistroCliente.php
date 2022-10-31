@@ -3,8 +3,6 @@ require_once("modelo/Usuario.php");
 $usuario = new Usuario();
 if(!empty($_POST["boton_registro"])){
     if(!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["correo"]) and !empty($_POST["passwordRegistro1"])) {
-        
-        //echo "<div class="alert alert-success">Usuario dado de alta correctamente</div>";
 
         $nombre = $_POST["nombre"];
         $apellido = $_POST["apellido"];

@@ -4,8 +4,6 @@ $producto = new Producto();
 if (!empty($_POST["boton_añadir"])) {
     if (!empty($_POST["nombre"]) and !empty($_POST["precio"]) and !($_POST["tipo"] == "0")) {
 
-        //echo "<div class="alert alert-success">Alumno dado de alta correctamente</div>";
-
         $nombre = $_POST["nombre"];
         $precio = $_POST["precio"];
         $tipo = $_POST["tipo"];
@@ -21,8 +19,6 @@ if (!empty($_POST["boton_añadir"])) {
             // ALTA DE PRODUCTO //
             $estado = $producto->set_producto($nombre, $precio, $tipo, $descripcion);
             // FIN DE ALTA DE PRODUCTO //
-
-            // ------------------------------SUBIDA DE IMAGEN-------------------------------------- //
 
 
         }
