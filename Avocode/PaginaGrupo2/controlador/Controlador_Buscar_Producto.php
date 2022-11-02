@@ -9,6 +9,6 @@ $productos = new Producto();
 
 $matrizProducto = $productos->buscar_productos($producto);
 
-require_once("vista/Productos_view.php");
+require_once("vista/Productos_VISTA.php");
 }
 ?>

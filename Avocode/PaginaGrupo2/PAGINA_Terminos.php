@@ -17,7 +17,7 @@
         Las Condiciones de servicio establecen la forma en que se puede utilizar tu producto, servicio o contenido de forma legalmente vinculante.</div>
     </section>
   </form>
-  <a class="button1" href="FormularioRegistroCliente.php">Volver</a>
+  <a class="button1" href="PAGINA_FormularioRegistroCliente.php">Volver</a>
 </body>
 
 </html>

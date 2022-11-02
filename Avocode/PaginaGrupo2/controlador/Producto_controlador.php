@@ -7,7 +7,7 @@ $productos = new Producto();
 $matrizProducto = $productos->listar_productos();
 
 if ($matrizProducto) {
-    require_once("vista/Productos_view.php");
+    require_once("vista/Productos_VISTA.php");
 } else {
 ?>
     <div class="no_hay_registros">

@@ -7,7 +7,7 @@ $mesas = new Mesa();
 $matrizMesa = $mesas->listar_mesas_libres();
 
 if ($matrizMesa) {
-    require_once("vista/MesasLibres_ReservaCliente_view.php");
+    require_once("vista/MesasLibres_ReservaCliente_VISTA.php");
 } else {
 ?>
     <div class="no_hay_registros">

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles2.css">
-    <title>Vista de Proveedor</title>
+    <title>Vista de Usuarios</title>
     <!-- Recursos Misceláneos (Bootstrap CSS, Tipografías, CSS variado) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -33,16 +33,17 @@
                 });
             });
         });
-
         // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
         function asegurar() {
-            rc = confirm("¿Seguro que desea Eliminar este proveedor?");
+            rc = confirm("¿Seguro que desea Eliminar al usuario?");
             return rc;
         }
     </script>
+
 </head>
 
 <body>
+
     <!-- DIV'S CON CLASES DIFERENTES PARA EL RESPONSIVE Y DISPOSICIÓN EN LA PÁGINA -->
     <div class="container">
         <div class="table-responsive">
@@ -65,39 +66,43 @@
                             </div>
                         </div>
                         <div class="col-xs-4">
-                            <h2 class="text-center">Listado de <b>Proveedores</b></h2>
+                            <h2 class="text-center">Listado de <b>Usuarios</b></h2>
                         </div>
                         <!------------------------------------------------------------------------------->
 
                         <!-- DIV DE BÚSQUEDA-->
-                        <?php require_once("vista/buscar_proveedor_view.php"); ?>
+                        <?php require_once("vista/BUSCAR_Usuario_VISTA.php"); ?>
                         <!------------------------------------------------------------------------------->
 
-                        <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
+                        <!-- COMIENZO DEL FORMULARIO DE USUARIOS -->
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>#ID</th>
                                     <th>Nombre<i class="fa fa-sort"></i></th>
-                                    <th>Empresa</th>
-                                    <th>Productos</th>
-                                    <th>Telefono</th>
+                                    <th>Apellido</th>
+                                    <th>Tipo de usuario<i class="fa fa-sort"></i></th>
+                                    <th>Correo</i></th>
+                                    <th>Teléfono</th>
+                                    <th>Dirección</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
 
                             <!-- CUERPO DE TABLA -->
                             <tbody>
-                                <?php foreach ($matrizProveedor as $proveedor) : ?>
+                                <?php foreach ($matrizUsuario as $usuario) : ?>
                                     <tr>
-                                        <td scope="row"><?php echo $proveedor['id_proveedor'] ?></td>
-                                        <td><?php echo $proveedor['nombre_apellido'] ?></td>
-                                        <td><?php echo $proveedor['empresa'] ?></td>
-                                        <td><?php echo $proveedor['productos'] ?></td>
-                                        <td><?php echo $proveedor['telefono'] ?></td>
+                                        <td scope="row"><?php echo $usuario['id_usuario'] ?></td>
+                                        <td><?php echo $usuario['nombre'] ?></td>
+                                        <td><?php echo $usuario['apellido'] ?></td>
+                                        <td><?php echo $usuario['tipo'] ?></td>
+                                        <td><?php echo $usuario['correo'] ?></td>
+                                        <td><?php echo $usuario['telefono'] ?></td>
+                                        <td><?php echo $usuario['direccion'] ?></td>
                                         <td>
-                                            <a href="ModificarProveedor_pagina.php?id=<?php echo $proveedor['id_proveedor'] ?>" title="Editar"><img src="assets/iconos/icono-editar-2.svg"></a>
-                                            <a href="controlador/eliminar_Proveedor_controlador.php?id=<?php echo $proveedor['id_proveedor'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
+                                            <a href="PAGINA_ModificarUsuario.php?id=<?php echo $usuario['id_usuario'] ?>" title="Editar"><img src="assets/iconos/icono-editar-2.svg"></a>
+                                            <a href="controlador/eliminar_Usuario_controlador.php?id=<?php echo $usuario['id_usuario'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

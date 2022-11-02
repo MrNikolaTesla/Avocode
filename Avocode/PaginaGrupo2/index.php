@@ -21,8 +21,8 @@
         
         <h2>Principal</h2>
         <ul>
-          <?php require_once("vista/VistaPestanasCliente.php") ?>
-          <?php require_once("vista/mensaje_perfil_INDEX.php") ?>
+          <?php require_once("vista/Pestanas_CLIENTE_VISTA.php") ?>
+          <?php require_once("vista/MENSAJE_Perfil_INDEX.php") ?>
 
         </ul>
       </nav>
@@ -49,9 +49,9 @@
       </li>
     </ul>
     <ul>
-      <li><a href="contacto.php">Contacto</a></li>
-      <li><a href="sobre-nosotros.php">Sobre nosotros</a></li>
-      <li><a href="filosofia-empresa.php">Filosofía de la empresa</a></li>
+      <li><a href="PAGINA_Contacto.php">Contacto</a></li>
+      <li><a href="PAGINA_SobreNosotros.php">Sobre nosotros</a></li>
+      <li><a href="PAGINA_FilosofiaEmpresa.php">Filosofía de la empresa</a></li>
     </ul>
     <ul>
       <li></li>

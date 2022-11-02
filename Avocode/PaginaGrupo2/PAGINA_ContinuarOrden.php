@@ -24,7 +24,7 @@
         <div class="container-fluid-2">
                 <div class="col-8 ">
                         <!-- INICIO TABLA LISTAR -->
-                        <?php require_once("vista/FormularioCompletarOrden_view.php"); ?>
+                        <?php require_once("vista/FormularioCompletarOrden_VISTA.php"); ?>
                 </div>
         </div>
 </body>

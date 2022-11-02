@@ -9,6 +9,6 @@ $usuarios = new Usuario();
 
 $matrizUsuario = $usuarios->buscar_usuarios($usuario);
 
-require_once("vista/Usuarios_view.php");
+require_once("vista/Usuarios_VISTA.php");
 }
 ?>

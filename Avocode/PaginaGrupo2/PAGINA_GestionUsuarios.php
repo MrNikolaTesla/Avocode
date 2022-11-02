@@ -25,13 +25,13 @@
         <div class="container-fluid cont-pers">
                 
                 <!-- INICIO FORMULARIO ALTA -->
-                <?php require_once("vista/RegistroDeUsuarios.php"); ?>
+                <?php require_once("vista/RegistroDeUsuarios_VISTA.php"); ?>
                 <!-- FIN FORMULARIO ALTA -->
                 <div class="col-8 ">
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("controlador/Usuario_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
-                        <?php require_once("vista/BarraNavegacion.php"); ?>
+                        <?php require_once("vista/ADMIN_BarraNavegacion.php"); ?>
 
                 </div>
         </div>

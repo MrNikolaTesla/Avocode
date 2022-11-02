@@ -21,17 +21,17 @@
 </head>
 
 <body>
-        <?php require_once("vista/mensaje_gestor.php"); ?>
+        <?php require_once("vista/MENSAJE_Gestor_VISTA.php"); ?>
 
         <div class="container-fluid cont-pers">
                 <!-- INICIO FORMULARIO ALTA -->
-                <?php require_once("vista/RegistroDeProveedores.php"); ?>
+                <?php require_once("vista/RegistroDeProveedores_VISTA.php"); ?>
                 <!-- FIN FORMULARIO ALTA -->
                 <div class="col-8 ">
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("controlador/Proveedor_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
-                        <?php require_once("vista/BarraNavegacion.php"); ?>
+                        <?php require_once("vista/ADMIN_BarraNavegacion.php"); ?>
 
                 </div>
         </div>

@@ -20,18 +20,18 @@
 </head>
 
 <body>
-        <?php require_once("vista/mensaje_gestor.php"); ?>
+        <?php require_once("vista/MENSAJE_Gestor_VISTA.php"); ?>
 
         <div class="container-fluid cont-pers">
 
                 <!-- INICIO FORMULARIO ALTA -->
-                <?php require_once("vista/RegistroDeMesas.php"); ?>
+                <?php require_once("vista/RegistroDeMesas_VISTA.php"); ?>
                 <!-- FIN FORMULARIO ALTA -->
                 <div class="col-8 ">
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("controlador/Mesa_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
-                        <?php require_once("vista/BarraNavegacion.php"); ?>
+                        <?php require_once("vista/ADMIN_BarraNavegacion.php"); ?>
 
                 </div>
         </div>

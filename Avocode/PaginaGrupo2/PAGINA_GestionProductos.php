@@ -23,13 +23,13 @@
 <body>
         <div class="container-fluid cont-pers">
                 <!-- INICIO FORMULARIO ALTA -->
-                <?php require_once("vista/RegistroDeProductos.php"); ?>
+                <?php require_once("vista/RegistroDeProductos_VISTA.php"); ?>
                 <!-- FIN FORMULARIO ALTA -->
                 <div class="col-8 ">
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("controlador/Producto_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
-                        <?php require_once("vista/BarraNavegacion.php"); ?>
+                        <?php require_once("vista/ADMIN_BarraNavegacion.php"); ?>
 
                 </div>
         </div>

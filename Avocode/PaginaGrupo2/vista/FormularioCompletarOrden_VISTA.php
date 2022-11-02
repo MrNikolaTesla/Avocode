@@ -17,7 +17,7 @@
     <a href="controlador/Controlador_Generar_Formulario_Orden.php?tipo=delivery"><button class="button-2" style="color:white;">Delivery</button></a>
     <a href="controlador/Controlador_Generar_Formulario_Orden.php?tipo=takeaway"> <button class="button-2" style="color:white;">Take Away</button> </a><br>
 
-    <?php require_once("vista/TipoOrden_Formulario.php"); ?>
+    <?php require_once("vista/Formulario_TipoORDEN.php"); ?>
 </body>
 
 </html>

@@ -7,7 +7,7 @@ $mesas = new Mesa();
 $matrizMesa = $mesas->listar_mesas();
 
 if ($matrizMesa) {
-    require_once("vista/Mesa_view.php");
+    require_once("vista/Mesas_VISTA.php");
 } else {
 ?>
     <div>

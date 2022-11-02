@@ -12,6 +12,6 @@ if(isset($_GET['id'])){
     $direccion = $_SESSION['direccion'];
     $telefono = $_SESSION['telefono'];
     
-    require_once("vista/Modificar_perfil_cliente_view.php");
+    require_once("vista/ModificarPerfil_CLIENTE_VISTA.php");
 }
 ?>

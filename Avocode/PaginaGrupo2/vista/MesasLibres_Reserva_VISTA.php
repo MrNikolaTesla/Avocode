@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles2.css">
-    <title>Vista de Mesa</title>
+    <title>(RESERVA) Vista de Mesa</title>
     <!-- Recursos Misceláneos (Bootstrap CSS, Tipografías, CSS variado) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">

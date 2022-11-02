@@ -6,6 +6,6 @@ $productos = new Producto();
 
 $matrizProducto = $productos->listar_productos();
 
-require_once("vista/Cartilla_view.php");
+require_once("vista/Cartilla_VISTA.php");
 
 ?>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles2.css">
-    <title>Vista de Usuarios</title>
+    <title>Vista de Reserva</title>
     <!-- Recursos Misceláneos (Bootstrap CSS, Tipografías, CSS variado) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -35,15 +35,13 @@
         });
         // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
         function asegurar() {
-            rc = confirm("¿Seguro que desea Eliminar al usuario?");
+            rc = confirm("¿Seguro que desea Eliminar esta reserva?");
             return rc;
         }
     </script>
-
 </head>
 
 <body>
-
     <!-- DIV'S CON CLASES DIFERENTES PARA EL RESPONSIVE Y DISPOSICIÓN EN LA PÁGINA -->
     <div class="container">
         <div class="table-responsive">
@@ -66,43 +64,54 @@
                             </div>
                         </div>
                         <div class="col-xs-4">
-                            <h2 class="text-center">Listado de <b>Usuarios</b></h2>
+                            <h2 class="text-center">Listado de <b>Reservas</b></h2>
                         </div>
                         <!------------------------------------------------------------------------------->
 
                         <!-- DIV DE BÚSQUEDA-->
-                        <?php require_once("vista/buscar_usuario_view.php"); ?>
+                        <?php require_once("vista/BUSCAR_Reserva_VISTA.php"); ?>
                         <!------------------------------------------------------------------------------->
-
-                        <!-- COMIENZO DEL FORMULARIO DE USUARIOS -->
+                        <!-- Cabeza de la tabla -->
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>#ID</th>
-                                    <th>Nombre<i class="fa fa-sort"></i></th>
-                                    <th>Apellido</th>
-                                    <th>Tipo de usuario<i class="fa fa-sort"></i></th>
-                                    <th>Correo</i></th>
-                                    <th>Teléfono</th>
-                                    <th>Dirección</th>
+                                    <th>Numero de Mesa<i class="fa fa-sort"></i></th>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                    <th>ID Usuario (Propietario)</th>
+                                    <th>Nombre</th>
+                                    <th>ID Usuario (Creador de la Reserva)</th>
+                                    <th>Nombre</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
 
                             <!-- CUERPO DE TABLA -->
                             <tbody>
-                                <?php foreach ($matrizUsuario as $usuario) : ?>
+                                <?php foreach ($matrizReserva as $reserva) : ?>
                                     <tr>
-                                        <td scope="row"><?php echo $usuario['id_usuario'] ?></td>
-                                        <td><?php echo $usuario['nombre'] ?></td>
-                                        <td><?php echo $usuario['apellido'] ?></td>
-                                        <td><?php echo $usuario['tipo'] ?></td>
-                                        <td><?php echo $usuario['correo'] ?></td>
-                                        <td><?php echo $usuario['telefono'] ?></td>
-                                        <td><?php echo $usuario['direccion'] ?></td>
+                                        <?php $_SESSION['cliente_reserva'] = $reserva['cliente'];
+                                        if ($reserva['empleado'] != null) {
+                                            $_SESSION['empleado_reserva'] = $reserva['empleado'];
+                                            require("controlador/Controlador_Nombre_Empleado_Reserva.php");
+                                        } else {
+                                            $_SESSION['empleado_reserva'] = null;
+                                        }
+                                        require("controlador/Controlador_Nombre_Cliente_Reserva.php");
+                                        ?>
+                                        <td scope="row"><?php echo $reserva['id_reserva'] ?></td>
+                                        <td><?php echo $reserva['mesa'] ?></td>
+                                        <td><?php echo $reserva['fecha'] ?></td>
+                                        <td><?php echo $reserva['hora'] ?></td>
+                                        <td><?php echo $reserva['cliente']; ?></td>
+                                        <td><?php echo $_SESSION['cliente_reserva'] ?></td>
+                                        <td><?php echo $reserva['empleado'] ?></td>
+                                        <td><?php echo $_SESSION['empleado_reserva'] ?></td>
+
                                         <td>
-                                            <a href="ModificarUsuario_pagina.php?id=<?php echo $usuario['id_usuario'] ?>" title="Editar"><img src="assets/iconos/icono-editar-2.svg"></a>
-                                            <a href="controlador/eliminar_Usuario_controlador.php?id=<?php echo $usuario['id_usuario'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a></a>
+                                            <a href="PAGINA_ModificarReserva.php?id=<?php echo $reserva['id_reserva'] ?>" title="Editar"><img src="assets/iconos/icono-editar-2.svg"></a>
+                                            <a href="controlador/eliminar_Reserva_controlador.php?id=<?php echo $reserva['id_reserva'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -127,6 +136,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 </body>
 
 </html>

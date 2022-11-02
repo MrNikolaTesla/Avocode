@@ -9,7 +9,7 @@ $id = $_SESSION['id'];
 $matrizOrden = $orden->listar_ordenes_usuario($id);
 
 if ($matrizOrden) {
-    require_once("vista/Orden_DeUsuario_view.php");
+    require_once("vista/OrdenUsuario_VISTA.php");
 } else {
 ?>
     <div class="no_hay_registros">

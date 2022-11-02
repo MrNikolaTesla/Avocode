@@ -7,7 +7,7 @@ $proveedores = new Proveedor();
 $matrizProveedor = $proveedores->listar_proveedores();
 
 if ($matrizProveedor) {
-    require_once("vista/Proveedor_view.php");
+    require_once("vista/Proveedor_VISTA.php");
 } else {
 ?>
     <div class="no_hay_registros">

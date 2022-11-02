@@ -33,7 +33,6 @@
                 });
             });
         });
-
         // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
         function asegurar() {
             rc = confirm("¿Seguro que desea Eliminar esta orden?");
@@ -90,20 +89,17 @@
                                         <td><?php if ($orden['estado_orden'] == "Generandose...") {
                                                 echo "Sin completar";
                                             } else {
-                                                echo $orden['estado_orden'] ?>
-                                        </td><?php
-                                            } ?>
-
+                                                echo $orden['estado_orden'] ?></td><?php
+                                                                                } ?>
                                     <td>
-                                        <a href="VerProductos_DeTuOrden_pagina.php?id=<?php echo $orden['id_orden'] ?>" title="Informacion de la Orden"><img src="assets/iconos/icono-lupa.svg"></a>
+                                        <!--<a href="PAGINA_ModificarProveedor.php?id= echo $proveedor['id_proveedor'] " class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>-->
+                                        <a href="PAGINA_VerProductosTuOrden.php?id=<?php echo $orden['id_orden'] ?>" title="Informacion de la Orden"><img src="assets/iconos/icono-lupa.svg"></a>
                                     </td>
                                     </tr>
                                 <?php $numero_orden = $numero_orden + 1;
                                 endforeach; ?>
                             </tbody>
                         </table>
-
-
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@ $usuarios = new Usuario();
 $matrizUsuario = $usuarios->listar_usuarios();
 
 if ($matrizUsuario) {
-    require_once("vista/Usuarios_view.php");
+    require_once("vista/Usuarios_VISTA.php");
 } else {
 ?>
     <div class="no_hay_registros">

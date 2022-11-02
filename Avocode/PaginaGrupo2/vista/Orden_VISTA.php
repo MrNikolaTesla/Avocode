@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles2.css">
-    <title>Vista de Productos</title>
+    <title>Vista de Proveedor</title>
     <!-- Recursos Misceláneos (Bootstrap CSS, Tipografías, CSS variado) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <!-- JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- BOOTSTRAP JAVASCRIPT -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Search Box -->
     <script>
-        // Casilla de Búsqueda
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
-            // Casilla animada
+            // Animate select box length
             var searchInput = $(".search-box input");
             var inputGroup = $(".search-box .input-group");
             var boxWidth = inputGroup.width();
@@ -33,18 +33,17 @@
                 });
             });
         });
-        // Confirmación de eliminar producto, funciona cada vez que se quiere eliminar un producto
+
+        // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
         function asegurar() {
-            rc = confirm("¿Seguro que desea Eliminar este producto?");
+            rc = confirm("¿Seguro que desea Eliminar esta orden?");
             return rc;
         }
     </script>
-
 </head>
 
 <body>
-
-    <!-- DIV'S CON CLASES DIFERENTES PARA EL RESPONSIVE, DISPOSICIÓN EN LA PÁGINA -->
+    <!-- DIV'S CON CLASES DIFERENTES PARA EL RESPONSIVE Y DISPOSICIÓN EN LA PÁGINA -->
     <div class="container">
         <div class="table-responsive">
             <div class="table-wrapper">
@@ -66,42 +65,60 @@
                             </div>
                         </div>
                         <div class="col-xs-4">
-                            <h2 class="text-center">Listado de <b>Productos</b></h2>
+                            <h2 class="text-center">Listado de <b>Ordenes</b></h2>
                         </div>
                         <!------------------------------------------------------------------------------->
 
                         <!-- DIV DE BÚSQUEDA-->
-                        <?php require_once("vista/buscar_producto_view.php"); ?>
+                        <?php require_once("vista/BUSCAR_Orden_VISTA.php"); ?>
                         <!------------------------------------------------------------------------------->
 
-                        <!-- COMIENZO DEL FORMULARIO DE PRODUCTOS -->
+                        <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>#ID</th>
-                                    <th>Imagen</th>
-                                    <th>Nombre<i class="fa fa-sort"></i></th>
-                                    <th>Precio<i class="fa fa-sort"></i></th>
-                                    <th>Tipo de Producto</th>
-                                    <th>Descripcion</th>
+                                    <th>ID Usuario (Propietario)</th>
+                                    <th>Nombre Cliente</th>
+                                    <th>ID Usuario (Creador de la Orden)</th>
+                                    <th>Nombre Empleado</th>
+                                    <th>ID Mesa</th>
+                                    <th>Tipo de Orden</th>
+                                    <th>Hora</th>
+                                    <th>Direccion</th>
+                                    <th>Fecha</th>
+                                    <th>Observacion</th>
+                                    <th>Estado</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
+
                             <!-- CUERPO DE TABLA -->
                             <tbody>
-                                <?php foreach ($matrizProducto as $producto) : ?>
+                                <?php foreach ($matrizOrden as $orden) : ?>
                                     <tr>
-                                        <th scope="row"><?php echo $producto['id_producto'] ?></th>
-                                        <?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?>
-                                        <th><img src="<?php echo $dir_imagen; ?>" alt="Imagen" width="120" height="80"></th>
-                                        <td><?php echo $producto['nombre'] ?></td>
-                                        <td><?php echo $producto['precio'] ?></td>
-                                        <td><?php echo $producto['tipo'] ?></td>
-                                        <td><?php echo $producto['descripcion'] ?></td>
+                                        <?php $_SESSION['cliente_orden'] = $orden['cliente_orden'];
+                                        $_SESSION['empleado_orden'] = $orden['empleado_orden'];
+                                        require("controlador/Controlador_Nombre_Cliente_Orden.php");
+                                        require("controlador/Controlador_Nombre_Empleado_Orden.php");
+                                        ?>
+                                        <td scope="row"><?php echo $orden['id_orden'] ?></td>
+                                        <td><?php echo $orden['cliente_orden'] ?></td>
+                                        <td><?php echo $_SESSION['cliente_orden'] ?></td>
+                                        <td><?php echo $orden['empleado_orden'] ?></td>
+                                        <td><?php echo $_SESSION['empleado_orden'] ?></td>
+                                        <td><?php echo $orden['mesa_orden'] ?></td>
+                                        <td><?php echo $orden['tipo_orden'] ?></td>
+                                        <td><?php echo $orden['hora'] ?></td>
+                                        <td><?php echo $orden['direccion'] ?></td>
+                                        <td><?php echo $orden['fecha'] ?></td>
+                                        <td><?php echo $orden['observacion'] ?></td>
+                                        <td><?php echo $orden['estado_orden'] ?></td>
                                         <td>
-                                            <a href="ModificarProductoImagen_pagina.php?id=<?php echo $producto['id_producto'] ?>" title="Editar Imagen" data-toggle="tooltip"><img src="assets/iconos/icono-imagen.svg"></a>
-                                            <a href="ModificarProducto_pagina.php?id=<?php echo $producto['id_producto'] ?>" title="Editar Informacion"><img src="assets/iconos/icono-editar-2.svg"></a>
-                                            <a href="controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id_producto'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
+                                            <!--<a href="PAGINA_ModificarProveedor.php?id= echo $proveedor['id_proveedor'] " class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>-->
+                                            <a href="PAGINA_VerOrden.php?id=<?php echo $orden['id_orden'] ?>" title="Ver Orden"><img src="assets/iconos/icono-lupa.svg"></a>
+                                            <a href="controlador/eliminar_Orden_controlador.php?id=<?php echo $orden['id_orden'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
+                                            <a href="controlador/AvanzarEstadoOrden_controlador.php?id=<?php echo $orden['id_orden'] ?>" title="Avanzar Estado"><img src="assets/iconos/icono-flecha.svg"></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

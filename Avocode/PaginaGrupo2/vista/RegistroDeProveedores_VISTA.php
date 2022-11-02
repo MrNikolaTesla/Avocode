@@ -9,7 +9,7 @@
 </head>
 
 <body>
-        <?php require_once("vista/mensaje_gestor.php"); ?>
+        <?php require_once("vista/MENSAJE_Gestor_VISTA.php"); ?>
         <form class="form-flex" method="POST">
                 <h3 class="text-center2">Registro de Proveedores</h3>
                 <?php require_once("controlador/ControladorRegistroProveedor.php"); ?>

@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busqueda de Producto</title>
+    <title>Búsqueda de Proveedor</title>
 </head>
 
 <body>
     <div class="col-xs-4">
         <form method="POST">
             <div class="search-box">
-                <?php require_once("controlador/Controlador_Buscar_Producto.php"); ?>
+                <?php require_once("controlador/Controlador_Buscar_Proveedor.php"); ?>
                 <div class="input-group" type="text" name="busqueda">
                     <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
-                    <input type="text" name="producto" class="form-control" placeholder="Buscar&hellip;">
+                    <input type="text" name="proveedor" class="form-control" placeholder="Buscar&hellip;">
                     <input hidden class="buttons" type="submit" name="busqueda" value="Buscar"></input>
                 </div>
             </div>

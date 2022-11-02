@@ -7,7 +7,7 @@ $orden = new Orden();
 $matrizOrden = $orden->listar_ordenes();
 
 if ($matrizOrden) {
-    require_once("vista/Orden_view.php");
+    require_once("vista/Orden_VISTA.php");
 } else {
 ?>
     <div class="no_hay_registros">
