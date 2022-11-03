@@ -29,3 +29,17 @@ listar las reservas ordenadas por fecha y mostrar  el nombre del cliente que la 
 listar las reservas ordenadas cantidad comensales
 
 listar las reservas que aún no fueron realizadas (fecha posterior a hoy) 
+
+Órdenes 
+
+contar cuantas órdenes se realizan por cada día
+
+contar las órdenes agrupadas por  id  de mesa 
+
+calcular el promedio de platos por orden
+
+calcular el promedio de precio por orden 
+
+listar el detalle de platos de la orden con mayor cantidad de platos 
+
+dado el nombre de un plato  (ej : pizza) listar todas las ordenes que lo contienen
