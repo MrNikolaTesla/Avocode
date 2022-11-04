@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="assets/styles_contacto.css">
+  <link rel="stylesheet" type="text/css" href="assets/styles_secciones_index.css">
   <title>Contactos</title>
   </div>
   <h1> Redes Sociales</h1>

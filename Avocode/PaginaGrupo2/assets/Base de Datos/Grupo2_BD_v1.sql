@@ -2,7 +2,7 @@ CREATE TABLE `producto` (
   `id_producto` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID del Producto',
   `nombre` varchar(30) NOT NULL COMMENT 'Nombre del Producto',
   `precio` int(20) NOT NULL COMMENT 'Precio del Producto',
-  `tipo` varchar(15) NOT NULL COMMENT 'Tipo de producto (vegano, vegetariano, celiaco,  etc).',
+  `tipo` varchar(15) NOT NULL COMMENT 'Tipo de producto (Hamburguesa, Bebida, Acompañamiento).',
   `descripcion` varchar(180) NULL COMMENT 'Descripcion del Producto'
 );
 
@@ -29,21 +29,21 @@ CREATE TABLE `usuario` (
   `apellido` varchar(40) NOT NULL COMMENT 'Apellido del Usuario',
   `correo` varchar(60) NOT NULL COMMENT 'Correo del Usuario',
   `password` varchar(20) NOT NULL COMMENT 'Clave del Usuario',
-  `direccion` varchar(80) DEFAULT NULL COMMENT 'Direccion de envio del Usuario',
-  `telefono` varchar(18) DEFAULT NULL COMMENT 'Telefono de contacto del Usuario',
-  `tipo` varchar(30) NOT NULL DEFAULT 'cliente' COMMENT 'Tipo de usuario, para las jerarquias'
+  `direccion` varchar(80) DEFAULT NULL COMMENT 'Direcciín de envío del Usuario',
+  `telefono` varchar(18) DEFAULT NULL COMMENT 'Teléfono de contacto del Usuario',
+  `tipo` varchar(30) NOT NULL DEFAULT 'cliente' COMMENT 'Tipo de usuario, para las jerarquias y permisos'
 );
 
 CREATE TABLE `orden` (
   `id_orden` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID de la orden', /*Se crearan FK cliente y empleado para verificar e origen y direccion de la orden*/
-  `cliente_orden` int(10) NULL COMMENT '',
-  `empleado_orden` int(10) NULL COMMENT '',
-  `mesa_orden` int(10) NULL COMMENT '',
-  `tipo_orden` enum('Local','Take Away','Delivery') NULL COMMENT 'Tipo de orden funcional',
-  `hora` varchar(5) NOT NULL COMMENT '',
-  `direccion` varchar(80) NULL COMMENT '',
+  `cliente_orden` int(10) NULL COMMENT 'Cliente al que le corresponde la orden',
+  `empleado_orden` int(10) NULL COMMENT 'Empleado que realizó la orden',
+  `mesa_orden` int(10) NULL COMMENT 'Mesa asignada a la orden',
+  `tipo_orden` enum('Local','Take Away','Delivery') NULL COMMENT 'Tipo de orden',
+  `hora` varchar(5) NOT NULL COMMENT 'Hora de la orden',
+  `direccion` varchar(80) NULL COMMENT 'Dirección de la orden',
   `fecha` date NOT NULL COMMENT 'Fecha de la orden realizada',
-  `observacion` varchar(90) NULL COMMENT 'Comentarios para realizar el pedido',
+  `observacion` varchar(90) NULL COMMENT 'Comentarios para el pedido',
   `estado_orden` enum('Generandose...','Pendiente','En Proceso','Completada') NOT NULL COMMENT 'Estado de la orden',
   CONSTRAINT cliente_orden FOREIGN KEY (cliente_orden) REFERENCES usuario(id_usuario),
   CONSTRAINT empleado_orden FOREIGN KEY (empleado_orden) REFERENCES usuario(id_usuario),
@@ -51,10 +51,10 @@ CREATE TABLE `orden` (
 );
 
 CREATE TABLE `detalles_orden` (
-  `id_detalle_orden` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID de la orden', /*Se crearan FK cliente y empleado para verificar e origen y direccion de la orden*/
-  `orden` int(10) NULL COMMENT '',
-  `producto_det` int(10) NULL COMMENT '',
-  `cantidad_producto` int(10) NOT NULL COMMENT '',
+  `id_detalle_orden` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID de la línea', /*Se crearan FK cliente y empleado para verificar e origen y direccion de la orden*/
+  `orden` int(10) NULL COMMENT 'ID de la orden',
+  `producto_det` int(10) NULL COMMENT 'ID del producto de la línea',
+  `cantidad_producto` int(10) NOT NULL COMMENT 'Cantidad del producto de la línea',
   CONSTRAINT orden FOREIGN KEY (orden) REFERENCES orden(id_orden),
   CONSTRAINT producto_det FOREIGN KEY (producto_det) REFERENCES producto(id_producto)
 );
@@ -70,11 +70,11 @@ CREATE TABLE `proveedor` (
 
 CREATE TABLE `reserva` (
   `id_reserva` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID de Mesa',
-  `mesa` int(10) NULL COMMENT 'Numero de Mesa',
-  `fecha` date NOT NULL COMMENT 'Fecha en la que se ocupo la Mesa',
-  `hora` varchar(5) NOT NULL COMMENT 'Hora en que se ocupo la Mesa',
-  `cliente` int(10) NULL COMMENT 'Cliente que ocupo la Mesa',
-  `empleado` int(10) NULL COMMENT 'Empleado que atendio la Mesa',
+  `mesa` int(10) NULL COMMENT 'Número de Mesa',
+  `fecha` date NOT NULL COMMENT 'Fecha en la que se ocupó la Mesa',
+  `hora` varchar(5) NOT NULL COMMENT 'Hora en que se ocupó la Mesa',
+  `cliente` int(10) NULL COMMENT 'Cliente que ocupó la Mesa',
+  `empleado` int(10) NULL COMMENT 'Empleado que atendió la Mesa',
   CONSTRAINT cliente FOREIGN KEY (cliente) REFERENCES usuario(id_usuario),
   CONSTRAINT empleado FOREIGN KEY (empleado) REFERENCES usuario(id_usuario),
   CONSTRAINT mesa FOREIGN KEY (mesa) REFERENCES mesa(id_mesa)
@@ -145,19 +145,25 @@ INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, 
 VALUES ('1','Administrador 1', 'Apellido 1 ADMIN', 'ADMIN@gmail.com', 'ADMINISTRADOR1', 'DIRECCION 1 ADMIN', '091010101', 'administrador');
 
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
-VALUES ('2','Empleado 1', 'Apellido 1 EMP', 'EMP@gmail.com', 'EMPLEADO1', 'DIRECCION 1 EMP', '092020202', 'empleado');
+VALUES ('2', 'Administrador 2', 'Apellido 2 ADMIN', 'ADMIN2@gmail.com', 'ADMINISTRADOR2', 'DIRECCION 2 ADMIN', '097070707', 'administrador');
 
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
-VALUES ('3', 'Cliente 1', 'Apellido 1 CLIENTE', 'CLIENTE1@gmail.com', 'CLIENTE1', 'DIRECCION 1 CLIENTE', '093030303', 'cliente');
+VALUES ('3','Empleado 1', 'Apellido 1 EMP', 'EMP@gmail.com', 'EMPLEADO1', 'DIRECCION 1 EMP', '092020202', 'empleado');
 
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
-VALUES ('4', 'Cliente 2', 'Apellido 2 CLIENTE', 'CLIENTE2@gmail.com', 'CLIENTE2', 'DIRECCION 2 CLIENTE', '094040404', 'cliente');
+VALUES ('4', 'Empleado 2', 'Apellido 2 EMP', 'EMP2@gmail.com', 'EMPLEADO2', 'DIRECCION 2 EMP', '098080808', 'empleado');
 
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
-VALUES ('5', 'Cliente 3', 'Apellido 3 CLIENTE', 'CLIENTE3@gmail.com', 'CLIENTE3', 'DIRECCION 3 CLIENTE', '095050505', 'cliente');
+VALUES ('5', 'Cliente 1', 'Apellido 1 CLIENTE', 'CLIENTE1@gmail.com', 'CLIENTE1', 'DIRECCION 1 CLIENTE', '093030303', 'cliente');
 
 INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
-VALUES ('6', 'Cliente 4', 'Apellido 4 CLIENTE', 'CLIENTE4@gmail.com', 'CLIENTE4', 'DIRECCION 4 CLIENTE', '096060606', 'cliente');
+VALUES ('6', 'Cliente 2', 'Apellido 2 CLIENTE', 'CLIENTE2@gmail.com', 'CLIENTE2', 'DIRECCION 2 CLIENTE', '094040404', 'cliente');
+
+INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
+VALUES ('7', 'Cliente 3', 'Apellido 3 CLIENTE', 'CLIENTE3@gmail.com', 'CLIENTE3', 'DIRECCION 3 CLIENTE', '095050505', 'cliente');
+
+INSERT INTO usuario (id_usuario, nombre, apellido, correo, password, direccion, telefono, tipo)
+VALUES ('8', 'Cliente 4', 'Apellido 4 CLIENTE', 'CLIENTE4@gmail.com', 'CLIENTE4', 'DIRECCION 4 CLIENTE', '096060606', 'cliente');
 
 INSERT INTO reserva (id_reserva, mesa, fecha, hora, cliente, empleado)
 VALUES ('1', '1', '2022-09-07', '19:00', '3', '2');

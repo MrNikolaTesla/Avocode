@@ -5,7 +5,6 @@ MINOR PRIORITY | CSS Side-Quests:
 - CSS de OrdenUsuario_VISTA (Que se note menos que es Copy - Paste | Quizas colorcito)
 - CSS de la tabla de mesas libres en MesasLibres_Reserva_VISTA.php
   (Que se note menos que es Copy - Paste y de paso que no quede para el c*lo)
-- Boton <a> "Volver" de Terminos y Condiciones
 
 Addittions :
 - Limpieza de datos sobrantes (Ordenes en generandose, detalle_orden sin id orden, reservas sin usuario propietario / cliente, etc)

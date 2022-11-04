@@ -12,9 +12,7 @@ if ($matrizOrden) {
     require_once("vista/OrdenUsuario_VISTA.php");
 } else {
 ?>
-    <div class="no_hay_registros">
-        <?php echo "No cuentas con ordenes en el sistema."; ?>
-    </div>
+        <?php echo "No cuentas con ordenes en el sistema"; ?>
 <?php
 }
 
