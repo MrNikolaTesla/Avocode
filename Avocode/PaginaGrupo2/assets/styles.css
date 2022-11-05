@@ -40,6 +40,22 @@ body {
   opacity: 0.85;
 }
 
+.seccion {
+  width: 400px;
+  max-width: 400px;
+  height: auto;
+  background: #4e4141;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: rgb(0, 0, 0);
+  box-shadow: 7px 13px 37px #000;
+  opacity: 0.85;
+}
+
 .form-register h4 {
   font-size: 22px;
   margin-bottom: 20px;
@@ -139,7 +155,6 @@ li a:hover:not(.active) {
   padding: 10px 16px;
   margin-top: 20px;
 
-
 }
 
 .button-1:hover {
@@ -167,4 +182,16 @@ li a:hover:not(.active) {
   display: inherit;
   text-decoration: none;
   color: white;
+}
+
+h2 {
+  color: white;
+}
+h4 {
+  color: white;
+  text-align: justify;
+}
+
+p {
+  text-align: center;
 }

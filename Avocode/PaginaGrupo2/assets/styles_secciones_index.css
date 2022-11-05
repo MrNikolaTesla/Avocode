@@ -17,7 +17,7 @@ h1 {
 
 }
 
-.form-register {
+.seccion {
   width: 400px;
   max-width: 400px;
   height: auto;
@@ -25,6 +25,7 @@ h1 {
   padding: 30px;
   margin: auto;
   margin-top: 100px;
+  margin-bottom: 100px;
   border-radius: 4px;
   font-family: 'calibri';
   color: rgb(0, 0, 0);
@@ -32,7 +33,7 @@ h1 {
   opacity: 0.85;
 }
 
-.form-register h4 {
+.seccion h4 {
   font-size: 22px;
   margin-bottom: 20px;
 }
@@ -49,24 +50,24 @@ h1 {
   color: white;
 }
 
-.form-register p {
+.seccion p {
   height: 40px;
   text-align: center;
   font-size: 18px;
   line-height: 40px;
 }
 
-.form-register a {
+.seccion a {
   color: white;
   text-decoration: none;
 }
 
-.form-register a:hover {
+.seccion a:hover {
   color: white;
   text-decoration: underline;
 }
 
-.form-register .buttons {
+.seccion .buttons {
   width: 100%;
   background: #292527;
   border: none;
@@ -78,14 +79,13 @@ h1 {
 
 .button-1 {
   appearance: none;
-  background-color: #268bd3;
+  background-color: #1c537a;
   border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 6px;
   box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
   box-sizing: border-box;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   cursor: pointer;
-  display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 12px;
   font-weight: 700;
@@ -94,10 +94,12 @@ h1 {
   margin-top: 10px;
   margin-left: 900px;
 
+  text-decoration: none;
+
 }
 
 .button-1:hover {
-  background-color: #11507ebd;
+  background-color: #5290bdbd;
 }
 
 .button-1:focus {
@@ -106,13 +108,17 @@ h1 {
 }
 
 .button-1:disabled {
-  background-color: #1d689e;
+  background-color: #4b89b4;
   border-color: rgba(27, 31, 35, .1);
   color: rgba(255, 255, 255, .8);
   cursor: default;
 }
 
 .button-1:active {
-  background-color: #1d689edc;
+  background-color: #65a4d1dc;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+h3 {
+  text-align: justify;
 }

@@ -18,7 +18,7 @@
       <img class="logo" src="assets/logo.png" alt="Burger Factory ">
 
       <nav>
-        
+
         <h2>Principal</h2>
         <ul>
           <?php require_once("vista/Pestanas_CLIENTE_VISTA.php") ?>
@@ -54,12 +54,18 @@
       <li><a href="PAGINA_FilosofiaEmpresa.php">Filosofía de la empresa</a></li>
     </ul>
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Martes
+        De 20:00 a 23:59</li>
+      <li>Miércoles
+        De 20:00 a 23:59</li>
+      <li> Jueves
+        De 20:00 a 23:59</li>
+      <li>
+        Viernes
+        De 20:00 a 23:59</li>
+      <li> Sábado
+        De 20:00 a 23:59</li>
     </ul>
-
     <!----------------------------------------------------------->
 
     <!------------------------ Copyright ------------------------->
