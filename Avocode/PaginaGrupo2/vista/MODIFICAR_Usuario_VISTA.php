@@ -56,7 +56,6 @@
                                         <option value="NoSelecciono" selected disabled hidden>Elija un usuario</option>
                                         <option value="cliente">Cliente</option>
                                         <option value="empleado">Empleado</option>
-                                        <option value="administrador">Administrador</option>
                                 </select>
                         </div>
                         <div><a href="PAGINA_GestionUsuarios.php" class="button-2" style="color:white; text-decoration:none;">Regresar al Listado</a>

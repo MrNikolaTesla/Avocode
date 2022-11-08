@@ -42,7 +42,6 @@
                         <select id="cmbMake" name="tipo">
                                 <option value="cliente">Cliente</option>
                                 <option value="empleado">Empleado</option>
-                                <option value="administrador">Administrador</option>
                         </select>
                 </div>
                 <button type="submit" class="button-2" name="boton_registro" value="enviar">Agregar</button>
