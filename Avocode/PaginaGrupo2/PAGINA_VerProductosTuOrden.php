@@ -12,14 +12,13 @@
 </head>
 
 <body>
-
-        <div class="container-fluid row">
-                <?php require_once("controlador/listar_productos_orden_usuario_controlador.php"); ?>
+        <div class="div-menu">
+                <div class="container-fluid row">
+                        <?php require_once("controlador/listar_productos_orden_usuario_controlador.php"); ?>
+                </div>
         </div>
 
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 </html>

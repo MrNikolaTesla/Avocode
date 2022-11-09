@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <div>
+    <div class="div-menu">
         <?php require_once("controlador/Mostrar_Ordenes_Usuario_controlador.php"); ?>
-        <a href="index.php"><button class="button-2">Regresar</button></a>
+        <a href="index.php"><button class="button-5">Regresar</button></a>
     </div>
 </body>
 
