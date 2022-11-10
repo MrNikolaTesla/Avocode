@@ -21,7 +21,7 @@
     <section id="our_menu" class="pt-5 pb-5">
 
         <div class="container">
-            <?php require_once("controlador/BOTON_VerMiOrden_CONTROLADOR.php"); ?>
+            <?php require_once("controlador/BtnVerMiOrden_Controlador.php"); ?>
             <div class="div-botones"><a href="index.php"><button class="button-1-cartilla">Regresar</button></a></div>
             <div class="row">
                 <div class="col-lg-12">
@@ -63,7 +63,7 @@
                                     <div class="menu_content">
                                         <h4><?php echo $producto['nombre'] ?><span>$<?php echo $producto['precio'] ?></span></h4>
                                         <p><?php echo $producto['descripcion'] ?>
-                                            <?php require("controlador/AgregarAOrden_CONTROLADOR.php") ?>
+                                            <?php require("controlador/ControladorBotonParaAgregarAOrden.php") ?>
 
                                         </p>
                                     </div>

@@ -13,7 +13,7 @@ if (isset($_SESSION['id_orden_actual'])) {
   } else {
     echo "<h3 class='centrado'>Tu Orden:</h3><br>
   <div class='centrado_y_alejado_bottom'> No cuentas con productos dentro de tu orden</div>"; ?>
-    <div class="centrado"><a href="controlador/ORDEN_Cancelar_CONTROLADOR.php" style="color:white;">Cancelar Orden</a></div>
+    <div class="centrado"><a href="controlador/Controlador_CancelarOrden.php" style="color:white;">Cancelar Orden</a></div>
 <?php
   }
 }

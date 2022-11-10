@@ -101,7 +101,7 @@
                                         <td>
                                             <a href="PAGINA_ModificarImagenProducto.php?id=<?php echo $producto['id_producto'] ?>" title="Editar Imagen" data-toggle="tooltip"><img src="assets/iconos/icono-imagen.svg"></a>
                                             <a href="PAGINA_ModificarProducto.php?id=<?php echo $producto['id_producto'] ?>" title="Editar Informacion"><img src="assets/iconos/icono-editar-2.svg"></a>
-                                            <a href="controlador/ELIMINAR_Producto_CONTROLADOR.php?id=<?php echo $producto['id_producto'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
+                                            <a href="controlador/eliminar_Producto_controlador.php?id=<?php echo $producto['id_producto'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

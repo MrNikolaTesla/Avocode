@@ -12,7 +12,7 @@
         <?php require_once("vista/MENSAJE_Gestor_VISTA.php"); ?>
         <form class="form-flex" method="POST">
                 <h3 class="text-center2">Registro de Proveedores</h3>
-                <?php require_once("controlador/REGISTRO_Proveedor_CONTROLADOR.php"); ?>
+                <?php require_once("controlador/ControladorRegistroProveedor.php"); ?>
                 <div class="mb-3">
                         <label class="form-label">Nombre/s y Apellido/s</label>
                         <p><input type="text" class="tablas-input" name="nombre_apellido"></p>

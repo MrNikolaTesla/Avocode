@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <?php require_once("controlador/PerfilUsuario_CONTROLADOR.php"); ?>
+    <?php require_once("controlador/Controlador_PerfilUsuario.php"); ?>
 
     <header>
         <span class="menu"><img src="assets/iconos/icono-desplegable.svg" alt="Inicio" width="20" height="20"></span>

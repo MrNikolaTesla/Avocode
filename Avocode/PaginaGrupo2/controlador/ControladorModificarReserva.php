@@ -25,7 +25,9 @@ if(!empty($_POST["modificacion"])){
             $estado=2;
         }else{
                 $estado = $reserva_mod->update_reserva($id, $num_mesa, $fecha, $hora, $cliente_id, $id_empleado_reserva);
-        }    
+        }
+
+        
 
 if($estado==1) {
     $_SESSION['message'] = 'Reserva modificada correctamente';

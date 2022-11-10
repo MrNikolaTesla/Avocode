@@ -28,7 +28,7 @@
                 <!-- FIN FORMULARIO ALTA -->
                 <div class="col-8 ">
                         <!-- INICIO TABLA LISTAR -->
-                        <?php require_once("controlador/Ordenes_CONTROLADOR.php"); ?>
+                        <?php require_once("controlador/Ordenes_controlador.php"); ?>
                         <!-- FIN TABLA LISTAR -->
                         <?php require_once("vista/ADMIN_BarraNavegacion.php"); ?>
 

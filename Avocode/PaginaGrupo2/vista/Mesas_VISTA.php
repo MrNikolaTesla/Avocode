@@ -70,10 +70,10 @@
 
                                         <td class="td-mesa">
                                             <?php echo $mesa['id_mesa'] ?>
-                                            <a href="controlador/ELIMINAR_Mesa_CONTROLADOR.php?id=<?php echo $mesa['id_mesa'] ?>" class="iconos" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
+                                            <a href="controlador/eliminar_mesa_controlador.php?id=<?php echo $mesa['id_mesa'] ?>" class="iconos" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
                                             <img class="img-mesa" src="assets/iconos/icono-mesa.png">
                                             <?php echo $mesa['estado'] ?>
-                                            <a href="controlador/MODIFICAR_GESTION_Mesa_CONTROLADOR.php?id=<?php echo $mesa['id_mesa'] ?>" class="iconos" title="Cambiar estado"><img src="assets/iconos/icono-editar-2.svg"></a>
+                                            <a href="controlador/ControladorModificarMesa.php?id=<?php echo $mesa['id_mesa'] ?>" class="iconos" title="Cambiar estado"><img src="assets/iconos/icono-editar-2.svg"></a>
                                         </td>
 
                                     <?php endforeach; ?>

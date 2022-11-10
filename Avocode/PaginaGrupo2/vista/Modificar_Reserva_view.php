@@ -19,10 +19,16 @@
 </head>
 
 <body>
+                <!--$_SESSION['cliente_orden'] = $reserva['cliente'];-->
+                <!--$_SESSION['empleado_orden'] = $reserva['empleado'];-->
+                <!--require("controlador/Controlador_Nombre_Cliente_Orden.php");-->
+                <!--require("controlador/Controlador_Nombre_Empleado_Orden.php");-->
+                <!--$nombre_cliente = $reserva['cliente']." - ".$_SESSION['cliente_orden'];-->
+                <!--$nombre_empleado = $reserva['empleado']." - ".$_SESSION['empleado_orden'];-->
         <?php foreach ($reserva_modificar as $reserva) : ?>
                 <form class="col-4" method="POST">
                         <h3 class="text-center">Modificacion de Reservas</h3>
-                        <?php require_once("controlador/MODIFICAR_GESTION_Reserva_CONTROLADOR.php"); ?>
+                        <?php require_once("controlador/ControladorModificarReserva.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Id - Inalterable</label>
                                 <input type="number" class="form-control" name="id" value="<?php echo $reserva['id_reserva'] ?>" readonly>
@@ -40,13 +46,11 @@
                                 <input type="text" class="form-control" name="hora" value="<?php echo $reserva['hora'] ?>">
                         </div>
                         <div class="mb-3">
-                                <label class="form-label">Cliente (Que realizo la reserva)</label>
-                                <!--Aca tendria que haber una funcion para buscar el nombre del empleado y ponerlo a la izquierda de la ID-->
+                                <label class="form-label">Cliente (Que realizo la reserva)</label><!--Aca tendria que haber una funcion para buscar el nombre del empleado y ponerlo a la izquierda de la ID-->
                                 <input type="text" class="form-control" name="cliente_id" value="<?php echo $reserva['cliente'] ?>">
                         </div>
                         <div class="mb-3">
-                                <label class="form-label">Empleado (Que realizo la reserva)</label>
-                                <!--Lo mismo aca-->
+                                <label class="form-label">Empleado (Que realizo la reserva)</label><!--Lo mismo aca-->
                                 <input type="text" class="form-control" name="empleado_id" value="<?php echo $reserva['empleado'] ?>">
                         </div>
                         <a href="PAGINA_GestionReservas.php" class="button-2" style="color:white; text-decoration:none;">Regresar al Listado</a>

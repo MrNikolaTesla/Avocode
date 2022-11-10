@@ -26,13 +26,13 @@ $_SESSION['nuevo_ingreso'] = "true";
  
 
 // Tipo de Usuario Cliente --> Index  // Empleado ó Admin --> Gestión Usuarios
-    header("Location: controlador/PERMISOS_Redirección_CONTROLADOR.php");
+    header("Location: controlador/Controlador_Redireccion_Por_Permisos.php");
 }else {
     echo '<div class="alert alert-danger">Contraseña o correo incorrecto.</div>';
 }
 
 } else {
-    echo '<div class="alert alert-danger">Algunos de los campos están vacíos</div>'; 
+    echo '<div class="alert alert-danger">Algunos de los campos esta vacío.</div>'; 
 }
 }
 ?>

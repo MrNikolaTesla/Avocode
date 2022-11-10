@@ -14,7 +14,7 @@
 <body>
 
         <aside class="container-fluid row">
-                <?php require_once("controlador/MODIFICAR_PerfilCliente_CONTROLADOR.php"); ?>
+                <?php require_once("controlador/Modificar_perfil_cliente_controlador.php"); ?>
         </aside>
 
         <!-- JavaScript Bundle with Popper -->

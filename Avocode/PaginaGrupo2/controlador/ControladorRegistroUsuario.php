@@ -24,14 +24,14 @@ if($estado==1) {
     $_SESSION['message'] = 'Usuario '.$tipo.' registrado correctamente!';
     header("Location: PAGINA_GestionUsuarios.php");
 }else if($repetido!=null){
-    $_SESSION['message'] = 'El Correo ya está en uso';
+    $_SESSION['message'] = 'Correo ya está en uso';
     header("Location: PAGINA_GestionUsuarios.php");
 }else if($estado==2) {
     $_SESSION['message'] = 'No tienes los permisos para realizar esta acción';
     header("Location: PAGINA_GestionUsuarios.php");
 }
 }else{
-    $_SESSION['message'] = 'Alguno de los campos están vacíos';
+    $_SESSION['message'] = 'Alguno de los campos está vacío';
     header("Location: PAGINA_GestionUsuarios.php");
 }
 }

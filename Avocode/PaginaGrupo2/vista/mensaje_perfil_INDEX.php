@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles_alertas.css">
     <title>Mensaje Perfil INDEX</title>
+
 </head>
 
 <body>
+
     <?php
     if (isset($_SESSION['message']) && $_SESSION['message'] != "no") { ?>
         <div class="container-alert">
@@ -19,7 +21,7 @@
                     <div class="alert-icon">
                         <span class="fa fa-info my_appended_icon"></span>
                     </div>
-                    <div class="alert-text" class="btn-close"> <?= $_SESSION['message'] ?>
+                    <div class="alert-text" class="btn-close"> <?= $_SESSION['message'] ?> 
                     </div>
                     </button>
                 </div>

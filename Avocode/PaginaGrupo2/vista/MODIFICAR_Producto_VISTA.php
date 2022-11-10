@@ -22,7 +22,7 @@
         <?php foreach ($producto_modificar as $producto) : ?>
                 <form class="col-4" method="POST" enctype="multipart/form-data">
                         <h3 class="text-center">Modificacion de Productos</h3>
-                        <?php require_once("controlador/MODIFICAR_GESTION_Producto_CONTROLADOR.php"); ?>
+                        <?php require_once("controlador/ControladorModificarProducto.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Id - Inalterable</label>
                                 <input type="text" class="form-control" name="id" value="<?php echo $producto['id_producto'] ?>" readonly>

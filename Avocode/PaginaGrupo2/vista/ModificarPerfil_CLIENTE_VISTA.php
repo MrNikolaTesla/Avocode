@@ -32,7 +32,7 @@
         <?php if ($id_a_Modificar == $id_perfil) { ?>
                 <form class="col-4" method="POST">
                         <h3 class="text-center">Informacion de Perfil</h3>
-                        <?php require_once("controlador/MODIFICAR_GESTION_PerfilCliente_CONTROLADOR.php"); ?>
+                        <?php require_once("controlador/ControladorModificarPerfilCliente.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Id - Inalterable</label>
                                 <input type="text" class="form-control" name="id" value="<?php echo $id_perfil ?>" readonly>
@@ -60,7 +60,7 @@
                         <a href="index.php" class="button-2" style="color:white; text-decoration:none;">Regresar</a>
                         <button type="submit" class="button-3" name="modificacion" value="enviar">Modificar</button>
                         
-                        <a href="controlador/ELIMINAR_Perfil_CONTROLADOR.php?id=<?php echo $id_perfil ?>" class="button-4" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera-2.svg"></a>
+                        <a href="controlador/EliminarPerfil_controlador.php?id=<?php echo $id_perfil ?>" class="button-4" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera-2.svg"></a>
                         
                 </form>
         <?php } else {  ?>

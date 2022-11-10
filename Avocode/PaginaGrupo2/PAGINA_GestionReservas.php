@@ -29,10 +29,10 @@
                 <!-- FIN FORMULARIO ALTA -->
                 <div class="col-8 ">
                         <!-- INICIO TABLA LISTAR -->
-                        <?php require_once("controlador/Reserva_CONTROLADOR.php"); ?>
+                        <?php require_once("controlador/Reserva_controlador.php"); ?>
                         <div>
-                                <?php require_once("controlador/RESERVA_Cliente_CONTROLADOR.php"); ?>
-                                <?php require("controlador/MOSTRAR_MesasLibres_EMPLEADO_CONTROLADOR.php"); ?>
+                                <?php require_once("controlador/ClienteReserva_controlador.php"); ?>
+                                <?php require("controlador/Controlador_MostrasMesas_Libres_LADOEMPLEADO.php"); ?>
                         </div>
                         <!-- FIN TABLA LISTAR -->
                         <?php require_once("vista/ADMIN_BarraNavegacion.php"); ?>
