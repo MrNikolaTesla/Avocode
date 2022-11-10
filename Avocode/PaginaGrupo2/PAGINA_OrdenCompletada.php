@@ -1,7 +1,18 @@
-<title>Orden completada</title>
-<link rel="stylesheet" href="assets/styles2.css">
+<!DOCTYPE html>
+<html lang="es">
 
-<body class="centrado">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles2.css">
+
+    <title>Orden Completada</title>
+</head>
+
+<body>
     Orden completada con éxito!<br><br>
     <a href="index.php"><button class="button-2">Regresar</button></a>
 </body>
+
+</html>

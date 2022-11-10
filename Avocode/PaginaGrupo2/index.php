@@ -8,34 +8,22 @@
   <title>Inicio</title>
   <link rel="stylesheet" type="text/css" href="assets/styles_inicio.css">
 </head>
+<!----------------------------- Pestañas del Cliente ------------------------------>
+<header>
+  <div class="wrapper">
+    <img class="logo" src="assets/logo.png" alt="Burger Factory ">
+    <nav>
+      <h2>Principal</h2>
+      <ul>
+        <?php require_once("vista/Pestanas_CLIENTE_VISTA.php") ?>
+        <?php require_once("vista/MENSAJE_Perfil_INDEX.php") ?>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-<body>
-
-  <!----------------------------- Pestañas del Cliente ------------------------------>
-  <header>
-
-    <div class="wrapper">
-      <img class="logo" src="assets/logo.png" alt="Burger Factory ">
-
-      <nav>
-
-        <h2>Principal</h2>
-        <ul>
-          <?php require_once("vista/Pestanas_CLIENTE_VISTA.php") ?>
-          <?php require_once("vista/MENSAJE_Perfil_INDEX.php") ?>
-
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!--------------------------------------------------------------------------------->
-
-  <!------------------------ Banner Principal ------------------------->
-  <?php require_once("Sliders-index.html") ?>
-  <!------------------------------------------------------------------->
-
-</body>
-
+<!------------------------ Banner Principal ------------------------->
+<?php require_once("Sliders-index.html") ?>
 <!------------------------ Pie de Página ------------------------->
 <footer class="index">
   <div class="wrapper">

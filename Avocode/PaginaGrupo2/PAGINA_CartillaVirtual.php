@@ -1,6 +1,5 @@
-<title>Cartilla virtual</title>
-<br>
-<link rel="stylesheet" href="assets/styles2.css">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">

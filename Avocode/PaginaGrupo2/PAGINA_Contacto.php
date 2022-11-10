@@ -14,13 +14,12 @@
     </div>
     <h2>Contacto</h2>
     <h4>¡Podés estar en contacto con nosotros, para enterarte de la novedades en Burger Factory,
-      participar en sorteos y hablar con nosotros para resolver cualquier duda!
-    </h4>
+      participar en sorteos y hablar con nosotros para resolver cualquier duda!</h4>
     <br>
     <p>
-    <a href="https://api.whatsapp.com/send?phone=59891646540"><img width="70" height="70" src="assets/imagenes/whatsapp.png" alt="whatsapp"></a>
-    <a href="https://www.instagram.com/burgerfactorym/"><img width="70" height="70" src="assets/imagenes/instagram.png" alt="instagram"></a>
-    <a href="https://www.facebook.com/burgerfactorymaldonado"><img width="70" height="70" src="assets/imagenes/facebook.png" alt="facebook"></a><a class="a-1" href="index.php"><button class="button-1">Regresar</button></a>
+      <a href="https://api.whatsapp.com/send?phone=59891646540"><img width="70" height="70" src="assets/imagenes/whatsapp.png" alt="whatsapp"></a>
+      <a href="https://www.instagram.com/burgerfactorym/"><img width="70" height="70" src="assets/imagenes/instagram.png" alt="instagram"></a>
+      <a href="https://www.facebook.com/burgerfactorymaldonado"><img width="70" height="70" src="assets/imagenes/facebook.png" alt="facebook"></a><a class="a-1" href="index.php"><button class="button-1">Regresar</button></a>
     </p>
   </section>
 

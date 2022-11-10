@@ -11,9 +11,7 @@
 </head>
 
 <body>
-<?php require_once("vista/LOGIN_VISTA.php"); ?>
+    <?php require_once("vista/LOGIN_VISTA.php"); ?>
 </body>
 
 </html>
-
-<!-- https://www.pexels.com/photo/man-standing-beside-commercial-espresso-machine-2067431/ -->
