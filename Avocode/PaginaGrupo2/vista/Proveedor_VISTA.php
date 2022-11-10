@@ -97,7 +97,7 @@
                                         <td><?php echo $proveedor['telefono'] ?></td>
                                         <td>
                                             <a href="PAGINA_ModificarProveedor.php?id=<?php echo $proveedor['id_proveedor'] ?>" title="Editar"><img src="assets/iconos/icono-editar-2.svg"></a>
-                                            <a href="controlador/eliminar_Proveedor_controlador.php?id=<?php echo $proveedor['id_proveedor'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
+                                            <a href="controlador/ELIMINAR_Proveedor_CONTROLADOR.php?id=<?php echo $proveedor['id_proveedor'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

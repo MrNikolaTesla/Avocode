@@ -94,11 +94,11 @@
                                         <?php $_SESSION['cliente_reserva'] = $reserva['cliente'];
                                         if ($reserva['empleado'] != null) {
                                             $_SESSION['empleado_reserva'] = $reserva['empleado'];
-                                            require("controlador/Controlador_Nombre_Empleado_Reserva.php");
+                                            require("controlador/RESERVA_NombreEmpleado_CONTROLADOR.php");
                                         } else {
                                             $_SESSION['empleado_reserva'] = null;
                                         }
-                                        require("controlador/Controlador_Nombre_Cliente_Reserva.php");
+                                        require("controlador/RESERVA_NombreCliente_CONTROLADOR.php");
                                         ?>
                                         <td scope="row"><?php echo $reserva['id_reserva'] ?></td>
                                         <td><?php echo $reserva['mesa'] ?></td>
@@ -111,7 +111,7 @@
 
                                         <td>
                                             <a href="PAGINA_ModificarReserva.php?id=<?php echo $reserva['id_reserva'] ?>" title="Editar"><img src="assets/iconos/icono-editar-2.svg"></a>
-                                            <a href="controlador/eliminar_Reserva_controlador.php?id=<?php echo $reserva['id_reserva'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
+                                            <a href="controlador/ELIMINAR_Reserva_CONTROLADOR.php?id=<?php echo $reserva['id_reserva'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

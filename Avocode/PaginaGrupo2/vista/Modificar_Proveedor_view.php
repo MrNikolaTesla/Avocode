@@ -22,7 +22,7 @@
         <?php foreach ($proveedor_modificar as $proveedor) : ?>
                 <form class="col-4" method="POST">
                         <h3 class="text-center">Modificacion de Proveedores</h3>
-                        <?php require_once("controlador/ControladorModificarProveedor.php"); ?>
+                        <?php require_once("controlador/MODIFICAR_GESTION_Proveedor_CONTROLADOR.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Id - Inalterable</label>
                                 <input type="text" class="form-control" name="id" value="<?php echo $proveedor['id_proveedor'] ?>" readonly>

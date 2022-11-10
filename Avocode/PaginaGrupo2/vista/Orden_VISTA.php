@@ -99,8 +99,8 @@
                                     <tr>
                                         <?php $_SESSION['cliente_orden'] = $orden['cliente_orden'];
                                         $_SESSION['empleado_orden'] = $orden['empleado_orden'];
-                                        require("controlador/Controlador_Nombre_Cliente_Orden.php");
-                                        require("controlador/Controlador_Nombre_Empleado_Orden.php");
+                                        require("controlador/ORDEN_NombreCliente_CONTROLADOR.php");
+                                        require("controlador/ORDEN_NombreEmpleado_CONTROLADOR.php");
                                         ?>
                                         <td scope="row"><?php echo $orden['id_orden'] ?></td>
                                         <td><?php echo $orden['cliente_orden'] ?></td>
@@ -117,8 +117,8 @@
                                         <td>
                                             <!--<a href="PAGINA_ModificarProveedor.php?id= echo $proveedor['id_proveedor'] " class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>-->
                                             <a href="PAGINA_VerOrden.php?id=<?php echo $orden['id_orden'] ?>" title="Ver Orden"><img src="assets/iconos/icono-lupa.svg"></a>
-                                            <a href="controlador/eliminar_Orden_controlador.php?id=<?php echo $orden['id_orden'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
-                                            <a href="controlador/AvanzarEstadoOrden_controlador.php?id=<?php echo $orden['id_orden'] ?>" title="Avanzar Estado"><img src="assets/iconos/icono-flecha.svg"></a>
+                                            <a href="controlador/ELIMINAR_Orden_CONTROLADOR.php?id=<?php echo $orden['id_orden'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a>
+                                            <a href="controlador/ORDEN_AvanzarEstado_CONTROLADOR.php?id=<?php echo $orden['id_orden'] ?>" title="Avanzar Estado"><img src="assets/iconos/icono-flecha.svg"></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

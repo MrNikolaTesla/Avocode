@@ -12,7 +12,7 @@
     <div class="col-xs-4">
         <form method="POST">
             <div class="search-box">
-                <?php require_once("controlador/Controlador_Buscar_Producto.php"); ?>
+                <?php require_once("controlador/BUSCAR_Producto_CONTROLADOR.php"); ?>
                 <div class="input-group" type="text" name="busqueda">
                     <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
                     <input type="text" name="producto" class="form-control" placeholder="Buscar&hellip;">

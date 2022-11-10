@@ -31,7 +31,7 @@ if (!empty($_POST["completar"])) {
             $mesa_a_ocupar = new Mesa();
             $mesa_a_ocupar->ocupar_mesa($num_mesa);
             $_SESSION['completando_orden'] = "false";
-            require_once("Controlador_CompletarOrden.php");
+            require_once("CompletarOrden_CONTROLADOR.php");
         }else if($resultado==2){
 
         }else{
@@ -51,7 +51,7 @@ if (!empty($_POST["completar"])) {
 
         if($resultado){
             $_SESSION['completando_orden'] = "false";
-            require_once("Controlador_CompletarOrden.php");
+            require_once("CompletarOrden_CONTROLADOR.php");
 
         }else{
             echo "Algo ha fallado, intentelo de nuevo mas tarde.";
@@ -71,7 +71,7 @@ if (!empty($_POST["completar"])) {
 
         if($resultado){
             $_SESSION['completando_orden'] = "false";
-            require_once("Controlador_CompletarOrden.php");
+            require_once("CompletarOrden_CONTROLADOR.php");
         }else{
             echo "Algo ha fallado, intentelo de nuevo mas tarde.";
         }

@@ -14,7 +14,7 @@
 <body>
 
         <div class="container-fluid row">
-                <?php require_once("controlador/Modificar_producto_controlador.php"); ?>
+                <?php require_once("controlador/MODIFICAR_Producto_CONTROLADOR.php"); ?>
         </div>
 
         <!-- JavaScript Bundle with Popper -->

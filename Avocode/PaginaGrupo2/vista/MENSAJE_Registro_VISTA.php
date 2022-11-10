@@ -21,12 +21,9 @@
             <br>
             <div class="col-md-12-1">
                 <div class="alert alert-info alert-dismissable">
-                    <div class="alert-icon">
-                        <span class="fa fa-info my_appended_icon"></span>
+                    <div class="alert-text"> <?= $_SESSION['message_reg'] ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> </button>
                     </div>
-                    <div class="alert-text"> <?= $_SESSION['message_reg'] ?> <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                    </div>
-                    </button>
                 </div>
             </div>
         </div>

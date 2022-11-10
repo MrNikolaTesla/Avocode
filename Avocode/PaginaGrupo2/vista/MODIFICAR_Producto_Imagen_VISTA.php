@@ -23,7 +23,7 @@
                 $dir_imagen = "assets/Productos/id".$producto['id_producto'].".png"; ?>
                 <form class="col-4" method="POST" enctype="multipart/form-data">
                         <h3 class="text-center">Modificacion de Imagen</h3>
-                        <?php require_once("controlador/ControladorModificarProductoImagen.php"); ?>
+                        <?php require_once("controlador/MODIFICAR_GESTION_ProductoImagen_CONTROLADOR.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Id - Inalterable</label>
                                 <input type="text" class="form-control" name="id" value="<?php echo $producto['id_producto'] ?>" readonly>

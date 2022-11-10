@@ -31,7 +31,7 @@
                         <!-- INICIO TABLA LISTAR -->
                         <div>
 
-                                <?php require("controlador/Controlador_MostrasMesas_Libres_Reserva.php"); ?>
+                                <?php require("controlador/MOSTRAR_MesasLibres_RESERVA_CONTROLADOR.php"); ?>
                         </div>
                         <!-- FIN TABLA LISTAR -->
                         <a href="index.php"><button class="button-2">Volver</button></a>

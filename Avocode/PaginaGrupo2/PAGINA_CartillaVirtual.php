@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <?php require_once("controlador/ControladorMostrarCartilla.php"); ?>
+    <?php require_once("controlador/MOSTRAR_Cartilla_CONTROLADOR.php"); ?>
     <a name="orden">
-        <?php require_once("controlador/Controlador_Listar_Productos_En_Orden.php"); ?>
+        <?php require_once("controlador/LISTAR_ProductosEnOrden_CONTROLADOR.php"); ?>
 </body>
 
 </html>

@@ -102,7 +102,7 @@
                                         <td><?php echo $usuario['direccion'] ?></td>
                                         <td>
                                             <a href="PAGINA_ModificarUsuario.php?id=<?php echo $usuario['id_usuario'] ?>" title="Editar"><img src="assets/iconos/icono-editar-2.svg"></a>
-                                            <a href="controlador/eliminar_Usuario_controlador.php?id=<?php echo $usuario['id_usuario'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a></a>
+                                            <a href="controlador/ELIMINAR_Usuario_CONTROLADOR.php?id=<?php echo $usuario['id_usuario'] ?>" title="Eliminar" onclick="javascript:return asegurar();"><img src="assets/iconos/icono-papelera.svg"></a></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
