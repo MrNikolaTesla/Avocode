@@ -10,7 +10,7 @@
 
  <body>
      <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
-     <h3 class="centrado">Productos dentro de esta Orden :</h3>
+     <h3 class="centrado">Productos dentro de esta Orden:</h3>
      <form method="POST">
          <table class="table table-bordered">
              <thead>
@@ -39,7 +39,7 @@
          <?php endforeach; ?>
      </tbody>
      </table>
-     <div class="centrado"><b>Total : $<?php echo $precio_total; ?></b></div>
+     <div class="centrado"><b>Total: $<?php echo $precio_total; ?></b></div>
      <div class="centrado"><a class="button-2" href="PAGINA_GestionOrdenes.php" style="color:white;">Regresar</a></div>
  </body>
 

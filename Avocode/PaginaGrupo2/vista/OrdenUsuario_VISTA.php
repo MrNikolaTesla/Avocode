@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles2.css">
-    <title>Vista de Proveedor</title>
+    <title>Orden de Usuario</title>
     <!-- Recursos Misceláneos (Bootstrap CSS, Tipografías, CSS variado) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
                 });
             });
         });
-        // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
+        // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar una orden
         function asegurar() {
             rc = confirm("¿Seguro que desea Eliminar esta orden?");
             return rc;
