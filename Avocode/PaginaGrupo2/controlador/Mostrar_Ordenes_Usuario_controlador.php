@@ -13,6 +13,7 @@ if ($matrizOrden) {
 } else {
 ?>
         <?php echo "No cuentas con ordenes en el sistema"; ?>
+        <br>
 <?php
 }
 
