@@ -18,14 +18,10 @@
 </head>
 
 <body>
-        <div class="container-fluid-2">
-                <div class="col-8 ">
-                        <!-- INICIO TABLA LISTAR -->
-                        <?php require_once("vista/FormularioCompletarOrden_VISTA.php"); ?>
-                </div>
+        <div class="div-menu">
+                <!-- INICIO TABLA LISTAR -->
+                <?php require_once("vista/FormularioCompletarOrden_VISTA.php"); ?>
         </div>
 </body>
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 </html>

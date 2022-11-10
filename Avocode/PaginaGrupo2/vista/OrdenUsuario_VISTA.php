@@ -54,7 +54,7 @@
                             <!-- DIV DE SELECCIÓN DE ENTRADAS-->
                         </div>
                         <div class="col-xs-4">
-                            <h2 class="text-center">Tus <b>Ordenes : </b></h2>
+                            <h2 class="text-center">Tus <b>Ordenes: </b></h2>
                         </div>
                         <!------------------------------------------------------------------------------->
 

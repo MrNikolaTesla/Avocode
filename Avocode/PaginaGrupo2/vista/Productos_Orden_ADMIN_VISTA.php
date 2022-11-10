@@ -5,11 +5,11 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Productos de Orden</title>
+     <title>(Gestion) Productos de Orden</title>
  </head>
 
  <body>
-     <!-- COMIENZO DEL FORMULARIO DE PROVEEDORES -->
+    <div class="div-menu">
      <h3 class="centrado">Productos dentro de esta Orden:</h3>
      <form method="POST">
          <table class="table table-bordered">
@@ -41,6 +41,7 @@
      </table>
      <div class="centrado"><b>Total: $<?php echo $precio_total; ?></b></div>
      <div class="centrado"><a class="button-2" href="PAGINA_GestionOrdenes.php" style="color:white;">Regresar</a></div>
+    </div>
  </body>
 
  </html>

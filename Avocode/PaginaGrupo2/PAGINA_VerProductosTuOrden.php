@@ -11,7 +11,7 @@
 </head>
 
 <body>
-        <div class="container-fluid row">
+        <div class="container">
                 <?php require_once("controlador/listar_productos_orden_usuario_controlador.php"); ?>
         </div>
 </body>

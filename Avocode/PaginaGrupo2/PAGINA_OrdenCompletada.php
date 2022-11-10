@@ -11,8 +11,10 @@
 </head>
 
 <body>
+    <div class="div-menu">
     Orden completada con éxito!<br><br>
     <a href="index.php"><button class="button-2">Regresar</button></a>
+    </div>
 </body>
 
 </html>

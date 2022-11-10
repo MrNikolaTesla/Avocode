@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
     $resultado = $orden->listar_productos_orden($id_orden);
 
     if ($resultado) {
-        require_once("vista/ProductosDe_UNAORDEN_view.php");
+        require_once("vista/Productos_Orden_ADMIN_VISTA.php");
     } else {
 ?>
         <div class="no_hay_registros">

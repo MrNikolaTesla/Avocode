@@ -10,7 +10,7 @@
 
 <body>
         <form class="form-flex" method="POST">
-                <h3 class="text-center2">Formulario de Reserva :</h3>
+                <h3 class="text-center2">Formulario de Reserva:</h3>
                 <?php require_once("controlador/ControladorRegistroReservaCliente.php"); ?>
                 <div class="mb-3">
                         <label class="form-label">Numero de Mesa</label>

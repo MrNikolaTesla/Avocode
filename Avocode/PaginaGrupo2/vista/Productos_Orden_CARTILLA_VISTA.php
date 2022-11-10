@@ -9,6 +9,7 @@
  </head>
 
  <body>
+    <div class="div-menu">
      <h3 class="centrado">Tu Orden:</h3>
      <form method="POST">
          <table class="table table-bordered">
@@ -44,6 +45,7 @@
      <div class="centrado"><a class="button-2" href="PAGINA_ContinuarOrden.php" style="color:white; text-decoration:none;">Continuar</a>
          <a class="button-6" href="controlador/Controlador_CancelarOrden.php" style="color:white; text-decoration:none;">Cancelar Orden</a>
      </div>
+     <div>
  </body>
 
  </html>
