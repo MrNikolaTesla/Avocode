@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<title>Cartilla virtual</title>
+<br>
+<link rel="stylesheet" href="assets/styles2.css">
 
 <head>
     <meta charset="UTF-8">
@@ -13,6 +14,7 @@
     <?php require_once("controlador/ControladorMostrarCartilla.php"); ?>
     <a name="orden">
         <?php require_once("controlador/Controlador_Listar_Productos_En_Orden.php"); ?>
+    </a>
 </body>
 
 </html>

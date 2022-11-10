@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=devide-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles2.css">
-    <title>Orden de Usuario</title>
+    <title>Vista de Proveedor</title>
     <!-- Recursos Misceláneos (Bootstrap CSS, Tipografías, CSS variado) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -15,8 +15,25 @@
     <!-- BOOTSTRAP JAVASCRIPT -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <!-- Search Box -->
     <script>
-        // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar una orden
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+            // Animate select box length
+            var searchInput = $(".search-box input");
+            var inputGroup = $(".search-box .input-group");
+            var boxWidth = inputGroup.width();
+            searchInput.focus(function() {
+                inputGroup.animate({
+                    width: "300"
+                });
+            }).blur(function() {
+                inputGroup.animate({
+                    width: boxWidth
+                });
+            });
+        });
+        // Confirmación de eliminar usuario, funciona cada vez que se quiere eliminar un usuario
         function asegurar() {
             rc = confirm("¿Seguro que desea Eliminar esta orden?");
             return rc;
@@ -75,6 +92,7 @@
                                                 echo $orden['estado_orden'] ?></td><?php
                                                                                 } ?>
                                     <td>
+                                        <!--<a href="PAGINA_ModificarProveedor.php?id= echo $proveedor['id_proveedor'] " class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>-->
                                         <a href="PAGINA_VerProductosTuOrden.php?id=<?php echo $orden['id_orden'] ?>" title="Informacion de la Orden"><img src="assets/iconos/icono-lupa.svg"></a>
                                     </td>
                                     </tr>
