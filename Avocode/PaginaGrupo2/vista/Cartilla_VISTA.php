@@ -62,10 +62,10 @@
                                     <img src="<?php $dir_imagen = "assets/Productos/id" . $producto['id_producto'] . ".png"; ?><?php echo $dir_imagen; ?>" alt="burger">
                                     <div class="menu_content">
                                         <h4><?php echo $producto['nombre'] ?><span>$<?php echo $producto['precio'] ?></span></h4>
-                                        <p><?php echo $producto['descripcion'] ?>
+                                        <div class="descripcion_producto"><?php echo $producto['descripcion'] ?></div>
                                             <?php require("controlador/ControladorBotonParaAgregarAOrden.php") ?>
 
-                                        </p>
+                                        
                                     </div>
                                 </div>
                             <?php endforeach; ?>
