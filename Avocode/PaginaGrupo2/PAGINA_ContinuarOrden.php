@@ -17,7 +17,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body class="body-2">
         <div class="div-menu">
                 <!-- INICIO TABLA LISTAR -->
                 <?php require_once("vista/FormularioCompletarOrden_VISTA.php"); ?>

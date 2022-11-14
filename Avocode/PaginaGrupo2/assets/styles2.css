@@ -551,10 +551,11 @@ table.table td i {
 .row-2 {
   color: white;
 }
+
 .body-2 {
-        background-image: url(imagenes/fondo-index.jpg);
+  background-image: url(imagenes/fondo-index.jpg);
 }
 
 .blanco-div {
-  color:white;
+  color: white;
 }
