@@ -19,18 +19,18 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body class="body-2">
         <?php require_once("vista/MENSAJE_Gestor_VISTA.php"); ?>
         <div class="div-menu">
                 <!-- INICIO FORMULARIO ALTA -->
                 <?php require_once("vista/RegistroDeReservas_CLIENTE_VISTA.php"); ?>
                 <!-- FIN FORMULARIO ALTA -->
-                        <!-- INICIO TABLA LISTAR -->
-                        <div>
-                                <?php require("controlador/Controlador_MostrasMesas_Libres_Reserva.php"); ?>
-                        </div>
-                        <!-- FIN TABLA LISTAR -->
-                        <a href="index.php"><button class="button-2">Volver</button></a>
+                <!-- INICIO TABLA LISTAR -->
+                <div>
+                        <?php require("controlador/Controlador_MostrasMesas_Libres_Reserva.php"); ?>
+                </div>
+                <!-- FIN TABLA LISTAR -->
+                <a href="index.php"><button class="button-2">Volver</button></a>
         </div>
 </body>
 <!-- JavaScript Bundle with Popper -->

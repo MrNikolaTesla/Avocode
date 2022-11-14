@@ -1,3 +1,7 @@
+*{
+    font-weight:700;
+    
+}
 .page_title {
     padding: 30px 0px;
 }
@@ -7,7 +11,7 @@
 }
 
 .page_title h1 {
-    color: #c0392b;
+    color: #692c25;
     font-weight: 700;
     line-height: 2;
     margin-bottom: 0;
@@ -16,7 +20,7 @@
 }
 
 .page_title h1::before {
-    background: #c0392b;
+    background: #88524c;
     width: 70px;
     height: 2px;
     position: absolute;
@@ -53,20 +57,20 @@
 }
 
 .nav-tabs .nav-link.active {
-    background: #c0392b;
+    background: #c79d98;
     color: #fff;
     font-weight: 700;
-    border: 1px solid #c0392b;
+    border: 1px solid #b88782;
 }
 
 .nav-link {
-    color: #000;
+    color: rgb(255, 255, 255);
 }
 
 .nav-tabs .nav-link:hover {
-    background: #c0392b;
+    background: #c48c86;
     color: #fff;
-    border: 1px solid #c0392b;
+    border: 1px solid #c2918b;
 }
 
 .single_menu {
@@ -111,7 +115,7 @@
     font-weight: 800;
     float: right;
     font-style: italic;
-    color: #6e0d0d;
+    color: #ffffff;
     margin-left: 20px;
 }
 

@@ -96,7 +96,7 @@ INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
 VALUES ('5','Burger Red Hot ', '430', 'hamburguesa', ' 160grs de carne, muzzarella, guacamole, lechuga, tomate, salsa factory picante. Acompañada de papas rústicas. ');
 
 INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
-VALUES ('6','Burger Super Cheese ', '460', 'hamburguesa', ' 160grs de carne, provolone, queso azul, muzzarella, queso crema con hierbas y tomate con orégano. Acompañada de papas rústicas. ');
+VALUES ('6','Super Cheese ', '460', 'hamburguesa', ' 160grs de carne, provolone, queso azul, muzzarella, queso crema con hierbas y tomate con orégano. Acompañada de papas rústicas. ');
 
 INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
 VALUES ('7','Sanderburger', '540', 'hamburguesa', 'Doble carne, extra cheddar, extra panceta, huevo a la plancha, lechuga, tomate, cebolla caramelizada y salsa barbacoa. Acompañada de papas rústicas. ');

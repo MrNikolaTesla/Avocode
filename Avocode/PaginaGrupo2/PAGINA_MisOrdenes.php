@@ -9,7 +9,7 @@
     <title>Mis ordenes</title>
 </head>
 
-<body>
+<body class="body-2">
     <div class="div-menu">
         <?php require_once("controlador/Mostrar_Ordenes_Usuario_controlador.php"); ?>
         <br>
