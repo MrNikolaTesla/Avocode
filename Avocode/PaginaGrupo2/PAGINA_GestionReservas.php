@@ -25,18 +25,18 @@
                 <!-- INICIO FORMULARIO ALTA -->
                 <?php require_once("vista/RegistroDeReservas_VISTA.php"); ?>
                 <!-- FIN FORMULARIO ALTA -->
-                <div class="col-8 ">
+                <div class="col-8">
                         <!-- INICIO TABLA LISTAR -->
                         <?php require_once("controlador/Reserva_controlador.php"); ?>
                         <div>
                                 <?php require_once("controlador/ClienteReserva_controlador.php"); ?>
-                                <?php require("controlador/Controlador_MostrasMesas_Libres_LADOEMPLEADO.php"); ?>
+                                <?php require("controlador/Controlador_MostrarMesas_Libres_LADOEMPLEADO.php"); ?>
                         </div>
                         <!-- FIN TABLA LISTAR -->
                         <?php require_once("vista/ADMIN_BarraNavegacion.php"); ?>
                 </div>
 </body>
 <!-- JavaScript Bundle Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>

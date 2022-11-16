@@ -172,13 +172,13 @@ INSERT INTO reserva (id_reserva, mesa, fecha, hora, cliente, empleado)
 VALUES ('2', '2', '2022-09-09', '21:00', '4', '2');
 
 INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado_orden)
-VALUES ('1', '3', '1', '2', 'Take Away', '20:00', null, '2022-10-21', 'Observacion 1', 'Completada');
+VALUES ('1', '3', '1', null, 'Take Away', '20:00', null, '2022-10-21', 'Observacion 1', 'Completada');
 
 INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado_orden)
-VALUES ('2', '4', '2', '1', 'Local', '21:00', null, '2022-10-22', 'Observacion 2', 'Completada');
+VALUES ('2', '4', '2', '1', 'Local', '21:00', 'Dirección Domicilio 1', '2022-10-22', 'Observacion 2', 'Completada');
 
 INSERT INTO orden (id_orden, cliente_orden, empleado_orden, mesa_orden, tipo_orden, hora, direccion, fecha, observacion, estado_orden)
-VALUES ('3', '5', '2', '1', 'Delivery', '22:00', null, '2022-10-23', 'Observacion 3', 'Completada');
+VALUES ('3', '5', '2', null, 'Delivery', '22:00', null, '2022-10-23', 'Observacion 3', 'Completada');
 
 INSERT INTO detalles_orden (id_detalle_orden, orden, producto_det, cantidad_producto)
 VALUES ('1','1','2','1');

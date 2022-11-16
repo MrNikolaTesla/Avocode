@@ -15,35 +15,31 @@
 
 <body>
     <!-- DIV'S CON CLASES DIFERENTES PARA EL RESPONSIVE Y DISPOSICIÓN EN LA PÁGINA -->
-    <div class="container">
-        <div class="table-responsive">
-            <div class="table-wrapper">
-                <div class="table-title">
-                    <div class="row">
-                        <div>
-                            <h2 class="text-center"><b>Mesas Disponibles</b></h2>
-                        </div>
-
-                        <!-- COMIENZO DEL FORMULARIO DE MESAS -->
-                        <table class="table">
-
-                            <!-- CUERPO DE TABLA -->
-                            <tbody>
-                                <div class="div-mesa">
-
-                                    <?php foreach ($matrizMesa as $mesa) : ?>
-
-                                        <td class="td-mesa">
-                                            Numero <?php echo $mesa['id_mesa'] ?>
-                                            - <?php echo $mesa['estado'] ?>
-                                        </td>
-
-                                    <?php endforeach; ?>
-                                </div>
-                            </tbody>
-                        </table>
-                    </div>
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div>
+                    <h2 class="text-center"><b>Mesas Disponibles</b></h2>
                 </div>
+
+                <!-- COMIENZO DEL LISTADO DE MESAS LIBRES -->
+                <table class="table">
+
+                    <!-- CUERPO DE TABLA -->
+                    <tbody>
+                        <div class="div-mesa">
+
+                            <?php foreach ($matrizMesa as $mesa) : ?>
+
+                                <td class="td-mesa">
+                                    Numero <?php echo $mesa['id_mesa'] ?>
+                                    - <?php echo $mesa['estado'] ?>
+                                </td>
+
+                            <?php endforeach; ?>
+                        </div>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

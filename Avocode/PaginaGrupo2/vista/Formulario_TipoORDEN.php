@@ -4,7 +4,7 @@ if (isset($_SESSION['completando_orden']) && $_SESSION['completando_orden'] == "
         if ($_SESSION['tipo_orden'] == "local") {
 ?>
                 <form class="col-5" method="POST">
-                        <h3>Completar Datos de la Orden : Local</h3>
+                        <h3>Completar Datos de la Orden: Local</h3>
                         <?php require_once("controlador/ControladorProcesarOrden.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Numero de Mesa</label>
@@ -16,12 +16,12 @@ if (isset($_SESSION['completando_orden']) && $_SESSION['completando_orden'] == "
                         </div>
                         <button type="submit" class="button-2" name="completar" value="enviar">Completar orden!</button>
                 </form>
-                <?php require("controlador/Controlador_MostrasMesas_Libres.php"); ?>
+                <?php require("controlador/Controlador_MostrarMesas_Libres.php"); ?>
         <?php
         } else if ($_SESSION['tipo_orden'] == "delivery") {
         ?>
                 <form class="col-5" method="POST">
-                        <h3>Completar Datos de la Orden : Delivery</h3>
+                        <h3>Completar Datos de la Orden: Delivery</h3>
                         <?php require_once("controlador/ControladorProcesarOrden.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Direccion</label>
@@ -37,7 +37,7 @@ if (isset($_SESSION['completando_orden']) && $_SESSION['completando_orden'] == "
         } else if ($_SESSION['tipo_orden'] == "takeaway") {
         ?>
                 <form class="col-5" method="POST">
-                        <h3>Completar Datos de la Orden : Take Away</h3>
+                        <h3>Completar Datos de la Orden: Take Away</h3>
                         <?php require_once("controlador/ControladorProcesarOrden.php"); ?>
                         <div class="mb-3">
                                 <label class="form-label">Fecha</label>

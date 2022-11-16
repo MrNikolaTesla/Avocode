@@ -559,3 +559,8 @@ table.table td i {
 .blanco-div {
   color: white;
 }
+
+.div-mesa {
+    width:max-content;
+
+}

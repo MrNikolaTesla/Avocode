@@ -27,7 +27,7 @@
                 <!-- FIN FORMULARIO ALTA -->
                 <!-- INICIO TABLA LISTAR -->
                 <div>
-                        <?php require("controlador/Controlador_MostrasMesas_Libres_Reserva.php"); ?>
+                        <?php require("controlador/Controlador_MostrarMesas_Libres_Reserva.php"); ?>
                 </div>
                 <!-- FIN TABLA LISTAR -->
                 <a href="index.php"><button class="button-2">Volver</button></a>
