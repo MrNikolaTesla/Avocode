@@ -58,10 +58,12 @@
 
     <!------------------------ Copyright ------------------------->
     <ul>
-      <li><img width="80" height="50" src="assets/imagenes/persea.png" alt="logo"></li>
       <li class="copyright-text">Copyright &copy; 2022 Todos los Derechos Reservados
         <a href="https://github.com/MrNikolaTesla/Avocode">Persea SRL</a>
+        <li><img width="80" height="50" src="assets/imagenes/persea.png" alt="logo"></li>
+
       </li>
+      
     </ul>
   </div>
 </footer>
