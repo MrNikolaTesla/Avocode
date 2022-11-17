@@ -11,7 +11,7 @@
 }
 
 .page_title h1 {
-    color: #692c25;
+    color: #f5f5f5;
     font-weight: 700;
     line-height: 2;
     margin-bottom: 0;
@@ -126,13 +126,6 @@
     margin-left: 20px;
 }
 
-.menu_btn.btn.btn-danger {
-    margin: 0 auto;
-    display: block;
-    width: 140px;
-}
-
-/*Menu ends*/
 .menu_btn.btn.btn-danger {
     margin: 0 auto;
     display: block;

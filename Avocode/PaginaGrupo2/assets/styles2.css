@@ -554,6 +554,8 @@ table.table td i {
 
 .body-2 {
   background-image: url(imagenes/fondo-index.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .blanco-div {
