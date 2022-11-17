@@ -548,13 +548,21 @@ table.table td i {
   color: white;
 }
 
+.row-2 {
+  color: white;
+}
+
 .body-2 {
-  background-image: url(imagenes/fondo-index-reducido2.jpg);
-  background-repeat: repeat;
-  background-size: auto;
+  background-image: url(imagenes/fondo-index.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blanco-div {
+  color: white;
 }
 
 .div-mesa {
-  width: max-content;
+    width:max-content;
 
 }

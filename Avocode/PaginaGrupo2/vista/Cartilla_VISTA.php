@@ -13,7 +13,7 @@
     <title>Vista de Productos</title>
 </head>
 
-<body class="body-3">
+<body class="body-2">
 
     <!------------- COMIENZO DE CARTILLA ------------------>
 
@@ -22,7 +22,7 @@
         <div class="container">
             <?php require_once("controlador/BtnVerMiOrden_Controlador.php"); ?>
             <div class="div-botones"><a href="index.php"><button class="button-1-cartilla">Regresar</button></a></div>
-            <div class="row">
+            <div class="row-2">
                 <div class="col-lg-12">
                     <div class="page_title text-center mb-4">
                         <h1>Cartilla Virtual</h1>
@@ -51,7 +51,7 @@
                 </ul>
             </div>
 
-            <div class="row">
+            <div class="row-2">
                 <div class="tab-content col-lg-12" id="myTabContent">
                     <div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
                         <div class="row">
