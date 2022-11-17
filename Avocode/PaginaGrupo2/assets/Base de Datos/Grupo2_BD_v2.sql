@@ -22,7 +22,6 @@ CREATE TABLE `mesa` (
   `estado` enum('Libre','Ocupada','Reservada') NOT NULL DEFAULT 'Libre' COMMENT 'Estado de la Mesa'
 );
 
-
 CREATE TABLE `usuario` (
   `id_usuario` int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT COMMENT 'ID del Usuario',
   `nombre` varchar(40) NOT NULL COMMENT 'Nombre del Usuario',
@@ -79,30 +78,72 @@ CREATE TABLE `reserva` (
   CONSTRAINT empleado FOREIGN KEY (empleado) REFERENCES usuario(id_usuario),
   CONSTRAINT mesa FOREIGN KEY (mesa) REFERENCES mesa(id_mesa)
 );
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('1','Edición Limitada', '410', 'hamburguesa', 'Carne, doble cheddar, panceta, cebolla Crispy y spicy BBQ. ');
+
 
 INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
-VALUES ('1','Burger Clásica ', '350', 'hamburguesa', ' 160grs de carne, doble cheddar, lechuga, cebolla, tomate y mayonesa. Acompañada de papas rústicas');
+VALUES ('2','Burger Clásica ', '350', 'hamburguesa', ' 160grs de carne, doble cheddar, lechuga, cebolla, tomate y mayonesa. Acompañada de papas rústicas');
 
 INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
-VALUES ('2','Burger Gringa ', '390', 'hamburguesa', ' 160grs de carne, doble cheddar, pepinillos, panceta y ketchup. Acompañada de papas rústicas. ');
+VALUES ('3','Burger Gringa ', '390', 'hamburguesa', ' 160grs de carne, doble cheddar, pepinillos, panceta y ketchup. Acompañada de papas rústicas. ');
 
 INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
-VALUES ('3','Burger Cabrona ', '460', 'hamburguesa', ' 160grs de carne, queso de cabra, muzzarella, pesto de tomates secos, berenjena y mayonesa. Acompañada de papas rústicas. ');
+VALUES ('4','Burger Cabrona ', '460', 'hamburguesa', ' 160grs de carne, queso de cabra, muzzarella, pesto de tomates secos, berenjena y mayonesa. Acompañada de papas rústicas. ');
 
 INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
-VALUES ('4','Burger Champi ', '430', 'hamburguesa', ' 160grs de carne, muzzarella, champiñones, tomate, cebolla caramelizada, rúcula, mostaza a la antigua y miel. Acompañada de papas rústicas. ');
+VALUES ('5','Burger Champi ', '430', 'hamburguesa', ' 160grs de carne, muzzarella, champiñones, tomate, cebolla caramelizada, rúcula, mostaza a la antigua y miel. Acompañada de papas rústicas. ');
 
 INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
-VALUES ('5','Burger Red Hot ', '430', 'hamburguesa', ' 160grs de carne, muzzarella, guacamole, lechuga, tomate, salsa factory picante. Acompañada de papas rústicas. ');
+VALUES ('6','Burger Red Hot ', '430', 'hamburguesa', ' 160grs de carne, muzzarella, guacamole, lechuga, tomate, salsa factory picante. Acompañada de papas rústicas. ');
 
 INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
-VALUES ('6','Super Cheese ', '460', 'hamburguesa', ' 160grs de carne, provolone, queso azul, muzzarella, queso crema con hierbas y tomate con orégano. Acompañada de papas rústicas. ');
+VALUES ('7','Super Cheese ', '460', 'hamburguesa', ' 160grs de carne, provolone, queso azul, muzzarella, queso crema con hierbas y tomate con orégano. Acompañada de papas rústicas. ');
 
 INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
-VALUES ('7','Sanderburger', '540', 'hamburguesa', 'Doble carne, extra cheddar, extra panceta, huevo a la plancha, lechuga, tomate, cebolla caramelizada y salsa barbacoa. Acompañada de papas rústicas. ');
+VALUES ('8','Sanderburger', '540', 'hamburguesa', 'Doble carne, extra cheddar, extra panceta, huevo a la plancha, lechuga, tomate, cebolla caramelizada y salsa barbacoa. Acompañada de papas rústicas. ');
 
 INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
-VALUES ('8','Edición I-Limitada ', '410', 'hamburguesa', ' 160grs de carne, panceta, doble cheddar, aros de cebolla, mostaza, ketchup. Acompañada de papas rústicas. ');
+VALUES ('9','Edición I-Limitada ', '410', 'hamburguesa', ' 160grs de carne, panceta, doble cheddar, aros de cebolla, mostaza, ketchup. Acompañada de papas rústicas. ');
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('10','Burger Campo', '490', 'hamburguesa', ' Pollo a la plancha, doble cheddar, panceta, tomate, lechuga, mayonesa de ajo. Acompañada de papas rústicas. ');
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('11','Burger Salmón', '540', 'hamburguesa', 'Salmón, muzzarella, queso crema con hierbas, cebolla caramelizada y rúcula. Acompañada de papas rústicas. ');
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('12','Burger Lentejas', '330', 'hamburguesa', 'Burger de lentejas, muzzarella, berenjena grillada, cebolla caramelizada, lechuga, tomate, criolla y mayonesa. Acompañada de papas rústicas. ');
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('13','Burger Blue Cheese', '350', 'hamburguesa', 'Burger de calabaza y avena, queso azul, muzzarella, rúcula, cebolla caramelizada y mayonesa de ajo. Acompañada de papas rústicas. ');
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('14','Frambuesas Bañadas', '280', 'acompanamiento', 'Frambuesas bañadas en chocolate blanco y chocolate con leche. ');
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('15','Aros de Cebolla', '260', 'acompanamiento', 'Acompañados de dip de salsa a elección: alioli o salsa picante. ');
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('16','Papas', '260', 'acompanamiento', null);
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('17','Agua 600ml', '70', 'bebida', 'Sin gas / Con gas. ');
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('18','Coca Cola 600ml', '110', 'bebida', null);
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('19','Fanta 600ml', '110', 'bebida', null);
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('20','IPA Atómica', '190', 'bebida', null);
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('21','Blonde Ale', '190', 'bebida', null);
+
+INSERT INTO producto (id_producto, nombre, precio, tipo, descripcion)
+VALUES ('22','Scottish', '190', 'bebida', null);
 
 INSERT INTO factura (id_factura, cliente, empleado, fecha, hora, forma_pago, productos, monto)
 VALUES ('1','3', '2', '2022-09-07', '19:00', 'Credito', '2', '230');
